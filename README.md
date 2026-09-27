@@ -12,7 +12,7 @@ and the [TerraFirmaGreg](https://github.com/TerraFirmaGreg-Team/Modpack-Modern) 
 
 Everything runs in your browser. There is no server and no account, and nothing is read from your
 game or your saves: the map is computed from the seed alone. Use it at
-<https://pauaixala.github.io/Outcrop/>.
+<https://outcropmap.com/>.
 
 How closely it matches the game is checked, not assumed: the tests in `tests/parity/` hold the
 generators to values captured from the mod's own Java and, for TerraFirmaGreg, from a real save.

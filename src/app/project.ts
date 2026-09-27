@@ -6,4 +6,4 @@
  * a one-line change, and `tests/unit/project-url.test.ts` fails if a copy of the URL creeps back in
  * anywhere else.
  */
-export const REPOSITORY_URL = 'https://github.com/PauAixala/Outcrop';
+export const REPOSITORY_URL = 'https://github.com/PauAixala/outcropmap';
