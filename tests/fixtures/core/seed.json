@@ -1,0 +1,26 @@
+{
+  "source": "java.lang.String.hashCode() and java.lang.Long.parseLong(String) \u2014 real JDK 11.0.32.1",
+  "capturedAt": "2026-09-05",
+  "seed": "n/a \u2014 pure string/long functions",
+  "cases": [
+    { "input": "", "hashCode": 0, "parsesAsLong": null },
+    { "input": "a", "hashCode": 97, "parsesAsLong": null },
+    { "input": "TerraFirmaCraft", "hashCode": -1267015667, "parsesAsLong": null },
+    { "input": "my cool seed", "hashCode": 991641460, "parsesAsLong": null },
+    { "input": "12345", "hashCode": 46792755, "parsesAsLong": "12345" },
+    { "input": "-12345", "hashCode": 1335104550, "parsesAsLong": "-12345" },
+    { "input": "0", "hashCode": 48, "parsesAsLong": "0" },
+    { "input": "-0", "hashCode": 1443, "parsesAsLong": "0" },
+    { "input": "9223372036854775807", "hashCode": -1773151198, "parsesAsLong": "9223372036854775807" },
+    { "input": "-9223372036854775808", "hashCode": 1304595158, "parsesAsLong": "-9223372036854775808" },
+    { "input": "9223372036854775808", "hashCode": -1773151197, "parsesAsLong": null },
+    { "input": "99999999999999999999", "hashCode": 1260560192, "parsesAsLong": null },
+    { "input": "+123", "hashCode": 1329703, "parsesAsLong": "123" },
+    { "input": "12.5", "hashCode": 1509288, "parsesAsLong": null },
+    { "input": " 123", "hashCode": 1002002, "parsesAsLong": null },
+    { "input": "123 ", "hashCode": 1509422, "parsesAsLong": null },
+    { "input": "tfg:cluster_vein", "hashCode": -1329236386, "parsesAsLong": null },
+    { "input": "\u00e9\u00e8\u00ea", "hashCode": 231339, "parsesAsLong": null },
+    { "input": "\ud83d\ude00", "hashCode": 1772899, "parsesAsLong": null }
+  ]
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OutCrop</title>
+    <link rel="icon" type="image/png" href="./icons/favicon-32.png" />
+    <link rel="stylesheet" href="./src/ui/styles/base.css" />
+  </head>
+  <body>
+    <div id="app" class="app app--forge">
+      <header id="app-header" class="app-header"><!-- shell: nav + theme toggle --></header>
+      <main class="app-main">
+        <section class="forge-hero" aria-labelledby="forge-hero-title">
+          <div class="forge-hero__copy">
+            <h1 id="forge-hero-title"></h1>
+            <p id="forge-hero-body" class="forge-hero__body"></p>
+          </div>
+          <div class="forge-hero__mark" aria-hidden="true">
+            <!--
+              The forge mark: anvil, hammer, hot ingot and sparks. Kept as its own asset rather
+              than inlined — it is artwork with its own fixed palette, not a themed UI element, and
+              a 58 kB path soup has no business in the middle of a page's markup. Local file, no
+              remote fetch (ADR 0004).
+            -->
+            <img class="forge-mark" src="./icons/forge-mark.svg" alt="" />
+          </div>
+        </section>
+        <section id="recipe-picker" class="panel"><!-- profile + item search --></section>
+        <section id="recipe-editor" class="panel"><!-- custom recipe: target + rules --></section>
+        <section id="saved-recipes" class="panel"><!-- saved list --></section>
+      </main>
+    </div>
+    <script type="module" src="./src/pages/forge/main.ts"></script>
+  </body>
+</html>

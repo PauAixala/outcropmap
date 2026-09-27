@@ -1,0 +1,10 @@
+{
+  "source": "Target work values read off the anvil screen in the player's own TerraFirmaGreg 0.9.21 save (\"New World\"), reported 2026-09-11.",
+  "profile": "tfg",
+  "seed": "-6696614430994881185",
+  "note": "The target is only ever shown in-game, so this fixture is read by a human from the anvil UI rather than captured by a tool. Each case is one recipe's full resource id and the number the anvil displayed for it.",
+  "cases": [
+    { "recipeId": "tfc:anvil/steel_saw_blade", "label": "Steel Saw Blade", "target": 100 },
+    { "recipeId": "tfc:anvil/steel_fish_hook", "label": "Steel Fish Hook", "target": 113 }
+  ]
+}

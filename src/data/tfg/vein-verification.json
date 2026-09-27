@@ -1,0 +1,884 @@
+{
+ "_meta": {
+  "source": "tools/verify-veins.py, against a real TerraFirmaGreg save",
+  "profile": "tfg",
+  "seed": "-6696614430994881185",
+  "boxes": [
+   {
+    "minX": -4028,
+    "minZ": 2116,
+    "maxX": -2628,
+    "maxZ": 3516
+   },
+   {
+    "minX": 3140,
+    "minZ": 5188,
+    "maxX": 4540,
+    "maxZ": 6588
+   },
+   {
+    "minX": 3652,
+    "minZ": 5700,
+    "maxX": 5052,
+    "maxZ": 7100
+   },
+   {
+    "minX": 1274,
+    "minZ": 3351,
+    "maxX": 2042,
+    "maxZ": 4119
+   }
+  ],
+  "checked": 4733,
+  "real": 4282,
+  "world": "Pau's TerraFirmaGreg 0.9.21 save, read-only",
+  "measured": "2026-09-12",
+  "tools": "tools/dump-vein-predictions.ts + tools/verify-veins.py",
+  "note": "Counts are of the markers the map actually draws, after the air gate, the host-rock gate and the dikes. `depth` buckets those same markers by how far the middle of the band sits below our surface height, in blocks; -16 means above it.",
+  "dimensions": {
+   "nether": {
+    "source": "tools/dump-vein-predictions.ts ... nether, then tools/verify-veins.py ... DIM-1",
+    "box": {
+     "minX": -700,
+     "minZ": -700,
+     "maxX": 700,
+     "maxZ": 700
+    },
+    "checked": 2897,
+    "real": 2733,
+    "precision": 0.9434,
+    "note": "The Beneath's veins only. The shared `depth` table is the overworld's and was left alone: the Beneath's surface is a flat roof at y 208, so every one of its markers falls in the deepest bucket and merging them would move a number that describes a different world."
+   },
+   "moon": {
+    "source": "tools/dump-vein-predictions.ts ... moon, then tools/verify-veins.py ... dimensions/ad_astra/moon",
+    "box": {
+     "minX": -700,
+     "minZ": -700,
+     "maxX": 700,
+     "maxZ": 700
+    },
+    "checked": 490,
+    "real": 418,
+    "precision": 0.8531,
+    "note": "No host-rock gate and no surface height in this dimension, so the per-vein precision is doing the work both of those do on the overworld. The depth table stays the overworld\u2019s."
+   },
+   "mars": {
+    "source": "tools/dump-vein-predictions.ts ... mars, then tools/verify-veins.py ... dimensions/ad_astra/mars",
+    "box": {
+     "minX": -700,
+     "minZ": -700,
+     "maxX": 700,
+     "maxZ": 700
+    },
+    "checked": 434,
+    "real": 292,
+    "precision": 0.6728,
+    "note": "No host-rock gate and no surface height in this dimension, so the per-vein precision is doing the work both of those do on the overworld. The depth table stays the overworld\u2019s."
+   }
+  }
+ },
+ "veins": {
+  "beneath_aluminium": {
+   "checked": 84,
+   "real": 83,
+   "precision": 0.988
+  },
+  "beneath_bismuth": {
+   "checked": 172,
+   "real": 170,
+   "precision": 0.988
+  },
+  "beneath_coal_anthracite": {
+   "checked": 81,
+   "real": 76,
+   "precision": 0.938
+  },
+  "beneath_coal_bituminous": {
+   "checked": 202,
+   "real": 193,
+   "precision": 0.955
+  },
+  "beneath_coal_lignite": {
+   "checked": 70,
+   "real": 56,
+   "precision": 0.8
+  },
+  "beneath_copper_native": {
+   "checked": 61,
+   "real": 49,
+   "precision": 0.803
+  },
+  "beneath_copper_sulfide": {
+   "checked": 158,
+   "real": 154,
+   "precision": 0.975
+  },
+  "beneath_copper_tetrahedrite": {
+   "checked": 56,
+   "real": 45,
+   "precision": 0.804
+  },
+  "beneath_gold": {
+   "checked": 72,
+   "real": 68,
+   "precision": 0.944
+  },
+  "beneath_gold_rich": {
+   "checked": 178,
+   "real": 176,
+   "precision": 0.989
+  },
+  "beneath_graphite": {
+   "checked": 99,
+   "real": 99,
+   "precision": 1.0
+  },
+  "beneath_iron_banded": {
+   "checked": 65,
+   "real": 57,
+   "precision": 0.877
+  },
+  "beneath_iron_hematite": {
+   "checked": 60,
+   "real": 57,
+   "precision": 0.95
+  },
+  "beneath_iron_magnetite": {
+   "checked": 127,
+   "real": 122,
+   "precision": 0.961
+  },
+  "beneath_lead_silver": {
+   "checked": 27,
+   "real": 25,
+   "precision": 0.926
+  },
+  "beneath_lithium": {
+   "checked": 103,
+   "real": 97,
+   "precision": 0.942
+  },
+  "beneath_manganese": {
+   "checked": 132,
+   "real": 119,
+   "precision": 0.902
+  },
+  "beneath_molydbenum": {
+   "checked": 98,
+   "real": 90,
+   "precision": 0.918
+  },
+  "beneath_nickel": {
+   "checked": 170,
+   "real": 159,
+   "precision": 0.935
+  },
+  "beneath_phlogopite": {
+   "checked": 103,
+   "real": 103,
+   "precision": 1.0
+  },
+  "beneath_phosphate": {
+   "checked": 45,
+   "real": 42,
+   "precision": 0.933
+  },
+  "beneath_psg": {
+   "checked": 29,
+   "real": 28,
+   "precision": 0.966
+  },
+  "beneath_quartz": {
+   "checked": 81,
+   "real": 78,
+   "precision": 0.963
+  },
+  "beneath_realgar": {
+   "checked": 65,
+   "real": 64,
+   "precision": 0.985
+  },
+  "beneath_redstone": {
+   "checked": 121,
+   "real": 117,
+   "precision": 0.967
+  },
+  "beneath_salt": {
+   "checked": 49,
+   "real": 40,
+   "precision": 0.816
+  },
+  "beneath_sulfur": {
+   "checked": 114,
+   "real": 114,
+   "precision": 1.0
+  },
+  "beneath_tin": {
+   "checked": 98,
+   "real": 89,
+   "precision": 0.908
+  },
+  "beneath_zinc": {
+   "checked": 177,
+   "real": 163,
+   "precision": 0.921
+  },
+  "deep_apatite": {
+   "checked": 72,
+   "real": 72,
+   "precision": 1.0
+  },
+  "deep_asbestos": {
+   "checked": 40,
+   "real": 40,
+   "precision": 1.0
+  },
+  "deep_banded_iron": {
+   "checked": 33,
+   "real": 33,
+   "precision": 1.0
+  },
+  "deep_bauxite": {
+   "checked": 26,
+   "real": 25,
+   "precision": 0.962
+  },
+  "deep_big_redstone": {
+   "checked": 40,
+   "real": 40,
+   "precision": 1.0
+  },
+  "deep_bismuth": {
+   "checked": 4,
+   "real": 4,
+   "precision": 1.0
+  },
+  "deep_copper_iron": {
+   "checked": 58,
+   "real": 58,
+   "precision": 1.0
+  },
+  "deep_copper_tin": {
+   "checked": 62,
+   "real": 62,
+   "precision": 1.0
+  },
+  "deep_galena": {
+   "checked": 65,
+   "real": 65,
+   "precision": 1.0
+  },
+  "deep_graphite": {
+   "checked": 293,
+   "real": 292,
+   "precision": 0.997
+  },
+  "deep_graphite_volcanic": {
+   "checked": 16,
+   "real": 16,
+   "precision": 1.0
+  },
+  "deep_iron": {
+   "checked": 57,
+   "real": 57,
+   "precision": 1.0
+  },
+  "deep_kyanite": {
+   "checked": 47,
+   "real": 47,
+   "precision": 1.0
+  },
+  "deep_lazurite_calcite": {
+   "checked": 87,
+   "real": 87,
+   "precision": 1.0
+  },
+  "deep_magnetite": {
+   "checked": 58,
+   "real": 58,
+   "precision": 1.0
+  },
+  "deep_magnetite_olivine": {
+   "checked": 48,
+   "real": 48,
+   "precision": 1.0
+  },
+  "deep_manganese": {
+   "checked": 58,
+   "real": 58,
+   "precision": 1.0
+  },
+  "deep_mars_chromite": {
+   "checked": 3,
+   "real": 3,
+   "precision": 1.0
+  },
+  "deep_mars_pitchblende": {
+   "checked": 10,
+   "real": 10,
+   "precision": 1.0
+  },
+  "deep_mars_sheldonite": {
+   "checked": 6,
+   "real": 6,
+   "precision": 1.0
+  },
+  "deep_molybdenum": {
+   "checked": 59,
+   "real": 59,
+   "precision": 1.0
+  },
+  "deep_monazite": {
+   "checked": 27,
+   "real": 27,
+   "precision": 1.0
+  },
+  "deep_nickel": {
+   "checked": 61,
+   "real": 61,
+   "precision": 1.0
+  },
+  "deep_redstone": {
+   "checked": 94,
+   "real": 94,
+   "precision": 1.0
+  },
+  "deep_saltpeter": {
+   "checked": 25,
+   "real": 25,
+   "precision": 1.0
+  },
+  "deep_sapphire": {
+   "checked": 35,
+   "real": 35,
+   "precision": 1.0
+  },
+  "deep_scheelite": {
+   "checked": 19,
+   "real": 19,
+   "precision": 1.0
+  },
+  "deep_sphalerite": {
+   "checked": 52,
+   "real": 52,
+   "precision": 1.0
+  },
+  "deep_tantalite": {
+   "checked": 29,
+   "real": 29,
+   "precision": 1.0
+  },
+  "deep_thorianite": {
+   "checked": 45,
+   "real": 45,
+   "precision": 1.0
+  },
+  "deep_tin": {
+   "checked": 45,
+   "real": 45,
+   "precision": 1.0
+  },
+  "deep_topaz": {
+   "checked": 67,
+   "real": 67,
+   "precision": 1.0
+  },
+  "high_bismuth_mountain": {
+   "checked": 29,
+   "real": 28,
+   "precision": 0.966
+  },
+  "high_coal": {
+   "checked": 67,
+   "real": 26,
+   "precision": 0.388
+  },
+  "high_gypsum": {
+   "checked": 39,
+   "real": 17,
+   "precision": 0.436
+  },
+  "high_lead": {
+   "checked": 19,
+   "real": 19,
+   "precision": 1.0
+  },
+  "high_realgar": {
+   "checked": 88,
+   "real": 88,
+   "precision": 1.0
+  },
+  "high_sulfur": {
+   "checked": 2,
+   "real": 0,
+   "precision": 0.0
+  },
+  "high_tetrahedrite": {
+   "checked": 11,
+   "real": 11,
+   "precision": 1.0
+  },
+  "high_tin": {
+   "checked": 22,
+   "real": 22,
+   "precision": 1.0
+  },
+  "kaolin": {
+   "checked": 2,
+   "real": 0,
+   "precision": 0.0
+  },
+  "mars_almandine": {
+   "checked": 20,
+   "real": 20,
+   "precision": 1.0
+  },
+  "mars_apatite": {
+   "checked": 9,
+   "real": 9,
+   "precision": 1.0
+  },
+  "mars_beryllium": {
+   "checked": 15,
+   "real": 0,
+   "precision": 0.0
+  },
+  "mars_coal": {
+   "checked": 25,
+   "real": 25,
+   "precision": 1.0
+  },
+  "mars_copper": {
+   "checked": 18,
+   "real": 18,
+   "precision": 1.0
+  },
+  "mars_galena": {
+   "checked": 12,
+   "real": 12,
+   "precision": 1.0
+  },
+  "mars_gold": {
+   "checked": 7,
+   "real": 7,
+   "precision": 1.0
+  },
+  "mars_graphite": {
+   "checked": 17,
+   "real": 15,
+   "precision": 0.882
+  },
+  "mars_hematite": {
+   "checked": 15,
+   "real": 15,
+   "precision": 1.0
+  },
+  "mars_lapis": {
+   "checked": 14,
+   "real": 12,
+   "precision": 0.857
+  },
+  "mars_lubricant": {
+   "checked": 14,
+   "real": 14,
+   "precision": 1.0
+  },
+  "mars_neodynium": {
+   "checked": 11,
+   "real": 11,
+   "precision": 1.0
+  },
+  "mars_nickel": {
+   "checked": 11,
+   "real": 11,
+   "precision": 1.0
+  },
+  "mars_pitchblende": {
+   "checked": 23,
+   "real": 14,
+   "precision": 0.609
+  },
+  "mars_quartzite": {
+   "checked": 18,
+   "real": 18,
+   "precision": 1.0
+  },
+  "mars_salt": {
+   "checked": 22,
+   "real": 16,
+   "precision": 0.727
+  },
+  "mars_stibnite": {
+   "checked": 11,
+   "real": 11,
+   "precision": 1.0
+  },
+  "mars_sulfur": {
+   "checked": 15,
+   "real": 14,
+   "precision": 0.933
+  },
+  "mars_surface_bismuthinite": {
+   "checked": 15,
+   "real": 0,
+   "precision": 0.0
+  },
+  "mars_surface_cassiterite": {
+   "checked": 37,
+   "real": 0,
+   "precision": 0.0
+  },
+  "mars_surface_hematite": {
+   "checked": 21,
+   "real": 2,
+   "precision": 0.095
+  },
+  "mars_surface_nickel_galena": {
+   "checked": 17,
+   "real": 0,
+   "precision": 0.0
+  },
+  "mars_surface_tetrahedrite": {
+   "checked": 19,
+   "real": 0,
+   "precision": 0.0
+  },
+  "mars_tantalite": {
+   "checked": 12,
+   "real": 12,
+   "precision": 1.0
+  },
+  "mars_tungsten": {
+   "checked": 17,
+   "real": 17,
+   "precision": 1.0
+  },
+  "moon_apatite": {
+   "checked": 25,
+   "real": 19,
+   "precision": 0.76
+  },
+  "moon_bauxite": {
+   "checked": 23,
+   "real": 23,
+   "precision": 1.0
+  },
+  "moon_beryllium": {
+   "checked": 21,
+   "real": 19,
+   "precision": 0.905
+  },
+  "moon_cassiterite": {
+   "checked": 10,
+   "real": 6,
+   "precision": 0.6
+  },
+  "moon_desh": {
+   "checked": 20,
+   "real": 20,
+   "precision": 1.0
+  },
+  "moon_garnet": {
+   "checked": 10,
+   "real": 8,
+   "precision": 0.8
+  },
+  "moon_garnierite": {
+   "checked": 18,
+   "real": 16,
+   "precision": 0.889
+  },
+  "moon_gold": {
+   "checked": 19,
+   "real": 8,
+   "precision": 0.421
+  },
+  "moon_graphite": {
+   "checked": 13,
+   "real": 13,
+   "precision": 1.0
+  },
+  "moon_gypsum": {
+   "checked": 37,
+   "real": 25,
+   "precision": 0.676
+  },
+  "moon_lubricant": {
+   "checked": 28,
+   "real": 27,
+   "precision": 0.964
+  },
+  "moon_magnetite": {
+   "checked": 7,
+   "real": 7,
+   "precision": 1.0
+  },
+  "moon_manganese": {
+   "checked": 20,
+   "real": 20,
+   "precision": 1.0
+  },
+  "moon_mica": {
+   "checked": 23,
+   "real": 21,
+   "precision": 0.913
+  },
+  "moon_molybdenum": {
+   "checked": 14,
+   "real": 14,
+   "precision": 1.0
+  },
+  "moon_monazite": {
+   "checked": 16,
+   "real": 15,
+   "precision": 0.938
+  },
+  "moon_pyrolusite": {
+   "checked": 12,
+   "real": 12,
+   "precision": 1.0
+  },
+  "moon_quartz": {
+   "checked": 20,
+   "real": 20,
+   "precision": 1.0
+  },
+  "moon_redstone": {
+   "checked": 11,
+   "real": 10,
+   "precision": 0.909
+  },
+  "moon_saltpeter": {
+   "checked": 8,
+   "real": 7,
+   "precision": 0.875
+  },
+  "moon_sapphire": {
+   "checked": 12,
+   "real": 10,
+   "precision": 0.833
+  },
+  "moon_scheelite": {
+   "checked": 30,
+   "real": 14,
+   "precision": 0.467
+  },
+  "moon_sheldonite": {
+   "checked": 17,
+   "real": 9,
+   "precision": 0.529
+  },
+  "moon_silver": {
+   "checked": 20,
+   "real": 20,
+   "precision": 1.0
+  },
+  "moon_sphalerite": {
+   "checked": 24,
+   "real": 24,
+   "precision": 1.0
+  },
+  "moon_tetrahedrite": {
+   "checked": 14,
+   "real": 13,
+   "precision": 0.929
+  },
+  "moon_topaz": {
+   "checked": 18,
+   "real": 18,
+   "precision": 1.0
+  },
+  "normal_amethyst": {
+   "checked": 16,
+   "real": 11,
+   "precision": 0.688
+  },
+  "normal_coal": {
+   "checked": 2,
+   "real": 2,
+   "precision": 1.0
+  },
+  "normal_copper": {
+   "checked": 76,
+   "real": 75,
+   "precision": 0.987
+  },
+  "normal_copper_gypsum": {
+   "checked": 2,
+   "real": 2,
+   "precision": 1.0
+  },
+  "normal_galena": {
+   "checked": 79,
+   "real": 70,
+   "precision": 0.886
+  },
+  "normal_garnierite": {
+   "checked": 41,
+   "real": 40,
+   "precision": 0.976
+  },
+  "normal_gold": {
+   "checked": 83,
+   "real": 75,
+   "precision": 0.904
+  },
+  "normal_iron": {
+   "checked": 160,
+   "real": 155,
+   "precision": 0.969
+  },
+  "normal_mica": {
+   "checked": 99,
+   "real": 88,
+   "precision": 0.889
+  },
+  "normal_quartz": {
+   "checked": 45,
+   "real": 45,
+   "precision": 1.0
+  },
+  "normal_quartz_borax": {
+   "checked": 30,
+   "real": 30,
+   "precision": 1.0
+  },
+  "normal_salt": {
+   "checked": 7,
+   "real": 7,
+   "precision": 1.0
+  },
+  "normal_sphalerite": {
+   "checked": 52,
+   "real": 50,
+   "precision": 0.962
+  },
+  "normal_spodumene": {
+   "checked": 54,
+   "real": 52,
+   "precision": 0.963
+  },
+  "normal_sulfide": {
+   "checked": 13,
+   "real": 13,
+   "precision": 1.0
+  },
+  "normal_tarkianite": {
+   "checked": 97,
+   "real": 4,
+   "precision": 0.041
+  },
+  "surface_bismuth": {
+   "checked": 143,
+   "real": 143,
+   "precision": 1.0
+  },
+  "surface_coal": {
+   "checked": 40,
+   "real": 39,
+   "precision": 0.975
+  },
+  "surface_cobaltite": {
+   "checked": 115,
+   "real": 100,
+   "precision": 0.87
+  },
+  "surface_gold": {
+   "checked": 182,
+   "real": 151,
+   "precision": 0.83
+  },
+  "surface_hematite": {
+   "checked": 185,
+   "real": 153,
+   "precision": 0.827
+  },
+  "surface_limonite": {
+   "checked": 68,
+   "real": 63,
+   "precision": 0.926
+  },
+  "surface_magnetite": {
+   "checked": 56,
+   "real": 54,
+   "precision": 0.964
+  },
+  "surface_malachite": {
+   "checked": 166,
+   "real": 148,
+   "precision": 0.892
+  },
+  "surface_mica": {
+   "checked": 119,
+   "real": 101,
+   "precision": 0.849
+  },
+  "surface_native_copper": {
+   "checked": 204,
+   "real": 171,
+   "precision": 0.838
+  },
+  "surface_nickel": {
+   "checked": 113,
+   "real": 98,
+   "precision": 0.867
+  },
+  "surface_salpeter": {
+   "checked": 159,
+   "real": 125,
+   "precision": 0.786
+  },
+  "surface_sphalerite": {
+   "checked": 222,
+   "real": 189,
+   "precision": 0.851
+  },
+  "surface_sylvite_salt": {
+   "checked": 106,
+   "real": 102,
+   "precision": 0.962
+  },
+  "surface_tetrahedrite": {
+   "checked": 9,
+   "real": 9,
+   "precision": 1.0
+  },
+  "surface_tricalcium_phosphate": {
+   "checked": 89,
+   "real": 86,
+   "precision": 0.966
+  }
+ },
+ "depth": {
+  "-16": {
+   "checked": 108,
+   "real": 30,
+   "precision": 0.278
+  },
+  "0": {
+   "checked": 2068,
+   "real": 1769,
+   "precision": 0.855
+  },
+  "16": {
+   "checked": 625,
+   "real": 571,
+   "precision": 0.914
+  },
+  "32": {
+   "checked": 231,
+   "real": 218,
+   "precision": 0.944
+  },
+  "48": {
+   "checked": 194,
+   "real": 190,
+   "precision": 0.979
+  },
+  "64": {
+   "checked": 1507,
+   "real": 1504,
+   "precision": 0.998
+  }
+ }
+}

@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "description": "Biome colours for the tfc-1.20 profile's biome raster layer and legend. This is our own UI design choice, not a port of any Java source: colours are grouped by terrain character so the map reads intuitively — blues for ocean/lake/river (darker with depth), sand/olive for coasts, greens for vegetated lowlands and hills, orange/red for dry canyons and badlands, and grey tones (tinted by kind) for mountains. Every id here is ported game data from src/data/tfc-1.20/biomes.json (net.dries007.tfc.world.layer.TFCLayers's biome registration, see src/worldgen/tfc-1.20/biome/ids.ts) — only the colour assigned to each id is a design decision. Packed as 0xRRGGBB decimal, matching src/render/colormap.ts's colorToCss.",
+    "profile": "tfc-1.20"
+  },
+  "colors": {
+    "tfc:ocean": 3108784,
+    "tfc:ocean_reef": 3122608,
+    "tfc:deep_ocean": 1919610,
+    "tfc:deep_ocean_trench": 1059400,
+    "tfc:lake": 4168662,
+    "tfc:river": 5227488,
+    "tfc:mountain_lake": 9426668,
+    "tfc:volcanic_mountain_lake": 9426668,
+    "tfc:old_mountain_lake": 9426668,
+    "tfc:oceanic_mountain_lake": 9426668,
+    "tfc:volcanic_oceanic_mountain_lake": 9426668,
+    "tfc:plateau_lake": 9426668,
+    "tfc:shore": 14271626,
+    "tfc:tidal_flats": 12102510,
+    "tfc:salt_marsh": 8163162,
+    "tfc:plains": 6991948,
+    "tfc:hills": 5609795,
+    "tfc:lowlands": 4156218,
+    "tfc:rolling_hills": 8171090,
+    "tfc:highlands": 3101235,
+    "tfc:low_canyons": 11887901,
+    "tfc:canyons": 10242586,
+    "tfc:badlands": 13789470,
+    "tfc:inverted_badlands": 12742746,
+    "tfc:plateau": 9083503,
+    "tfc:mountains": 9211020,
+    "tfc:old_mountains": 10259318,
+    "tfc:volcanic_mountains": 9064776,
+    "tfc:oceanic_mountains": 7375264,
+    "tfc:volcanic_oceanic_mountains": 6978186
+  }
+}

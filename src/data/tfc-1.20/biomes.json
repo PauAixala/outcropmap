@@ -1,0 +1,100 @@
+{
+  "_meta": {
+    "extraction_date": "2026-09-10T09:01:40.537Z",
+    "git_commit": "b158c9c968cad7afb99cea2c937b301ff275e2e6",
+    "source_repo": "$HOME/reference/tfc",
+    "tool_version": "1.0.0"
+  },
+  "biomes": {
+    "tfc:badlands": {
+      "id": "tfc:badlands"
+    },
+    "tfc:canyons": {
+      "id": "tfc:canyons"
+    },
+    "tfc:deep_ocean": {
+      "id": "tfc:deep_ocean"
+    },
+    "tfc:deep_ocean_trench": {
+      "id": "tfc:deep_ocean_trench"
+    },
+    "tfc:highlands": {
+      "id": "tfc:highlands"
+    },
+    "tfc:hills": {
+      "id": "tfc:hills"
+    },
+    "tfc:inverted_badlands": {
+      "id": "tfc:inverted_badlands"
+    },
+    "tfc:lake": {
+      "id": "tfc:lake"
+    },
+    "tfc:low_canyons": {
+      "id": "tfc:low_canyons"
+    },
+    "tfc:lowlands": {
+      "id": "tfc:lowlands"
+    },
+    "tfc:mountain_lake": {
+      "id": "tfc:mountain_lake"
+    },
+    "tfc:mountains": {
+      "id": "tfc:mountains"
+    },
+    "tfc:ocean": {
+      "id": "tfc:ocean"
+    },
+    "tfc:ocean_reef": {
+      "id": "tfc:ocean_reef"
+    },
+    "tfc:oceanic_mountain_lake": {
+      "id": "tfc:oceanic_mountain_lake"
+    },
+    "tfc:oceanic_mountains": {
+      "id": "tfc:oceanic_mountains"
+    },
+    "tfc:old_mountain_lake": {
+      "id": "tfc:old_mountain_lake"
+    },
+    "tfc:old_mountains": {
+      "id": "tfc:old_mountains"
+    },
+    "tfc:plains": {
+      "id": "tfc:plains"
+    },
+    "tfc:plateau": {
+      "id": "tfc:plateau"
+    },
+    "tfc:plateau_lake": {
+      "id": "tfc:plateau_lake"
+    },
+    "tfc:river": {
+      "id": "tfc:river"
+    },
+    "tfc:rolling_hills": {
+      "id": "tfc:rolling_hills"
+    },
+    "tfc:salt_marsh": {
+      "id": "tfc:salt_marsh"
+    },
+    "tfc:shore": {
+      "id": "tfc:shore"
+    },
+    "tfc:tidal_flats": {
+      "id": "tfc:tidal_flats"
+    },
+    "tfc:volcanic_mountain_lake": {
+      "id": "tfc:volcanic_mountain_lake"
+    },
+    "tfc:volcanic_mountains": {
+      "id": "tfc:volcanic_mountains"
+    },
+    "tfc:volcanic_oceanic_mountain_lake": {
+      "id": "tfc:volcanic_oceanic_mountain_lake"
+    },
+    "tfc:volcanic_oceanic_mountains": {
+      "id": "tfc:volcanic_oceanic_mountains"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": "src/test/java/net/dries007/tfc/drawing/RegionGeneratorTest.java#biomeColor (TFC 1.20.x)",
+  "viewerAliases": {
+    "tfc:salt_marsh": "tfc:lowlands",
+    "tfc:tidal_flats": "tfc:shore",
+    "tfc:volcanic_oceanic_mountain_lake": "tfc:oceanic_mountain_lake"
+  },
+  "colors": {
+    "tfc:ocean": 220,
+    "tfc:ocean_reef": 4628730,
+    "tfc:deep_ocean": 160,
+    "tfc:deep_ocean_trench": 80,
+    "tfc:lake": 1974015,
+    "tfc:mountain_lake": 11842815,
+    "tfc:oceanic_mountain_lake": 11842815,
+    "tfc:old_mountain_lake": 11842815,
+    "tfc:volcanic_mountain_lake": 11842815,
+    "tfc:plateau_lake": 11842815,
+    "tfc:river": 51455,
+    "tfc:oceanic_mountains": 16711935,
+    "tfc:volcanic_oceanic_mountains": 16711935,
+    "tfc:canyons": 11812095,
+    "tfc:low_canyons": 13135615,
+    "tfc:lowlands": 14456550,
+    "tfc:mountains": 16724530,
+    "tfc:volcanic_mountains": 16724530,
+    "tfc:old_mountains": 15754340,
+    "tfc:plateau": 13793400,
+    "tfc:badlands": 16750080,
+    "tfc:inverted_badlands": 15774720,
+    "tfc:shore": 15127170,
+    "tfc:highlands": 1331230,
+    "tfc:rolling_hills": 3302450,
+    "tfc:hills": 5276240,
+    "tfc:plains": 6604900,
+    "tfc:salt_marsh": 14456550,
+    "tfc:tidal_flats": 15127170,
+    "tfc:volcanic_oceanic_mountain_lake": 11842815
+  }
+}

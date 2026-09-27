@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "source": "<instance>/kubejs/data/minecraft/dimension/the_nether.json",
+    "extracted": "2026-09-13T19:17:16.765Z",
+    "dimension": "tfg:the_nether",
+    "note": "The Beneath is not a dimension of its own: the Beneath mod adds features to minecraft:the_nether and TerraFirmaGreg rebuilds that Nether with TFC machinery. This is that rebuild.",
+    "rocks": 14
+  },
+  "bottom": [
+    "blackstone"
+  ],
+  "layers": [
+    {
+      "id": "lowest",
+      "entries": [
+        [
+          "deepslate",
+          "bottom"
+        ]
+      ]
+    },
+    {
+      "id": "lower_b",
+      "entries": [
+        [
+          "gabbro",
+          "lowest"
+        ],
+        [
+          "granite",
+          "lowest"
+        ],
+        [
+          "tuff",
+          "lowest"
+        ]
+      ]
+    },
+    {
+      "id": "lower_a",
+      "entries": [
+        [
+          "diorite",
+          "lowest"
+        ],
+        [
+          "deepslate",
+          "lowest"
+        ]
+      ]
+    },
+    {
+      "id": "upper_b",
+      "entries": [
+        [
+          "schist",
+          "lower_a"
+        ],
+        [
+          "gneiss",
+          "lower_a"
+        ],
+        [
+          "tuff",
+          "lower_a"
+        ]
+      ]
+    },
+    {
+      "id": "upper_a",
+      "entries": [
+        [
+          "deepslate",
+          "lower_b"
+        ],
+        [
+          "dripstone",
+          "lower_b"
+        ],
+        [
+          "diorite",
+          "lower_b"
+        ]
+      ]
+    },
+    {
+      "id": "top",
+      "entries": [
+        [
+          "phyllite",
+          "upper_b"
+        ],
+        [
+          "schist",
+          "upper_a"
+        ],
+        [
+          "gneiss",
+          "upper_a"
+        ],
+        [
+          "marble",
+          "upper_b"
+        ],
+        [
+          "slate",
+          "upper_a"
+        ],
+        [
+          "deepslate",
+          "upper_b"
+        ],
+        [
+          "dripstone",
+          "upper_b"
+        ]
+      ]
+    }
+  ],
+  "oceanFloor": [
+    "top"
+  ],
+  "land": [
+    "top"
+  ],
+  "volcanic": [
+    "top"
+  ],
+  "uplift": [
+    "top"
+  ]
+}

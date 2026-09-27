@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "extraction_date": "2026-09-10T01:12:38.112Z",
+    "git_commit": null,
+    "source_repo": "<instance>",
+    "tool_version": "1.0.0"
+  },
+  "actions": {
+    "bend": 7,
+    "draw": -15,
+    "hit_hard": -9,
+    "hit_light": -3,
+    "hit_medium": -6,
+    "punch": 2,
+    "shrink": 16,
+    "upset": 13
+  }
+}

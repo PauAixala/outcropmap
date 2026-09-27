@@ -1,0 +1,2598 @@
+/* Theme tokens — the Anvil visual language (ADR 0008, docs/DESIGN.md).
+ * No colour may be hardcoded anywhere else in the project (ADR 0005).
+ *
+ * Elevation is a 3px bevel, not a border and never a blurred shadow: --bevel-hi on the top/left of
+ * a raised surface, --bevel-lo on its bottom/right, inverted for a sunken one. Radius is 0
+ * everywhere. Every size is a multiple of --grid-unit. */
+
+/* Silkscreen, SIL Open Font License 1.1 — vendored, never fetched at runtime (ADR 0004 bans remote
+ * assets). Licence text: src/ui/fonts/OFL.txt. The `latin` subset covers
+ * U+0000-00FF, so the backlogged Spanish locale's accented characters are already available. */
+@font-face {
+  font-family: 'Silkscreen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/silkscreen-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Silkscreen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/silkscreen-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+/* `hidden` must always win. The browser's own `[hidden] { display: none }` loses to any class that
+ * sets `display`, so an element hidden from script stayed on screen — the loading compass kept
+ * showing its empty chip after everything had loaded. One rule here instead of a `[hidden]` override
+ * next to every component that happens to use flex or grid. */
+[hidden] {
+  display: none !important;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces — whitewashed stone, not grey: the bevel needs a near-white panel to read against. */
+  --bg: #e7e4dc;
+  --bg-panel: #f4f2ec;
+  --bg-elevated: #fcfbf7;
+  --bg-sunk: #d9d5ca;
+  --bevel-hi: #ffffff;
+  --bevel-lo: #a8a08e;
+  --border: #a8a08e;
+  --text: #1d1a14;
+  --text-muted: #6a6355;
+
+  /* The page's ground: a wall of blocks (see `body`). Both are barely there on purpose -- the
+   * pattern sits under a diagram of thin lines and must not compete with it. */
+  --ground-seam: #00000033;
+  /* The wall's tile, as artwork used through a mask so its colours stay theme tokens.
+   * 96 px holds four blocks in two courses, the lower offset half a block -- that offset is
+   * what stops the pattern reading as squared paper. Grains are scattered by hand; a regular
+   * scatter is another grid. */
+  --ground-tile-lit: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='white'%3E%3Crect x='0' y='0' width='96' height='3'/%3E%3Crect x='0' y='48' width='96' height='3'/%3E%3Crect x='0' y='0' width='3' height='48'/%3E%3Crect x='48' y='0' width='3' height='48'/%3E%3Crect x='24' y='48' width='3' height='48'/%3E%3Crect x='72' y='48' width='3' height='48'/%3E%3Crect x='11' y='13' width='4' height='4'/%3E%3Crect x='35' y='31' width='3' height='3'/%3E%3Crect x='61' y='17' width='4' height='4'/%3E%3Crect x='83' y='37' width='3' height='3'/%3E%3Crect x='39' y='63' width='4' height='4'/%3E%3Crect x='59' y='81' width='3' height='3'/%3E%3Crect x='87' y='67' width='4' height='4'/%3E%3Crect x='9' y='79' width='3' height='3'/%3E%3C/g%3E%3C/svg%3E");
+  --ground-tile-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='white'%3E%3Crect x='0' y='45' width='96' height='3'/%3E%3Crect x='0' y='93' width='96' height='3'/%3E%3Crect x='45' y='0' width='3' height='45'/%3E%3Crect x='93' y='0' width='3' height='45'/%3E%3Crect x='21' y='48' width='3' height='45'/%3E%3Crect x='69' y='48' width='3' height='45'/%3E%3Crect x='18' y='22' width='5' height='5'/%3E%3Crect x='30' y='8' width='3' height='3'/%3E%3Crect x='68' y='30' width='5' height='5'/%3E%3Crect x='78' y='12' width='3' height='3'/%3E%3Crect x='46' y='70' width='5' height='5'/%3E%3Crect x='34' y='86' width='3' height='3'/%3E%3Crect x='90' y='78' width='4' height='4'/%3E%3Crect x='14' y='58' width='3' height='3'/%3E%3C/g%3E%3C/svg%3E");
+
+  --ground-bevel: #ffffffbb;
+  --ground-shade: #00000022;
+
+  /* Two accents, both semantic: green marks the active and the interactive, gold is reserved for
+   * numeric values. Neither is legible as body text on a panel — see docs/DESIGN.md section 2. */
+  --accent: #3ea832;
+  --accent-contrast: #08290a;
+  --accent-soft: #d9f0cf;
+  --value: #d98b0f;
+
+  /* Map chrome — data palettes live in src/data/palettes/ and are never restyled by the skin. */
+  --map-bg: #dedad0;
+  --map-grid: #00000024;
+  --map-grid-strong: #0000003f;
+  --map-label: #1d1a14;
+  --map-label-plate: #f4f2ec;
+  --marker-outline: #1d1a14;
+  /* Deposit markers on the `minerals` layer (src/render/canvas2d/painter.ts's paintDeposits). */
+  --marker-mineral: #d98b0f;
+
+  /* Waypoint marker colours (docs/PLAN.md 10b) — saturated enough to read on the light map. */
+  --wp-red: #e03a34;
+  --wp-orange: #f28311;
+  --wp-green: #17a55f;
+  --wp-blue: #2b71e3;
+  --wp-purple: #8f43e0;
+  --wp-pink: #e0327f;
+
+  /* Inset bevels drawn with box-shadow: a translucent black and white laid over whatever colour the
+   * control has, so one pair of tokens serves every theme (they used to be literals in the rules). */
+  --inset-shade: rgba(0, 0, 0, 0.3);
+  --inset-shade-soft: rgba(0, 0, 0, 0.32);
+  --inset-shade-deep: rgba(0, 0, 0, 0.42);
+  --inset-light: rgba(255, 255, 255, 0.28);
+  --inset-light-strong: rgba(255, 255, 255, 0.3);
+
+  /* Ore deposit markers on the map, one per ore family (src/render/markers.ts ORE_TOKEN_NAMES).
+   * Earthy, ore-like colours; the same in both themes because they name the rock, not the UI. */
+  --ore-tetrahedrite: #72514c;
+  --ore-malachite: #2e8b57;
+  --ore-copper: #b87333;
+  --ore-hematite: #9c4f42;
+  --ore-magnetite: #454b50;
+  --ore-limonite: #a66a2c;
+  --ore-iron: #8b5145;
+  --ore-cassiterite: #59636f;
+  --ore-tin: #89929b;
+  --ore-bismuth: #c18eaa;
+  --ore-sphalerite: #a58d3e;
+  --ore-zinc: #9ba3a1;
+  --ore-galena: #625c78;
+  --ore-lead: #6f7080;
+  --ore-garnierite: #6f9b63;
+  --ore-nickel: #9aa897;
+  --ore-gold: #d6ae32;
+  --ore-silver: #b7c0c8;
+  --ore-platinum: #c8c8d0;
+  --ore-lignite: #5b3a29;
+  --ore-graphite: #42434a;
+  --ore-coal: #292b30;
+  --ore-sulfur: #d8c92e;
+  --ore-gypsum: #e2d8c8;
+  --ore-sylvite: #d28dab;
+  --ore-halite: #e0a8b6;
+  --ore-saltpeter: #d7d1bd;
+  --ore-borax: #e5e0d2;
+  --ore-kaolin: #e8d8c7;
+  --ore-gravel: #77736c;
+  --ore-lapis: #3155a6;
+  --ore-lazurite: #3155a6;
+  --ore-sapphire: #2458b3;
+  --ore-ruby: #a82f4d;
+  --ore-emerald: #2f9a62;
+  --ore-diamond: #8fd6dc;
+  --ore-amethyst: #8e5bb7;
+  --ore-opal: #b9d8d2;
+  --ore-uranium: #88b83e;
+  --ore-chromite: #514650;
+  --ore-manganese: #624b64;
+  --ore-tungsten: #596470;
+  --ore-molybdenum: #637687;
+
+  /* Anvil catalogue markers, coloured by the metal the recipe works (src/ui/icons/metal-colours.ts).
+   * These are the metals' own colours as TerraFirmaCraft renders them, so the list reads as a
+   * legend a player already knows rather than as an arbitrary rainbow. */
+  --metal-copper: #b8622e;
+  --metal-bronze: #a9752f;
+  --metal-bismuth-bronze: #6f8f6a;
+  --metal-black-bronze: #6b4a6e;
+  --metal-brass: #b08b2c;
+  --metal-wrought-iron: #8a8a87;
+  --metal-cast-iron: #5d5c59;
+  --metal-steel: #6e747a;
+  --metal-black-steel: #3c3f45;
+  --metal-blue-steel: #3f5f96;
+  --metal-red-steel: #9a3b36;
+  --metal-stainless: #7f8c94;
+  --metal-gold: #d4a017;
+  --metal-rose-gold: #d08a72;
+  --metal-silver: #9aa3ad;
+  --metal-nickel: #9c9a7e;
+  --metal-zinc: #8e9aa0;
+  --metal-tin: #9fa8ae;
+  --metal-tin-alloy: #93999b;
+  --metal-lead: #5f6470;
+  --metal-bismuth: #7d94a8;
+
+  /* Forge mark — the anvil-and-hammer pixel art on the forge page. Steel and wood are the colour
+   * of an object rather than of chrome, so they barely move between themes; only the outline and
+   * the darkest faces lift in dark mode, so the mark does not dissolve into the stone ground.
+   * Sparks reuse --value and --wp-orange rather than inventing a third warm hue. */
+  --forge-line: #171717;
+  --forge-steel-hi: #8f959c;
+  --forge-steel: #6b7076;
+  --forge-steel-lo: #54585d;
+  --forge-steel-deep: #3e4247;
+  --forge-iron-hi: #f2f5f7;
+  --forge-iron: #d8dde3;
+  --forge-iron-lo: #aeb5bc;
+  --forge-wood: #a86b3d;
+  --forge-wood-lo: #7b4b2a;
+
+  /* Type: the pixel face sets labels, headings and buttons at 10/12/16px only, and never a
+   * sentence (docs/DESIGN.md section 4). Anything longer is --font-ui. */
+  --font-pixel: 'Silkscreen', 'Courier New', monospace;
+  --font-ui: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', 'SF Mono', Menlo, monospace;
+
+  /* Metrics. Everything is a multiple of --grid-unit; there is no 14, no 22, no 6. */
+  --grid-unit: 4px;
+  --bevel: 3px;
+  --row-h: 32px;
+
+  /* Layout, not colour — shared so the hover readout can stay clear of the side panel.
+   * Doubled to 880px to fit filter section. Responsive scaling below prevents excessive
+   * viewport consumption on smaller windows. */
+  --side-panel-width: min(880px, 45vw);
+}
+
+/* On very small windows, use a higher viewport percentage to ensure the side panel doesn't
+ * consume too much horizontal space while still remaining usable. At 900px window width,
+ * 60vw gives ~540px, allowing sufficient map area. The min() with 880px ensures we don't
+ * exceed the desktop width even at moderately small viewports. */
+@media (max-width: 900px) {
+  :root {
+    --side-panel-width: min(880px, 60vw);
+  }
+}
+
+/* Dark ground: stone. Only the tokens change — every component is styled through them. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+
+    --bg: #232529;
+    --bg-panel: #3a3d42;
+    --bg-elevated: #474b51;
+    --bg-sunk: #1b1d20;
+    --bevel-hi: #5f646b;
+    --bevel-lo: #191b1e;
+    --border: #191b1e;
+    --text: #e8e6df;
+    --text-muted: #b4b1a8;
+
+    /* Inverted for a dark ground: here the bevel is the lighter of the two. */
+    --ground-seam: #00000070;
+    --ground-bevel: #ffffff2b;
+    --ground-shade: #00000038;
+
+    --accent: #6cc24a;
+    --accent-contrast: #08210a;
+    --accent-soft: #2d4527;
+    --value: #f0aa3c;
+
+    --map-bg: #1b1d20;
+    --map-grid: #ffffff1c;
+    --map-grid-strong: #ffffff33;
+    --map-label: #e8e6df;
+    --map-label-plate: #1b1d20;
+    --marker-outline: #0d0e10;
+    --marker-mineral: #f0aa3c;
+
+    /* Brighter on the dark map so the same hues keep their contrast. */
+    --wp-red: #ff6b5e;
+    --wp-orange: #ffa63d;
+    --wp-green: #3ed489;
+    --wp-blue: #63a8ff;
+    --wp-purple: #b98cff;
+    --wp-pink: #ff6fae;
+    /* Lifted for the dark ground; the hue of each metal is unchanged. */
+    --metal-copper: #e0844a;
+    --metal-bronze: #d19a46;
+    --metal-bismuth-bronze: #93b88d;
+    --metal-black-bronze: #a077a4;
+    --metal-brass: #dcb245;
+    --metal-wrought-iron: #b6b6b2;
+    --metal-cast-iron: #8d8b86;
+    --metal-steel: #9aa1a8;
+    --metal-black-steel: #7a808a;
+    --metal-blue-steel: #6f95d6;
+    --metal-red-steel: #d1655e;
+    --metal-stainless: #a9b6bf;
+    --metal-gold: #f0c344;
+    --metal-rose-gold: #f0a992;
+    --metal-silver: #c2cad3;
+    --metal-nickel: #c4c2a2;
+    --metal-zinc: #b3bfc6;
+    --metal-tin: #c3ccd2;
+    --metal-tin-alloy: #b8bec0;
+    --metal-lead: #8b90a0;
+    --metal-bismuth: #a2bbd0;
+    --forge-line: #0d0e0f;
+    --forge-steel-hi: #9aa1a8;
+    --forge-steel: #767c83;
+    --forge-steel-lo: #5c6166;
+    --forge-steel-deep: #43474c;
+    --forge-iron-hi: #f6f8fa;
+    --forge-iron: #dde2e8;
+    --forge-iron-lo: #b6bdc4;
+    --forge-wood: #b4753f;
+    --forge-wood-lo: #85512c;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #232529;
+  --bg-panel: #3a3d42;
+  --bg-elevated: #474b51;
+  --bg-sunk: #1b1d20;
+  --bevel-hi: #5f646b;
+  --bevel-lo: #191b1e;
+  --border: #191b1e;
+  --text: #e8e6df;
+  --text-muted: #b4b1a8;
+
+  /* Inverted for a dark ground: here the bevel is the lighter of the two. */
+  --ground-seam: #00000070;
+  --ground-bevel: #ffffff2b;
+  --ground-shade: #00000038;
+
+  --accent: #6cc24a;
+  --accent-contrast: #08210a;
+  --accent-soft: #2d4527;
+  --value: #f0aa3c;
+
+  --map-bg: #1b1d20;
+  --map-grid: #ffffff1c;
+  --map-grid-strong: #ffffff33;
+  --map-label: #e8e6df;
+  --map-label-plate: #1b1d20;
+  --marker-outline: #0d0e10;
+  --marker-mineral: #f0aa3c;
+
+  /* Brighter on the dark map so the same hues keep their contrast. */
+  --wp-red: #ff6b5e;
+  --wp-orange: #ffa63d;
+  --wp-green: #3ed489;
+  --wp-blue: #63a8ff;
+  --wp-purple: #b98cff;
+  --wp-pink: #ff6fae;
+  /* Lifted for the dark ground; the hue of each metal is unchanged. */
+  --metal-copper: #e0844a;
+  --metal-bronze: #d19a46;
+  --metal-bismuth-bronze: #93b88d;
+  --metal-black-bronze: #a077a4;
+  --metal-brass: #dcb245;
+  --metal-wrought-iron: #b6b6b2;
+  --metal-cast-iron: #8d8b86;
+  --metal-steel: #9aa1a8;
+  --metal-black-steel: #7a808a;
+  --metal-blue-steel: #6f95d6;
+  --metal-red-steel: #d1655e;
+  --metal-stainless: #a9b6bf;
+  --metal-gold: #f0c344;
+  --metal-rose-gold: #f0a992;
+  --metal-silver: #c2cad3;
+  --metal-nickel: #c4c2a2;
+  --metal-zinc: #b3bfc6;
+  --metal-tin: #c3ccd2;
+  --metal-tin-alloy: #b8bec0;
+  --metal-lead: #8b90a0;
+  --metal-bismuth: #a2bbd0;
+  --forge-line: #0d0e0f;
+  --forge-steel-hi: #9aa1a8;
+  --forge-steel: #767c83;
+  --forge-steel-lo: #5c6166;
+  --forge-steel-deep: #43474c;
+  --forge-iron-hi: #f6f8fa;
+  --forge-iron: #dde2e8;
+  --forge-iron-lo: #b6bdc4;
+  --forge-wood: #b4753f;
+  --forge-wood-lo: #85512c;
+}
+
+/* Bevel utilities — the only two elevation states there are (docs/DESIGN.md section 3). */
+.raised {
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-hi),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-lo);
+}
+.sunken {
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-lo),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-hi);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* A wall of blocks.
+ *
+ * The first version was gradients alone: a 32 px grid with a light edge on each cell. It was
+ * *technically* a wall and it read as graph paper -- Pau, twice: "pero si es gris", then the same
+ * grid at four times the contrast still looked like squared paper. A uniform grid of identical
+ * cells with thin edges reads as lines however dark you make them, because what says "blocks" is
+ * relief and irregularity, not ruling.
+ *
+ * So the pattern is a **tile drawn as artwork and used as a mask**, which is what lets it have
+ * bevels, speckles and offset courses while still taking its colours from theme tokens (ADR 0005):
+ * each layer is a solid `background-color: var(--ground-*)` with the tile masking where it lands.
+ * A data URI is local, so nothing is fetched at runtime (ADR 0004), and the tile is our own drawing
+ * like every other glyph here (AGENTS.md section 8).
+ *
+ * Two layers, because a cube face needs both: the lit top-and-left plus a few bright speckles, and
+ * the shaded bottom-and-right plus a few dark ones. The courses are offset by half a block every
+ * other row, which is the cue that finally breaks the grid.
+ */
+body {
+  position: relative;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  mask-repeat: repeat;
+  mask-size: 96px 96px;
+  -webkit-mask-repeat: repeat;
+  -webkit-mask-size: 96px 96px;
+}
+
+/* The lit edges: top and left of every block, and a scatter of bright grains. */
+body::before {
+  background-color: var(--ground-bevel);
+  mask-image: var(--ground-tile-lit);
+  -webkit-mask-image: var(--ground-tile-lit);
+}
+
+/* The shaded edges: bottom and right, and the dark grains. */
+body::after {
+  background-color: var(--ground-shade);
+  mask-image: var(--ground-tile-dark);
+  -webkit-mask-image: var(--ground-tile-dark);
+}
+
+.map-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* Same reasoning as `.side-panel`'s `min-height: 0` above -- keeps this grid cell bound to the
+   * row's computed height instead of any intrinsic canvas size. */
+  min-height: 0;
+  min-width: 0;
+  background: var(--map-bg);
+  touch-action: none;
+}
+
+/* --- Shared shell layout (Phase 1) --- */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* The map page is a single-screen app: header + a map/side-panel row that exactly fills the
+ * viewport. Without this, the side panel's own content (layers, filter, legend -- routinely taller
+ * than the viewport) sized its grid row to fit itself, which grew `.app-main` past the viewport
+ * height and put a document-level scrollbar on the whole page, pushing the map out of view
+ * (docs/FEEDBACK.md, "the whole page scrolls"). `overflow: hidden` here means only a region that
+ * declares its own `overflow-y: auto` -- the side panel -- ever scrolls; the forge page
+ * (`.app--forge`) is intentionally left alone below, since its layout is a set of stacked panels
+ * meant to scroll as a page. */
+.app--map {
+  overflow: hidden;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+
+.app-header__title {
+  font-weight: 600;
+}
+
+.app-header__nav {
+  display: flex;
+  gap: 4px;
+}
+
+/* Page tabs. Raised = somewhere you can go, pressed = where you are. Same bevel vocabulary as every
+   other control (ADR 0008), so the pair reads as a physical switch. */
+.app-tab {
+  padding: 0.35rem 0.9rem;
+  color: var(--text);
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-decoration: none;
+  background: var(--bg-elevated);
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-hi),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-lo);
+}
+
+.app-tab:hover:not([data-current='true']) {
+  background-color: color-mix(in srgb, var(--accent) 16%, var(--bg-elevated));
+}
+
+.app-tab:active:not([data-current='true']) {
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-lo),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-hi);
+}
+
+.app-tab[data-current='true'] {
+  color: var(--accent-contrast);
+  background: var(--accent);
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--inset-shade),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--inset-light);
+  cursor: default;
+}
+
+/* The licence notice: present and reachable, but not competing with the controls. */
+.app-header__legal {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.app-header__legal:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* Header buttons share the app's bevel; the first of them takes the slack so the pair sits right. */
+.app-header__button {
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+  padding: 0.3rem 0.6rem;
+}
+
+.app-header__button + .app-header__button {
+  margin-left: 4px;
+}
+
+
+
+.app-main {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+}
+
+.app--map .app-main {
+  display: grid;
+  grid-template-columns: 1fr var(--side-panel-width);
+  /* Without an explicit row size, a grid row sizes to the tallest item's own content -- exactly
+   * what let the side panel's content grow this whole box past the viewport (see `.app--map`'s
+   * comment above). `minmax(0, 1fr)` instead fills the flex-computed height of `.app-main` itself
+   * and lets each grid item's own overflow rule (`.side-panel`'s `overflow-y: auto`) handle content
+   * taller than that. */
+  grid-template-rows: minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.app--forge .app-main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border);
+}
+
+.side-panel {
+  overflow-y: auto;
+  /* Grid items default to `min-height: auto`/`min-width: auto` (their content's intrinsic size),
+   * which would otherwise force this cell -- and therefore the row -- to grow to fit the panel's
+   * content instead of respecting `overflow-y: auto`. Zeroing both is what actually makes this the
+   * one scrollable region (see `.app--map .app-main`'s comment). */
+  min-height: 0;
+  min-width: 0;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-panel);
+}
+
+.panel h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.field-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Seed, profile and dimension on one line. Each field keeps its own label, stacked above its
+   control, so the row reads as three labelled fields rather than one run-on sentence. */
+.world-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.5rem 0.75rem;
+}
+
+.world-row__field {
+  flex: 1 1 8rem;
+  min-width: 0;
+}
+
+/* A seed is longer than a profile name, so it gets the slack when the row has room. */
+.world-row__field--seed {
+  flex: 2 1 10rem;
+}
+
+.world-row__field .field-label input,
+.world-row__field .field-label select {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Every text box, number box, dropdown and button in the app, in one place.
+ *
+ * docs/DESIGN.md section 3 is the contract: a 3px bevel is the entire elevation system, radius is
+ * always 0, and there are no 1px borders. A control you type into is a well cut into the panel
+ * (dark edge top-left); a button stands proud until you press it, and a pressed button is the same
+ * bevel inverted -- nothing moves.
+ *
+ * The bevel is drawn with inset shadows rather than borders so it never changes the box's size, and
+ * `border: 0` removes the UA border underneath it. */
+.field-label input,
+.field-label select,
+input[type='text'],
+input[type='number'],
+input[type='search'],
+select,
+textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 0;
+  border-radius: 0;
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-lo),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-hi);
+  padding: 0.35rem 0.5rem;
+}
+
+/* Focus recolours the shadowed edge rather than adding a ring, so the control keeps its footprint
+   and the accent reads as light falling into the well. */
+.field-label input:focus-visible,
+.field-label select:focus-visible,
+input[type='text']:focus-visible,
+input[type='number']:focus-visible,
+input[type='search']:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--accent),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-hi);
+}
+
+/* Deliberately the bare `button` element rather than a list of classes, so a button added later is
+   bevelled by default instead of quietly shipping as a browser default. The few buttons that are
+   not chrome -- a bare glyph, a colour swatch -- opt out below or set their own bevel. */
+button {
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-hi),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-lo);
+}
+
+button:active:not(:disabled) {
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-lo),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-hi);
+}
+
+/* Hover tints the face instead of adding another edge -- a second ring would fight the bevel. */
+button:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--accent) 14%, var(--bg-elevated));
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* A bare glyph in a dense row would read as a raised tile, which it is not. */
+.waypoint-row__delete,
+.waypoint-row__delete:hover {
+  background: none;
+  box-shadow: none;
+}
+
+/* Some buttons carry meaning in their fill -- a colour swatch, the pin showing a waypoint's colour,
+   a selected icon, a primary action. Tinting those on hover would misreport the very thing they
+   encode, so they keep their own fill. The `button` prefix is there to match the blanket hover
+   rule's specificity rather than to select anything extra. */
+button.waypoint-colour-btn:hover,
+button.waypoint-row__pin:hover,
+button.waypoint-icon-btn[aria-pressed='true']:hover {
+  background-color: var(--waypoint-colour, var(--accent));
+}
+
+button.forge-btn--primary:hover:not(:disabled),
+button.measure-btn--active:hover:not(:disabled) {
+  background-color: var(--accent);
+}
+
+.waypoint-picker-group {
+  display: grid;
+  gap: 12px;
+}
+
+.waypoint-picker {
+  display: flex;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* The glyphs and swatches speak for themselves on screen; the legend stays in the DOM so the
+   fieldset is still named for assistive tech. */
+.waypoint-picker legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* A 32px slot holding a 16px glyph — glyphs render at 16 or 32 CSS px only (docs/DESIGN.md 6). */
+.waypoint-icon-btn {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  padding: 0;
+  color: var(--text-muted);
+  background: var(--bg-sunk);
+  border: 0;
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-lo),
+    inset -2px -2px 0 var(--bevel-hi);
+}
+
+.waypoint-icon-btn svg,
+.waypoint-list__centre svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  shape-rendering: crispedges;
+}
+
+/* Selected: the button becomes a miniature of the marker the map will draw — the waypoint colour
+   behind the same glyph, with the marker's own dark edge. */
+.waypoint-icon-btn[aria-pressed='true'] {
+  color: var(--accent-contrast);
+  background: var(--waypoint-colour, var(--accent));
+  box-shadow: inset 0 0 0 3px var(--bevel-lo);
+}
+
+/* Same 32px square as the icon buttons above, so the two pickers line up as one grid. */
+.waypoint-colour-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: var(--waypoint-colour);
+  box-shadow: inset 0 0 0 2px var(--bevel-lo);
+}
+
+.waypoint-colour-btn[aria-pressed='true'] {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.waypoint-transfer {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 8px;
+}
+
+/* Collapses when empty. It used to reserve a line for a message that is absent nearly all the time,
+   which left a visible hole between the colour picker and the list. */
+.waypoint-status:empty {
+  display: none;
+}
+
+.waypoint-status {
+  margin: 0.25rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.waypoint-list {
+  display: grid;
+  gap: 2px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.waypoint-list__empty {
+  padding: 8px 0;
+  color: var(--text-muted);
+}
+
+/* One line, 32px tall: pin, name, X/Z, delete. The colour lives in the pin, not in a rail down the
+   side of the row (docs/PLAN.md 10c P2). */
+.waypoint-row {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) auto 20px;
+  gap: 8px;
+  align-items: center;
+  height: var(--row-h);
+  padding: 0 4px;
+}
+
+.waypoint-row[data-selected='true'] {
+  background: var(--bg-sunk);
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-lo),
+    inset -2px -2px 0 var(--bevel-hi);
+}
+
+.waypoint-row__pin {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  place-items: center;
+  color: var(--accent-contrast);
+  cursor: pointer;
+  background: var(--waypoint-colour);
+  border: 0;
+  box-shadow: inset 0 0 0 2px var(--bevel-lo);
+}
+
+.waypoint-row__pin svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  shape-rendering: crispedges;
+}
+
+.waypoint-row__name {
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  font: inherit;
+  color: var(--text);
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: text;
+  background: none;
+  border: 0;
+}
+
+.waypoint-row__name[data-unnamed='true'] {
+  color: var(--text-muted);
+}
+
+.waypoint-row__input {
+  min-width: 0;
+  height: 24px;
+  padding: 0 6px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 0;
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-lo),
+    inset -2px -2px 0 var(--bevel-hi);
+}
+
+.waypoint-row__xz {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.waypoint-row__delete {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.waypoint-row__delete:hover {
+  color: var(--wp-red);
+}
+
+.waypoint-icon-btn:hover,
+.waypoint-colour-btn:hover {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.layer-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  color: var(--text);
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.layer-row__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.layer-row__opacity {
+  flex: 1 1 6rem;
+  min-width: 4rem;
+  max-width: 8rem;
+}
+
+.panel details {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.panel summary {
+  cursor: pointer;
+}
+
+/* "Advanced world settings" disclosure (FEEDBACK.md section 4) -- the whole settings panel lives
+ * behind this, collapsed by default, since most users never touch TFC's world-preset fields. */
+/* Collapsible side-panel sections (docs/PLAN.md 10c P2). The disclosure itself is native
+   <details>; these rules only give the summary the Anvil section-header treatment. */
+.panel-section {
+  margin: 0;
+  border-bottom: 2px solid var(--bevel-lo);
+  box-shadow: 0 1px 0 var(--bevel-hi);
+}
+
+.panel-section:last-child {
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.panel-section__summary,
+.world-settings summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+}
+
+.panel-section__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: var(--accent);
+  shape-rendering: crispedges;
+}
+
+.panel-section__summary::-webkit-details-marker,
+.world-settings summary::-webkit-details-marker {
+  display: none;
+}
+
+/* The marker is drawn here so it sits on the 4px grid and matches the pixel face. */
+.panel-section__summary::before,
+.world-settings summary::before {
+  width: 12px;
+  margin-right: 8px;
+  font-size: 9px;
+  color: var(--text-muted);
+  content: '▶';
+}
+
+.panel-section[open] > .panel-section__summary::before,
+.world-settings[open] summary::before {
+  content: '▼';
+}
+
+.panel-section__body {
+  padding: 0 0 12px;
+}
+
+.world-settings {
+  margin: 0;
+}
+
+.world-settings[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+/* One setting per row, label above field -- the previous version of this rule did not exist at
+ * all (the class was referenced from panels.ts but never styled), which left each `<label>` at
+ * its inline default and let two adjacent rows overlap (FEEDBACK.md section 4's layout bug). */
+.setting-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.setting-row__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.setting-row__label {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.setting-row__unit {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.setting-row input[type='number'] {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.setting-row__hint {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+/* --- Filter panel (docs/FEEDBACK.md, Pau's rock/temperature/rainfall/biome request) ---
+ * Retuned for the 880px side panel (up from the original 440px): the rock and biome checklists lay
+ * out in as many columns as fit rather than one cramped narrow column, each bounded to a sensible
+ * height with its own scrollbar, and every group (rock / biome / temperature+rainfall / ore) reads
+ * as a distinct section separated by a rule instead of running together. */
+
+.filter-intro {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.filter-subheading {
+  margin: 0.6rem 0 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* One criterion group (rock, biome). Visually separated from the next by a top rule -- except the
+ * first, which already has the intro paragraph above it. */
+.filter-section {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+.filter-section > summary {
+  cursor: pointer;
+  /* `outside` hangs the marker into the panel's padding, level with the panel's own title. These
+     are sub-sections of the filter, so the marker sits inside the text column and indented. */
+  list-style-position: inside;
+  padding-left: 0.5rem;
+}
+
+.filter-section__body {
+  padding-top: 0.35rem;
+}
+
+.filter-section:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* Subheading plus the "select all"/"select none" pair, on one line next to it. */
+.filter-section-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  justify-content: flex-end;
+}
+
+.ore-swatch {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--marker-outline);
+}
+
+.filter-section-head .filter-subheading {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.filter-select-btn {
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  padding: 0.15rem 0.55rem;
+  cursor: pointer;
+}
+
+.filter-select-btn:hover {
+  color: var(--text);
+}
+
+/* Rock and biome checklists share this: as many columns as fit the panel width, bounded to a fixed
+ * height with its own internal scrollbar once a list runs longer than that -- so a long biome list
+ * never pushes the rest of the filter panel (or the side panel itself) further down than it needs
+ * to (see also `.side-panel`'s own scroll region in the shared shell layout above). */
+.filter-ore__search {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* The accuracy floor sits under the ore list: a trade of coverage for certainty, not a criterion. */
+.filter-accuracy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.filter-accuracy__select {
+  flex: 0 0 auto;
+}
+
+.filter-accuracy__note {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--color-text-muted);
+  font-size: 0.8em;
+}
+
+.filter-checklist {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0.3rem 0.6rem;
+  max-height: 15rem;
+  overflow-y: auto;
+  border: 0;
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-lo),
+    inset -2px -2px 0 var(--bevel-hi);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0 0.6rem;
+}
+
+.filter-checklist li {
+  padding: 0.15rem 0;
+  min-width: 0;
+}
+
+.filter-checklist label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  min-width: 0;
+}
+
+/* Name, and an optional second line of detail under it (an ore's yields). Both clip to one line
+   with an ellipsis; the label's `title` carries the full text on hover. Clipping instead of
+   wrapping is what keeps the columns lined up — a wrapped row was three lines tall next to a
+   one-line neighbour, which is what made the list read as a jumble. */
+.filter-checklist__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.2;
+}
+
+.filter-checklist__name,
+.filter-checklist__detail {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.filter-checklist__detail {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Top-aligned, so a one-line row sits level with the first line of a two-line neighbour instead of
+   floating in the middle of it. The nudges put the checkbox and swatch on that first line's centre. */
+.filter-checklist label {
+  align-items: flex-start;
+}
+
+.filter-checklist input[type='checkbox'] {
+  flex: none;
+  margin-top: 0.1rem;
+}
+
+.filter-checklist .ore-swatch {
+  flex: none;
+  margin-top: 0.2rem;
+}
+
+/* Temperature and rainfall side by side at this width instead of stacked -- there is room, and it
+ * reads as one "climate" group rather than two unrelated rows. */
+.filter-ranges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Heading and both inputs on one line. The heading has a fixed basis so "Temperature (°C)" and
+   "Rainfall (mm)" put their inputs in the same column. */
+.filter-range-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1 1 100%;
+  margin: 0;
+}
+
+.filter-range-row > .filter-subheading {
+  flex: 0 0 9rem;
+  margin: 0;
+}
+
+.filter-range-row__inputs {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.filter-range-row__inputs input[type='number'] {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.filter-ore {
+  margin: 0.85rem 0 0;
+  padding: 0.85rem 0 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.filter-ore__note {
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.filter-clear {
+  margin-top: 0.6rem;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+}
+
+.filter-clear:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.filter-clear:disabled {
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.scale-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  background: var(--bg-elevated);
+  border: 0;
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-lo),
+    inset -2px -2px 0 var(--bevel-hi);
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+}
+
+.scale-bar__bar {
+  height: 4px;
+  background: var(--map-label);
+}
+
+.scale-bar__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.coord-readout {
+  position: absolute;
+  /* Clear of the side panel column, not the whole `.app-main` box it's a sibling of — see
+   * docs/FEEDBACK.md 3c ("keep it out of the way of the map"). */
+  right: calc(var(--side-panel-width) + 0.75rem);
+  bottom: 0.75rem;
+  background: var(--bg-elevated);
+  border: 0;
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-lo),
+    inset -2px -2px 0 var(--bevel-hi);
+  padding: 0.5rem 0.7rem;
+  font-size: 0.78rem;
+  pointer-events: none;
+  max-width: min(45rem, calc(100% - var(--side-panel-width) - 1.5rem));
+  max-height: calc(100% - 1.5rem);
+  overflow-y: auto;
+}
+
+.coord-readout[hidden] {
+  display: none;
+}
+
+/* Pinned: it stays where it was clicked, so it has to be clickable (its close control) and it
+   needs to read as a deliberate object rather than a passing tooltip. */
+.coord-readout[data-pinned='true'] {
+  pointer-events: auto;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--bevel-lo) 70%, transparent);
+}
+
+.coord-readout__close {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: -2px -4px 0 4px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.coord-readout__close:hover {
+  color: var(--text);
+}
+
+.hover-readout__group + .hover-readout__group {
+  margin-top: 0.45rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--border);
+}
+
+.hover-readout__heading {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.hover-readout__rows {
+  margin: 0.2rem 0 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0 0.75rem;
+  align-items: baseline;
+}
+
+.hover-readout__row {
+  display: contents;
+}
+
+.hover-readout__label,
+.hover-readout__value {
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.hover-readout__label {
+  color: var(--text-muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.hover-readout__value {
+  color: var(--text);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.hover-readout__empty {
+  margin: 0.2rem 0 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------------------
+ * Forging calculator panels (docs/PLAN.md section 14) — custom recipe editor +
+ * saved recipes list, same plain-panel language as the map's filter panel.
+ * ------------------------------------------------------------------------- */
+
+.forge-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.forge-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.forge-hint {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+/* Mirrors `.filter-subheading` so the two pages read alike. */
+.forge-subheading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* One row per possible rule (max three), action + position side by side; an empty row means no rule. */
+.forge-rules,
+.forge-rule-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* A rule slot: the step number, then the action buttons. The number *is* the position -- slot 1 is
+   the third-from-last step, slot 3 the last -- so there is nothing else to choose. */
+.forge-rule-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Rule slots are a stack of equal blocks; give them the same breathing room between slots that
+   the buttons have inside one, so the three read as three and not as one nine-row grid. */
+.forge-rule-grid {
+  gap: 0.7rem;
+}
+
+/* Rules of a saved recipe the three slots cannot hold (ANY, NOT_LAST, a second rule for one step):
+   read-only, and plainly apart from the slots so nobody mistakes them for editable. */
+.forge-rules-extra__list {
+  margin: 0.2rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.forge-rule-row__step {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--accent-contrast);
+  background: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+}
+
+/* Nine actions in three equal columns: wrapping left them ragged (six then three), and a rule
+   slot is a single choice among nine, so the nine read better as one block than as a sentence. */
+.forge-rule-row__actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.forge-action-btn {
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  font: inherit;
+  font-size: 0.75rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+}
+
+/* The work delta, set apart from the verb: "Draw" means nothing until you know it is -15. */
+.forge-action-btn__delta {
+  margin-left: 0.4em;
+  opacity: 0.68;
+  font-variant-numeric: tabular-nums;
+}
+
+.forge-action-btn__delta:empty {
+  margin-left: 0;
+}
+
+.forge-action-btn[aria-pressed='true'] {
+  color: var(--accent-contrast);
+  background: var(--accent);
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--inset-shade),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--inset-light);
+}
+
+.forge-action-btn[aria-pressed='true']:hover:not(:disabled) {
+  background-color: var(--accent);
+}
+
+.forge-form__buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* House button style (cf. `.filter-select-btn`), sized for a primary action row. */
+.forge-btn {
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+}
+
+.forge-btn:hover:not(:disabled) {
+  color: var(--text);
+}
+
+.forge-btn--primary {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+/* Status line under the form / list. `--error` uses red; --wp-red is the only red token in this
+ * theme (ADR 0005), so it doubles for error text here too. */
+.forge-status {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.forge-status--error {
+  color: var(--wp-red);
+}
+
+.forge-list-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* Saved recipes list, bounded with its own scroll like `.filter-checklist`. */
+.forge-recipe-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  max-height: 16rem;
+  overflow-y: auto;
+  border: 0;
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-lo),
+    inset -2px -2px 0 var(--bevel-hi);
+}
+
+.forge-recipe-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.forge-recipe-item:last-child {
+  border-bottom: none;
+}
+
+.forge-recipe-item__info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.forge-recipe-item__name {
+  font-size: 0.88rem;
+  color: var(--text);
+  word-break: break-word; /* long names wrap instead of overflowing the item */
+}
+
+.forge-recipe-item__meta {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.forge-recipe-item__actions {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+/* Empty-state row, rendered as an <li> so the list markup stays valid. */
+.forge-list__empty {
+  margin: 0;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* --- Forge workshop visual pass -------------------------------------------------------------- */
+
+.app--forge {
+  height: auto;
+  min-height: 100%;
+}
+
+.app--forge .app-main {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 1.25rem;
+  width: min(72rem, 100%);
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 2.5rem) 3rem;
+  /* Flat ground. A soft radial wash is the one thing in the app that is not a hard-edged surface,
+     and it fought the pixel language everywhere else (ADR 0008). */
+  background: var(--bg);
+}
+
+.app--forge .panel {
+  padding: clamp(1.1rem, 2.5vw, 1.75rem);
+  border: 0;
+  background: var(--bg-panel);
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-hi),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-lo);
+}
+
+.app--forge .panel:empty {
+  display: none;
+}
+
+.app--forge .panel h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.forge-heading__icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: var(--accent);
+  shape-rendering: crispEdges;
+}
+
+.forge-hero {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.85fr);
+  align-items: center;
+  overflow: hidden;
+  /* Compact on purpose: the calculator is the page, and a tall hero pushed the recipe list below
+     the first screen on a 1000 px tall window. */
+  padding: clamp(1.25rem, 2.5vw, 2.25rem) clamp(1.25rem, 4vw, 3.5rem);
+  border: 0;
+  background: var(--bg-panel);
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-hi),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-lo);
+}
+
+.forge-hero__copy {
+  position: relative;
+  z-index: 1;
+}
+
+.forge-hero h1 {
+  max-width: 14ch;
+  margin: 0;
+  font-family: var(--font-pixel);
+  font-size: clamp(1.75rem, 3.2vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+}
+
+.forge-hero__body {
+  max-width: 38rem;
+  margin: 1.15rem 0 0;
+  color: var(--text-muted);
+  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  line-height: 1.65;
+}
+
+/* The mark fills its column rather than sitting in the middle of it at a fixed 13rem, which left a
+ * 208 px drawing in a 288 px slot inside a 1 072 px panel and read as an afterthought.
+ *
+ * Widening the slot was only half of it: the artwork used 42% of its own viewBox, so it stayed
+ * small whatever the slot. The viewBox is cropped to the drawing now (see the note in the file),
+ * which also makes it landscape rather than square — so a wide mark no longer drags the hero's
+ * height up with it, and the calculator stays on the first screen. */
+.forge-hero__mark {
+  width: 100%;
+  max-width: 30rem;
+  justify-self: end;
+}
+
+.forge-hero__mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.forge-catalog {
+  grid-column: 1 / -1;
+}
+
+.forge-catalog__controls {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.4fr) minmax(9rem, 0.35fr) minmax(10rem, 0.6fr);
+  gap: 0.75rem;
+}
+
+.forge-catalog__count {
+  margin: 0.75rem 0 0.45rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.forge-catalog__browser {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.75fr) minmax(0, 1.25fr);
+  min-height: 22rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.forge-catalog__list {
+  max-height: 28rem;
+  overflow-y: auto;
+  padding: 0.4rem;
+  border-right: 1px solid var(--border);
+}
+
+.forge-catalog__recipe {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.82rem;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.forge-catalog__recipe:hover,
+.forge-catalog__recipe--selected {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.forge-catalog__recipe--selected {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.forge-catalog__recipe:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.forge-catalog__detail {
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 1.6rem);
+}
+
+.forge-catalog__detail:empty {
+  display: none;
+}
+
+.forge-catalog__detail h4 {
+  margin: 0;
+  font-family: var(--font-pixel);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  line-height: 1.15;
+}
+
+.forge-catalog__tier {
+  display: inline-block;
+  margin-top: 0.55rem;
+  padding: 0.25rem 0.5rem;
+  background: color-mix(in srgb, var(--accent) 13%, transparent);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.forge-catalog__fields {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.45rem 0.9rem;
+  margin: 1.2rem 0;
+  padding: 1rem 0;
+  border-block: 1px solid var(--border);
+  font-size: 0.8rem;
+}
+
+.forge-catalog__fields dt {
+  color: var(--text-muted);
+  font-weight: 650;
+}
+
+.forge-catalog__fields dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-family: var(--font-mono);
+  color: var(--text);
+}
+
+.forge-catalog__empty {
+  margin: 0;
+  padding: 1rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.forge-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(9rem, 0.38fr);
+  gap: 1rem;
+}
+
+.forge-field--notes,
+.forge-rules,
+.forge-form__buttons {
+  grid-column: 1 / -1;
+}
+
+.forge-field input,
+.forge-field textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  padding: 0.65rem 0.75rem;
+}
+
+.forge-field textarea {
+  min-height: 5.5rem;
+  resize: vertical;
+}
+
+.forge-field input:focus-visible,
+.forge-field textarea:focus-visible,
+.forge-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.forge-rules {
+  margin-top: 0.25rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.forge-form__buttons {
+  padding-top: 0.25rem;
+}
+
+.forge-btn {
+  padding: 0.55rem 0.85rem;
+}
+
+.forge-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.forge-recipe-list {
+  border: 0;
+}
+
+.forge-recipe-item {
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.forge-recipe-item:last-child {
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.forge-list__empty {
+  padding: 1.4rem;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .app--forge .app-main,
+  .forge-hero,
+  .forge-form {
+    grid-template-columns: 1fr;
+  }
+
+  .forge-hero {
+    min-height: 0;
+  }
+
+  .forge-hero__mark {
+    width: min(15rem, 70vw);
+    justify-self: center;
+    order: -1;
+  }
+
+  .forge-catalog,
+  .forge-catalog__controls,
+  .forge-catalog__browser {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .forge-catalog__list {
+    max-height: 14rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .forge-field--notes,
+  .forge-rules,
+  .forge-form__buttons {
+    grid-column: auto;
+  }
+
+  .forge-recipe-item {
+    flex-direction: column;
+  }
+
+  .forge-recipe-item__actions {
+    align-self: flex-start;
+  }
+}
+
+
+.forge-solve__target {
+  /* Wide enough for the "40 to 113" range hint and any three-digit value. */
+  width: 10rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.forge-solve__hint,
+.forge-solve__error {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.forge-solve__error {
+  color: var(--wp-red);
+}
+
+.forge-solve__heading {
+  margin: 0;
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  color: var(--text);
+}
+
+.forge-steps {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: forge-step;
+}
+
+.forge-step {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 8px;
+  background: var(--bg-sunk);
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-hi),
+    inset -2px -2px 0 var(--bevel-lo);
+  counter-increment: forge-step;
+}
+
+.forge-step::before {
+  flex: 0 0 24px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: right;
+  content: counter(forge-step);
+}
+
+/* The last three steps are the ones the rules govern, so they are lifted and labelled. */
+.forge-step[data-final='true'] {
+  background: var(--accent-soft);
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-hi),
+    inset -2px -2px 0 var(--bevel-lo),
+    inset 0 0 0 3px var(--accent);
+}
+
+.forge-step[data-final='true']::before {
+  color: var(--accent);
+}
+
+.forge-step__action {
+  min-width: 0;
+  flex: 1 1 auto;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.forge-step__badge {
+  flex: 0 0 auto;
+  padding: 3px 4px 1px;
+  margin-left: 8px;
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  color: var(--accent-contrast);
+  background: var(--accent);
+  white-space: nowrap;
+}
+
+.forge-step[data-badge='true'] {
+  display: flex;
+}
+
+.forge-step__delta {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .forge-step {
+    flex-wrap: wrap;
+  }
+
+  .forge-step__delta {
+    margin-left: 32px;
+  }
+}
+
+.forge-workbar {
+  display: grid;
+  gap: 4px;
+}
+
+.forge-workbar__track {
+  height: 12px;
+  background: var(--bg-sunk);
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-lo),
+    inset -2px -2px 0 var(--bevel-hi);
+}
+
+.forge-workbar__fill {
+  height: 100%;
+  background: var(--accent);
+}
+
+.forge-workbar__caption {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+/* ---- Recipe category glyphs (docs/PLAN.md 10c P3) ----------------------- */
+
+/* A sunken socket holding a 16px glyph -- an inventory slot, in the Anvil grammar. */
+.forge-catalog__glyph {
+  display: grid;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  color: var(--text-muted);
+  background: var(--bg-sunk);
+  box-shadow:
+    inset 2px 2px 0 var(--bevel-lo),
+    inset -2px -2px 0 var(--bevel-hi);
+}
+
+.forge-catalog__glyph svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  shape-rendering: crispedges;
+}
+
+.forge-catalog__glyph--large {
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+}
+
+.forge-catalog__recipe {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.forge-catalog__recipe-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.forge-catalog__recipe--selected .forge-catalog__glyph {
+  color: var(--accent);
+}
+
+.forge-catalog__title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ---- Measure tool (docs/PLAN.md 10d P1) --------------------------------- */
+
+.measure-btn {
+  width: 100%;
+  height: var(--row-h);
+  font: inherit;
+  color: var(--text);
+  cursor: pointer;
+  background: var(--bg-elevated);
+}
+
+.measure-btn--active {
+  color: var(--accent-contrast);
+  background: var(--accent);
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--inset-light),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--inset-shade-deep);
+}
+
+
+.measure-hint {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.measure-rows {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 12px;
+  margin: 8px 0 0;
+}
+
+.measure-rows dt {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.measure-rows dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* Travel times are estimates and must never read as measured facts. */
+.measure-rows dd[data-estimate='true'] {
+  color: var(--text-muted);
+}
+
+.measure-rows dd[data-estimate='true']::after {
+  margin-left: 4px;
+  font-family: var(--font-ui);
+  content: '≈';
+}
+
+/* --- On-map HUD: terrain switch + loading compass ------------------------------------------- */
+.map-hud {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  /* The strip is only a layout box; the map has to stay draggable through the gaps. */
+  pointer-events: none;
+}
+
+.map-hud > * {
+  pointer-events: auto;
+}
+
+.map-hud__button {
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+  padding: 0.35rem 0.7rem;
+}
+
+/* Pressed in when the relief is on, so the switch reads as a switch and not as a label. */
+.map-hud__button[aria-pressed='true'] {
+  background: color-mix(in srgb, var(--accent) 22%, var(--bg-elevated));
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-lo),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-hi);
+}
+
+/* Compass plus label, side by side, sized like a status chip rather than a dialog. Hidden
+   outright when nothing is pending — `hidden` is set on the element itself. */
+.map-hud__compass {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.4rem;
+  background: var(--bg-elevated);
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-hi),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-lo);
+}
+
+.map-hud__compass-dial {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: none;
+}
+
+/* The frame and dial are static pixel shapes; only the needle turns, as a compass does. */
+.map-hud__compass-frame {
+  fill: var(--forge-steel-lo);
+  stroke: var(--forge-line);
+  stroke-width: 1;
+  paint-order: stroke;
+}
+
+.map-hud__compass-face {
+  fill: var(--forge-iron);
+}
+
+.map-hud__compass-needle {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: map-hud-spin 2.4s linear infinite;
+}
+
+.map-hud__compass-north {
+  fill: var(--wp-red);
+}
+
+.map-hud__compass-south {
+  fill: var(--forge-iron-hi);
+}
+
+@keyframes map-hud-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-hud__compass-needle {
+    animation-duration: 9s;
+  }
+}
+
+.map-hud__compass-label {
+  font-size: 0.72rem;
+  line-height: 1.2;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* --- Narrow windows: the map on top, the panel below ------------------------------------------ */
+/* Side by side, a phone-width window left the map a strip ~160px wide with the readout spilling
+   over the panel, and the header's buttons ran off the right edge. */
+@media (max-width: 760px) {
+  :root {
+    --map-narrow-height: max(16rem, 52vh);
+  }
+
+  .app-header {
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .app--map .app-main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--map-narrow-height) minmax(0, 1fr);
+  }
+
+  .app--map .side-panel {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  /* Overlays belong to the map box, which is now only the top row. */
+  .app--map .scale-bar {
+    left: auto;
+    right: 0.75rem;
+    top: 0.75rem;
+    bottom: auto;
+  }
+
+  /* Placement follows the cursor and is clamped to the map by the readout's own script; here it
+     only needs to fit inside a map that is now the full window width but short. */
+  .app--map .coord-readout {
+    max-width: calc(100% - 1.5rem);
+    max-height: calc(var(--map-narrow-height) - 1.5rem);
+  }
+}
+
+/* --- Structures: filter chips and the readout's completed toggle --------------------------- */
+/* Chips rather than checkboxes: each kind is recognised by its icon first, the way the map shows it,
+   so the toggle carries the icon. Pressed = shown on the map. */
+.structure-chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 4px;
+  margin-top: 0.4rem;
+}
+
+.structure-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+  padding: 0.25rem 0.45rem;
+  font: inherit;
+  font-size: 0.8rem;
+  text-align: left;
+  color: var(--text-muted);
+  background: var(--bg-sunk);
+}
+
+.structure-chip[aria-pressed='true'] {
+  color: var(--text);
+  background: var(--bg-elevated);
+}
+
+.structure-chip__icon {
+  display: grid;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  color: var(--accent-contrast);
+  background: var(--structure-colour, var(--accent));
+  box-shadow: inset 0 0 0 2px var(--bevel-lo);
+}
+
+.structure-chip[aria-pressed='false'] .structure-chip__icon {
+  opacity: 0.45;
+}
+
+.structure-chip__icon svg {
+  width: 16px;
+  height: 16px;
+  shape-rendering: crispEdges;
+}
+
+.structure-chip__name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.coord-readout__completed {
+  margin-top: 0.4rem;
+  font: inherit;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+  pointer-events: auto;
+}
+
+.coord-readout__completed[aria-pressed='true'] {
+  color: var(--accent-contrast);
+  background: var(--accent);
+}
+
+/* Copy buttons in a pinned readout: a small row at the bottom, clickable like the close control. */
+.coord-readout__actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 0.5rem;
+  pointer-events: auto;
+}
+
+.coord-readout__copy {
+  font: inherit;
+  font-size: 0.72rem;
+  padding: 0.2rem 0.5rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+}
+
+/* --- Ads, the fan-site disclaimer and the privacy page --------------------------------------- */
+
+/* The unit arrives late; a reserved box keeps it from shoving the panel down under the cursor. */
+.ad-slot {
+  padding: 0.5rem 1rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-panel);
+}
+
+.ad-slot__label {
+  margin: 0 0 0.25rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.ad-slot__unit {
+  display: block;
+  min-height: 252px;
+}
+
+.forge-ad {
+  grid-column: 1 / -1;
+}
+
+.app--forge .ad-slot {
+  border-bottom: 0;
+}
+
+/* The Minecraft Usage Guidelines ask fan sites to carry this line; it closes the panel and the page. */
+.site-disclaimer {
+  margin: 0;
+  padding: 0.75rem 1rem 1rem;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.app--forge .site-disclaimer {
+  grid-column: 1 / -1;
+  padding: 0.5rem 0 0;
+  background: var(--bg);
+}
+
+/* Only the first legal link pushes the group right; the privacy link and cookie settings follow. */
+.app-header__legal + .app-header__legal {
+  margin-left: 0;
+}
+
+/* A link in look, a button in behaviour: it runs Google's consent flow rather than navigating. */
+button.app-header__legal,
+button.app-header__legal:hover:not(:disabled),
+button.app-header__legal:active:not(:disabled) {
+  font: inherit;
+  font-size: 0.72rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.app--privacy {
+  height: auto;
+  min-height: 100%;
+}
+
+.app--privacy .app-main {
+  display: block;
+  width: min(46rem, 100%);
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 2.5rem) 3rem;
+}
+
+.privacy {
+  border-bottom: 0;
+}
+
+.privacy h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+.privacy h2 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 1rem;
+}
+
+.privacy p {
+  margin: 0 0 0.6rem;
+  max-width: 42em;
+  line-height: 1.55;
+}
+
+.privacy__intro {
+  color: var(--text-muted);
+}
+
+.privacy a {
+  color: var(--text);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.privacy a:hover {
+  text-decoration-color: var(--text);
+}

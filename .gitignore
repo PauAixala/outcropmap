@@ -1,0 +1,52 @@
+node_modules/
+dist/
+dist-ssr/
+coverage/
+.vite/
+*.timestamp-*.mjs
+*.local
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Extracted mod assets. Never commit mod jars or decompiled sources.
+tools/.cache/
+tools/jars/
+tools/parity/out/
+reference/
+*.jar
+
+# Maintainer notes and scripts kept out of the public repository: the contract (AGENTS.md and its
+# Claude copy), the plan, the parity record, the design and research notes, the ADRs, the hand-off
+# note, the local run scripts, and what is left of the retired Chrome extension's notes.
+AGENTS.md
+CLAUDE.md
+HANDOFF.md
+docs/
+serve.bat
+docker-compose.yml
+extension/
+
+# Leftovers the build could not delete in place
+_to_delete/
+
+# Vite writes these next to the config and cannot always clean them up here
+vite.config.ts.timestamp-*
+vitest.config.ts.timestamp-*
+
+# Throwaway PNGs from tools/render-preview.ts (see package.json's preview:render script)
+previews/
+
+# Runtime logs
+logs/
+
+# Playwright MCP writes snapshots and screenshots here; it is only allowed to write inside the repo.
+.playwright-mcp/
+
+# Local assistant state (Kilo sessions, Agent Manager). Per machine, never shared.
+.kilo/
+
+# Scratch output from assistant sessions (a preview PNG was committed from here by accident once).
+Claude outputs/

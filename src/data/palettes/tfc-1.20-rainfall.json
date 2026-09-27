@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "description": "Rainfall ramp for the rainfall raster layer. A sequential scale from dry (sandy tan) through wet (teal) to very wet (deep blue). Values in mm from 0 to 500. Colours are theme-independent solid colours (0xRRGGBB decimal) chosen for contrast on both light and dark backgrounds.",
+    "profile": "tfc-1.20",
+    "unit": "mm"
+  },
+  "stops": [
+    { "value": 0, "color": 12757084 },
+    { "value": 100, "color": 13952160 },
+    { "value": 200, "color": 6732650 },
+    { "value": 300, "color": 31083 },
+    { "value": 400, "color": 1402304 },
+    { "value": 500, "color": 870305 }
+  ]
+}

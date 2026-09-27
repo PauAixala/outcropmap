@@ -1,0 +1,379 @@
+{
+  "_meta": {
+    "extraction_date": "2026-09-13T23:38:34.018Z",
+    "git_commit": "9a8c6f34574414cb65fd63d27267a92dc11e8769",
+    "source_repo": "https://github.com/TerraFirmaGreg-Team/Modpack-Modern",
+    "tool_version": "1.0.0"
+  },
+  "veins": {
+    "venus_manual_salt": {
+      "blocks": {
+        "ad_astra:venus_stone": [
+          {
+            "block": "gtceu:venus_stone_salt_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:venus_stone_rock_salt_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:venus_stone_lepidolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:venus_stone_spodumene_ore",
+            "weight": 5
+          }
+        ],
+        "betterend:flavolite": [
+          {
+            "block": "gtceu:flavolite_salt_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:flavolite_rock_salt_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:flavolite_lepidolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:flavolite_spodumene_ore",
+            "weight": 5
+          }
+        ],
+        "betterend:sandy_jadestone": [
+          {
+            "block": "gtceu:sandy_jadestone_salt_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:sandy_jadestone_rock_salt_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:sandy_jadestone_lepidolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:sandy_jadestone_spodumene_ore",
+            "weight": 5
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_salt_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:basalt_rock_salt_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:basalt_lepidolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:basalt_spodumene_ore",
+            "weight": 5
+          }
+        ],
+        "minecraft:dripstone_block": [
+          {
+            "block": "gtceu:dripstone_salt_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:dripstone_rock_salt_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:dripstone_lepidolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:dripstone_spodumene_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_salt_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:andesite_rock_salt_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:andesite_lepidolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:andesite_spodumene_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_salt_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:basalt_rock_salt_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:basalt_lepidolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:basalt_spodumene_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_salt_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:dacite_rock_salt_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:dacite_lepidolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:dacite_spodumene_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_salt_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:rhyolite_rock_salt_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:rhyolite_lepidolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:rhyolite_spodumene_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.2,
+      "height": 6,
+      "id": "venus_manual_salt",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:rock_salt_indicator",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:rock_salt_bud_indicator",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:salt_indicator",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:salt_bud_indicator",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:lepidolite_indicator",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:spodumene_indicator",
+            "weight": 5
+          }
+        ],
+        "depth": 30,
+        "rarity": 20,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 65,
+      "min_y": 40,
+      "project": false,
+      "project_offset": false,
+      "random_name": "venus_manual_salt",
+      "rarity": 30,
+      "size": 20,
+      "type": "disc"
+    },
+    "venus_manual_sulfur": {
+      "blocks": {
+        "ad_astra:venus_stone": [
+          {
+            "block": "gtceu:venus_stone_sulfur_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:venus_stone_pyrite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:venus_stone_sphalerite_ore",
+            "weight": 5
+          }
+        ],
+        "betterend:flavolite": [
+          {
+            "block": "gtceu:flavolite_sulfur_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:flavolite_pyrite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:flavolite_sphalerite_ore",
+            "weight": 5
+          }
+        ],
+        "betterend:sandy_jadestone": [
+          {
+            "block": "gtceu:sandy_jadestone_sulfur_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:sandy_jadestone_pyrite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:sandy_jadestone_sphalerite_ore",
+            "weight": 5
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_sulfur_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:basalt_pyrite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_sphalerite_ore",
+            "weight": 5
+          }
+        ],
+        "minecraft:dripstone_block": [
+          {
+            "block": "gtceu:dripstone_sulfur_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:dripstone_pyrite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:dripstone_sphalerite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_sulfur_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:andesite_pyrite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:andesite_sphalerite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_sulfur_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:basalt_pyrite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_sphalerite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_sulfur_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:dacite_pyrite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:dacite_sphalerite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_sulfur_ore",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:rhyolite_pyrite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:rhyolite_sphalerite_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.2,
+      "id": "venus_manual_sulfur",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:sulfur_indicator",
+            "weight": 80
+          },
+          {
+            "block": "gtceu:pyrite_indicator",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/small_sphalerite",
+            "weight": 5
+          }
+        ],
+        "depth": 30,
+        "rarity": 20,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 65,
+      "min_y": 40,
+      "project": false,
+      "project_offset": false,
+      "random_name": "venus_manual_sulfur",
+      "rarity": 30,
+      "size": 20,
+      "type": "cluster"
+    }
+  }
+}

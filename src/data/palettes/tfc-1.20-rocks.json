@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "description": "Rock colours for the tfc-1.20 profile's rock raster layer and legend. This is our own UI design choice, not a port of any Java source: colours follow the real-world look of each rock family so the map reads geologically — dark greys/greens for mafic volcanics and plutonics (basalt, gabbro), warm pinks/tans for felsic plutonics and rhyolite (granite, diorite, dacite, rhyolite), pale buffs and creams for carbonate/clastic sedimentaries (chalk, limestone, dolomite, marble), warm browns for clastic sedimentaries (claystone, conglomerate, chert), and blue-grey/olive tones for the foliated metamorphics (slate, phyllite, schist, gneiss, quartzite). Every id here is ported game data from src/data/tfc-1.20/rocks.json (net.dries007.tfc.world.settings.RockLayerSettings's rock registration, see src/worldgen/tfc-1.20/rock/layer-settings.ts) — only the colour assigned to each id is a design decision. Packed as 0xRRGGBB decimal, matching src/render/colormap.ts's colorToCss.",
+    "profile": "tfc-1.20"
+  },
+  "colors": {
+    "andesite": 8223350,
+    "basalt": 2829102,
+    "chalk": 15591644,
+    "chert": 9206371,
+    "claystone": 11107408,
+    "conglomerate": 11567189,
+    "dacite": 11052704,
+    "diorite": 10462118,
+    "dolomite": 13879732,
+    "gabbro": 3489838,
+    "gneiss": 9865102,
+    "granite": 13209458,
+    "limestone": 13483936,
+    "marble": 14473422,
+    "phyllite": 7240296,
+    "quartzite": 14468272,
+    "rhyolite": 13216140,
+    "schist": 7371358,
+    "shale": 5988200,
+    "slate": 4606802
+  }
+}

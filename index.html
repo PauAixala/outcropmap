@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OutCrop</title>
+    <link rel="icon" type="image/png" href="./icons/favicon-32.png" />
+    <link rel="stylesheet" href="./src/ui/styles/base.css" />
+  </head>
+  <body>
+    <div id="app" class="app app--map">
+      <header id="app-header" class="app-header"><!-- shell: nav + theme toggle --></header>
+      <main class="app-main">
+        <canvas id="map-canvas" class="map-canvas"></canvas>
+        <div id="map-hud" class="map-hud"><!-- terrain switch + loading compass --></div>
+        <aside id="side-panel" class="side-panel"><!-- layers, filters, legend --></aside>
+        <div id="coord-readout" class="coord-readout" aria-live="off"></div>
+      </main>
+    </div>
+    <script type="module" src="./src/pages/map/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+# The three checks (typecheck, tests, site build), on every push and on demand.
+#
+# Checks only: this workflow builds, it never deploys or publishes anything. Deploying is
+# pages.yml's job, and that one is manual-dispatch only on purpose.
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Typecheck
+        run: ./node_modules/.bin/tsc --noEmit
+
+      - name: Test
+        run: ./node_modules/.bin/vitest run
+
+      - name: Build site
+        run: npm run build:web

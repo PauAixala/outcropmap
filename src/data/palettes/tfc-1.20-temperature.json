@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "description": "Temperature ramp for the temperature raster layer. A diverging scale from cold (deep blue) through 0°C (near-white) to hot (deep red). Values in °C from -30 to +35. Colours are theme-independent solid colours (0xRRGGBB decimal) chosen for contrast on both light and dark backgrounds.",
+    "profile": "tfc-1.20",
+    "unit": "°C"
+  },
+  "stops": [
+    { "value": -30, "color": 13158 },
+    { "value": -20, "color": 26316 },
+    { "value": -10, "color": 52479 },
+    { "value": 0, "color": 15790335 },
+    { "value": 10, "color": 13434624 },
+    { "value": 20, "color": 16759552 },
+    { "value": 30, "color": 16737792 },
+    { "value": 35, "color": 13369344 }
+  ]
+}

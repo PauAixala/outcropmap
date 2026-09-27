@@ -1,0 +1,295 @@
+{
+  "_meta": {
+    "extraction_date": "2026-09-10T09:01:40.537Z",
+    "git_commit": "b158c9c968cad7afb99cea2c937b301ff275e2e6",
+    "source_repo": "$HOME/reference/tfc",
+    "tool_version": "1.0.0"
+  },
+  "rockLayers": {
+    "bottom": [
+      "gneiss",
+      "schist",
+      "diorite",
+      "granite",
+      "gabbro"
+    ],
+    "land": [
+      "igneous_extrusive",
+      "sedimentary"
+    ],
+    "layers": [
+      {
+        "entries": [
+          [
+            "granite",
+            "bottom"
+          ]
+        ],
+        "id": "felsic"
+      },
+      {
+        "entries": [
+          [
+            "diorite",
+            "bottom"
+          ]
+        ],
+        "id": "intermediate"
+      },
+      {
+        "entries": [
+          [
+            "gabbro",
+            "bottom"
+          ]
+        ],
+        "id": "mafic"
+      },
+      {
+        "entries": [
+          [
+            "rhyolite",
+            "felsic"
+          ],
+          [
+            "andesite",
+            "intermediate"
+          ],
+          [
+            "dacite",
+            "intermediate"
+          ],
+          [
+            "basalt",
+            "mafic"
+          ]
+        ],
+        "id": "igneous_extrusive"
+      },
+      {
+        "entries": [
+          [
+            "rhyolite",
+            "igneous_extrusive"
+          ],
+          [
+            "andesite",
+            "igneous_extrusive"
+          ],
+          [
+            "dacite",
+            "igneous_extrusive"
+          ],
+          [
+            "basalt",
+            "igneous_extrusive"
+          ]
+        ],
+        "id": "igneous_extrusive_x2"
+      },
+      {
+        "entries": [
+          [
+            "phyllite",
+            "bottom"
+          ],
+          [
+            "gneiss",
+            "bottom"
+          ],
+          [
+            "schist",
+            "bottom"
+          ]
+        ],
+        "id": "phyllite"
+      },
+      {
+        "entries": [
+          [
+            "slate",
+            "bottom"
+          ],
+          [
+            "phyllite",
+            "phyllite"
+          ]
+        ],
+        "id": "slate"
+      },
+      {
+        "entries": [
+          [
+            "marble",
+            "bottom"
+          ]
+        ],
+        "id": "marble"
+      },
+      {
+        "entries": [
+          [
+            "quartzite",
+            "bottom"
+          ]
+        ],
+        "id": "quartzite"
+      },
+      {
+        "entries": [
+          [
+            "shale",
+            "slate"
+          ],
+          [
+            "claystone",
+            "slate"
+          ],
+          [
+            "conglomerate",
+            "slate"
+          ],
+          [
+            "limestone",
+            "marble"
+          ],
+          [
+            "dolomite",
+            "marble"
+          ],
+          [
+            "chalk",
+            "marble"
+          ],
+          [
+            "chert",
+            "quartzite"
+          ]
+        ],
+        "id": "sedimentary"
+      },
+      {
+        "entries": [
+          [
+            "slate",
+            "phyllite"
+          ],
+          [
+            "marble",
+            "bottom"
+          ],
+          [
+            "quartzite",
+            "bottom"
+          ],
+          [
+            "diorite",
+            "sedimentary"
+          ],
+          [
+            "granite",
+            "sedimentary"
+          ],
+          [
+            "gabbro",
+            "sedimentary"
+          ]
+        ],
+        "id": "uplift"
+      }
+    ],
+    "oceanFloor": [
+      "igneous_extrusive"
+    ],
+    "uplift": [
+      "sedimentary",
+      "uplift"
+    ],
+    "volcanic": [
+      "igneous_extrusive",
+      "igneous_extrusive_x2"
+    ]
+  },
+  "rocks": {
+    "andesite": {
+      "block": "tfc:andesite",
+      "id": "andesite"
+    },
+    "basalt": {
+      "block": "tfc:basalt",
+      "id": "basalt"
+    },
+    "chalk": {
+      "block": "tfc:chalk",
+      "id": "chalk"
+    },
+    "chert": {
+      "block": "tfc:chert",
+      "id": "chert"
+    },
+    "claystone": {
+      "block": "tfc:claystone",
+      "id": "claystone"
+    },
+    "conglomerate": {
+      "block": "tfc:conglomerate",
+      "id": "conglomerate"
+    },
+    "dacite": {
+      "block": "tfc:dacite",
+      "id": "dacite"
+    },
+    "diorite": {
+      "block": "tfc:diorite",
+      "id": "diorite"
+    },
+    "dolomite": {
+      "block": "tfc:dolomite",
+      "id": "dolomite"
+    },
+    "gabbro": {
+      "block": "tfc:gabbro",
+      "id": "gabbro"
+    },
+    "gneiss": {
+      "block": "tfc:gneiss",
+      "id": "gneiss"
+    },
+    "granite": {
+      "block": "tfc:granite",
+      "id": "granite"
+    },
+    "limestone": {
+      "block": "tfc:limestone",
+      "id": "limestone"
+    },
+    "marble": {
+      "block": "tfc:marble",
+      "id": "marble"
+    },
+    "phyllite": {
+      "block": "tfc:phyllite",
+      "id": "phyllite"
+    },
+    "quartzite": {
+      "block": "tfc:quartzite",
+      "id": "quartzite"
+    },
+    "rhyolite": {
+      "block": "tfc:rhyolite",
+      "id": "rhyolite"
+    },
+    "schist": {
+      "block": "tfc:schist",
+      "id": "schist"
+    },
+    "shale": {
+      "block": "tfc:shale",
+      "id": "shale"
+    },
+    "slate": {
+      "block": "tfc:slate",
+      "id": "slate"
+    }
+  }
+}

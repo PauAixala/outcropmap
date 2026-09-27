@@ -1,0 +1,60 @@
+# Builds the static site and deploys it to GitHub Pages.
+#
+# Manual trigger only, on purpose: publishing is distribution (NOTICE.md) and must not happen as a
+# side effect of a push.
+#
+# The same three checks as CI run before anything is uploaded.
+name: Deploy site to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Typecheck
+        run: ./node_modules/.bin/tsc --noEmit
+
+      - name: Test
+        run: ./node_modules/.bin/vitest run
+
+      # prebuild:web runs tools/prepare-out-dir.mjs; finish-web-build.mjs copies LICENSE and
+      # NOTICE.md into dist/ and fails the build if they are missing.
+      - name: Build
+        run: npm run build:web
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

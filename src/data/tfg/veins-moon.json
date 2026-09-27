@@ -1,0 +1,4117 @@
+{
+  "_meta": {
+    "extraction_date": "2026-09-13T23:36:37.782Z",
+    "git_commit": "9a8c6f34574414cb65fd63d27267a92dc11e8769",
+    "source_repo": "https://github.com/TerraFirmaGreg-Team/Modpack-Modern",
+    "tool_version": "1.0.0"
+  },
+  "veins": {
+    "moon_apatite": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_apatite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_tricalcium_phosphate_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:moon_deepslate_pyrochlore_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_pyrochlore_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_apatite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_stone_tricalcium_phosphate_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:moon_stone_pyrochlore_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_pyrochlore_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_apatite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:diorite_tricalcium_phosphate_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:diorite_pyrochlore_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_pyrochlore_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_olivine_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.3,
+      "id": "moon_apatite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:apatite_bud_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:tricalcium_phosphate_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:pyrochlore_indicator",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 5
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 100,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_apatite",
+      "rarity": 250,
+      "size": 35,
+      "type": "cluster"
+    },
+    "moon_bauxite": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_bauxite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bauxite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_ilmenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_bauxite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bauxite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_ilmenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_bauxite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bauxite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_ilmenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_bauxite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bauxite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_ilmenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_bauxite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bauxite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_ilmenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_bauxite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bauxite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_ilmenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_bauxite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bauxite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_ilmenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_armalcolite_ore",
+            "weight": 20
+          }
+        ]
+      },
+      "density": 0.35,
+      "id": "moon_bauxite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:bauxite_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:ilmenite_indicator",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:armalcolite_bud_indicator",
+            "weight": 20
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 80,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_bauxite",
+      "rarity": 200,
+      "size": 40,
+      "type": "cluster"
+    },
+    "moon_beryllium": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_beryllium_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_beryllium_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_emerald_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_emerald_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:glacio_stone_thorium_ore",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_olivine_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:glacio_stone_rock_salt_ore",
+            "weight": 20
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_beryllium_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_beryllium_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_emerald_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_emerald_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:moon_stone_thorium_ore",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_olivine_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:moon_stone_rock_salt_ore",
+            "weight": 20
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_beryllium_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_beryllium_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_emerald_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_emerald_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:basalt_thorium_ore",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_olivine_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:basalt_rock_salt_ore",
+            "weight": 20
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_beryllium_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_beryllium_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_emerald_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_emerald_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:basalt_thorium_ore",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_olivine_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:basalt_rock_salt_ore",
+            "weight": 20
+          }
+        ]
+      },
+      "density": 0.35,
+      "height": 70,
+      "id": "moon_beryllium",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:beryllium_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:emerald_bud_indicator",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:thorium_indicator",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:rock_salt_indicator",
+            "weight": 20
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_skew": 18,
+      "max_slant": 4,
+      "max_y": 120,
+      "min_skew": 6,
+      "min_slant": 0,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "radius": 8,
+      "random_name": "moon_beryllium",
+      "rarity": 260,
+      "sign": 0,
+      "size": null,
+      "type": "pipe"
+    },
+    "moon_cassiterite": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_chalcopyrite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_chalcopyrite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_zeolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:moon_deepslate_cassiterite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_cassiterite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_tin_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_chalcopyrite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_chalcopyrite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_zeolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:diorite_cassiterite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_cassiterite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_tin_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_chalcopyrite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_chalcopyrite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_zeolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:gabbro_cassiterite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_cassiterite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_tin_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "gtceu:granite_chalcopyrite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_chalcopyrite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:granite_zeolite_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:granite_cassiterite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_cassiterite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:granite_tin_ore",
+            "weight": 15
+          }
+        ]
+      },
+      "density": 0.3,
+      "id": "moon_cassiterite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_cassiterite",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:zeolite_indicator",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:chalcopyrite_indicator",
+            "weight": 30
+          }
+        ],
+        "depth": 60,
+        "rarity": 12,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 128,
+      "min_y": 10,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_cassiterite",
+      "rarity": 210,
+      "size": 35,
+      "type": "cluster"
+    },
+    "moon_desh": {
+      "blocks": {
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_desh_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_ilmenite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_aluminium_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_desh_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:andesite_ilmenite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_aluminium_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:andesite_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_desh_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_ilmenite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_aluminium_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_desh_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:dacite_ilmenite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_aluminium_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:dacite_armalcolite_ore",
+            "weight": 20
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_desh_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:gabbro_ilmenite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_ilmenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_aluminium_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:gabbro_armalcolite_ore",
+            "weight": 20
+          }
+        ]
+      },
+      "density": 0.35,
+      "id": "moon_desh",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:desh_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:ilmenite_indicator",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:aluminium_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:armalcolite_bud_indicator",
+            "weight": 20
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 80,
+      "min_y": 10,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_desh",
+      "rarity": 230,
+      "size": 30,
+      "type": "cluster"
+    },
+    "moon_garnet": {
+      "blocks": {
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_red_garnet_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:basalt_yellow_garnet_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_amethyst_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_amethyst_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_opal_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_opal_block",
+            "weight": 1
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_red_garnet_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:andesite_yellow_garnet_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:andesite_amethyst_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_amethyst_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_opal_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_opal_block",
+            "weight": 1
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_red_garnet_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:basalt_yellow_garnet_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_amethyst_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_amethyst_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_opal_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_opal_block",
+            "weight": 1
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_red_garnet_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:rhyolite_yellow_garnet_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:rhyolite_amethyst_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_amethyst_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_opal_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_opal_block",
+            "weight": 1
+          }
+        ]
+      },
+      "density": 0.35,
+      "height": 7,
+      "id": "moon_garnet",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:red_garnet_bud_indicator",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:yellow_garnet_bud_indicator",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:amethyst_bud_indicator",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:opal_bud_indicator",
+            "weight": 40
+          }
+        ],
+        "depth": 20,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 128,
+      "min_y": 10,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_garnet",
+      "rarity": 230,
+      "size": 35,
+      "type": "disc"
+    },
+    "moon_garnierite": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_garnierite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_garnierite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_nickel_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:diorite_cobaltite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:diorite_pentlandite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_pentlandite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_cobalt_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_garnierite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_garnierite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_nickel_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:gabbro_cobaltite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:gabbro_pentlandite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_pentlandite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_cobalt_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_garnierite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_garnierite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_nickel_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:rhyolite_cobaltite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:rhyolite_pentlandite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_pentlandite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_cobalt_ore",
+            "weight": 15
+          }
+        ]
+      },
+      "density": 0.35,
+      "id": "moon_garnierite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_garnierite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/small_garnierite",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:cobaltite_indicator",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:pentlandite_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:cobalt_indicator",
+            "weight": 15
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 85,
+      "min_y": 5,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_garnierite",
+      "rarity": 250,
+      "size": 45,
+      "type": "cluster"
+    },
+    "moon_gold": {
+      "blocks": {
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_green_sapphire_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:basalt_bauxite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_magnetite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_gold_ore",
+            "weight": 55
+          },
+          {
+            "block": "minecraft:raw_gold_block",
+            "weight": 1
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_green_sapphire_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:basalt_bauxite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_magnetite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_gold_ore",
+            "weight": 55
+          },
+          {
+            "block": "minecraft:raw_gold_block",
+            "weight": 1
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_green_sapphire_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:diorite_bauxite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:diorite_magnetite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:diorite_gold_ore",
+            "weight": 55
+          },
+          {
+            "block": "minecraft:raw_gold_block",
+            "weight": 1
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "gtceu:granite_green_sapphire_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:granite_bauxite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:granite_magnetite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:granite_gold_ore",
+            "weight": 55
+          },
+          {
+            "block": "minecraft:raw_gold_block",
+            "weight": 1
+          }
+        ]
+      },
+      "density": 0.35,
+      "height": 10,
+      "id": "moon_gold",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:green_sapphire_bud_indicator",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:bauxite_indicator",
+            "weight": 20
+          },
+          {
+            "block": "tfc:ore/small_magnetite",
+            "weight": 20
+          },
+          {
+            "block": "tfc:ore/small_native_gold",
+            "weight": 55
+          }
+        ],
+        "depth": 60,
+        "rarity": 12,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 80,
+      "min_y": 10,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_gold",
+      "rarity": 170,
+      "size": 35,
+      "type": "disc"
+    },
+    "moon_graphite": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_graphite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_graphite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_diamond_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:glacio_stone_olivine_ore",
+            "weight": 10
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_graphite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_graphite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_diamond_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:moon_stone_olivine_ore",
+            "weight": 10
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_graphite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_graphite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_diamond_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:basalt_olivine_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_graphite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_graphite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_diamond_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:basalt_olivine_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_graphite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_graphite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_diamond_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:gabbro_olivine_ore",
+            "weight": 10
+          }
+        ]
+      },
+      "density": 0.4,
+      "height": 60,
+      "id": "moon_graphite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:graphite_indicator",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:diamond_bud_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 10
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_skew": 18,
+      "max_slant": 4,
+      "max_y": 120,
+      "min_skew": 6,
+      "min_slant": 0,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "radius": 9,
+      "random_name": "moon_graphite",
+      "rarity": 260,
+      "sign": 0,
+      "size": null,
+      "type": "pipe"
+    },
+    "moon_gypsum": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_borax_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:glacio_stone_calcite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:glacio_stone_alunite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:glacio_stone_gypsum_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_gypsum_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_borax_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:moon_deepslate_calcite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_alunite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_deepslate_gypsum_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_gypsum_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_borax_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:moon_stone_calcite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_stone_alunite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_stone_gypsum_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_gypsum_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_olivine_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.3,
+      "height": 9,
+      "id": "moon_gypsum",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:borax_indicator",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:calcite_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:alunite_indicator",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:gypsum_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 5
+          }
+        ],
+        "depth": 20,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 100,
+      "min_y": 10,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_gypsum",
+      "rarity": 180,
+      "size": 30,
+      "type": "disc"
+    },
+    "moon_lubricant": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_soapstone_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:moon_deepslate_talc_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:moon_deepslate_glauconite_sand_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_pentlandite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_deepslate_trona_ore",
+            "weight": 10
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_soapstone_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:moon_stone_talc_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:moon_stone_glauconite_sand_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_stone_pentlandite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_stone_trona_ore",
+            "weight": 10
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_soapstone_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:basalt_talc_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_glauconite_sand_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_pentlandite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_trona_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_soapstone_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:basalt_talc_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_glauconite_sand_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_pentlandite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_trona_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_soapstone_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:diorite_talc_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:diorite_glauconite_sand_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:diorite_pentlandite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:diorite_trona_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_soapstone_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:gabbro_talc_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:gabbro_glauconite_sand_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:gabbro_pentlandite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:gabbro_trona_ore",
+            "weight": 10
+          }
+        ]
+      },
+      "density": 0.25,
+      "id": "moon_lubricant",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:soapstone_indicator",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:talc_indicator",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:glauconite_sand_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:pentlandite_indicator",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:trona_indicator",
+            "weight": 10
+          }
+        ],
+        "depth": 20,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 66,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_lubricant",
+      "rarity": 190,
+      "size": 30,
+      "type": "cluster"
+    },
+    "moon_magnetite": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_magnetite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_vanadium_magnetite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_deepslate_chromite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_chromite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:moon_deepslate_gold_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_deepslate_sapphire_ore",
+            "weight": 5
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_magnetite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_stone_vanadium_magnetite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_stone_chromite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_chromite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:moon_stone_gold_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_stone_sapphire_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_magnetite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:diorite_vanadium_magnetite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:diorite_chromite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_chromite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:diorite_gold_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:diorite_sapphire_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_magnetite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:gabbro_vanadium_magnetite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:gabbro_chromite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_chromite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:gabbro_gold_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:gabbro_sapphire_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.25,
+      "id": "moon_magnetite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_magnetite",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:vanadium_magnetite_indicator",
+            "weight": 15
+          },
+          {
+            "block": "firmalife:ore/small_chromite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/small_native_gold",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:sapphire_bud_indicator",
+            "weight": 5
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 90,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_magnetite",
+      "rarity": 280,
+      "size": 50,
+      "type": "cluster"
+    },
+    "moon_manganese": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_grossular_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:moon_deepslate_spessartine_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:moon_deepslate_pyrolusite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:moon_deepslate_tantalite_ore",
+            "weight": 10
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_grossular_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:basalt_spessartine_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_pyrolusite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_tantalite_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_grossular_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:andesite_spessartine_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:andesite_pyrolusite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:andesite_tantalite_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_grossular_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:basalt_spessartine_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_pyrolusite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_tantalite_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_grossular_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:dacite_spessartine_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:dacite_pyrolusite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:dacite_tantalite_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_grossular_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:gabbro_spessartine_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:gabbro_pyrolusite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:gabbro_tantalite_ore",
+            "weight": 10
+          }
+        ]
+      },
+      "density": 0.35,
+      "id": "moon_manganese",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:grossular_bud_indicator",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:spessartine_bud_indicator",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:pyrolusite_indicator",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:tantalite_indicator",
+            "weight": 10
+          }
+        ],
+        "depth": 20,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 80,
+      "min_y": 5,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_manganese",
+      "rarity": 215,
+      "size": 30,
+      "type": "cluster"
+    },
+    "moon_mica": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_kyanite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_kyanite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_mica_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_bauxite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_aluminium_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_deepslate_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_kyanite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_kyanite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_mica_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_stone_bauxite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_stone_aluminium_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_stone_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_kyanite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_kyanite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_mica_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:diorite_bauxite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:diorite_aluminium_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:diorite_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_kyanite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_kyanite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_mica_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:gabbro_bauxite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:gabbro_aluminium_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:gabbro_olivine_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.25,
+      "id": "moon_mica",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:kyanite_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:mica_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:bauxite_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:aluminium_indicator",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 5
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 120,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_mica",
+      "rarity": 250,
+      "size": 35,
+      "type": "cluster"
+    },
+    "moon_molybdenum": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_wulfenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_wulfenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_powellite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_powellite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_molybdenite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_deepslate_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_wulfenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_wulfenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_powellite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_powellite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_molybdenite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_wulfenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_wulfenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_powellite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_powellite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_molybdenite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_wulfenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_wulfenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_powellite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_powellite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_molybdenite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:dacite_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_wulfenite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_wulfenite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_powellite_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_powellite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_molybdenite_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:gabbro_olivine_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.35,
+      "id": "moon_molybdenum",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:wulfenite_indicator",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:powellite_indicator",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:molybdenite_indicator",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 5
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 50,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_molybdenum",
+      "rarity": 245,
+      "size": 35,
+      "type": "cluster"
+    },
+    "moon_monazite": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_bastnasite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_bastnasite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_monazite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:glacio_stone_neodymium_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:glacio_stone_olivine_ore",
+            "weight": 1
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_bastnasite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_bastnasite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_monazite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:andesite_neodymium_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:andesite_olivine_ore",
+            "weight": 1
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_bastnasite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_bastnasite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_monazite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:dacite_neodymium_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:dacite_olivine_ore",
+            "weight": 1
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_bastnasite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_bastnasite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_monazite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:rhyolite_neodymium_ore",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:rhyolite_olivine_ore",
+            "weight": 1
+          }
+        ]
+      },
+      "density": 0.2,
+      "id": "moon_monazite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:bastnasite_indicator",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:monazite_bud_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:neodymium_indicator",
+            "weight": 5
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 1
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 70,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_monazite",
+      "rarity": 310,
+      "size": 40,
+      "type": "cluster"
+    },
+    "moon_pyrolusite": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_pyrolusite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_pyrolusite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:moon_deepslate_cobaltite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_cobalt_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_tantalite_ore",
+            "weight": 15
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_pyrolusite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_pyrolusite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:moon_stone_cobaltite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_stone_cobalt_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_stone_tantalite_ore",
+            "weight": 15
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_pyrolusite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_pyrolusite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:basalt_cobaltite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_cobalt_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_tantalite_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_pyrolusite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_pyrolusite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:andesite_cobaltite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:andesite_cobalt_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:andesite_tantalite_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_pyrolusite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_pyrolusite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:basalt_cobaltite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_cobalt_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_tantalite_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_pyrolusite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_pyrolusite_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:gabbro_cobaltite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:gabbro_cobalt_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:gabbro_tantalite_ore",
+            "weight": 15
+          }
+        ]
+      },
+      "density": 0.25,
+      "id": "moon_pyrolusite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:pyrolusite_indicator",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:cobaltite_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:cobalt_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:tantalite_indicator",
+            "weight": 15
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 80,
+      "min_y": 20,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_pyrolusite",
+      "rarity": 210,
+      "size": 35,
+      "type": "cluster"
+    },
+    "moon_quartz": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:glacio_stone_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:glacio_stone_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_barite_ore",
+            "weight": 5
+          }
+        ],
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:moon_deepslate_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:moon_deepslate_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_barite_ore",
+            "weight": 5
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:moon_stone_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:moon_stone_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_barite_ore",
+            "weight": 5
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:basalt_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_barite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:andesite_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:andesite_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_barite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:basalt_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:basalt_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_barite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:dacite_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:dacite_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_barite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:diorite_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:diorite_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_barite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:gabbro_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:gabbro_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_barite_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_quartzite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:rhyolite_certus_quartz_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_certus_quartz_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:rhyolite_nether_quartz_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:raw_nether_quartz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_barite_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.3,
+      "id": "moon_quartz",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:quartzite_bud_indicator",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:certus_quartz_bud_indicator",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:nether_quartz_bud_indicator",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:barite_indicator",
+            "weight": 5
+          }
+        ],
+        "depth": 80,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 100,
+      "min_y": 10,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_quartz",
+      "rarity": 230,
+      "size": 45,
+      "type": "cluster"
+    },
+    "moon_redstone": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_redstone_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_redstone_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_ruby_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:glacio_stone_cinnabar_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:glacio_stone_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_redstone_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_redstone_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_ruby_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:andesite_cinnabar_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:andesite_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_redstone_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_redstone_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_ruby_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:dacite_cinnabar_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:dacite_olivine_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.2,
+      "id": "moon_redstone",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:redstone_indicator",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:ruby_bud_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:cinnabar_bud_indicator",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 5
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 100,
+      "min_y": 20,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_redstone",
+      "rarity": 250,
+      "size": 35,
+      "type": "cluster"
+    },
+    "moon_saltpeter": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_saltpeter_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_saltpeter_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_soapstone_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_electrotine_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:moon_deepslate_talc_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_saltpeter_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_saltpeter_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_soapstone_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:andesite_electrotine_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:andesite_talc_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_saltpeter_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_saltpeter_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_soapstone_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:dacite_electrotine_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:dacite_talc_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_saltpeter_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_saltpeter_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_soapstone_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:rhyolite_electrotine_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:rhyolite_talc_ore",
+            "weight": 15
+          }
+        ]
+      },
+      "density": 0.3,
+      "id": "moon_saltpeter",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:saltpeter_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:soapstone_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:electrotine_indicator",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:talc_indicator",
+            "weight": 15
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 90,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_saltpeter",
+      "rarity": 210,
+      "size": 30,
+      "type": "cluster"
+    },
+    "moon_sapphire": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_almandine_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_almandine_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_pyrope_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_sapphire_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_deepslate_green_sapphire_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:moon_deepslate_olivine_ore",
+            "weight": 2
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_almandine_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_almandine_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_pyrope_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_sapphire_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_green_sapphire_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_olivine_ore",
+            "weight": 2
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_almandine_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_almandine_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_pyrope_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_sapphire_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_green_sapphire_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_olivine_ore",
+            "weight": 2
+          }
+        ]
+      },
+      "density": 0.35,
+      "height": 8,
+      "id": "moon_sapphire",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:almandine_bud_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:pyrope_bud_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:sapphire_bud_indicator",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:green_sapphire_bud_indicator",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 2
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 100,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_sapphire",
+      "rarity": 280,
+      "size": 28,
+      "type": "disc"
+    },
+    "moon_scheelite": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_scheelite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_scheelite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_tungstate_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_tungstate_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:glacio_stone_lithium_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_scheelite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_scheelite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_tungstate_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_tungstate_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:gabbro_lithium_ore",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_scheelite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_scheelite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_tungstate_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_tungstate_block",
+            "weight": 2
+          },
+          {
+            "block": "gtceu:rhyolite_lithium_ore",
+            "weight": 10
+          }
+        ]
+      },
+      "density": 0.4,
+      "id": "moon_scheelite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:scheelite_indicator",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:tungstate_indicator",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:lithium_indicator",
+            "weight": 10
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 70,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_scheelite",
+      "rarity": 200,
+      "size": 20,
+      "type": "cluster"
+    },
+    "moon_sheldonite": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_bornite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bornite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_cooperite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:glacio_stone_platinum_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:glacio_stone_nickel_ore",
+            "weight": 25
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_bornite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bornite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_cooperite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_platinum_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_nickel_ore",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_bornite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bornite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_cooperite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:andesite_platinum_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:andesite_nickel_ore",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_bornite_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_bornite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_cooperite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:basalt_platinum_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:basalt_nickel_ore",
+            "weight": 25
+          }
+        ]
+      },
+      "density": 0.3,
+      "id": "moon_sheldonite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:bornite_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:cooperite_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:platinum_indicator",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/small_garnierite",
+            "weight": 25
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 70,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_sheldonite",
+      "rarity": 260,
+      "size": 30,
+      "type": "cluster"
+    },
+    "moon_silver": {
+      "blocks": {
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_galena_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:moon_deepslate_silver_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_silver_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_lead_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_deepslate_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_galena_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:moon_stone_silver_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_silver_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_lead_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:moon_stone_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_galena_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:dacite_silver_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_silver_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_lead_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:dacite_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_galena_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:diorite_silver_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_silver_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_lead_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:diorite_olivine_ore",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_galena_ore",
+            "weight": 30
+          },
+          {
+            "block": "gtceu:rhyolite_silver_ore",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:raw_silver_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_lead_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:rhyolite_olivine_ore",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.35,
+      "id": "moon_silver",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:galena_indicator",
+            "weight": 30
+          },
+          {
+            "block": "tfc:ore/small_native_silver",
+            "weight": 45
+          },
+          {
+            "block": "gtceu:lead_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:olivine_bud_indicator",
+            "weight": 5
+          }
+        ],
+        "depth": 50,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 75,
+      "min_y": 20,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_silver",
+      "rarity": 210,
+      "size": 30,
+      "type": "cluster"
+    },
+    "moon_sphalerite": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_desh_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:glacio_stone_sphalerite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_sphalerite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_pyrite_ore",
+            "weight": 40
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_desh_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:basalt_sphalerite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_sphalerite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_pyrite_ore",
+            "weight": 40
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_desh_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:andesite_sphalerite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_sphalerite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_pyrite_ore",
+            "weight": 40
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_desh_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:basalt_sphalerite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_sphalerite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_pyrite_ore",
+            "weight": 40
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_desh_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:dacite_sphalerite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_sphalerite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_pyrite_ore",
+            "weight": 40
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_desh_ore",
+            "weight": 10
+          },
+          {
+            "block": "gtceu:gabbro_sphalerite_ore",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:raw_sphalerite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_pyrite_ore",
+            "weight": 40
+          }
+        ]
+      },
+      "density": 0.35,
+      "id": "moon_sphalerite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:desh_indicator",
+            "weight": 10
+          },
+          {
+            "block": "tfc:ore/small_sphalerite",
+            "weight": 50
+          },
+          {
+            "block": "gtceu:pyrite_indicator",
+            "weight": 40
+          }
+        ],
+        "depth": 60,
+        "rarity": 12,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 75,
+      "min_y": 2,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_sphalerite",
+      "rarity": 205,
+      "size": 35,
+      "type": "cluster"
+    },
+    "moon_tetrahedrite": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_tetrahedrite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_tetrahedrite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_copper_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:glacio_stone_stibnite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:glacio_stone_chalcocite_ore",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_tetrahedrite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_tetrahedrite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_copper_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:andesite_stibnite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:andesite_chalcocite_ore",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_tetrahedrite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_tetrahedrite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_copper_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:dacite_stibnite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:dacite_chalcocite_ore",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_tetrahedrite_ore",
+            "weight": 40
+          },
+          {
+            "block": "gtceu:raw_tetrahedrite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_copper_ore",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:rhyolite_stibnite_ore",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:rhyolite_chalcocite_ore",
+            "weight": 25
+          }
+        ]
+      },
+      "density": 0.3,
+      "id": "moon_tetrahedrite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_tetrahedrite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/small_native_copper",
+            "weight": 15
+          },
+          {
+            "block": "gtceu:stibnite_indicator",
+            "weight": 20
+          },
+          {
+            "block": "gtceu:chalcocite_indicator",
+            "weight": 25
+          }
+        ],
+        "depth": 60,
+        "rarity": 12,
+        "underground_count": 1,
+        "underground_rarity": 1
+      },
+      "max_y": 128,
+      "min_y": 50,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_tetrahedrite",
+      "rarity": 190,
+      "size": 35,
+      "type": "cluster"
+    },
+    "moon_topaz": {
+      "blocks": {
+        "ad_astra:glacio_stone": [
+          {
+            "block": "gtceu:glacio_stone_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:glacio_stone_bornite_ore",
+            "weight": 15
+          }
+        ],
+        "ad_astra:moon_deepslate": [
+          {
+            "block": "gtceu:moon_deepslate_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_deepslate_bornite_ore",
+            "weight": 15
+          }
+        ],
+        "ad_astra:moon_stone": [
+          {
+            "block": "gtceu:moon_stone_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:moon_stone_bornite_ore",
+            "weight": 15
+          }
+        ],
+        "minecraft:basalt": [
+          {
+            "block": "gtceu:basalt_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_bornite_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "gtceu:andesite_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:andesite_bornite_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "gtceu:basalt_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:basalt_bornite_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "gtceu:dacite_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:dacite_bornite_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "gtceu:diorite_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:diorite_bornite_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "gtceu:gabbro_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:gabbro_bornite_ore",
+            "weight": 15
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "gtceu:rhyolite_blue_topaz_ore",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:raw_blue_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_topaz_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_topaz_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_chalcocite_ore",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:raw_chalcocite_block",
+            "weight": 1
+          },
+          {
+            "block": "gtceu:rhyolite_bornite_ore",
+            "weight": 15
+          }
+        ]
+      },
+      "density": 0.35,
+      "height": 16,
+      "id": "moon_topaz",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "gtceu:blue_topaz_bud_indicator",
+            "weight": 35
+          },
+          {
+            "block": "gtceu:topaz_bud_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:chalcocite_indicator",
+            "weight": 25
+          },
+          {
+            "block": "gtceu:bornite_indicator",
+            "weight": 15
+          }
+        ],
+        "depth": 20,
+        "rarity": 15,
+        "underground_count": 200,
+        "underground_rarity": 40
+      },
+      "max_y": 120,
+      "min_y": 0,
+      "project": false,
+      "project_offset": false,
+      "random_name": "moon_topaz",
+      "rarity": 210,
+      "size": 45,
+      "type": "disc"
+    }
+  }
+}

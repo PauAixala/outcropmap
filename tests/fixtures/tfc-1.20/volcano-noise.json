@@ -1,0 +1,2107 @@
+{
+  "source": "Actual TFC 1.20.x VolcanoNoise, Cellular2D, OpenSimplex2D and FastNoiseLite. Minecraft Mth/BlockPos, Nullable and fastutil linkage use minimal shims. Seeds are supplied directly.",
+  "revision": "b158c9c968cad7afb99cea2c937b301ff275e2e6",
+  "capturedAt": "2026-09-10T08:02:13.286Z",
+  "cases": [
+    {
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 47.36481742441674
+    },
+    {
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 66.46311102688333
+    },
+    {
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.12490936561974
+    },
+    {
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 47.36481742441674
+    },
+    {
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 66.46311102688333
+    },
+    {
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.09398796659202
+    },
+    {
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 48.420215188348266
+    },
+    {
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 66.99897554405925
+    },
+    {
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.09398796659202
+    },
+    {
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 48.420215188348266
+    },
+    {
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 67.4532387168797
+    },
+    {
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.07997797848714
+    },
+    {
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 49.299283316889614
+    },
+    {
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 67.4532387168797
+    },
+    {
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.07997797848714
+    },
+    {
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.6539483070373535,
+      "center": [3, 70, -62],
+      "modifiedHeight": 78.43029426178009
+    },
+    {
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0.6539483070373535,
+      "center": [3, 70, -62],
+      "modifiedHeight": 86.5897768004802
+    },
+    {
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0.6539483070373535,
+      "center": [3, 70, -62],
+      "modifiedHeight": 96.78912997385532
+    },
+    {
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.8783141374588013,
+      "center": [-151, 70, 137],
+      "modifiedHeight": 125.60950764723293
+    },
+    {
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.3573896288871765,
+      "center": [234332, 70, -234381],
+      "modifiedHeight": 71.70369322504393
+    },
+    {
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0.3573896288871765,
+      "center": [234332, 70, -234381],
+      "modifiedHeight": 91.41859790010321
+    },
+    {
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": [8270, 70, 4115],
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 47.36481742441674
+    },
+    {
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 66.46311102688333
+    },
+    {
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.19263017177581787,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.09374061489197
+    },
+    {
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0.19263017177581787,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 48.43146975946945
+    },
+    {
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.21110129356384277,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 67.46274780408714
+    },
+    {
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0.21110129356384277,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.07980159927739
+    },
+    {
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.0247001051902771,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 40.32772564686092
+    },
+    {
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0.0247001051902771,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 63.14431290033462
+    },
+    {
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.675419270992279,
+      "center": [-125, 70, 157],
+      "modifiedHeight": 98.2019853226634
+    },
+    {
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0.675419270992279,
+      "center": [-125, 70, 157],
+      "modifiedHeight": 81.1393783472272
+    },
+    {
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.002970278263092041,
+      "center": [234380, 70, -234322],
+      "modifiedHeight": 63.05364108156659
+    },
+    {
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0.002970278263092041,
+      "center": [234380, 70, -234322],
+      "modifiedHeight": 91.7340889924491
+    },
+    {
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0.002970278263092041,
+      "center": [234380, 70, -234322],
+      "modifiedHeight": 40.122045787295924
+    },
+    {
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0.002970278263092041,
+      "center": [234380, 70, -234322],
+      "modifiedHeight": 63.05364108156659
+    },
+    {
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.22135502099990845,
+      "center": [8225, 70, 4062],
+      "modifiedHeight": 50.07143999535401
+    },
+    {
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 47.36481742441674
+    },
+    {
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 66.46311102688333
+    },
+    {
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.12490936561974
+    },
+    {
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 47.36481742441674
+    },
+    {
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 66.46311102688333
+    },
+    {
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.09418138293506
+    },
+    {
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 48.411443135620175
+    },
+    {
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 66.99447866428
+    },
+    {
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.09418138293506
+    },
+    {
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 48.411443135620175
+    },
+    {
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 67.45887450821829
+    },
+    {
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.07987300419711
+    },
+    {
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 49.31010113604498
+    },
+    {
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 67.45887450821829
+    },
+    {
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.07987300419711
+    },
+    {
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.6539483070373535,
+      "center": [3, 70, -62],
+      "modifiedHeight": 78.49020230372798
+    },
+    {
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0.6539483070373535,
+      "center": [3, 70, -62],
+      "modifiedHeight": 86.63642543156993
+    },
+    {
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0.6539483070373535,
+      "center": [3, 70, -62],
+      "modifiedHeight": 96.81920434137237
+    },
+    {
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.8783141374588013,
+      "center": [-151, 70, 137],
+      "modifiedHeight": 125.60950764723293
+    },
+    {
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.3573896288871765,
+      "center": [234332, 70, -234381],
+      "modifiedHeight": 71.70411458498893
+    },
+    {
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0.3573896288871765,
+      "center": [234332, 70, -234381],
+      "modifiedHeight": 91.41866833548687
+    },
+    {
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": [8270, 70, 4115],
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.16963934898376465,
+      "center": [-31, 70, 36],
+      "modifiedHeight": 47.36481483670832
+    },
+    {
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.1206936240196228,
+      "center": [-31, 70, 36],
+      "modifiedHeight": 91.23881124690334
+    },
+    {
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.1654396653175354,
+      "center": [-31, 70, 36],
+      "modifiedHeight": 66.36355978168899
+    },
+    {
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.216666579246521,
+      "center": [-31, 70, -73],
+      "modifiedHeight": 48.685132644897294
+    },
+    {
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0.216666579246521,
+      "center": [-31, 70, -73],
+      "modifiedHeight": 67.13511069846709
+    },
+    {
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": [-159, 70, 228],
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": [234289, 70, -234312],
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.6382582187652588,
+      "center": [8203, 70, 4066],
+      "modifiedHeight": 77.54995591583156
+    },
+    {
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 47.36481742441674
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.09398796659202
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 67.4532387168797
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.6539483070373535,
+      "center": [3, 70, -62],
+      "modifiedHeight": 78.43029426178009
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.8783141374588013,
+      "center": [-151, 70, 137],
+      "modifiedHeight": 125.60950764723293
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0.8783141374588013,
+      "center": [-151, 70, 137],
+      "modifiedHeight": 119.10518364317886
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.3573896288871765,
+      "center": [234332, 70, -234381],
+      "modifiedHeight": 71.70369322504393
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": [8270, 70, 4115],
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": [8270, 70, 4115],
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": [8270, 70, 4115],
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.16963940858840942,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 47.36481742441674
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.1926308274269104,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 91.09418138293506
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.2111009955406189,
+      "center": [-13, 70, -46],
+      "modifiedHeight": 67.45887450821829
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0.6539483070373535,
+      "center": [3, 70, -62],
+      "modifiedHeight": 78.49020230372798
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 1,
+      "baseHeight": 91.75,
+      "easing": 0.8783141374588013,
+      "center": [-151, 70, 137],
+      "modifiedHeight": 125.60950764723293
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 2,
+      "baseHeight": 40,
+      "easing": 0.8783141374588013,
+      "center": [-151, 70, 137],
+      "modifiedHeight": 119.10518364317886
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 5,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 10,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "rarity": 100,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 1,
+      "baseHeight": 63,
+      "easing": 0.3573896288871765,
+      "center": [234332, 70, -234381],
+      "modifiedHeight": 71.70411458498893
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 2,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 5,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 10,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "rarity": 100,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 1,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": [8270, 70, 4115],
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 2,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": [8270, 70, 4115],
+      "modifiedHeight": 63
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 5,
+      "baseHeight": 91.75,
+      "easing": 0,
+      "center": [8270, 70, 4115],
+      "modifiedHeight": 91.75
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 10,
+      "baseHeight": 40,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 40
+    },
+    {
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "rarity": 100,
+      "baseHeight": 63,
+      "easing": 0,
+      "center": null,
+      "modifiedHeight": 63
+    }
+  ]
+}

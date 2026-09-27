@@ -1,0 +1,7420 @@
+{
+  "source": "Actual TFC 1.20.x BiomeNoise, VolcanoNoise, Cellular2D, OpenSimplex2D and FastNoiseLite. Minecraft and fastutil linkage use minimal shims. Seeds are supplied directly.",
+  "revision": "b158c9c968cad7afb99cea2c937b301ff275e2e6",
+  "capturedAt": "2026-09-10T08:06:35.422Z",
+  "cases": [
+    {
+      "name": "badlands",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 66.6
+    },
+    {
+      "name": "badlands",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 67.87283516218886
+    },
+    {
+      "name": "badlands",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 67.89192918883637
+    },
+    {
+      "name": "badlands",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 82.30733137130737
+    },
+    {
+      "name": "badlands",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.41390206515788
+    },
+    {
+      "name": "badlands",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 83.82309750914574
+    },
+    {
+      "name": "badlands",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 75.93688030540943
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 71
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 70.91353579051793
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 70.96522930637002
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 87.33148580789566
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.86473476886749
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 78.34681116044521
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 85.18036421388388
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 64.66666666666667
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 64.71680540314979
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 64.69931866412756
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 75.37876118651886
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 64.56526758176187
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 60.355894212585284
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 62.760537120046166
+    },
+    {
+      "name": "canyons",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "canyons",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 75.07261472180315
+    },
+    {
+      "name": "canyons",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 75.04728909977095
+    },
+    {
+      "name": "canyons",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 90.51406792530317
+    },
+    {
+      "name": "canyons",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.85314615289649
+    },
+    {
+      "name": "canyons",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 68.75681230788213
+    },
+    {
+      "name": "canyons",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 72.23939858765306
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 70
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 69.96699705533683
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 69.989467962645
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 70.08048704080284
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 69.93483349122107
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.6990774050355
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 70.78727716207504
+    },
+    {
+      "name": "hills",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 68.5
+    },
+    {
+      "name": "hills",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 68.38448969367892
+    },
+    {
+      "name": "hills",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 68.46313786925748
+    },
+    {
+      "name": "hills",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 68.78170464280993
+    },
+    {
+      "name": "hills",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 68.27191721927375
+    },
+    {
+      "name": "hills",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 67.44677091762424
+    },
+    {
+      "name": "hills",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 71.25547006726265
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 74.5
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 74.31848380435258
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 74.44207379454747
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 74.9426787244156
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.14158420171589
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 72.84492572769523
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 78.83002439141273
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 88
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 87.94499509222806
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 87.98244660440832
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 88.13414506800473
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 87.89138915203512
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 87.49846234172583
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 89.3121286034584
+    },
+    {
+      "name": "sharpHills",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 76.03448289044547
+    },
+    {
+      "name": "sharpHills",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 74.83522665213377
+    },
+    {
+      "name": "sharpHills",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 75.52848071532034
+    },
+    {
+      "name": "sharpHills",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 72.24472789768762
+    },
+    {
+      "name": "sharpHills",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 81.62646360948358
+    },
+    {
+      "name": "sharpHills",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 71.79645691387958
+    },
+    {
+      "name": "sharpHills",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 77.0507130817942
+    },
+    {
+      "name": "lake",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 58
+    },
+    {
+      "name": "lake",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 57.748712873830165
+    },
+    {
+      "name": "lake",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 57.86641481614868
+    },
+    {
+      "name": "lake",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 58.7598754937652
+    },
+    {
+      "name": "lake",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 55.64513609130288
+    },
+    {
+      "name": "lake",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 57.14705032790475
+    },
+    {
+      "name": "lake",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 59.14221961153258
+    },
+    {
+      "name": "lowlands",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 60.5
+    },
+    {
+      "name": "lowlands",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 60.55406088102609
+    },
+    {
+      "name": "lowlands",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 60.60873849922791
+    },
+    {
+      "name": "lowlands",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 60.86298066843301
+    },
+    {
+      "name": "lowlands",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 59.932994975708425
+    },
+    {
+      "name": "lowlands",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 60.29031416401267
+    },
+    {
+      "name": "lowlands",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 60.19291943311691
+    },
+    {
+      "name": "mountains",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 143
+    },
+    {
+      "name": "mountains",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 142.41967416738993
+    },
+    {
+      "name": "mountains",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 143.1457589275766
+    },
+    {
+      "name": "mountains",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 100.10006983899768
+    },
+    {
+      "name": "mountains",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 90.40106182790736
+    },
+    {
+      "name": "mountains",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 159.82525016911725
+    },
+    {
+      "name": "mountains",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 193.40410375330435
+    },
+    {
+      "name": "oldMountains",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 119
+    },
+    {
+      "name": "oldMountains",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 118.48279567966446
+    },
+    {
+      "name": "oldMountains",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 119.08329081575806
+    },
+    {
+      "name": "oldMountains",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 94.48575419371296
+    },
+    {
+      "name": "oldMountains",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 88.94346390166135
+    },
+    {
+      "name": "oldMountains",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 128.614428668067
+    },
+    {
+      "name": "oldMountains",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 150.48518880624763
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 107
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 106.22419351949671
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 107.12493622363709
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 70.22863129056944
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 61.91519585249202
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 121.4216430021005
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 151.09779877095212
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 132.2241935194967
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 133.1249362236371
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 96.22863129056944
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 87.91519585249202
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 147.4216430021005
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 177.09779877095212
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 89
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 88.35349459958059
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 89.10411351969758
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 58.35719274214121
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 51.42932987707668
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 101.01803583508375
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 120.53152491176118
+    },
+    {
+      "name": "ocean",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 44
+    },
+    {
+      "name": "ocean",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 44.02348360768519
+    },
+    {
+      "name": "ocean",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 43.9964834600687
+    },
+    {
+      "name": "ocean",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 47.30282258987427
+    },
+    {
+      "name": "ocean",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 41.749710470438
+    },
+    {
+      "name": "ocean",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 43.869922783225775
+    },
+    {
+      "name": "ocean",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 44.28962030634284
+    },
+    {
+      "name": "oceanReef",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 51
+    },
+    {
+      "name": "oceanReef",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 51.01341920439154
+    },
+    {
+      "name": "oceanReef",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 50.99799054861069
+    },
+    {
+      "name": "oceanReef",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 52.88732719421387
+    },
+    {
+      "name": "oceanReef",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 49.714120268821716
+    },
+    {
+      "name": "oceanReef",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 50.9256701618433
+    },
+    {
+      "name": "oceanReef",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 51.165497317910194
+    },
+    {
+      "name": "deepOcean",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 40
+    },
+    {
+      "name": "deepOcean",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 40.02348360768519
+    },
+    {
+      "name": "deepOcean",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 39.9964834600687
+    },
+    {
+      "name": "deepOcean",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 43.30282258987427
+    },
+    {
+      "name": "deepOcean",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 37.749710470438
+    },
+    {
+      "name": "deepOcean",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 39.869922783225775
+    },
+    {
+      "name": "deepOcean",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 40.28962030634284
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 23.999997799212935
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 24.068404781197223
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 23.98446091224625
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 31.723615242955916
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 36.42867442586614
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 33.91237879481224
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 28.3844424933016
+    },
+    {
+      "name": "shore",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 65.5
+    },
+    {
+      "name": "shore",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 65.39656031131744
+    },
+    {
+      "name": "shore",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 65.43893971666694
+    },
+    {
+      "name": "shore",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 66.04085303097963
+    },
+    {
+      "name": "shore",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 65.62919815257192
+    },
+    {
+      "name": "shore",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 66.06034788489342
+    },
+    {
+      "name": "shore",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 66.04277781397104
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 63.900001525878906
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 63.86276317481861
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 63.878019786610764
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 64.09470894714207
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 63.94651293966109
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 64.10172710644974
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 64.09540187019377
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 75.46727974421992
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 75.61151056347396
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 75.66518403230464
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 88.77379091760511
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.85314615289649
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 68.75681230788213
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 72.23939858765306
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 129.33244738123076
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 128.17009844543466
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 128.61195224048078
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 97.9399638108352
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 87.91519585249202
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 147.4216430021005
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 177.09779877095212
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 85.92618531129018
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "0",
+      "x": 1,
+      "z": -1,
+      "value": 84.9597692309252
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "0",
+      "x": -1,
+      "z": -1,
+      "value": 85.33076475289025
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "0",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 60.349668718806946
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "0",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 51.42932987707668
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "0",
+      "x": 234375,
+      "z": -234375,
+      "value": 92.90808457443113
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "0",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 120.53152491176118
+    },
+    {
+      "name": "badlands",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 66.6
+    },
+    {
+      "name": "badlands",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 69.24053325857967
+    },
+    {
+      "name": "badlands",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 67.93127505071462
+    },
+    {
+      "name": "badlands",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 65.81445213258266
+    },
+    {
+      "name": "badlands",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 69.15762591362
+    },
+    {
+      "name": "badlands",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 79.01479999572038
+    },
+    {
+      "name": "badlands",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 77.30961481034755
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 71
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 71.09601745009422
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 71.25610169768333
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 76.07765173912048
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 71.75635987520218
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 88.45275462046266
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 81.6771424561739
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 64.66666666666667
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 64.87974392351767
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 63.767105533176085
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 71.56991126780841
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 64.29456284699992
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 58.52704403012429
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 55.5849599006033
+    },
+    {
+      "name": "canyons",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "canyons",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 75.30859464785316
+    },
+    {
+      "name": "canyons",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 73.69718732391019
+    },
+    {
+      "name": "canyons",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 84.99780252579149
+    },
+    {
+      "name": "canyons",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.46109101979299
+    },
+    {
+      "name": "canyons",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 66.10813273328345
+    },
+    {
+      "name": "canyons",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 61.847183304322016
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 70
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 70.04717181436718
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 70.03703467361629
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 69.01122921705246
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 70.07347375713289
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 70.37920847535133
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 70.14753998070955
+    },
+    {
+      "name": "hills",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 68.5
+    },
+    {
+      "name": "hills",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 68.66510135028511
+    },
+    {
+      "name": "hills",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 68.62962135765702
+    },
+    {
+      "name": "hills",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 65.03930225968361
+    },
+    {
+      "name": "hills",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 68.75715814996511
+    },
+    {
+      "name": "hills",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.82722966372967
+    },
+    {
+      "name": "hills",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 69.01638993248343
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 74.5
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 74.75944497901946
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 74.7036907048896
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 69.06176069378853
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.90410566423088
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 76.58564661443233
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 75.31146989390254
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 88
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 88.07861969061196
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 88.06172445602715
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 86.35204869508743
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 88.12245626188815
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 88.63201412558556
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 88.24589996784925
+    },
+    {
+      "name": "sharpHills",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 76.03448289044547
+    },
+    {
+      "name": "sharpHills",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 77.27172460289387
+    },
+    {
+      "name": "sharpHills",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 76.78892403586342
+    },
+    {
+      "name": "sharpHills",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 76.45573035943312
+    },
+    {
+      "name": "sharpHills",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 84.12559612037964
+    },
+    {
+      "name": "sharpHills",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 86.91174850526052
+    },
+    {
+      "name": "sharpHills",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 79.89334176153213
+    },
+    {
+      "name": "lake",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 58
+    },
+    {
+      "name": "lake",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 58.22143475394029
+    },
+    {
+      "name": "lake",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 58.217437353952306
+    },
+    {
+      "name": "lake",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 58.5922709701249
+    },
+    {
+      "name": "lake",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 57.69651282245829
+    },
+    {
+      "name": "lake",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 55.740561442147836
+    },
+    {
+      "name": "lake",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 60.47231470591744
+    },
+    {
+      "name": "lowlands",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 60.5
+    },
+    {
+      "name": "lowlands",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 60.69439148623496
+    },
+    {
+      "name": "lowlands",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 60.570499141700566
+    },
+    {
+      "name": "lowlands",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 59.669983357191086
+    },
+    {
+      "name": "lowlands",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 60.16889444086701
+    },
+    {
+      "name": "lowlands",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 61.04435507953167
+    },
+    {
+      "name": "lowlands",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 61.095153015106916
+    },
+    {
+      "name": "mountains",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 143
+    },
+    {
+      "name": "mountains",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 143.83991981739206
+    },
+    {
+      "name": "mountains",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 143.95743990379177
+    },
+    {
+      "name": "mountains",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 101.15031746578958
+    },
+    {
+      "name": "mountains",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 150.42753085109297
+    },
+    {
+      "name": "mountains",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 106.77633844110194
+    },
+    {
+      "name": "mountains",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 98.40976112172328
+    },
+    {
+      "name": "oldMountains",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 119
+    },
+    {
+      "name": "oldMountains",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 119.14683457184067
+    },
+    {
+      "name": "oldMountains",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 119.29135680021332
+    },
+    {
+      "name": "oldMountains",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 95.0858956947369
+    },
+    {
+      "name": "oldMountains",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 123.2443033434817
+    },
+    {
+      "name": "oldMountains",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 98.30076482348682
+    },
+    {
+      "name": "oldMountains",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 93.51986349812759
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 107
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 107.22025185776101
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 107.43703520032
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 71.12884354210536
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 113.36645501522254
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 75.95114723523024
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 68.77979524719139
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 133.220251857761
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 133.43703520032
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 97.12884354210536
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 139.36645501522253
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 101.95114723523024
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 94.77979524719139
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 89
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 89.18354321480084
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 89.36419600026666
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 59.10736961842113
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 94.30537917935212
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 63.12595602935853
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 57.14982937265948
+    },
+    {
+      "name": "ocean",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 44
+    },
+    {
+      "name": "ocean",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 44.32089816778898
+    },
+    {
+      "name": "ocean",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 44.191062945872545
+    },
+    {
+      "name": "ocean",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 41.92016017436981
+    },
+    {
+      "name": "ocean",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 45.01635743677616
+    },
+    {
+      "name": "ocean",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 43.911295409314334
+    },
+    {
+      "name": "ocean",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 44.362204395234585
+    },
+    {
+      "name": "oceanReef",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 51
+    },
+    {
+      "name": "oceanReef",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 51.183370381593704
+    },
+    {
+      "name": "oceanReef",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 51.10917882621288
+    },
+    {
+      "name": "oceanReef",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 49.81152009963989
+    },
+    {
+      "name": "oceanReef",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 51.580775678157806
+    },
+    {
+      "name": "oceanReef",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 50.949311662465334
+    },
+    {
+      "name": "oceanReef",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 51.20697394013405
+    },
+    {
+      "name": "deepOcean",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 40
+    },
+    {
+      "name": "deepOcean",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 40.32089816778898
+    },
+    {
+      "name": "deepOcean",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 40.191062945872545
+    },
+    {
+      "name": "deepOcean",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 37.92016017436981
+    },
+    {
+      "name": "deepOcean",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 41.01635743677616
+    },
+    {
+      "name": "deepOcean",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 39.911295409314334
+    },
+    {
+      "name": "deepOcean",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 40.362204395234585
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 23.999997799212935
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 24.99195371961755
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 24.711845829050596
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 30.927471031270308
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 39.73269841074707
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 33.671538891493086
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 30.37759023464981
+    },
+    {
+      "name": "shore",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 65.5
+    },
+    {
+      "name": "shore",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 65.57711987476796
+    },
+    {
+      "name": "shore",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 65.5828789267689
+    },
+    {
+      "name": "shore",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 66.17218072712421
+    },
+    {
+      "name": "shore",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 66.88800919055939
+    },
+    {
+      "name": "shore",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 66.17248202860355
+    },
+    {
+      "name": "shore",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 65.61570852249861
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 63.900001525878906
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 63.92776472786561
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 63.92983799010099
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 64.14198699791018
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 64.39968568165386
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 64.14209546662664
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 63.94165666460128
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 75.30859464785316
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 73.69718732391019
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 84.99780252579149
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.46109101979299
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 66.1405598512843
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 61.847183304322016
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 133.220251857761
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 133.43703520032
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 97.12884354210536
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 139.36645501522253
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 101.93044005359312
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 94.77979524719139
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "1",
+      "x": 0,
+      "z": 0,
+      "value": 85.92618531129018
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "1",
+      "x": 1,
+      "z": -1,
+      "value": 85.7060247104561
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "1",
+      "x": -1,
+      "z": -1,
+      "value": 85.55712866524303
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 59.075325276903
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 84.77117077205405
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "1",
+      "x": 234375,
+      "z": -234375,
+      "value": 63.10796301440266
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 57.14982937265948
+    },
+    {
+      "name": "badlands",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 66.6
+    },
+    {
+      "name": "badlands",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 67.87283516218886
+    },
+    {
+      "name": "badlands",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 66.59192918883636
+    },
+    {
+      "name": "badlands",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 78.40733137130738
+    },
+    {
+      "name": "badlands",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 69.31390206515789
+    },
+    {
+      "name": "badlands",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 86.42309750914573
+    },
+    {
+      "name": "badlands",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 75.93688030540943
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 71
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 71.03410222008824
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 70.97284623235464
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 72.6868103146553
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.04412668943405
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 85.44016447663307
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 79.53658973946055
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 64.66666666666667
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 64.64298652658057
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 64.50504401582539
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 68.37024738336234
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 67.23383324617396
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.92649648448085
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 56.313962916821794
+    },
+    {
+      "name": "canyons",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "canyons",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 74.9657046247029
+    },
+    {
+      "name": "canyons",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 74.76592581602297
+    },
+    {
+      "name": "canyons",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 80.36380655521442
+    },
+    {
+      "name": "canyons",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.71796539101057
+    },
+    {
+      "name": "canyons",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 82.61768456373089
+    },
+    {
+      "name": "canyons",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 62.902980776086736
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 70
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 69.96699705533683
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 69.989467962645
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 70.08048704080284
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 69.93483349122107
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.6990774050355
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 70.78727716207504
+    },
+    {
+      "name": "hills",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 68.5
+    },
+    {
+      "name": "hills",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 68.38448969367892
+    },
+    {
+      "name": "hills",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 68.46313786925748
+    },
+    {
+      "name": "hills",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 68.78170464280993
+    },
+    {
+      "name": "hills",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 68.27191721927375
+    },
+    {
+      "name": "hills",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 67.44677091762424
+    },
+    {
+      "name": "hills",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 71.25547006726265
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 74.5
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 74.31848380435258
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 74.44207379454747
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 74.9426787244156
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.14158420171589
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 72.84492572769523
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 78.83002439141273
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 88
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 87.94499509222806
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 87.98244660440832
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 88.13414506800473
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 87.89138915203512
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 87.49846234172583
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 89.3121286034584
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 76.03448289044547
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 74.87921835889931
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 75.51904212220995
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 71.33878166070646
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 80.97998222435388
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 72.1774685957791
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 74.66698242417883
+    },
+    {
+      "name": "lake",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 58
+    },
+    {
+      "name": "lake",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 57.74871285282319
+    },
+    {
+      "name": "lake",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 57.86641388388627
+    },
+    {
+      "name": "lake",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 58.7423453101531
+    },
+    {
+      "name": "lake",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 55.64513593912127
+    },
+    {
+      "name": "lake",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 57.14680642818195
+    },
+    {
+      "name": "lake",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 59.149551090771226
+    },
+    {
+      "name": "lowlands",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 60.5
+    },
+    {
+      "name": "lowlands",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 60.436408770270646
+    },
+    {
+      "name": "lowlands",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 60.464796318206936
+    },
+    {
+      "name": "lowlands",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 60.48728327546269
+    },
+    {
+      "name": "lowlands",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 60.36596655007452
+    },
+    {
+      "name": "lowlands",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 59.967681135982275
+    },
+    {
+      "name": "lowlands",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 59.722459107637405
+    },
+    {
+      "name": "mountains",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 143
+    },
+    {
+      "name": "mountains",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 142.41138288545247
+    },
+    {
+      "name": "mountains",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 143.69675615114096
+    },
+    {
+      "name": "mountains",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 78.16835426397923
+    },
+    {
+      "name": "mountains",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 108.15237659946166
+    },
+    {
+      "name": "mountains",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 159.54755472498056
+    },
+    {
+      "name": "mountains",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 142.04427249565265
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 119
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 118.6636473631157
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 119.39814637208055
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 81.95334529370241
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 99.08707234254952
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 128.45574555713173
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 118.45386999751581
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 107
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 106.49547104467354
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 107.59721955812083
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 51.43001794055362
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 77.13060851382427
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 121.1836183356976
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 106.18080499627371
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 132.49547104467354
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 133.59721955812083
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 77.43001794055363
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 103.13060851382427
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 147.1836183356976
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 132.1808049962737
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 89
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 88.57955920389462
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 89.4976829651007
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 42.69168161712801
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 64.1088404281869
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 100.81968194641468
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 88.31733749689477
+    },
+    {
+      "name": "ocean",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 44
+    },
+    {
+      "name": "ocean",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 43.9752989159897
+    },
+    {
+      "name": "ocean",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 44.04916484095156
+    },
+    {
+      "name": "ocean",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 42.93052323162556
+    },
+    {
+      "name": "ocean",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 44.3707811050117
+    },
+    {
+      "name": "ocean",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 41.21029934287071
+    },
+    {
+      "name": "ocean",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 44.00162313878536
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 51
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 50.985885094851255
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 51.028094194829464
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 50.38887041807175
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 51.211874917149544
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 49.405885338783264
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 51.00092750787735
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 40
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 39.9752989159897
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 40.04916484095156
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 38.93052323162556
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 40.3707811050117
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 37.21029934287071
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 40.00162313878536
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 23.999997799212935
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 24.059080669868017
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 24.08026957729392
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 42.15510598668668
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 26.900284068756726
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 32.88221495188006
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 25.034167469960735
+    },
+    {
+      "name": "shore",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 65.5
+    },
+    {
+      "name": "shore",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 65.39656031131744
+    },
+    {
+      "name": "shore",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 65.43893971666694
+    },
+    {
+      "name": "shore",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 66.04085303097963
+    },
+    {
+      "name": "shore",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 65.62919815257192
+    },
+    {
+      "name": "shore",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 66.06034788489342
+    },
+    {
+      "name": "shore",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 66.04277781397104
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 63.900001525878906
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 63.86276317481861
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 63.878019786610764
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 64.09470894714207
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 63.94651293966109
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 64.10172710644974
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 64.09540187019377
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 75.46727974421992
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 75.52441279896752
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 75.44409939907437
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 81.94507001707373
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.71796539101057
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 82.61768456373089
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 62.902980776086736
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 129.33244738123076
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 128.41901812816835
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 129.02992065175312
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 90.51239528347568
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 103.13060851382427
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 147.1836183356976
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 132.1808049962737
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-1",
+      "x": 0,
+      "z": 0,
+      "value": 85.92618531129018
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-1",
+      "x": 1,
+      "z": -1,
+      "value": 85.1671788284251
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-1",
+      "x": -1,
+      "z": -1,
+      "value": 85.6791110687184
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-1",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 54.31343949867179
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-1",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 64.1088404281869
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-1",
+      "x": 234375,
+      "z": -234375,
+      "value": 92.7449350681148
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-1",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 88.31733749689477
+    },
+    {
+      "name": "badlands",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 66.6
+    },
+    {
+      "name": "badlands",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 69.13476565461606
+    },
+    {
+      "name": "badlands",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 67.98459109812975
+    },
+    {
+      "name": "badlands",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 82.32273003458977
+    },
+    {
+      "name": "badlands",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 84.65457959473133
+    },
+    {
+      "name": "badlands",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 73.4397038206458
+    },
+    {
+      "name": "badlands",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 66.90758837461472
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 71
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 71.31663276255131
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 71.21016980707645
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 80.55325096845627
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 86.89016211032867
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 79.38016252592206
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 71.33908678591251
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 64.66666666666667
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 65.44172855988053
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 64.61097917633535
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 74.26325853770089
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 59.799563887721845
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 61.02374383275097
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 64.76670777151921
+    },
+    {
+      "name": "canyons",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "canyons",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 76.12250343155111
+    },
+    {
+      "name": "canyons",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 74.91934915193396
+    },
+    {
+      "name": "canyons",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 88.89851236494613
+    },
+    {
+      "name": "canyons",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 67.95109252704542
+    },
+    {
+      "name": "canyons",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.72404279226001
+    },
+    {
+      "name": "canyons",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 75.14488711737265
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 70
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 69.92102957516909
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 70.1007361151278
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 69.74116852879524
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 69.72335311770439
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.82728911936283
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 69.52384634315968
+    },
+    {
+      "name": "hills",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 68.5
+    },
+    {
+      "name": "hills",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 68.2236035130918
+    },
+    {
+      "name": "hills",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 68.8525764029473
+    },
+    {
+      "name": "hills",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 67.59408985078335
+    },
+    {
+      "name": "hills",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 67.53173591196537
+    },
+    {
+      "name": "hills",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 67.89551191776991
+    },
+    {
+      "name": "hills",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 66.83346220105886
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 74.5
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 74.06566266342998
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 75.05404863320291
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 73.07642690837383
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 72.97844214737415
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 73.55009015649557
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 71.88115488737822
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 88
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 87.86838262528181
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 88.167893525213
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 87.56861421465874
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 87.53892186284065
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 87.71214853227139
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 87.20641057193279
+    },
+    {
+      "name": "sharpHills",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 76.03448289044547
+    },
+    {
+      "name": "sharpHills",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 73.29565512732825
+    },
+    {
+      "name": "sharpHills",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 78.55439953314999
+    },
+    {
+      "name": "sharpHills",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 85.48196443812236
+    },
+    {
+      "name": "sharpHills",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 66.52613227637542
+    },
+    {
+      "name": "sharpHills",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 88.00934540380675
+    },
+    {
+      "name": "sharpHills",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 75.39435532529812
+    },
+    {
+      "name": "lake",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 58
+    },
+    {
+      "name": "lake",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 57.38817468350532
+    },
+    {
+      "name": "lake",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 58.65439869837856
+    },
+    {
+      "name": "lake",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 58.27938739716888
+    },
+    {
+      "name": "lake",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 60.73747624874093
+    },
+    {
+      "name": "lake",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 58.99152156317734
+    },
+    {
+      "name": "lake",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 58.15548018357476
+    },
+    {
+      "name": "lowlands",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 60.5
+    },
+    {
+      "name": "lowlands",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 60.39610210433602
+    },
+    {
+      "name": "lowlands",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 60.587866296991706
+    },
+    {
+      "name": "lowlands",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 61.321783527731895
+    },
+    {
+      "name": "lowlands",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 61.124259904026985
+    },
+    {
+      "name": "lowlands",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 59.96808972209692
+    },
+    {
+      "name": "lowlands",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 59.824328415095806
+    },
+    {
+      "name": "mountains",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 143
+    },
+    {
+      "name": "mountains",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 139.58659134289042
+    },
+    {
+      "name": "mountains",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 144.2272240700599
+    },
+    {
+      "name": "mountains",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 135.14364102249502
+    },
+    {
+      "name": "mountains",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 111.17174109511467
+    },
+    {
+      "name": "mountains",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 175.78669560831085
+    },
+    {
+      "name": "mountains",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 117.87009859201433
+    },
+    {
+      "name": "oldMountains",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 119
+    },
+    {
+      "name": "oldMountains",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 117.04948076736594
+    },
+    {
+      "name": "oldMountains",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 119.60181466008021
+    },
+    {
+      "name": "oldMountains",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 114.5106520128543
+    },
+    {
+      "name": "oldMountains",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 100.81242348292267
+    },
+    {
+      "name": "oldMountains",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 134.23944136574892
+    },
+    {
+      "name": "oldMountains",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 104.6400563382939
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 107
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 104.0742211510489
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 107.90272199012033
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 100.26597801928143
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 79.718635224384
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 129.85916204862335
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 85.46008450744085
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 130.0742211510489
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 133.9027219901203
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 126.26597801928143
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 105.718635224384
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 161.97683526687362
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 111.46008450744085
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 89
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 86.56185095920742
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 89.75226832510026
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 83.38831501606786
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 66.26552935365333
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 108.04930170718613
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 71.05007042286738
+    },
+    {
+      "name": "ocean",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 44
+    },
+    {
+      "name": "ocean",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 43.59901165217161
+    },
+    {
+      "name": "ocean",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 44.057279309257865
+    },
+    {
+      "name": "ocean",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 43.84544465132058
+    },
+    {
+      "name": "ocean",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 45.07519546151161
+    },
+    {
+      "name": "ocean",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 43.274822771549225
+    },
+    {
+      "name": "ocean",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 46.772231966257095
+    },
+    {
+      "name": "oceanReef",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 51
+    },
+    {
+      "name": "oceanReef",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 50.77086380124092
+    },
+    {
+      "name": "oceanReef",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 51.03273103386164
+    },
+    {
+      "name": "oceanReef",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 50.91168265789747
+    },
+    {
+      "name": "oceanReef",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 51.614397406578064
+    },
+    {
+      "name": "oceanReef",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 50.58561301231384
+    },
+    {
+      "name": "oceanReef",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 52.58413255214691
+    },
+    {
+      "name": "deepOcean",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 40
+    },
+    {
+      "name": "deepOcean",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 39.59901165217161
+    },
+    {
+      "name": "deepOcean",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 40.057279309257865
+    },
+    {
+      "name": "deepOcean",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 39.84544465132058
+    },
+    {
+      "name": "deepOcean",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 41.07519546151161
+    },
+    {
+      "name": "deepOcean",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 39.274822771549225
+    },
+    {
+      "name": "deepOcean",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 42.772231966257095
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 23.999997799212935
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 24.513142576418108
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 23.983054973867386
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 29.882393060086294
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 41.798986076148516
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 30.08269954698985
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 33.44362928189136
+    },
+    {
+      "name": "shore",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 65.5
+    },
+    {
+      "name": "shore",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 65.24568422883749
+    },
+    {
+      "name": "shore",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 65.75879906490445
+    },
+    {
+      "name": "shore",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 65.91652038693428
+    },
+    {
+      "name": "shore",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 65.46691809035838
+    },
+    {
+      "name": "shore",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 64.75003632903099
+    },
+    {
+      "name": "shore",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 66.18109765648842
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 63.900001525878906
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 63.808447693038374
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 63.99316934720292
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 64.04994911939912
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 63.88809201821633
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 63.630014146588564
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 64.14519709792376
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 76.12250343155111
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 74.91934915193396
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 88.89851236494613
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 67.95109252704542
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.72404279226001
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 75.14488711737265
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 130.0742211510489
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 133.9027219901203
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 126.26597801928143
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 105.718635224384
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 161.97683526687362
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 111.46008450744085
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "123456789",
+      "x": 0,
+      "z": 0,
+      "value": 89
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "123456789",
+      "x": 1,
+      "z": -1,
+      "value": 86.56185095920742
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "123456789",
+      "x": -1,
+      "z": -1,
+      "value": 89.75226832510026
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "123456789",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 80.39402504240034
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "123456789",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 66.26552935365333
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "123456789",
+      "x": 234375,
+      "z": -234375,
+      "value": 108.04930170718613
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "123456789",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 71.05007042286738
+    },
+    {
+      "name": "badlands",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 66.6
+    },
+    {
+      "name": "badlands",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 67.87283516218886
+    },
+    {
+      "name": "badlands",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 67.89192918883637
+    },
+    {
+      "name": "badlands",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 82.30733137130737
+    },
+    {
+      "name": "badlands",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.41390206515788
+    },
+    {
+      "name": "badlands",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 83.82309750914574
+    },
+    {
+      "name": "badlands",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 75.93688030540943
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 71
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 70.91353579051793
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 70.96522930637002
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 87.33148580789566
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.86473476886749
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 78.34681116044521
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 85.18036421388388
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 64.66666666666667
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 64.71680540314979
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 64.69931866412756
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 75.37876118651886
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 64.56526758176187
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 60.355894212585284
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 62.760537120046166
+    },
+    {
+      "name": "canyons",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "canyons",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 75.07261472180315
+    },
+    {
+      "name": "canyons",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 75.04728909977095
+    },
+    {
+      "name": "canyons",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 90.51406792530317
+    },
+    {
+      "name": "canyons",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.85314615289649
+    },
+    {
+      "name": "canyons",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 68.75681230788213
+    },
+    {
+      "name": "canyons",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 72.23939858765306
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 70
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 69.96699705533683
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 69.989467962645
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 70.08048704080284
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 69.93483349122107
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.6990774050355
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 70.78727716207504
+    },
+    {
+      "name": "hills",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 68.5
+    },
+    {
+      "name": "hills",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 68.38448969367892
+    },
+    {
+      "name": "hills",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 68.46313786925748
+    },
+    {
+      "name": "hills",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 68.78170464280993
+    },
+    {
+      "name": "hills",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 68.27191721927375
+    },
+    {
+      "name": "hills",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 67.44677091762424
+    },
+    {
+      "name": "hills",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 71.25547006726265
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 74.5
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 74.31848380435258
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 74.44207379454747
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 74.9426787244156
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.14158420171589
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 72.84492572769523
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 78.83002439141273
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 88
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 87.94499509222806
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 87.98244660440832
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 88.13414506800473
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 87.89138915203512
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 87.49846234172583
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 89.3121286034584
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 76.03448289044547
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 74.83522665213377
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 75.52848071532034
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 72.24472789768762
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 81.62646360948358
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 71.79645691387958
+    },
+    {
+      "name": "sharpHills",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 77.0507130817942
+    },
+    {
+      "name": "lake",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 58
+    },
+    {
+      "name": "lake",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 57.748712873830165
+    },
+    {
+      "name": "lake",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 57.86641481614868
+    },
+    {
+      "name": "lake",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 58.7598754937652
+    },
+    {
+      "name": "lake",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 55.64513609130288
+    },
+    {
+      "name": "lake",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 57.14705032790475
+    },
+    {
+      "name": "lake",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 59.14221961153258
+    },
+    {
+      "name": "lowlands",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 60.5
+    },
+    {
+      "name": "lowlands",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 60.55406088102609
+    },
+    {
+      "name": "lowlands",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 60.60873849922791
+    },
+    {
+      "name": "lowlands",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 60.86298066843301
+    },
+    {
+      "name": "lowlands",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 59.932994975708425
+    },
+    {
+      "name": "lowlands",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 60.29031416401267
+    },
+    {
+      "name": "lowlands",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 60.19291943311691
+    },
+    {
+      "name": "mountains",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 143
+    },
+    {
+      "name": "mountains",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 142.41967416738993
+    },
+    {
+      "name": "mountains",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 143.1457589275766
+    },
+    {
+      "name": "mountains",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 100.10006983899768
+    },
+    {
+      "name": "mountains",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 90.40106182790736
+    },
+    {
+      "name": "mountains",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 159.82525016911725
+    },
+    {
+      "name": "mountains",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 193.40410375330435
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 119
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 118.48279567966446
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 119.08329081575806
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 94.48575419371296
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 88.94346390166135
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 128.614428668067
+    },
+    {
+      "name": "oldMountains",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 150.48518880624763
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 107
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 106.22419351949671
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 107.12493622363709
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 70.22863129056944
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 61.91519585249202
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 121.4216430021005
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 151.09779877095212
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 132.2241935194967
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 133.1249362236371
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 96.22863129056944
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 87.91519585249202
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 147.4216430021005
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 177.09779877095212
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 89
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 88.35349459958059
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 89.10411351969758
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 58.35719274214121
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 51.42932987707668
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 101.01803583508375
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 120.53152491176118
+    },
+    {
+      "name": "ocean",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 44
+    },
+    {
+      "name": "ocean",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 44.02348360768519
+    },
+    {
+      "name": "ocean",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 43.9964834600687
+    },
+    {
+      "name": "ocean",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 47.30282258987427
+    },
+    {
+      "name": "ocean",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 41.749710470438
+    },
+    {
+      "name": "ocean",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 43.869922783225775
+    },
+    {
+      "name": "ocean",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 44.28962030634284
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 51
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 51.01341920439154
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 50.99799054861069
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 52.88732719421387
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 49.714120268821716
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 50.9256701618433
+    },
+    {
+      "name": "oceanReef",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 51.165497317910194
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 40
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 40.02348360768519
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 39.9964834600687
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 43.30282258987427
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 37.749710470438
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 39.869922783225775
+    },
+    {
+      "name": "deepOcean",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 40.28962030634284
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 23.999997799212935
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 24.068404781197223
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 23.98446091224625
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 31.723615242955916
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 36.42867442586614
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 33.91237879481224
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 28.3844424933016
+    },
+    {
+      "name": "shore",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 65.5
+    },
+    {
+      "name": "shore",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 65.39656031131744
+    },
+    {
+      "name": "shore",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 65.43893971666694
+    },
+    {
+      "name": "shore",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 66.04085303097963
+    },
+    {
+      "name": "shore",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 65.62919815257192
+    },
+    {
+      "name": "shore",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 66.06034788489342
+    },
+    {
+      "name": "shore",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 66.04277781397104
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 63.900001525878906
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 63.86276317481861
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 63.878019786610764
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 64.09470894714207
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 63.94651293966109
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 64.10172710644974
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 64.09540187019377
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 75.07261472180315
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 75.04728909977095
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 90.51406792530317
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.85314615289649
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 68.75681230788213
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 72.23939858765306
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 132.2241935194967
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 133.1249362236371
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 96.22863129056944
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 87.91519585249202
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 147.4216430021005
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 177.09779877095212
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 0,
+      "z": 0,
+      "value": 89
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 1,
+      "z": -1,
+      "value": 88.35349459958059
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": -1,
+      "z": -1,
+      "value": 89.10411351969758
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 58.35719274214121
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 73.58435991165582
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 234375,
+      "z": -234375,
+      "value": 101.01803583508375
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "-9223372036854775808",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 120.53152491176118
+    },
+    {
+      "name": "badlands",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 66.6
+    },
+    {
+      "name": "badlands",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 67.87283516218886
+    },
+    {
+      "name": "badlands",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 66.59192918883636
+    },
+    {
+      "name": "badlands",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 78.40733137130738
+    },
+    {
+      "name": "badlands",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 69.31390206515789
+    },
+    {
+      "name": "badlands",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 86.42309750914573
+    },
+    {
+      "name": "badlands",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 75.93688030540943
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 71
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 71.03410222008824
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 70.97284623235464
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 72.6868103146553
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.04412668943405
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 85.44016447663307
+    },
+    {
+      "name": "bryceCanyon",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 79.53658973946055
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 64.66666666666667
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 64.64298652658057
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 64.50504401582539
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 68.37024738336234
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 67.23383324617396
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.92649648448085
+    },
+    {
+      "name": "canyonsLow",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 56.313962916821794
+    },
+    {
+      "name": "canyons",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "canyons",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 74.9657046247029
+    },
+    {
+      "name": "canyons",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 74.76592581602297
+    },
+    {
+      "name": "canyons",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 80.36380655521442
+    },
+    {
+      "name": "canyons",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.71796539101057
+    },
+    {
+      "name": "canyons",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 82.61768456373089
+    },
+    {
+      "name": "canyons",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 62.902980776086736
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 70
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 69.96699705533683
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 69.989467962645
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 70.08048704080284
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 69.93483349122107
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 69.6990774050355
+    },
+    {
+      "name": "hillsPlains",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 70.78727716207504
+    },
+    {
+      "name": "hills",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 68.5
+    },
+    {
+      "name": "hills",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 68.38448969367892
+    },
+    {
+      "name": "hills",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 68.46313786925748
+    },
+    {
+      "name": "hills",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 68.78170464280993
+    },
+    {
+      "name": "hills",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 68.27191721927375
+    },
+    {
+      "name": "hills",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 67.44677091762424
+    },
+    {
+      "name": "hills",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 71.25547006726265
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 74.5
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 74.31848380435258
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 74.44207379454747
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 74.9426787244156
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 74.14158420171589
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 72.84492572769523
+    },
+    {
+      "name": "hillsRolling",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 78.83002439141273
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 88
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 87.94499509222806
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 87.98244660440832
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 88.13414506800473
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 87.89138915203512
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 87.49846234172583
+    },
+    {
+      "name": "hillsPlateau",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 89.3121286034584
+    },
+    {
+      "name": "sharpHills",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 76.03448289044547
+    },
+    {
+      "name": "sharpHills",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 74.87921835889931
+    },
+    {
+      "name": "sharpHills",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 75.51904212220995
+    },
+    {
+      "name": "sharpHills",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 71.33878166070646
+    },
+    {
+      "name": "sharpHills",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 80.97998222435388
+    },
+    {
+      "name": "sharpHills",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 72.1774685957791
+    },
+    {
+      "name": "sharpHills",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 74.66698242417883
+    },
+    {
+      "name": "lake",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 58
+    },
+    {
+      "name": "lake",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 57.74871285282319
+    },
+    {
+      "name": "lake",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 57.86641388388627
+    },
+    {
+      "name": "lake",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 58.7423453101531
+    },
+    {
+      "name": "lake",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 55.64513593912127
+    },
+    {
+      "name": "lake",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 57.14680642818195
+    },
+    {
+      "name": "lake",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 59.149551090771226
+    },
+    {
+      "name": "lowlands",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 60.5
+    },
+    {
+      "name": "lowlands",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 60.436408770270646
+    },
+    {
+      "name": "lowlands",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 60.464796318206936
+    },
+    {
+      "name": "lowlands",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 60.48728327546269
+    },
+    {
+      "name": "lowlands",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 60.36596655007452
+    },
+    {
+      "name": "lowlands",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 59.967681135982275
+    },
+    {
+      "name": "lowlands",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 59.722459107637405
+    },
+    {
+      "name": "mountains",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 143
+    },
+    {
+      "name": "mountains",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 142.41138288545247
+    },
+    {
+      "name": "mountains",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 143.69675615114096
+    },
+    {
+      "name": "mountains",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 78.16835426397923
+    },
+    {
+      "name": "mountains",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 108.15237659946166
+    },
+    {
+      "name": "mountains",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 159.54755472498056
+    },
+    {
+      "name": "mountains",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 142.04427249565265
+    },
+    {
+      "name": "oldMountains",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 119
+    },
+    {
+      "name": "oldMountains",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 118.6636473631157
+    },
+    {
+      "name": "oldMountains",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 119.39814637208055
+    },
+    {
+      "name": "oldMountains",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 81.95334529370241
+    },
+    {
+      "name": "oldMountains",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 99.08707234254952
+    },
+    {
+      "name": "oldMountains",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 128.45574555713173
+    },
+    {
+      "name": "oldMountains",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 118.45386999751581
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 107
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 106.49547104467354
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 107.59721955812083
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 51.43001794055362
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 77.13060851382427
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 121.1836183356976
+    },
+    {
+      "name": "oceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 106.18080499627371
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 132.49547104467354
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 133.59721955812083
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 77.43001794055363
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 103.13060851382427
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 147.1836183356976
+    },
+    {
+      "name": "volcanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 132.1808049962737
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 89
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 88.57955920389462
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 89.4976829651007
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 42.69168161712801
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 64.1088404281869
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 100.81968194641468
+    },
+    {
+      "name": "volcanicOceanicMountainsBase",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 88.31733749689477
+    },
+    {
+      "name": "ocean",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 44
+    },
+    {
+      "name": "ocean",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 43.9752989159897
+    },
+    {
+      "name": "ocean",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 44.04916484095156
+    },
+    {
+      "name": "ocean",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 42.93052323162556
+    },
+    {
+      "name": "ocean",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 44.3707811050117
+    },
+    {
+      "name": "ocean",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 41.21029934287071
+    },
+    {
+      "name": "ocean",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 44.00162313878536
+    },
+    {
+      "name": "oceanReef",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 51
+    },
+    {
+      "name": "oceanReef",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 50.985885094851255
+    },
+    {
+      "name": "oceanReef",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 51.028094194829464
+    },
+    {
+      "name": "oceanReef",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 50.38887041807175
+    },
+    {
+      "name": "oceanReef",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 51.211874917149544
+    },
+    {
+      "name": "oceanReef",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 49.405885338783264
+    },
+    {
+      "name": "oceanReef",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 51.00092750787735
+    },
+    {
+      "name": "deepOcean",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 40
+    },
+    {
+      "name": "deepOcean",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 39.9752989159897
+    },
+    {
+      "name": "deepOcean",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 40.04916484095156
+    },
+    {
+      "name": "deepOcean",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 38.93052323162556
+    },
+    {
+      "name": "deepOcean",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 40.3707811050117
+    },
+    {
+      "name": "deepOcean",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 37.21029934287071
+    },
+    {
+      "name": "deepOcean",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 40.00162313878536
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 23.999997799212935
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 24.059080669868017
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 24.08026957729392
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 42.15510598668668
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 26.900284068756726
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 32.88221495188006
+    },
+    {
+      "name": "oceanRidge",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 25.034167469960735
+    },
+    {
+      "name": "shore",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 65.5
+    },
+    {
+      "name": "shore",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 65.39656031131744
+    },
+    {
+      "name": "shore",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 65.43893971666694
+    },
+    {
+      "name": "shore",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 66.04085303097963
+    },
+    {
+      "name": "shore",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 65.62919815257192
+    },
+    {
+      "name": "shore",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 66.06034788489342
+    },
+    {
+      "name": "shore",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 66.04277781397104
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 63.900001525878906
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 63.86276317481861
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 63.878019786610764
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 64.09470894714207
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 63.94651293966109
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 64.10172710644974
+    },
+    {
+      "name": "tidalFlats",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 64.09540187019377
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 75
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 74.9657046247029
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 74.76592581602297
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 80.36380655521442
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 78.71796539101057
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 82.61768456373089
+    },
+    {
+      "name": "volcanicCanyons",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 62.902980776086736
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 133
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 132.49547104467354
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 133.59721955812083
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 77.43001794055363
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 103.13060851382427
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 147.1836183356976
+    },
+    {
+      "name": "volcanicMountains",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 132.1808049962737
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 0,
+      "z": 0,
+      "value": 89
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 1,
+      "z": -1,
+      "value": 88.57955920389462
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "9223372036854775807",
+      "x": -1,
+      "z": -1,
+      "value": 89.4976829651007
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 12.5,
+      "z": -93.25,
+      "value": 42.69168161712801
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "9223372036854775807",
+      "x": -156.25,
+      "z": 156.25,
+      "value": 75.17801488435617
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 234375,
+      "z": -234375,
+      "value": 100.81968194641468
+    },
+    {
+      "name": "volcanicOceanicMountains",
+      "seed": "9223372036854775807",
+      "x": 8192.5,
+      "z": 4096.25,
+      "value": 88.31733749689477
+    },
+    {
+      "name": "sharpHillsMap",
+      "seed": "0",
+      "x": -1,
+      "z": 0,
+      "value": -1
+    },
+    {
+      "name": "sharpHillsMap",
+      "seed": "0",
+      "x": -0.67,
+      "z": 0,
+      "value": -0.6999999816601098
+    },
+    {
+      "name": "sharpHillsMap",
+      "seed": "0",
+      "x": -0.5,
+      "z": 0,
+      "value": -0.6346153715217612
+    },
+    {
+      "name": "sharpHillsMap",
+      "seed": "0",
+      "x": -0.15,
+      "z": 0,
+      "value": -0.49999998013178587
+    },
+    {
+      "name": "sharpHillsMap",
+      "seed": "0",
+      "x": 0,
+      "z": 0,
+      "value": 0
+    },
+    {
+      "name": "sharpHillsMap",
+      "seed": "0",
+      "x": 0.15,
+      "z": 0,
+      "value": 0.4999999801317859
+    },
+    {
+      "name": "sharpHillsMap",
+      "seed": "0",
+      "x": 0.5,
+      "z": 0,
+      "value": 0.6346153715217612
+    },
+    {
+      "name": "sharpHillsMap",
+      "seed": "0",
+      "x": 0.67,
+      "z": 0,
+      "value": 0.6999999816601098
+    },
+    {
+      "name": "sharpHillsMap",
+      "seed": "0",
+      "x": 1,
+      "z": 0,
+      "value": 1
+    }
+  ]
+}

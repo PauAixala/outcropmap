@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "extraction_date": "2026-09-05T23:36:46.794Z",
+    "git_commit": "f456f468e24114bea98ac76211eccae084d5f58f",
+    "source_repo": "https://github.com/TerraFirmaGreg-Team/Modpack-Modern",
+    "tool_version": "1.0.0"
+  },
+  "rocks": {
+    "andesite": {
+      "block": "tfc:andesite",
+      "id": "andesite"
+    },
+    "basalt": {
+      "block": "tfc:basalt",
+      "id": "basalt"
+    },
+    "chalk": {
+      "block": "tfc:chalk",
+      "id": "chalk"
+    },
+    "chert": {
+      "block": "tfc:chert",
+      "id": "chert"
+    },
+    "claystone": {
+      "block": "tfc:claystone",
+      "id": "claystone"
+    },
+    "conglomerate": {
+      "block": "tfc:conglomerate",
+      "id": "conglomerate"
+    },
+    "dacite": {
+      "block": "tfc:dacite",
+      "id": "dacite"
+    },
+    "diorite": {
+      "block": "tfc:diorite",
+      "id": "diorite"
+    },
+    "dolomite": {
+      "block": "tfc:dolomite",
+      "id": "dolomite"
+    },
+    "gabbro": {
+      "block": "tfc:gabbro",
+      "id": "gabbro"
+    },
+    "gneiss": {
+      "block": "tfc:gneiss",
+      "id": "gneiss"
+    },
+    "granite": {
+      "block": "tfc:granite",
+      "id": "granite"
+    },
+    "limestone": {
+      "block": "tfc:limestone",
+      "id": "limestone"
+    },
+    "marble": {
+      "block": "tfc:marble",
+      "id": "marble"
+    },
+    "phyllite": {
+      "block": "tfc:phyllite",
+      "id": "phyllite"
+    },
+    "quartzite": {
+      "block": "tfc:quartzite",
+      "id": "quartzite"
+    },
+    "rhyolite": {
+      "block": "tfc:rhyolite",
+      "id": "rhyolite"
+    },
+    "schist": {
+      "block": "tfc:schist",
+      "id": "schist"
+    },
+    "shale": {
+      "block": "tfc:shale",
+      "id": "shale"
+    },
+    "slate": {
+      "block": "tfc:slate",
+      "id": "slate"
+    }
+  }
+}

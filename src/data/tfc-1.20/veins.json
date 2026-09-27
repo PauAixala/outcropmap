@@ -1,0 +1,3444 @@
+{
+  "_meta": {
+    "extraction_date": "2026-09-10T09:01:40.537Z",
+    "git_commit": "b158c9c968cad7afb99cea2c937b301ff275e2e6",
+    "source_repo": "$HOME/reference/tfc",
+    "tool_version": "1.0.0"
+  },
+  "veins": {
+    "amethyst": {
+      "biomes": "#tfc:is_river",
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/amethyst/chalk"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/amethyst/chert"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/amethyst/claystone"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/amethyst/conglomerate"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/amethyst/dolomite"
+          }
+        ],
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:ore/amethyst/gneiss"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/amethyst/limestone"
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:ore/amethyst/marble"
+          }
+        ],
+        "tfc:rock/raw/phyllite": [
+          {
+            "block": "tfc:ore/amethyst/phyllite"
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:ore/amethyst/quartzite"
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:ore/amethyst/schist"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/amethyst/shale"
+          }
+        ],
+        "tfc:rock/raw/slate": [
+          {
+            "block": "tfc:ore/amethyst/slate"
+          }
+        ]
+      },
+      "density": 0.2,
+      "height": 4,
+      "id": "amethyst",
+      "max_y": 60,
+      "min_y": 40,
+      "random_name": "amethyst",
+      "rarity": 25,
+      "size": 8,
+      "type": "disc"
+    },
+    "bituminous_coal": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/bituminous_coal/chalk"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/bituminous_coal/chert"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/bituminous_coal/claystone"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/bituminous_coal/conglomerate"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/bituminous_coal/dolomite"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/bituminous_coal/limestone"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/bituminous_coal/shale"
+          }
+        ]
+      },
+      "density": 0.9,
+      "height": 3,
+      "id": "bituminous_coal",
+      "max_y": -12,
+      "min_y": -35,
+      "project": true,
+      "project_offset": true,
+      "random_name": "bituminous_coal",
+      "rarity": 210,
+      "size": 50,
+      "type": "disc"
+    },
+    "borax": {
+      "blocks": {
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/borax/claystone"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/borax/limestone"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/borax/shale"
+          }
+        ]
+      },
+      "density": 0.2,
+      "height": 3,
+      "id": "borax",
+      "max_y": 100,
+      "min_y": 40,
+      "random_name": "borax",
+      "rarity": 40,
+      "size": 23,
+      "type": "disc"
+    },
+    "cinnabar": {
+      "blocks": {
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:ore/cinnabar/gneiss"
+          }
+        ],
+        "tfc:rock/raw/phyllite": [
+          {
+            "block": "tfc:ore/cinnabar/phyllite"
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:ore/cinnabar/quartzite"
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:ore/cinnabar/schist"
+          }
+        ]
+      },
+      "density": 0.6,
+      "id": "cinnabar",
+      "max_y": 10,
+      "min_y": -70,
+      "random_name": "cinnabar",
+      "rarity": 14,
+      "size": 18,
+      "type": "cluster"
+    },
+    "cryolite": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/cryolite/diorite"
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/cryolite/granite"
+          }
+        ]
+      },
+      "density": 0.7,
+      "id": "cryolite",
+      "max_y": -10,
+      "min_y": -70,
+      "random_name": "cryolite",
+      "rarity": 16,
+      "size": 18,
+      "type": "cluster"
+    },
+    "diamond": {
+      "blocks": {
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/diamond/gabbro"
+          }
+        ]
+      },
+      "density": 0.15,
+      "height": 60,
+      "id": "diamond",
+      "max_skew": 13,
+      "max_slant": 2,
+      "max_y": 100,
+      "min_skew": 5,
+      "min_slant": 0,
+      "min_y": -64,
+      "radius": 5,
+      "random_name": "diamond",
+      "rarity": 30,
+      "sign": 0,
+      "size": null,
+      "type": "pipe"
+    },
+    "diorite_dike": {
+      "blocks": {
+        "tfc:rock/gravel/andesite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/basalt": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/chalk": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/chert": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/claystone": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/conglomerate": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/dacite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/diorite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/dolomite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/gabbro": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/gneiss": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/granite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/limestone": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/marble": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/phyllite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/quartzite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/rhyolite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/schist": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/shale": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/gravel/slate": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/hardened/andesite": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/basalt": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/chalk": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/chert": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/claystone": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/conglomerate": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/dacite": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/diorite": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/dolomite": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/gabbro": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/gneiss": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/granite": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/limestone": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/marble": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/phyllite": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/quartzite": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/rhyolite": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/schist": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/shale": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/hardened/slate": [
+          {
+            "block": "tfc:rock/hardened/diorite"
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/phyllite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ],
+        "tfc:rock/raw/slate": [
+          {
+            "block": "tfc:rock/raw/diorite"
+          }
+        ]
+      },
+      "density": 0.98,
+      "height": 150,
+      "id": "diorite_dike",
+      "max_skew": 20,
+      "max_slant": 5,
+      "max_y": 180,
+      "min_skew": 7,
+      "min_slant": 2,
+      "min_y": -64,
+      "project": false,
+      "radius": 18,
+      "random_name": "diorite",
+      "rarity": 300,
+      "sign": 0,
+      "size": null,
+      "type": "pipe"
+    },
+    "emerald": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/emerald/diorite"
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/emerald/gabbro"
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/emerald/granite"
+          }
+        ]
+      },
+      "density": 0.15,
+      "height": 60,
+      "id": "emerald",
+      "max_skew": 13,
+      "max_slant": 2,
+      "max_y": 100,
+      "min_skew": 5,
+      "min_slant": 0,
+      "min_y": -64,
+      "radius": 5,
+      "random_name": "emerald",
+      "rarity": 80,
+      "sign": 0,
+      "size": null,
+      "type": "pipe"
+    },
+    "fake_native_gold": {
+      "blocks": {
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:ore/pyrite/andesite"
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:ore/pyrite/basalt"
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:ore/pyrite/dacite"
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/pyrite/diorite"
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/pyrite/gabbro"
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/pyrite/granite"
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:ore/pyrite/rhyolite"
+          }
+        ]
+      },
+      "density": 0.35,
+      "id": "fake_native_gold",
+      "max_y": 70,
+      "min_y": -50,
+      "random_name": "fake_native_gold",
+      "rarity": 16,
+      "size": 15,
+      "type": "cluster"
+    },
+    "gabbro_dike": {
+      "blocks": {
+        "tfc:rock/gravel/andesite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/basalt": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/chalk": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/chert": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/claystone": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/conglomerate": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/dacite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/diorite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/dolomite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/gabbro": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/gneiss": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/granite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/limestone": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/marble": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/phyllite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/quartzite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/rhyolite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/schist": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/shale": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/gravel/slate": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/andesite": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/basalt": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/chalk": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/chert": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/claystone": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/conglomerate": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/dacite": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/diorite": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/dolomite": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/gabbro": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/gneiss": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/granite": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/limestone": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/marble": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/phyllite": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/quartzite": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/rhyolite": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/schist": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/shale": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/hardened/slate": [
+          {
+            "block": "tfc:rock/hardened/gabbro"
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/phyllite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ],
+        "tfc:rock/raw/slate": [
+          {
+            "block": "tfc:rock/raw/gabbro"
+          }
+        ]
+      },
+      "density": 0.98,
+      "height": 150,
+      "id": "gabbro_dike",
+      "max_skew": 20,
+      "max_slant": 5,
+      "max_y": 180,
+      "min_skew": 7,
+      "min_slant": 2,
+      "min_y": -64,
+      "project": false,
+      "radius": 18,
+      "random_name": "gabbro",
+      "rarity": 300,
+      "sign": 0,
+      "size": null,
+      "type": "pipe"
+    },
+    "gabbro_garnierite": {
+      "blocks": {
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/poor_garnierite/gabbro",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_garnierite/gabbro",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_garnierite/gabbro",
+            "weight": 60
+          }
+        ]
+      },
+      "density": 0.6,
+      "id": "gabbro_garnierite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_garnierite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 0,
+        "underground_count": 7,
+        "underground_rarity": 1
+      },
+      "max_y": 0,
+      "min_y": -80,
+      "random_name": "gabbro_garnierite",
+      "rarity": 20,
+      "size": 30,
+      "type": "cluster"
+    },
+    "granite_dike": {
+      "blocks": {
+        "tfc:rock/gravel/andesite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/basalt": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/chalk": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/chert": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/claystone": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/conglomerate": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/dacite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/diorite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/dolomite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/gabbro": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/gneiss": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/granite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/limestone": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/marble": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/phyllite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/quartzite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/rhyolite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/schist": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/shale": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/gravel/slate": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/hardened/andesite": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/basalt": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/chalk": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/chert": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/claystone": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/conglomerate": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/dacite": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/diorite": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/dolomite": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/gabbro": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/gneiss": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/granite": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/limestone": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/marble": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/phyllite": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/quartzite": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/rhyolite": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/schist": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/shale": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/hardened/slate": [
+          {
+            "block": "tfc:rock/hardened/granite"
+          }
+        ],
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/phyllite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ],
+        "tfc:rock/raw/slate": [
+          {
+            "block": "tfc:rock/raw/granite"
+          }
+        ]
+      },
+      "density": 0.98,
+      "height": 150,
+      "id": "granite_dike",
+      "max_skew": 20,
+      "max_slant": 5,
+      "max_y": 180,
+      "min_skew": 7,
+      "min_slant": 2,
+      "min_y": -64,
+      "project": false,
+      "radius": 18,
+      "random_name": "granite",
+      "rarity": 300,
+      "sign": 0,
+      "size": null,
+      "type": "pipe"
+    },
+    "graphite": {
+      "blocks": {
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:ore/graphite/gneiss"
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:ore/graphite/marble"
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:ore/graphite/quartzite"
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:ore/graphite/schist"
+          }
+        ]
+      },
+      "density": 0.4,
+      "id": "graphite",
+      "max_y": 60,
+      "min_y": -30,
+      "random_name": "graphite",
+      "rarity": 20,
+      "size": 20,
+      "type": "cluster"
+    },
+    "gravel": {
+      "blocks": {
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:rock/gravel/andesite"
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:rock/gravel/basalt"
+          }
+        ],
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:rock/gravel/chalk"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:rock/gravel/chert"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:rock/gravel/claystone"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:rock/gravel/conglomerate"
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:rock/gravel/dacite"
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:rock/gravel/diorite"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:rock/gravel/dolomite"
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:rock/gravel/gabbro"
+          }
+        ],
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:rock/gravel/gneiss"
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:rock/gravel/granite"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:rock/gravel/limestone"
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:rock/gravel/marble"
+          }
+        ],
+        "tfc:rock/raw/phyllite": [
+          {
+            "block": "tfc:rock/gravel/phyllite"
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:rock/gravel/quartzite"
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:rock/gravel/rhyolite"
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:rock/gravel/schist"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:rock/gravel/shale"
+          }
+        ],
+        "tfc:rock/raw/slate": [
+          {
+            "block": "tfc:rock/gravel/slate"
+          }
+        ]
+      },
+      "density": 0.98,
+      "height": 2,
+      "id": "gravel",
+      "max_y": 100,
+      "min_y": -64,
+      "project": false,
+      "random_name": "gravel",
+      "rarity": 30,
+      "size": 44,
+      "type": "disc"
+    },
+    "gypsum": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/gypsum/chalk"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/gypsum/chert"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/gypsum/claystone"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/gypsum/conglomerate"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/gypsum/dolomite"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/gypsum/limestone"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/gypsum/shale"
+          }
+        ]
+      },
+      "density": 0.3,
+      "height": 5,
+      "id": "gypsum",
+      "max_y": 100,
+      "min_y": 40,
+      "random_name": "gypsum",
+      "rarity": 70,
+      "size": 25,
+      "type": "disc"
+    },
+    "halite": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/halite/chalk"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/halite/chert"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/halite/claystone"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/halite/conglomerate"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/halite/dolomite"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/halite/limestone"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/halite/shale"
+          }
+        ]
+      },
+      "density": 0.85,
+      "height": 4,
+      "id": "halite",
+      "max_y": -12,
+      "min_y": -45,
+      "project": true,
+      "project_offset": true,
+      "random_name": "halite",
+      "rarity": 110,
+      "size": 35,
+      "type": "disc"
+    },
+    "kaolin_disc": {
+      "biomes": "#tfc:kaolin_clay_spawns_in",
+      "blocks": {},
+      "density": 1,
+      "height": 6,
+      "id": "kaolin_disc",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:plant/blood_lily"
+          }
+        ],
+        "depth": 35,
+        "rarity": 10,
+        "spread": 5,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 110,
+      "min_y": 75,
+      "random_name": "kaolin",
+      "rarity": 40,
+      "size": 18,
+      "type": "kaolin_disc"
+    },
+    "lapis_lazuli": {
+      "blocks": {
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/lapis_lazuli/limestone"
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:ore/lapis_lazuli/marble"
+          }
+        ]
+      },
+      "density": 0.12,
+      "id": "lapis_lazuli",
+      "max_y": 80,
+      "min_y": -20,
+      "random_name": "lapis_lazuli",
+      "rarity": 30,
+      "size": 30,
+      "type": "cluster"
+    },
+    "lignite": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/lignite/chalk"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/lignite/chert"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/lignite/claystone"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/lignite/conglomerate"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/lignite/dolomite"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/lignite/limestone"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/lignite/shale"
+          }
+        ]
+      },
+      "density": 0.85,
+      "height": 2,
+      "id": "lignite",
+      "max_y": -8,
+      "min_y": -20,
+      "project": true,
+      "project_offset": true,
+      "random_name": "lignite",
+      "rarity": 160,
+      "size": 40,
+      "type": "disc"
+    },
+    "normal_bismuthinite": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/diorite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/diorite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/diorite",
+            "weight": 60
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/gabbro",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/gabbro",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/gabbro",
+            "weight": 60
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/granite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/granite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/granite",
+            "weight": 60
+          }
+        ]
+      },
+      "density": 0.6,
+      "id": "normal_bismuthinite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_bismuthinite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 0,
+        "underground_count": 4,
+        "underground_rarity": 1
+      },
+      "max_y": 20,
+      "min_y": -80,
+      "random_name": "normal_bismuthinite",
+      "rarity": 45,
+      "size": 40,
+      "type": "cluster"
+    },
+    "normal_garnierite": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/poor_garnierite/diorite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_garnierite/diorite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_garnierite/diorite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/poor_garnierite/gabbro",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_garnierite/gabbro",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_garnierite/gabbro",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/poor_garnierite/granite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_garnierite/granite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_garnierite/granite",
+            "weight": 25
+          }
+        ]
+      },
+      "density": 0.3,
+      "id": "normal_garnierite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_garnierite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 12,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 0,
+      "min_y": -80,
+      "random_name": "normal_garnierite",
+      "rarity": 25,
+      "size": 18,
+      "type": "cluster"
+    },
+    "normal_malachite": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/poor_malachite/chalk",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_malachite/chalk",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_malachite/chalk",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/poor_malachite/dolomite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_malachite/dolomite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_malachite/dolomite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/poor_malachite/limestone",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_malachite/limestone",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_malachite/limestone",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:ore/poor_malachite/marble",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_malachite/marble",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_malachite/marble",
+            "weight": 25
+          }
+        ]
+      },
+      "density": 0.5,
+      "id": "normal_malachite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_malachite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 25,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 70,
+      "min_y": -30,
+      "random_name": "normal_malachite",
+      "rarity": 45,
+      "size": 30,
+      "type": "cluster"
+    },
+    "normal_native_gold": {
+      "blocks": {
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:ore/poor_native_gold/andesite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/andesite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/andesite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:ore/poor_native_gold/basalt",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/basalt",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/basalt",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:ore/poor_native_gold/dacite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/dacite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/dacite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/poor_native_gold/diorite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/diorite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/diorite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/poor_native_gold/gabbro",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/gabbro",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/gabbro",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/poor_native_gold/granite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/granite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/granite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:ore/poor_native_gold/rhyolite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/rhyolite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/rhyolite",
+            "weight": 25
+          }
+        ]
+      },
+      "density": 0.25,
+      "id": "normal_native_gold",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_native_gold"
+          }
+        ],
+        "depth": 35,
+        "rarity": 40,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 70,
+      "min_y": 0,
+      "random_name": "normal_native_gold",
+      "rarity": 90,
+      "size": 15,
+      "type": "cluster"
+    },
+    "normal_native_silver": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/poor_native_silver/diorite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/diorite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/diorite",
+            "weight": 60
+          }
+        ],
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:ore/poor_native_silver/gneiss",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/gneiss",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/gneiss",
+            "weight": 60
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/poor_native_silver/granite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/granite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/granite",
+            "weight": 60
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:ore/poor_native_silver/schist",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/schist",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/schist",
+            "weight": 60
+          }
+        ]
+      },
+      "density": 0.6,
+      "id": "normal_native_silver",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_native_silver"
+          }
+        ],
+        "depth": 35,
+        "rarity": 0,
+        "underground_count": 9,
+        "underground_rarity": 1
+      },
+      "max_y": 20,
+      "min_y": -80,
+      "random_name": "normal_native_silver",
+      "rarity": 25,
+      "size": 25,
+      "type": "cluster"
+    },
+    "normal_sphalerite": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/poor_sphalerite/diorite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/diorite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/diorite",
+            "weight": 60
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/poor_sphalerite/gabbro",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/gabbro",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/gabbro",
+            "weight": 60
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/poor_sphalerite/granite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/granite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/granite",
+            "weight": 60
+          }
+        ]
+      },
+      "density": 0.6,
+      "id": "normal_sphalerite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_sphalerite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 0,
+        "underground_count": 5,
+        "underground_rarity": 1
+      },
+      "max_y": 20,
+      "min_y": -80,
+      "random_name": "normal_sphalerite",
+      "rarity": 45,
+      "size": 40,
+      "type": "cluster"
+    },
+    "normal_tetrahedrite": {
+      "blocks": {
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/gneiss",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/gneiss",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/gneiss",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/marble",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/marble",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/marble",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/phyllite": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/phyllite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/phyllite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/phyllite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/quartzite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/quartzite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/quartzite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/schist",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/schist",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/schist",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/slate": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/slate",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/slate",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/slate",
+            "weight": 25
+          }
+        ]
+      },
+      "density": 0.5,
+      "id": "normal_tetrahedrite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_tetrahedrite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 25,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 70,
+      "min_y": -30,
+      "random_name": "normal_tetrahedrite",
+      "rarity": 40,
+      "size": 30,
+      "type": "cluster"
+    },
+    "opal": {
+      "biomes": "#tfc:is_river",
+      "blocks": {
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:ore/opal/andesite"
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:ore/opal/basalt"
+          }
+        ],
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/opal/chalk"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/opal/chert"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/opal/claystone"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/opal/conglomerate"
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:ore/opal/dacite"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/opal/dolomite"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/opal/limestone"
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:ore/opal/rhyolite"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/opal/shale"
+          }
+        ]
+      },
+      "density": 0.2,
+      "height": 4,
+      "id": "opal",
+      "max_y": 60,
+      "min_y": 40,
+      "random_name": "opal",
+      "rarity": 25,
+      "size": 8,
+      "type": "disc"
+    },
+    "rich_native_gold": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/poor_native_gold/diorite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/diorite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/diorite",
+            "weight": 60
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/poor_native_gold/gabbro",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/gabbro",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/gabbro",
+            "weight": 60
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/poor_native_gold/granite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/granite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/granite",
+            "weight": 60
+          }
+        ]
+      },
+      "density": 0.5,
+      "id": "rich_native_gold",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_native_gold"
+          }
+        ],
+        "depth": 35,
+        "rarity": 0,
+        "underground_count": 4,
+        "underground_rarity": 1
+      },
+      "max_y": 20,
+      "min_y": -80,
+      "random_name": "rich_native_gold",
+      "rarity": 50,
+      "size": 40,
+      "type": "cluster"
+    },
+    "saltpeter": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/saltpeter/chalk"
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/saltpeter/chert"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/saltpeter/claystone"
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/saltpeter/conglomerate"
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/saltpeter/dolomite"
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/saltpeter/limestone"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/saltpeter/shale"
+          }
+        ]
+      },
+      "density": 0.4,
+      "height": 5,
+      "id": "saltpeter",
+      "max_y": 100,
+      "min_y": 40,
+      "random_name": "saltpeter",
+      "rarity": 110,
+      "size": 35,
+      "type": "disc"
+    },
+    "sulfur": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/sulfur/diorite"
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/sulfur/gabbro"
+          }
+        ],
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:ore/sulfur/gneiss"
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/sulfur/granite"
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:ore/sulfur/marble"
+          }
+        ],
+        "tfc:rock/raw/phyllite": [
+          {
+            "block": "tfc:ore/sulfur/phyllite"
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:ore/sulfur/quartzite"
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:ore/sulfur/schist"
+          }
+        ],
+        "tfc:rock/raw/slate": [
+          {
+            "block": "tfc:ore/sulfur/slate"
+          }
+        ]
+      },
+      "density": 0.25,
+      "height": 5,
+      "id": "sulfur",
+      "max_y": -45,
+      "min_y": -64,
+      "near_lava": true,
+      "random_name": "sulfur",
+      "rarity": 4,
+      "size": 18,
+      "type": "disc"
+    },
+    "surface_bismuthinite": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/chalk",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/chalk",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/chalk",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/chert",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/chert",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/chert",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/claystone",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/claystone",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/claystone",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/conglomerate",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/conglomerate",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/conglomerate",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/dolomite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/dolomite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/dolomite",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/limestone",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/limestone",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/limestone",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/poor_bismuthinite/shale",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_bismuthinite/shale",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_bismuthinite/shale",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.3,
+      "id": "surface_bismuthinite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_bismuthinite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 14,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 130,
+      "min_y": 40,
+      "random_name": "surface_bismuthinite",
+      "rarity": 32,
+      "size": 20,
+      "type": "cluster"
+    },
+    "surface_cassiterite": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/poor_cassiterite/diorite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_cassiterite/diorite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/diorite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:deposit/cassiterite/diorite",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/gabbro": [
+          {
+            "block": "tfc:ore/poor_cassiterite/gabbro",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_cassiterite/gabbro",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/gabbro",
+            "weight": 25
+          },
+          {
+            "block": "tfc:deposit/cassiterite/gabbro",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/poor_cassiterite/granite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_cassiterite/granite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_cassiterite/granite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:deposit/cassiterite/granite",
+            "weight": 10
+          }
+        ]
+      },
+      "density": 0.4,
+      "id": "surface_cassiterite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_cassiterite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 12,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 180,
+      "min_y": 80,
+      "random_name": "surface_cassiterite",
+      "rarity": 5,
+      "size": 15,
+      "type": "cluster"
+    },
+    "surface_hematite": {
+      "blocks": {
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:ore/poor_hematite/andesite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_hematite/andesite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_hematite/andesite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:ore/poor_hematite/basalt",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_hematite/basalt",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_hematite/basalt",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:ore/poor_hematite/dacite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_hematite/dacite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_hematite/dacite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:ore/poor_hematite/rhyolite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_hematite/rhyolite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_hematite/rhyolite",
+            "weight": 25
+          }
+        ]
+      },
+      "density": 0.4,
+      "id": "surface_hematite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_hematite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 24,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 90,
+      "min_y": 10,
+      "random_name": "surface_hematite",
+      "rarity": 45,
+      "size": 20,
+      "type": "cluster"
+    },
+    "surface_limonite": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/poor_limonite/chalk",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_limonite/chalk",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_limonite/chalk",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/poor_limonite/chert",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_limonite/chert",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_limonite/chert",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/poor_limonite/claystone",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_limonite/claystone",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_limonite/claystone",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/poor_limonite/conglomerate",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_limonite/conglomerate",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_limonite/conglomerate",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/poor_limonite/dolomite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_limonite/dolomite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_limonite/dolomite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/poor_limonite/limestone",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_limonite/limestone",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_limonite/limestone",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/poor_limonite/shale",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_limonite/shale",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_limonite/shale",
+            "weight": 25
+          }
+        ]
+      },
+      "density": 0.4,
+      "id": "surface_limonite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_limonite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 24,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 90,
+      "min_y": 10,
+      "random_name": "surface_limonite",
+      "rarity": 90,
+      "size": 20,
+      "type": "cluster"
+    },
+    "surface_magnetite": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/poor_magnetite/chalk",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/chalk",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_magnetite/chalk",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/poor_magnetite/chert",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/chert",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_magnetite/chert",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/poor_magnetite/claystone",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/claystone",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_magnetite/claystone",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/conglomerate": [
+          {
+            "block": "tfc:ore/poor_magnetite/conglomerate",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/conglomerate",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_magnetite/conglomerate",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/poor_magnetite/dolomite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/dolomite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_magnetite/dolomite",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/poor_magnetite/limestone",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/limestone",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_magnetite/limestone",
+            "weight": 25
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/poor_magnetite/shale",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/shale",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_magnetite/shale",
+            "weight": 25
+          }
+        ]
+      },
+      "density": 0.4,
+      "id": "surface_magnetite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_magnetite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 24,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 90,
+      "min_y": 10,
+      "random_name": "surface_magnetite",
+      "rarity": 90,
+      "size": 20,
+      "type": "cluster"
+    },
+    "surface_malachite": {
+      "blocks": {
+        "tfc:rock/raw/chalk": [
+          {
+            "block": "tfc:ore/poor_malachite/chalk",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_malachite/chalk",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_malachite/chalk",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/dolomite": [
+          {
+            "block": "tfc:ore/poor_malachite/dolomite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_malachite/dolomite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_malachite/dolomite",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/limestone": [
+          {
+            "block": "tfc:ore/poor_malachite/limestone",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_malachite/limestone",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_malachite/limestone",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:ore/poor_malachite/marble",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_malachite/marble",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_malachite/marble",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.25,
+      "id": "surface_malachite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_malachite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 14,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 130,
+      "min_y": 40,
+      "random_name": "surface_malachite",
+      "rarity": 32,
+      "size": 20,
+      "type": "cluster"
+    },
+    "surface_native_copper": {
+      "blocks": {
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:ore/poor_native_copper/andesite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_native_copper/andesite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_copper/andesite",
+            "weight": 5
+          },
+          {
+            "block": "tfc:deposit/native_copper/andesite",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:ore/poor_native_copper/basalt",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_native_copper/basalt",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_copper/basalt",
+            "weight": 5
+          },
+          {
+            "block": "tfc:deposit/native_copper/basalt",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:ore/poor_native_copper/dacite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_native_copper/dacite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_copper/dacite",
+            "weight": 5
+          },
+          {
+            "block": "tfc:deposit/native_copper/dacite",
+            "weight": 10
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:ore/poor_native_copper/rhyolite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_native_copper/rhyolite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_copper/rhyolite",
+            "weight": 5
+          },
+          {
+            "block": "tfc:deposit/native_copper/rhyolite",
+            "weight": 10
+          }
+        ]
+      },
+      "density": 0.25,
+      "id": "surface_native_copper",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_native_copper"
+          }
+        ],
+        "depth": 35,
+        "rarity": 14,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 130,
+      "min_y": 40,
+      "random_name": "surface_native_copper",
+      "rarity": 24,
+      "size": 20,
+      "type": "cluster"
+    },
+    "surface_native_silver": {
+      "blocks": {
+        "tfc:rock/raw/diorite": [
+          {
+            "block": "tfc:ore/poor_native_silver/diorite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/diorite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/diorite",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/granite": [
+          {
+            "block": "tfc:ore/poor_native_silver/granite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_native_silver/granite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_native_silver/granite",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.2,
+      "id": "surface_native_silver",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_native_silver"
+          }
+        ],
+        "depth": 35,
+        "rarity": 12,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 180,
+      "min_y": 90,
+      "random_name": "surface_native_silver",
+      "rarity": 15,
+      "size": 10,
+      "type": "cluster"
+    },
+    "surface_sphalerite": {
+      "blocks": {
+        "tfc:rock/raw/andesite": [
+          {
+            "block": "tfc:ore/poor_sphalerite/andesite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/andesite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/andesite",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/basalt": [
+          {
+            "block": "tfc:ore/poor_sphalerite/basalt",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/basalt",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/basalt",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/dacite": [
+          {
+            "block": "tfc:ore/poor_sphalerite/dacite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/dacite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/dacite",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/rhyolite": [
+          {
+            "block": "tfc:ore/poor_sphalerite/rhyolite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/rhyolite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/rhyolite",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.3,
+      "id": "surface_sphalerite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_sphalerite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 12,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 130,
+      "min_y": 40,
+      "random_name": "surface_sphalerite",
+      "rarity": 30,
+      "size": 20,
+      "type": "cluster"
+    },
+    "surface_tetrahedrite": {
+      "blocks": {
+        "tfc:rock/raw/gneiss": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/gneiss",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/gneiss",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/gneiss",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/marble": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/marble",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/marble",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/marble",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/phyllite": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/phyllite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/phyllite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/phyllite",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/quartzite": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/quartzite",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/quartzite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/quartzite",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/schist": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/schist",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/schist",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/schist",
+            "weight": 5
+          }
+        ],
+        "tfc:rock/raw/slate": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/slate",
+            "weight": 70
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/slate",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/slate",
+            "weight": 5
+          }
+        ]
+      },
+      "density": 0.25,
+      "id": "surface_tetrahedrite",
+      "indicator": {
+        "blocks": [
+          {
+            "block": "tfc:ore/small_tetrahedrite"
+          }
+        ],
+        "depth": 35,
+        "rarity": 8,
+        "underground_count": 0,
+        "underground_rarity": 1
+      },
+      "max_y": 170,
+      "min_y": 90,
+      "random_name": "surface_tetrahedrite",
+      "rarity": 7,
+      "size": 20,
+      "type": "cluster"
+    },
+    "sylvite": {
+      "blocks": {
+        "tfc:rock/raw/chert": [
+          {
+            "block": "tfc:ore/sylvite/chert"
+          }
+        ],
+        "tfc:rock/raw/claystone": [
+          {
+            "block": "tfc:ore/sylvite/claystone"
+          }
+        ],
+        "tfc:rock/raw/shale": [
+          {
+            "block": "tfc:ore/sylvite/shale"
+          }
+        ]
+      },
+      "density": 0.35,
+      "height": 5,
+      "id": "sylvite",
+      "max_y": 100,
+      "min_y": 40,
+      "random_name": "sylvite",
+      "rarity": 60,
+      "size": 35,
+      "type": "disc"
+    }
+  }
+}
