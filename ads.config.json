@@ -6,7 +6,7 @@
     "mapLeft is a 160 x 600 skyscraper in a column left of the map; forgeLeft and forgeRight are 160 x 600 rails that follow the scroll; all three appear only on screens wide enough for them. mapBottom is a banner below the map; forgeMiddle and forgeEnd are responsive blocks.",
     "The build writes the AdSense tag and verification meta into every page's head, and ads.txt at the site root, only while client is set."
   ],
-  "client": "",
+  "client": "ca-pub-7466765453292112",
   "slots": {
     "mapLeft": "",
     "mapBottom": "",
