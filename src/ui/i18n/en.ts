@@ -10,8 +10,6 @@ export const en = {
   forgeTitle: 'OutCrop',
   nav: {
     licence: 'EUPL-1.2 · Source',
-    fullscreen: 'Full screen',
-    exitFullscreen: 'Exit full screen',
     map: 'Map',
     forge: 'Forge',
     privacy: 'Privacy',

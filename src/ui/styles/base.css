@@ -2489,15 +2489,17 @@ button.measure-btn--active:hover:not(:disabled) {
 
 /* --- Ads, the fan-site disclaimer and the privacy page --------------------------------------- */
 
-/* The unit arrives late; a reserved box keeps it from shoving the panel down under the cursor. */
+/* Every ad sits in its own labelled box. The unit arrives late, so each box reserves its size:
+ * nothing jumps under the cursor when Google fills it. */
 .ad-slot {
-  padding: 0.5rem 1rem 0.75rem;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg-panel);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .ad-slot__label {
-  margin: 0 0 0.25rem;
+  margin: 0;
   font-size: 0.65rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -2506,15 +2508,122 @@ button.measure-btn--active:hover:not(:disabled) {
 
 .ad-slot__unit {
   display: block;
+}
+
+.ad-slot--block,
+.ad-slot--banner {
+  align-items: stretch;
+}
+
+.ad-slot--block .ad-slot__unit {
   min-height: 252px;
 }
 
+.ad-slot--banner .ad-slot__unit {
+  min-height: 92px;
+}
+
+.ad-slot--rail .ad-slot__unit {
+  display: inline-block;
+}
+
+/* The map with ads: a rail to the left and a banner along the bottom, each in its own cell with
+ * room between it and the map. What is left is split evenly, so the map and the side panel are the
+ * same size, and everything drawn over the map (HUD, scale bar, readout) moves with it. */
+.app--map.app--ads {
+  --side-panel-width: calc((100vw - var(--map-ad-rail, 0px)) / 2);
+}
+
+.app--map.app--ads .app-main {
+  grid-template-columns: var(--map-ad-rail, 0px) minmax(0, 1fr) var(--side-panel-width);
+  grid-template-rows: minmax(0, 1fr) var(--map-ad-bottom, 0px);
+  grid-template-areas:
+    'rail map panel'
+    'rail bottom bottom';
+}
+
+.app--map.app--ads-rail {
+  --map-ad-rail: 184px;
+}
+
+.app--map.app--ads-bottom {
+  --map-ad-bottom: 132px;
+}
+
+.app--map.app--ads .map-canvas {
+  grid-area: map;
+}
+
+.app--map.app--ads .side-panel {
+  grid-area: panel;
+}
+
+.map-ad-rail {
+  grid-area: rail;
+  overflow: hidden;
+  padding: 0.75rem;
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border);
+}
+
+.map-ad-bottom {
+  grid-area: bottom;
+  overflow: hidden;
+  padding: 0.75rem;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border);
+}
+
+.app--map.app--ads .map-hud {
+  left: calc(var(--map-ad-rail, 0px) + 0.75rem);
+}
+
+.app--map.app--ads .scale-bar {
+  left: calc(var(--map-ad-rail, 0px) + 0.75rem);
+  bottom: calc(var(--map-ad-bottom, 0px) + 0.75rem);
+}
+
+.app--map.app--ads .coord-readout {
+  bottom: calc(var(--map-ad-bottom, 0px) + 0.75rem);
+  max-width: min(
+    45rem,
+    calc(100% - var(--side-panel-width) - var(--map-ad-rail, 0px) - 1.5rem)
+  );
+  max-height: calc(100% - var(--map-ad-bottom, 0px) - 1.5rem);
+}
+
+/* The forge: blocks between sections span the page; each rail runs beside it for its whole length,
+ * and its ad follows the scroll inside it, so one is always in view. */
 .forge-ad {
   grid-column: 1 / -1;
 }
 
-.app--forge .ad-slot {
-  border-bottom: 0;
+.forge-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 72rem) minmax(0, 1fr);
+  column-gap: 1.5rem;
+}
+
+.forge-layout > .app-main {
+  width: 100%;
+  margin: 0;
+}
+
+.forge-rail {
+  padding: 2rem 0 3rem;
+}
+
+.forge-rail .ad-slot {
+  position: sticky;
+  top: 1rem;
+}
+
+.forge-rail--left {
+  justify-self: end;
+}
+
+.forge-rail--right {
+  justify-self: start;
 }
 
 /* The Minecraft Usage Guidelines ask fan sites to carry this line; it closes the panel and the page. */

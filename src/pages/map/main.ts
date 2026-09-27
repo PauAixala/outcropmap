@@ -20,7 +20,7 @@ import {
 import type { MeasurePanel, WaypointPanel } from '@ui/components';
 import type { MeasurePoint } from '@app/measure';
 import { en } from '@ui/i18n';
-import { mountAdSlot } from '@ui/components/ad-slot';
+import { RAIL_MIN_VIEWPORT, hasAd, mountAdSlot } from '@ui/components/ad-slot';
 import {
   DEFAULT_MAP_STATE,
   bindStateToLocation,
@@ -115,6 +115,28 @@ async function boot(): Promise<void> {
   const sidePanel = document.getElementById('side-panel');
   if (!(canvasEl instanceof HTMLCanvasElement) || !readoutEl) {
     return;
+  }
+
+  // Ads frame the map rather than sit in the panel: a 160 x 600 skyscraper in a narrow column to
+  // its left (only where the screen is wide enough to spare it) and a banner below it. Mounted before the canvas is sized, so the map
+  // starts at its final size; the HUD, scale bar and readout follow it (`app--ads-*` in base.css).
+  const adMain = document.querySelector('.app-main');
+  const adApp = document.getElementById('app');
+  if (adMain && adApp) {
+    if (hasAd('mapLeft') && window.matchMedia(`(min-width: ${RAIL_MIN_VIEWPORT.map}px)`).matches) {
+      const rail = document.createElement('div');
+      rail.className = 'map-ad-rail';
+      adMain.append(rail);
+      mountAdSlot(rail, 'mapLeft');
+      adApp.classList.add('app--ads', 'app--ads-rail');
+    }
+    if (hasAd('mapBottom')) {
+      const banner = document.createElement('div');
+      banner.className = 'map-ad-bottom';
+      adMain.append(banner);
+      mountAdSlot(banner, 'mapBottom');
+      adApp.classList.add('app--ads', 'app--ads-bottom');
+    }
   }
 
   const pool = new WorkerPool();
@@ -584,14 +606,11 @@ async function boot(): Promise<void> {
     settingsSection.className = 'panel';
     mountWorldSettings(settingsSection, store);
 
-    // The ad sits right under the world row, where a player looks first, and is absent from a build
-    // without ads. The disclaimer the Minecraft Usage Guidelines ask of fan sites closes the panel.
-    sidePanel.append(worldSection);
-    mountAdSlot(sidePanel, 'map');
+    // The disclaimer the Minecraft Usage Guidelines ask of fan sites closes the panel.
     const disclaimer = document.createElement('p');
     disclaimer.className = 'site-disclaimer';
     disclaimer.textContent = en.disclaimer;
-    sidePanel.append(configSection, settingsSection, disclaimer);
+    sidePanel.append(worldSection, configSection, settingsSection, disclaimer);
   }
 
   const mainEl = document.querySelector('.app-main');

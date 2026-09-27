@@ -2,12 +2,17 @@
   "_about": [
     "Google AdSense for the public site. The IDs are public by design: they appear in every page's source.",
     "client: your publisher ID, 'ca-pub-' and 16 digits (AdSense -> Account -> Account information). Leave it empty to build without ads: no ad script, no ad slots, no consent link, and the privacy page says there are no ads.",
-    "slots: the numeric data-ad-slot of one display ad unit per page (AdSense -> Ads -> By ad unit -> Display ads). A page whose slot is empty shows no ad.",
+    "slots: the numeric data-ad-slot of one display ad unit per placement (AdSense -> Ads -> By ad unit -> Display ads). A placement whose slot is empty shows no ad.",
+    "mapLeft is a 160 x 600 skyscraper in a column left of the map; forgeLeft and forgeRight are 160 x 600 rails that follow the scroll; all three appear only on screens wide enough for them. mapBottom is a banner below the map; forgeMiddle and forgeEnd are responsive blocks.",
     "The build writes the AdSense tag and verification meta into every page's head, and ads.txt at the site root, only while client is set."
   ],
   "client": "",
   "slots": {
-    "map": "",
-    "forge": ""
+    "mapLeft": "",
+    "mapBottom": "",
+    "forgeLeft": "",
+    "forgeRight": "",
+    "forgeMiddle": "",
+    "forgeEnd": ""
   }
 }

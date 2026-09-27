@@ -3,7 +3,7 @@
 // map's world generators into this page (~450 kB) for a calculator that never generates a world.
 import { initTheme } from '@ui/theme/theme';
 import { mountHeader } from '@ui/components/header';
-import { mountAdSlot } from '@ui/components/ad-slot';
+import { RAIL_MIN_VIEWPORT, hasAd, mountAdSlot } from '@ui/components/ad-slot';
 import { mountForgePicker } from '@ui/components/forge-picker';
 import { mountForgeRecipes } from '@ui/components/forge-recipes';
 import { en } from '@ui/i18n/en';
@@ -57,18 +57,40 @@ async function boot(): Promise<void> {
     : null;
   if (picker) void saveProfilePreference(storage, picker.profile()).catch(() => {});
 
-  // One ad unit between the calculator and the custom-recipe tools, in a build that has ads.
-  if (pickerEl) {
-    const adBox = document.createElement('div');
-    adBox.className = 'forge-ad';
-    pickerEl.after(adBox);
-    if (!mountAdSlot(adBox, 'forge')) adBox.remove();
+  // Ads, in a build that has them: one block between the calculator and the custom-recipe tools,
+  // one at the end of the page, and on each side a rail ad that follows the scroll, where the
+  // screen is wide enough for it.
+  const mainEl = document.querySelector('.app-main');
+  if (pickerEl && hasAd('forgeMiddle')) {
+    const middle = document.createElement('div');
+    middle.className = 'forge-ad';
+    pickerEl.after(middle);
+    mountAdSlot(middle, 'forgeMiddle');
+  }
+  if (mainEl && hasAd('forgeEnd')) {
+    const end = document.createElement('div');
+    end.className = 'forge-ad';
+    mainEl.append(end);
+    mountAdSlot(end, 'forgeEnd');
+  }
+  const wide = window.matchMedia(`(min-width: ${RAIL_MIN_VIEWPORT.forge}px)`).matches;
+  if (mainEl instanceof HTMLElement && wide && (hasAd('forgeLeft') || hasAd('forgeRight'))) {
+    const layout = document.createElement('div');
+    layout.className = 'forge-layout';
+    const left = document.createElement('div');
+    left.className = 'forge-rail forge-rail--left';
+    const right = document.createElement('div');
+    right.className = 'forge-rail forge-rail--right';
+    mainEl.before(layout);
+    layout.append(left, mainEl, right);
+    mountAdSlot(left, 'forgeLeft');
+    mountAdSlot(right, 'forgeRight');
   }
   // The disclaimer the Minecraft Usage Guidelines ask of fan sites.
   const disclaimer = document.createElement('p');
   disclaimer.className = 'site-disclaimer';
   disclaimer.textContent = en.disclaimer;
-  document.querySelector('.app-main')?.append(disclaimer);
+  mainEl?.append(disclaimer);
 
   // Custom recipe editor + saved recipes list (docs/PLAN.md section 14): the two sections are one
   // feature — opening a saved recipe fills the editor form.

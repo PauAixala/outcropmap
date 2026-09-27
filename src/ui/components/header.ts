@@ -46,25 +46,6 @@ export function mountHeader(container: HTMLElement, options: HeaderOptions): voi
     nav.append(link);
   }
 
-  // Full screen. The Fullscreen API is the only way to get the browser chrome out of the way of a
-  // map, and a map is what this app mostly is.
-  const fullscreenButton = document.createElement('button');
-  fullscreenButton.type = 'button';
-  fullscreenButton.className = 'app-header__button';
-  const syncFullscreenLabel = (): void => {
-    fullscreenButton.textContent = document.fullscreenElement
-      ? en.nav.exitFullscreen
-      : en.nav.fullscreen;
-  };
-  syncFullscreenLabel();
-  fullscreenButton.addEventListener('click', () => {
-    // Both calls reject when the browser refuses (an iframe without the permission, a user gesture
-    // it did not like). Nothing to recover, so swallow rather than throw into the console.
-    if (document.fullscreenElement) void document.exitFullscreen().catch(() => {});
-    else void document.documentElement.requestFullscreen().catch(() => {});
-  });
-  document.addEventListener('fullscreenchange', syncFullscreenLabel);
-
   const themeButton = document.createElement('button');
   themeButton.type = 'button';
   themeButton.className = 'app-header__button app-header__theme-toggle';
@@ -95,5 +76,5 @@ export function mountHeader(container: HTMLElement, options: HeaderOptions): voi
 
   container.append(title, nav, legal, privacy);
   if (cookieSettings) container.append(cookieSettings);
-  container.append(fullscreenButton, themeButton);
+  container.append(themeButton);
 }
