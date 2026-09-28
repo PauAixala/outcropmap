@@ -1766,10 +1766,10 @@ button.measure-btn--active:hover:not(:disabled) {
 /* The mark fills its column rather than sitting in the middle of it at a fixed 13rem, which left a
  * 208 px drawing in a 288 px slot inside a 1 072 px panel and read as an afterthought.
  *
- * Widening the slot was only half of it: the artwork used 42% of its own viewBox, so it stayed
- * small whatever the slot. The viewBox is cropped to the drawing now (see the note in the file),
- * which also makes it landscape rather than square — so a wide mark no longer drags the hero's
- * height up with it, and the calculator stays on the first screen. */
+ * Widening the slot was only half of it: the drawing must fill its own viewBox too. The mark
+ * (redrawn 2026-09-28) has a viewBox cropped to the drawing plus a small margin, 578x509, landscape
+ * and the same proportion as the art it replaced, so a wide mark does not drag the hero's height
+ * up and the calculator stays on the first screen. */
 .forge-hero__mark {
   width: 100%;
   max-width: 30rem;
