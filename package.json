@@ -1,6 +1,6 @@
 {
   "name": "terrafirma-mapviewer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "description": "Chunkbase-style seed map viewer plus a TerraFirmaCraft forging calculator, for TerraFirmaCraft and TerraFirmaGreg. Runs fully client-side, as a static site.",
