@@ -1,0 +1,23 @@
+{
+  "_about": [
+    "The site's pages and its public address, in one place, because three readers need them:",
+    "the build (vite.config.ts writes each page's metadata and the crawl files from src/app/site/),",
+    "the page header (the cookie-settings button only appears on a page that carries the ad tag),",
+    "and tools/finish-web-build.mjs, which checks the built site against this file and cannot import",
+    "TypeScript. Every page listed here is built; a page not listed here fails the build.",
+    "origin: the site's canonical address, with no trailing slash. Canonical links, og:url, og:image,",
+    "robots.txt, sitemap.xml and llms.txt are the only places it is written out; asset paths stay",
+    "relative so the site still works from any subfolder (ADR 0004).",
+    "adScript: whether the page carries the AdSense tag. privacy.html does not: AdSense Help (answer",
+    "10961370) asks that the privacy page the consent message links to hosts no ad tags and no",
+    "consent-message tag. The google-adsense-account meta is not a script and goes on every page."
+  ],
+  "origin": "https://outcropmap.com",
+  "pages": [
+    { "id": "map", "file": "index.html", "path": "/", "adScript": true },
+    { "id": "forge", "file": "forge.html", "path": "/forge.html", "adScript": true },
+    { "id": "about", "file": "about.html", "path": "/about.html", "adScript": true },
+    { "id": "privacy", "file": "privacy.html", "path": "/privacy.html", "adScript": false }
+  ],
+  "socialImage": { "path": "/og-image.jpg", "width": 1200, "height": 630, "type": "image/jpeg" }
+}

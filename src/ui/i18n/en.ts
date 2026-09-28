@@ -1,17 +1,23 @@
-import tfgBiomes from '@data/tfg/biomes.json';
+// Relative, not `@data/…`: vite.config.ts imports this file, and Vite's config loader does not resolve the aliases the config defines (tests/unit/site-imports.test.ts).
+import tfgBiomes from '../../data/tfg/biomes.json';
 // All display strings live here — never hardcode UI text elsewhere. Spanish locale is backlog.
+// The static pages' longer text (the About page, meta descriptions, llms.txt) is in ./en-site.ts.
 export const en = {
   appTitle: 'OutCrop',
-  /** Each page's document title, set by its entry point. */
+  /** Each page's document title. The build writes it into the page's <title> (src/app/site/pages.ts),
+   *  and the map and the forge also set it at runtime, so both must stay the same string. */
   pageTitles: {
-    map: 'OutCrop · Seed map for TerraFirmaCraft',
-    forge: 'OutCrop · Forging calculator',
+    map: 'OutCrop · Seed map for TerraFirmaCraft and TerraFirmaGreg',
+    forge: 'OutCrop · Anvil calculator for TerraFirmaCraft and TerraFirmaGreg',
+    about: 'OutCrop · About and FAQ',
+    privacy: 'OutCrop · Privacy',
   },
   forgeTitle: 'OutCrop',
   nav: {
     licence: 'EUPL-1.2 · Source',
     map: 'Map',
     forge: 'Forge',
+    about: 'About',
     privacy: 'Privacy',
   },
   // Minecraft Usage Guidelines: fan sites carry this, prominently, in these words.
@@ -33,7 +39,7 @@ export const en = {
     ads:
       'This site shows ads served by Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google’s use of advertising cookies enables it and its partners to serve ads based on your visits to this and other sites on the Internet.',
     adsConsent:
-      'Visitors in the European Economic Area, the United Kingdom and Switzerland are asked for consent before personalised ads are shown. You can change that choice at any time with “Privacy and cookie settings”, at the top of every page.',
+      'Visitors in the European Economic Area, the United Kingdom and Switzerland are asked for consent before personalised ads are shown. You can change that choice at any time with “Privacy and cookie settings”, at the top of the Map, Forge and About pages.',
     adsOptOut: 'Turn off personalised ads in Google’s ad settings',
     adsPartners: 'How Google uses information from sites that use its services',
     hostingHeading: 'Hosting',

@@ -2705,3 +2705,144 @@ button.app-header__legal:active:not(:disabled) {
 .privacy a:hover {
   text-decoration-color: var(--text);
 }
+
+/* --- Static text: the About page, and what a visitor without JavaScript reads --- */
+
+/* The map's and the forge's own description, which the build writes into the page for visitors
+ * and crawlers that run no JavaScript (src/app/site/pages.ts). Hidden unless the browser reports
+ * scripting off, so with scripts the page looks exactly as it did -- including in a browser too old
+ * to know the `scripting` media feature, where the rule below never matches. */
+.static-summary {
+  display: none;
+}
+
+@media (scripting: none) {
+  .static-summary {
+    display: block;
+    padding: 1.5rem clamp(1rem, 3vw, 2.5rem);
+    line-height: 1.55;
+    background: var(--bg-panel);
+  }
+
+  /* The map's grid has no cell for prose: the text covers the map, which cannot draw anyway. */
+  .app--map .static-summary {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow-y: auto;
+  }
+
+  .app--forge .static-summary {
+    grid-column: 1 / -1;
+  }
+
+  .static-summary h1,
+  .static-summary h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.4rem;
+  }
+
+  .static-summary p {
+    margin: 0 0 0.6rem;
+    max-width: 42em;
+  }
+
+  .static-summary a {
+    color: var(--text);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  .static-summary .site-disclaimer {
+    padding: 0.5rem 0 0;
+    background: none;
+  }
+}
+
+/* The About page: the privacy page's reading column, with room for lists and questions. */
+.app--about {
+  height: auto;
+  min-height: 100%;
+}
+
+.app--about .app-main {
+  display: block;
+  width: min(46rem, 100%);
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 2.5rem) 3rem;
+}
+
+.about {
+  border-bottom: 0;
+}
+
+.about h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.6rem;
+}
+
+.about h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* `.panel h3` is a small uppercase label; a question is a heading to read. */
+.about h3 {
+  margin: 1.25rem 0 0.4rem;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.about p,
+.about li {
+  max-width: 42em;
+  line-height: 1.55;
+}
+
+.about p {
+  margin: 0 0 0.6rem;
+}
+
+.about ul,
+.about ol {
+  margin: 0 0 0.8rem;
+  padding-left: 1.4rem;
+}
+
+.about li + li {
+  margin-top: 0.35rem;
+}
+
+.about__lead p:first-child {
+  font-size: 1.05rem;
+}
+
+.about__contents {
+  margin: 1.25rem 0 0.5rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--bg-elevated);
+}
+
+.about__contents ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  columns: 2 12rem;
+}
+
+.about a {
+  color: var(--text);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.about a:hover {
+  text-decoration-color: var(--text);
+}
+
+.about .site-disclaimer {
+  padding: 1.5rem 0 0;
+}

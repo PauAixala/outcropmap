@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The build writes the title, description, social card and structured data (src/app/site/pages.ts). -->
     <title>OutCrop</title>
+    <!-- outcrop:head -->
     <link rel="icon" type="image/png" href="./icons/favicon-32.png" />
     <link rel="stylesheet" href="./src/ui/styles/base.css" />
   </head>
@@ -13,8 +15,9 @@
       <main class="app-main">
         <section class="forge-hero" aria-labelledby="forge-hero-title">
           <div class="forge-hero__copy">
-            <h1 id="forge-hero-title"></h1>
-            <p id="forge-hero-body" class="forge-hero__body"></p>
+            <!-- The same strings src/pages/forge/main.ts sets, written in by the build. -->
+            <h1 id="forge-hero-title"><!-- outcrop:forge-hero-title --></h1>
+            <p id="forge-hero-body" class="forge-hero__body"><!-- outcrop:forge-hero-body --></p>
           </div>
           <div class="forge-hero__mark" aria-hidden="true">
             <!--
@@ -26,6 +29,8 @@
             <img class="forge-mark" src="./icons/forge-mark.svg" alt="" />
           </div>
         </section>
+        <!-- What this page is, for a visitor or crawler without JavaScript; hidden otherwise (base.css). -->
+        <!-- outcrop:static-summary -->
         <section id="recipe-picker" class="panel"><!-- profile + item search --></section>
         <section id="recipe-editor" class="panel"><!-- custom recipe: target + rules --></section>
         <section id="saved-recipes" class="panel"><!-- saved list --></section>

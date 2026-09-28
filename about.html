@@ -4,23 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- The build writes the title, description, social card and structured data (src/app/site/pages.ts). -->
-    <title>OutCrop</title>
+    <title>OutCrop · About</title>
     <!-- outcrop:head -->
     <link rel="icon" type="image/png" href="./icons/favicon-32.png" />
     <link rel="stylesheet" href="./src/ui/styles/base.css" />
   </head>
   <body>
-    <div id="app" class="app app--map">
+    <div id="app" class="app app--about">
       <header id="app-header" class="app-header"><!-- shell: nav + theme toggle --></header>
       <main class="app-main">
-        <!-- What this page is, for a visitor or crawler without JavaScript; hidden otherwise (base.css). -->
-        <!-- outcrop:static-summary -->
-        <canvas id="map-canvas" class="map-canvas"></canvas>
-        <div id="map-hud" class="map-hud"><!-- terrain switch + loading compass --></div>
-        <aside id="side-panel" class="side-panel"><!-- layers, filters, legend --></aside>
-        <div id="coord-readout" class="coord-readout" aria-live="off"></div>
+        <!-- Written by the build from the strings in src/ui/i18n/en-site.ts (src/app/site/pages.ts). -->
+        <article id="about" class="panel about">
+          <!-- outcrop:about -->
+        </article>
       </main>
     </div>
-    <script type="module" src="./src/pages/map/main.ts"></script>
+    <script type="module" src="./src/pages/about/main.ts"></script>
   </body>
 </html>

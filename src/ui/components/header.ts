@@ -1,13 +1,15 @@
 // Shared shell header: app title, a link between the map and forge pages, and a theme toggle.
-// Mounted by both src/pages/map/main.ts and src/pages/forge/main.ts.
+// Mounted by every page's entry point (src/pages/*/main.ts).
 import { REPOSITORY_URL } from '@app/project';
+import { sitePage } from '@app/site/site';
+import type { SitePageId } from '@app/site/site';
 import { en } from '@ui/i18n/en';
 import { createCookieSettingsButton } from '@ui/components/ad-slot';
 import { cycleTheme, getThemePreference, onThemeChange } from '@ui/theme/theme';
 import type { ThemePreference } from '@ui/theme/theme';
 
 export interface HeaderOptions {
-  readonly page: 'map' | 'forge' | 'privacy';
+  readonly page: SitePageId;
 }
 
 function themeLabel(pref: ThemePreference): string {
@@ -66,15 +68,24 @@ export function mountHeader(container: HTMLElement, options: HeaderOptions): voi
   legal.rel = 'noopener noreferrer';
   legal.textContent = en.nav.licence;
 
-  // The privacy page, and — only when the site shows ads — Google's consent revocation link.
+  // The About and privacy pages, and — only when the site shows ads, and only on a page that carries
+  // the ad tag — Google's consent revocation link. privacy.html carries no ad tag
+  // (src/app/site/site.json), so the button could not open the consent message there.
+  const about = document.createElement('a');
+  about.className = 'app-header__legal';
+  about.href = './about.html';
+  about.textContent = en.nav.about;
+  if (options.page === 'about') about.setAttribute('aria-current', 'page');
   const privacy = document.createElement('a');
   privacy.className = 'app-header__legal';
   privacy.href = './privacy.html';
   privacy.textContent = en.nav.privacy;
   if (options.page === 'privacy') privacy.setAttribute('aria-current', 'page');
-  const cookieSettings = createCookieSettingsButton('app-header__legal app-header__cookies');
+  const cookieSettings = sitePage(options.page).adScript
+    ? createCookieSettingsButton('app-header__legal app-header__cookies')
+    : null;
 
-  container.append(title, nav, legal, privacy);
+  container.append(title, nav, legal, about, privacy);
   if (cookieSettings) container.append(cookieSettings);
   container.append(themeButton);
 }

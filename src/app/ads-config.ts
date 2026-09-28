@@ -2,7 +2,8 @@
  * The site's advertising settings, read once from `ads.config.json` at the repository root.
  *
  * Ads are off unless a publisher ID is set there. The same file drives the build (the AdSense tag
- * in every page's head, `ads.txt`, and the one remote script `build:web` then allows) and the pages
+ * in the head of each page `src/app/site/site.json` marks `adScript`, which leaves out the privacy
+ * page; `ads.txt`; and the one remote script `build:web` then allows) and the pages
  * (the ad slots, the "Privacy and cookie settings" link and the privacy page's ads section), so the
  * two can never disagree.
  */
