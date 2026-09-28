@@ -4,15 +4,15 @@
     "client: your publisher ID, 'ca-pub-' and 16 digits (AdSense -> Account -> Account information). Leave it empty to build without ads: no ad script, no ad slots, no consent link, and the privacy page says there are no ads.",
     "slots: the numeric data-ad-slot of one display ad unit per placement (AdSense -> Ads -> By ad unit -> Display ads). A placement whose slot is empty shows no ad.",
     "mapLeft is a 160 x 600 skyscraper in a column left of the map; forgeLeft and forgeRight are 160 x 600 rails that follow the scroll; all three appear only on screens wide enough for them. mapBottom is a banner below the map; forgeMiddle and forgeEnd are responsive blocks.",
-    "The build writes the AdSense tag and verification meta into every page's head, and ads.txt at the site root, only while client is set."
+    "While client is set, the build writes the AdSense tag into content pages (not the privacy page), verification meta into every page's head, and ads.txt at the site root."
   ],
   "client": "ca-pub-7466765453292112",
   "slots": {
-    "mapLeft": "",
-    "mapBottom": "",
-    "forgeLeft": "",
-    "forgeRight": "",
-    "forgeMiddle": "",
-    "forgeEnd": ""
+    "mapLeft": "7710578362",
+    "mapBottom": "5958512996",
+    "forgeLeft": "9706186310",
+    "forgeRight": "2116394346",
+    "forgeMiddle": "6143269268",
+    "forgeEnd": "4453859636"
   }
 }
