@@ -462,6 +462,14 @@ body::after {
  * meant to scroll as a page. */
 .app--map {
   overflow: hidden;
+  /* Pinned to the viewport by its edges, not only sized by `height: 100%`. On a phone AdSense
+   * wrote `height: auto !important` inline on every ancestor of the banner up to this box (with
+   * the responsive banner, and with a fixed-size one while its mobile ad-size optimisation was at
+   * work), and no stylesheet outranks an inline !important: with the height gone, the page grew to
+   * the side panel's whole length and the map with it. A box held by its insets keeps its size
+   * whatever its `height` says. */
+  position: fixed;
+  inset: 0;
 }
 
 .app-header {
@@ -2385,11 +2393,14 @@ button.measure-btn--active:hover:not(:disabled) {
     border-top: 1px solid var(--border);
   }
 
-  /* Overlays belong to the map box, which is now only the top row. */
+  /* Overlays belong to the map box, which is now only the top row. The scale bar goes under the
+     HUD rather than beside it: at phone widths the two do not fit in one row, and at 360px the bar
+     covered the loading chip's label. Anchored to the top, it needs nothing from the map's height.
+     1.75rem is the HUD's height (the compass chip: a 1.15rem dial and 0.3rem of padding each way). */
   .app--map .scale-bar {
-    left: auto;
-    right: 0.75rem;
-    top: 0.75rem;
+    left: 0.75rem;
+    right: auto;
+    top: calc(0.75rem + 1.75rem + 0.4rem);
     bottom: auto;
   }
 
@@ -2510,8 +2521,7 @@ button.measure-btn--active:hover:not(:disabled) {
   display: block;
 }
 
-.ad-slot--block,
-.ad-slot--banner {
+.ad-slot--block {
   align-items: stretch;
 }
 
@@ -2519,9 +2529,7 @@ button.measure-btn--active:hover:not(:disabled) {
   min-height: 252px;
 }
 
-.ad-slot--banner .ad-slot__unit {
-  min-height: 92px;
-}
+/* The banner carries its exact size inline (ad-slot.ts) and sits centred in its row. */
 
 .ad-slot--rail .ad-slot__unit {
   display: inline-block;
@@ -2590,6 +2598,46 @@ button.measure-btn--active:hover:not(:disabled) {
     calc(100% - var(--side-panel-width) - var(--map-ad-rail, 0px) - 1.5rem)
   );
   max-height: calc(100% - var(--map-ad-bottom, 0px) - 1.5rem);
+}
+
+/* Narrow windows with ads keep the narrow layout: the map on top, the panel under it, the banner
+ * along the bottom. It sits after the rules above so it outranks them. Without it, those rules put
+ * the map and the panel side by side on a phone, and the scale bar, given a bottom there on top of
+ * the narrow rules' top, stretched over the whole map and panel. The banner's row fits whichever
+ * size it took (320 x 50 on a phone), since nothing over the map is placed against it here, and
+ * its side padding goes so a 320px-wide phone still fits one. On a phone held sideways the map
+ * gives way rather than push the banner out of sight. A rail mounted on a wide window is dropped
+ * if the window is then narrowed. */
+@media (max-width: 760px) {
+  .app--map.app--ads-rail {
+    --map-ad-rail: 0px;
+  }
+
+  .app--map.app--ads .app-main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, var(--map-narrow-height)) minmax(0, 1fr) auto;
+    grid-template-areas:
+      'map'
+      'panel'
+      'bottom';
+  }
+
+  .app--map.app--ads .map-ad-bottom {
+    padding: 0.5rem 0;
+  }
+
+  .app--map.app--ads .map-ad-rail {
+    display: none;
+  }
+
+  .app--map.app--ads .scale-bar {
+    bottom: auto;
+  }
+
+  .app--map.app--ads .coord-readout {
+    max-width: calc(100% - 1.5rem);
+    max-height: calc(var(--map-narrow-height) - 1.5rem);
+  }
 }
 
 /* The forge: blocks between sections span the page; each rail runs beside it for its whole length,

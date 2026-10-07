@@ -120,6 +120,10 @@ async function boot(): Promise<void> {
   // Ads frame the map rather than sit in the panel: a 160 x 600 skyscraper in a narrow column to
   // its left (only where the screen is wide enough to spare it) and a banner below it. Mounted before the canvas is sized, so the map
   // starts at its final size; the HUD, scale bar and readout follow it (`app--ads-*` in base.css).
+  // Each class goes on before its slot is mounted, so the slot is measured in its own cell. Before
+  // the grid had a cell for the banner, it sat in a stray implicit column ~83px wide, which AdSense
+  // refused ("No slot size for availableWidth=83") on every window too narrow for the rail, whose
+  // class used to arrive first.
   const adMain = document.querySelector('.app-main');
   const adApp = document.getElementById('app');
   if (adMain && adApp) {
@@ -127,15 +131,20 @@ async function boot(): Promise<void> {
       const rail = document.createElement('div');
       rail.className = 'map-ad-rail';
       adMain.append(rail);
-      mountAdSlot(rail, 'mapLeft');
       adApp.classList.add('app--ads', 'app--ads-rail');
+      mountAdSlot(rail, 'mapLeft');
     }
     if (hasAd('mapBottom')) {
       const banner = document.createElement('div');
       banner.className = 'map-ad-bottom';
       adMain.append(banner);
-      mountAdSlot(banner, 'mapBottom');
       adApp.classList.add('app--ads', 'app--ads-bottom');
+      // A window narrower than the smallest banner gets none, and no empty row for it.
+      if (!mountAdSlot(banner, 'mapBottom')) {
+        banner.remove();
+        adApp.classList.remove('app--ads-bottom');
+        if (!adApp.classList.contains('app--ads-rail')) adApp.classList.remove('app--ads');
+      }
     }
   }
 
