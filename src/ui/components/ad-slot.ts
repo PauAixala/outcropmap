@@ -54,12 +54,20 @@ const SHAPE: Readonly<Record<AdPlacement, AdShape>> = {
   forgeRight: 'rail',
   forgeMiddle: 'block',
   forgeEnd: 'block',
+  guideLeft: 'rail',
+  guideRight: 'rail',
+  guideTop: 'block',
+  guideEnd: 'block',
 };
 
-/** The widest rail, plus the room around it; below these widths a rail is not mounted at all. */
-export const RAIL_MIN_VIEWPORT: Readonly<Record<'map' | 'forge', number>> = {
+/**
+ * The widest rail, plus the room around it; below these widths a rail is not mounted at all. A
+ * guide's column is the forge's width (72rem), so its rails need the same room.
+ */
+export const RAIL_MIN_VIEWPORT: Readonly<Record<'map' | 'forge' | 'guide', number>> = {
   map: 1100,
   forge: 1560,
+  guide: 1560,
 };
 
 /** Whether `placement` has an ad unit in this build. */

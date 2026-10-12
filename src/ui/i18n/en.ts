@@ -9,6 +9,15 @@ export const en = {
   pageTitles: {
     map: 'OutCrop · Seed map for TerraFirmaCraft and TerraFirmaGreg',
     forge: 'OutCrop · Anvil calculator for TerraFirmaCraft and TerraFirmaGreg',
+    // The guides lead with their subject: it is what a search result has to show first.
+    guides: 'Guides to TerraFirmaCraft and TerraFirmaGreg · OutCrop',
+    'tfg-ore-veins': 'TerraFirmaGreg ore veins: depths, rocks and yields · OutCrop',
+    'tfc-ore-veins': 'TerraFirmaCraft 1.20 ore veins: depths, rocks and grades · OutCrop',
+    'kaolin-clay': 'Where to find kaolin clay in TFC and TerraFirmaGreg · OutCrop',
+    'rock-layers': 'TerraFirmaCraft rock layers and the ores each rock holds · OutCrop',
+    'anvil-guide': 'How the TerraFirmaCraft anvil works: rules and targets · OutCrop',
+    'tfg-structures': 'TerraFirmaGreg structures: villages, camps and ruins · OutCrop',
+    'tfg-dimensions': 'TerraFirmaGreg’s Beneath and planets: ores and biomes · OutCrop',
     about: 'OutCrop · About and FAQ',
     privacy: 'OutCrop · Privacy',
   },
@@ -17,8 +26,15 @@ export const en = {
     licence: 'EUPL-1.2 · Source',
     map: 'Map',
     forge: 'Forge',
+    guides: 'Guides',
     about: 'About',
     privacy: 'Privacy',
+  },
+  /** The guide pages' own labels; their text is in ./en-guides.ts. */
+  guides: {
+    tableFilterLabel: 'Filter this table',
+    tableFilterPlaceholder: 'Type to filter rows…',
+    tableFilterCount: '{shown} of {total} rows',
   },
   // Minecraft Usage Guidelines: fan sites carry this, prominently, in these words.
   disclaimer: 'NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.',
@@ -39,7 +55,7 @@ export const en = {
     ads:
       'This site shows ads served by Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google’s use of advertising cookies enables it and its partners to serve ads based on your visits to this and other sites on the Internet.',
     adsConsent:
-      'Visitors in the European Economic Area, the United Kingdom and Switzerland are asked for consent before personalised ads are shown. You can change that choice at any time with “Privacy and cookie settings”, at the top of the Map, Forge and About pages.',
+      'Visitors in the European Economic Area, the United Kingdom and Switzerland are asked for consent before personalised ads are shown. You can change that choice at any time with “Privacy and cookie settings”, at the top of the Map, Forge, Guides and About pages.',
     adsOptOut: 'Turn off personalised ads in Google’s ad settings',
     adsPartners: 'How Google uses information from sites that use its services',
     hostingHeading: 'Hosting',

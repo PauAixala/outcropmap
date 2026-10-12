@@ -33,8 +33,10 @@ permissive.
 
 **Extracted data.** `src/data/tfc-1.20/` contains values regenerated from TerraFirmaCraft's own
 datapack and source by `tools/extract-datapack.mjs`: ore vein definitions, rock and biome lists,
-biome tags, anvil recipes, anvil action deltas and crop/plant climate ranges; and, by
-`tools/extract-biome-palette.mjs`, the biome colours of its `RegionGeneratorTest`. The 486 `tfc:` recipes in `src/data/tfg/anvil-recipes.json` are
+biome tags, anvil recipes, anvil action deltas and crop/plant climate ranges; by
+`tools/extract-biome-palette.mjs`, the biome colours of its `RegionGeneratorTest`; and, by
+`tools/extract-rock-categories.mjs`, each rock's display category from its `Rock` enum
+(`rock-categories.json`, which the rock guide shows). The 486 `tfc:` recipes in `src/data/tfg/anvil-recipes.json` are
 TerraFirmaCraft's recipes as the TerraFirmaGreg game holds them, some replaced under the same id by
 TerraFirmaGreg's scripts (section 2). `src/data/tfg/` holds three more pieces of it: the same
 `ForgeStep` action deltas (`anvil.json`); the rock layers of its `tfc:overworld` world preset, in

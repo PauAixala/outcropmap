@@ -3,6 +3,7 @@
 import { en } from '@ui/i18n/en';
 import { STRUCTURE_KINDS, structureKindFor, structureSetOf } from '@ui/icons/structure-glyphs';
 import { formatBiomeName, formatMaterialName, formatOreName } from '@ui/i18n/ore-names';
+import { structureVariantName } from '@ui/i18n/structure-names';
 import { categoricalColor, hashString } from '@render/colormap';
 import { seasonalTemperatureRange } from '@app/growth';
 
@@ -1405,12 +1406,8 @@ export function buildReadoutGroups(
   ];
 }
 
-/** `tfc_ruined_world:small_limestone_church_2` -> "Small limestone church 2". */
-export function structureVariantName(id: string): string {
-  const path = id.slice(id.indexOf(':') + 1);
-  const words = path.slice(path.lastIndexOf('/') + 1).replace(/_/g, ' ').trim();
-  return words.charAt(0).toUpperCase() + words.slice(1);
-}
+// `structureVariantName` lives in @ui/i18n/structure-names, where the structures guide reads it too.
+export { structureVariantName };
 
 function renderReadoutGroups(container: HTMLElement, groups: readonly ReadoutGroup[]): void {
   container.replaceChildren();

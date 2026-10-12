@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "tool": "tools/extract-rock-categories.mjs",
+    "source": "$HOME/reference/tfc/src/main/java/net/dries007/tfc/common/blocks/rock/Rock.java",
+    "git_commit": "b158c9c968cad7afb99cea2c937b301ff275e2e6",
+    "note": "Rock -> RockDisplayCategory, the first argument of each Rock enum constant, in declaration order."
+  },
+  "rocks": {
+    "granite": "felsic_igneous_intrusive",
+    "diorite": "intermediate_igneous_intrusive",
+    "gabbro": "mafic_igneous_intrusive",
+    "shale": "sedimentary",
+    "claystone": "sedimentary",
+    "limestone": "sedimentary",
+    "conglomerate": "sedimentary",
+    "dolomite": "sedimentary",
+    "chert": "sedimentary",
+    "chalk": "sedimentary",
+    "rhyolite": "felsic_igneous_extrusive",
+    "basalt": "mafic_igneous_extrusive",
+    "andesite": "intermediate_igneous_extrusive",
+    "dacite": "intermediate_igneous_extrusive",
+    "quartzite": "metamorphic",
+    "slate": "metamorphic",
+    "phyllite": "metamorphic",
+    "schist": "metamorphic",
+    "gneiss": "metamorphic",
+    "marble": "metamorphic"
+  }
+}

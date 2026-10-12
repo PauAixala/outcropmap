@@ -7,8 +7,29 @@
  */
 import site from './site.json';
 
-export const SITE_PAGE_IDS = ['map', 'forge', 'about', 'privacy'] as const;
+/**
+ * The guides, in the order the guides page lists them. Each is a page of its own at the site root;
+ * `src/app/site/guides.ts` writes its text and tables from `src/ui/i18n/en-guides.ts` and the data
+ * the map and the forge run on.
+ */
+export const GUIDE_IDS = [
+  'tfg-ore-veins',
+  'tfc-ore-veins',
+  'kaolin-clay',
+  'rock-layers',
+  'anvil-guide',
+  'tfg-structures',
+  'tfg-dimensions',
+] as const;
+export type GuideId = (typeof GUIDE_IDS)[number];
+
+export const SITE_PAGE_IDS = ['map', 'forge', 'guides', ...GUIDE_IDS, 'about', 'privacy'] as const;
 export type SitePageId = (typeof SITE_PAGE_IDS)[number];
+
+export const isSitePageId = (id: string): id is SitePageId =>
+  (SITE_PAGE_IDS as readonly string[]).includes(id);
+
+export const isGuideId = (id: string): id is GuideId => (GUIDE_IDS as readonly string[]).includes(id);
 
 export interface SitePage {
   readonly id: SitePageId;
@@ -20,14 +41,11 @@ export interface SitePage {
   readonly adScript: boolean;
 }
 
-const isPageId = (id: string): id is SitePageId =>
-  (SITE_PAGE_IDS as readonly string[]).includes(id);
-
 /** `https://outcropmap.com`: scheme and host, no trailing slash. */
 export const SITE_ORIGIN: string = site.origin;
 
 export const SITE_PAGES: readonly SitePage[] = site.pages.map((page) => {
-  if (!isPageId(page.id)) throw new Error(`src/app/site/site.json: unknown page id "${page.id}"`);
+  if (!isSitePageId(page.id)) throw new Error(`src/app/site/site.json: unknown page id "${page.id}"`);
   return { id: page.id, file: page.file, path: page.path, adScript: page.adScript };
 });
 

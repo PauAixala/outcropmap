@@ -63,12 +63,18 @@ function inlineText(part: Inline, ctx: RenderContext): string {
 
 // --- HTML ---
 
+/** A link's address, with its section when it names one. */
+function inlineHref(part: Exclude<Inline, string>, ctx: RenderContext): string {
+  const { href } = ctx.resolve(part.link);
+  return part.hash === undefined ? href : `${href}#${part.hash}`;
+}
+
 function inlineHtml(part: Inline, ctx: RenderContext): string {
   const text = escapeText(inlineText(part, ctx));
   if (typeof part === 'string') return text;
   const target = ctx.resolve(part.link);
   const external = target.external ? ' target="_blank" rel="noopener noreferrer"' : '';
-  return `<a href="${escapeAttr(target.href)}"${external}>${text}</a>`;
+  return `<a href="${escapeAttr(inlineHref(part, ctx))}"${external}>${text}</a>`;
 }
 
 export function paragraphHtml(paragraph: Paragraph, ctx: RenderContext): string {
@@ -96,7 +102,7 @@ export function escapeMarkdown(text: string): string {
 function inlineMarkdown(part: Inline, ctx: RenderContext): string {
   const text = escapeMarkdown(inlineText(part, ctx));
   if (typeof part === 'string') return text;
-  return `[${text}](${ctx.resolve(part.link).href})`;
+  return `[${text}](${inlineHref(part, ctx)})`;
 }
 
 export function paragraphMarkdown(paragraph: Paragraph, ctx: RenderContext): string {

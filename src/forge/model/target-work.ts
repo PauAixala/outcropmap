@@ -17,10 +17,10 @@
  * (`tests/fixtures/tfg-world-anvil-targets.json`, `tests/parity/anvil-target.parity.test.ts`).
  */
 import { XoroshiroRandomSource } from '@core/random/xoroshiro';
+import { TARGET_WORK_MIN } from './action-set';
 
-/** `40` in the Java, and `154 - 2 * 40 - 1` above it: the inclusive range of a target. */
-export const TARGET_WORK_MIN = 40;
-export const TARGET_WORK_MAX = 113;
+// Defined beside the work bar (./action-set.ts) so the build-time guides can state the range too.
+export { TARGET_WORK_MAX, TARGET_WORK_MIN } from './action-set';
 
 export function anvilTargetWork(seed: bigint, recipeId: string): number {
   return (

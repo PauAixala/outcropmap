@@ -11,11 +11,12 @@
 import { en } from '../../ui/i18n/en';
 import { enSite } from '../../ui/i18n/en-site';
 import type { SiteQuestion, SiteSection } from '../../ui/i18n/en-site';
+import { guideMarkdown, guideSummary, guideTitle } from './guides';
 import { blocksMarkdown, escapeMarkdown, escapeText, paragraphText } from './markup';
 import type { RenderContext } from './markup';
 import { linkTarget, renderContext } from './pages';
 import type { SiteBuildOptions } from './pages';
-import { SITE_PAGES, pageUrl, siteUrl } from './site';
+import { GUIDE_IDS, SITE_PAGES, pageUrl, siteUrl } from './site';
 
 /**
  * Crawlers named in robots.txt, each allowed everything. `User-agent: *` already allows them; they
@@ -121,6 +122,11 @@ export function llmsTxt(options: SiteBuildOptions): string {
     listLink(copy.links.map, href('map'), paragraphText(enSite.summaries.map, ctx)),
     listLink(copy.links.forge, href('forge'), paragraphText(enSite.summaries.forge, ctx)),
     '',
+    `## ${copy.guidesHeading}`,
+    '',
+    listLink(copy.links.guides, href('guides'), copy.notes.guides),
+    ...GUIDE_IDS.map((id) => listLink(guideTitle(id, ctx), href(id), guideSummary(id, ctx))),
+    '',
     `## ${copy.aboutHeading}`,
     '',
     listLink(copy.links.about, href('about'), copy.notes.about),
@@ -142,7 +148,7 @@ function questionMarkdown(question: SiteQuestion, ctx: RenderContext): string {
   return `### ${escapeMarkdown(question.question)}\n\n${blocksMarkdown(question.answer, ctx)}`;
 }
 
-/** llms-full.txt: the About page, all of it, as one Markdown file. */
+/** llms-full.txt: the About page, all of it, then every guide, tables included, as one Markdown file. */
 export function llmsFullTxt(options: SiteBuildOptions): string {
   const ctx = renderContext(options, true);
   const about = enSite.about;
@@ -153,6 +159,7 @@ export function llmsFullTxt(options: SiteBuildOptions): string {
     ...about.sections.map((section) => sectionMarkdown(section, ctx)),
     `## ${escapeMarkdown(about.faqHeading)}`,
     ...about.faq.map((question) => questionMarkdown(question, ctx)),
+    ...GUIDE_IDS.map((id) => guideMarkdown(id, ctx)),
     escapeMarkdown(en.disclaimer),
   ];
   return `${parts.join('\n\n')}\n`;

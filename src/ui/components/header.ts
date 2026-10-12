@@ -1,7 +1,7 @@
-// Shared shell header: app title, a link between the map and forge pages, and a theme toggle.
+// Shared shell header: app title, tabs for the map, the forge and the guides, and a theme toggle.
 // Mounted by every page's entry point (src/pages/*/main.ts).
 import { REPOSITORY_URL } from '@app/project';
-import { sitePage } from '@app/site/site';
+import { isGuideId, sitePage } from '@app/site/site';
 import type { SitePageId } from '@app/site/site';
 import { en } from '@ui/i18n/en';
 import { createCookieSettingsButton } from '@ui/components/ad-slot';
@@ -24,26 +24,29 @@ export function mountHeader(container: HTMLElement, options: HeaderOptions): voi
   title.className = 'app-header__title';
   title.textContent = options.page === 'forge' ? en.forgeTitle : en.appTitle;
 
-  // Both destinations are always shown, as tabs: one link that says "Forge" gives no hint that the
-  // page you are on is the other half of a pair. The current page is drawn pressed in, the other
-  // raised, so the pair reads as a switch rather than as a stray link.
+  // Every destination is always shown, as tabs: one link that says "Forge" gives no hint that the
+  // page you are on is one of a set. The current page is drawn pressed in, the others raised, so
+  // the set reads as a switch rather than as stray links.
   const nav = document.createElement('nav');
   nav.className = 'app-header__nav';
   // Relative paths only (ADR 0004) — the site must work from any subfolder.
-  const tabs: readonly { page: 'map' | 'forge'; href: string; label: string }[] = [
+  const tabs: readonly { page: 'map' | 'forge' | 'guides'; href: string; label: string }[] = [
     { page: 'map', href: './index.html', label: en.nav.map },
     { page: 'forge', href: './forge.html', label: en.nav.forge },
+    { page: 'guides', href: './guides.html', label: en.nav.guides },
   ];
+  // A guide is a page of the Guides section: its tab stays pressed, and still leads back to the list.
+  const section = isGuideId(options.page) ? 'guides' : options.page;
   for (const tab of tabs) {
     const link = document.createElement('a');
     link.className = 'app-tab';
     link.href = tab.href;
     link.textContent = tab.label;
-    if (tab.page === options.page) {
+    if (tab.page === section) {
       link.dataset.current = 'true';
       // The tab you are on is not a link anywhere; marking it tells assistive tech the same thing
-      // the bevel tells everyone else.
-      link.setAttribute('aria-current', 'page');
+      // the bevel tells everyone else. On a guide it is the section you are in, and a way back.
+      link.setAttribute('aria-current', tab.page === options.page ? 'page' : 'true');
     }
     nav.append(link);
   }

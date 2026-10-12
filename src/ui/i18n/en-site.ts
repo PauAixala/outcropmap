@@ -15,13 +15,16 @@
  * Relative imports only: vite.config.ts loads this module (tests/unit/site-imports.test.ts).
  */
 import { en } from './en';
+import type { SitePageId } from '../../app/site/site';
 
 /** Where a link in the site text points. `src/app/site/pages.ts` turns it into a URL: one of this
  *  site's pages becomes a relative link in the HTML and an absolute one in llms.txt. */
-export type SiteLink = 'map' | 'forge' | 'about' | 'privacy' | 'source' | 'issues' | 'llmsFull';
+export type SiteLink = SitePageId | 'source' | 'issues' | 'llmsFull';
 
-/** A run of text, or a link. */
-export type Inline = string | { readonly link: SiteLink; readonly text: string };
+/** A run of text, or a link; `hash` points at a section of the page, e.g. `materials`. */
+export type Inline =
+  | string
+  | { readonly link: SiteLink; readonly text: string; readonly hash?: string };
 export type Paragraph = readonly Inline[];
 
 /**
@@ -75,7 +78,7 @@ interface SiteText {
     readonly map: { readonly heading: string; readonly needsScript: string };
     readonly forge: { readonly heading: string; readonly needsScript: string };
     readonly more: string;
-    readonly links: { readonly [K in 'map' | 'forge' | 'about' | 'privacy' | 'source']: string };
+    readonly links: { readonly [K in 'map' | 'forge' | 'guides' | 'about' | 'privacy' | 'source']: string };
   };
   readonly about: {
     readonly title: string;
@@ -89,12 +92,13 @@ interface SiteText {
     readonly summary: string;
     readonly details: readonly string[];
     readonly toolsHeading: string;
+    readonly guidesHeading: string;
     readonly aboutHeading: string;
     readonly optionalHeading: string;
     readonly links: {
-      readonly [K in 'map' | 'forge' | 'about' | 'privacy' | 'source' | 'llmsFull']: string;
+      readonly [K in 'map' | 'forge' | 'guides' | 'about' | 'privacy' | 'source' | 'llmsFull']: string;
     };
-    readonly notes: { readonly [K in 'about' | 'privacy' | 'source' | 'llmsFull']: string };
+    readonly notes: { readonly [K in 'guides' | 'about' | 'privacy' | 'source' | 'llmsFull']: string };
     readonly fullSource: string;
   };
 }
@@ -202,6 +206,7 @@ export const enSite = {
     links: {
       map: 'Seed map',
       forge: 'Forging calculator',
+      guides: 'Guides to ore veins, rock layers, kaolin clay, the anvil and structures',
       about: 'About OutCrop, how accurate it is, and common questions',
       privacy: 'Privacy',
       source: 'Source code (EUPL-1.2)',
@@ -483,6 +488,13 @@ export const enSite = {
               `: choose your profile, type your seed, turn on Minerals and search the ore filter for kaolin. In the filter, a minimum temperature of {kaolinMinTemperature} °C and a minimum rainfall of {kaolinMinRainfall} mm dim everywhere too cold or too dry for it. Markers are predictions from the seed, not guarantees: the map hides those whose measured hit rate is below “${en.filter.oreAccuracyLabel}” (90% by default), so some real patches do not show.`,
             ],
           },
+          {
+            p: [
+              'The ',
+              { link: 'kaolin-clay', text: 'kaolin clay guide' },
+              ' explains why patches only form at those heights, and lists every biome they allow.',
+            ],
+          },
         ],
       },
       {
@@ -494,6 +506,15 @@ export const enSite = {
               'Turn on Minerals on the ',
               { link: 'map', text: 'seed map' },
               ' and type what you want into the ore filter’s search. It searches what each vein yields, not just its name, so searching silver also finds the veins that carry it. The list shows each vein’s Y range, and a click on a marker shows its position, Y range and rarity. Markers are predictions from the seed, not guarantees.',
+            ],
+          },
+          {
+            p: [
+              'The ore vein guides for ',
+              { link: 'tfg-ore-veins', text: 'TerraFirmaGreg' },
+              ' and ',
+              { link: 'tfc-ore-veins', text: 'TerraFirmaCraft' },
+              ' list every vein with its depth, rarity and host rocks, and which veins yield each material.',
             ],
           },
         ],
@@ -516,7 +537,9 @@ export const enSite = {
             p: [
               'So the finishing strikes have to be planned before the first one. The ',
               { link: 'forge', text: 'forging calculator' },
-              ' starts from the rules and finds the shortest sequence that reaches the target and ends with them in order.',
+              ' starts from the rules and finds the shortest sequence that reaches the target and ends with them in order. The ',
+              { link: 'anvil-guide', text: 'anvil guide' },
+              ' works through an example and lists the rules of every TerraFirmaCraft item.',
             ],
           },
         ],
@@ -565,22 +588,25 @@ export const enSite = {
       'Accuracy: each map layer is a port of the mod’s own world-generation code, tested against values from that Java code and, for TerraFirmaGreg, against a real generated world. Surface height is approximate, whether a deposit is exposed is not known, and ore markers are predictions from the seed, not guarantees.',
     ],
     toolsHeading: 'Tools',
+    guidesHeading: 'Guides',
     aboutHeading: 'About',
     optionalHeading: 'Optional',
     links: {
       map: 'Seed map',
       forge: 'Forging calculator',
+      guides: 'All guides',
       about: 'About and FAQ',
       privacy: 'Privacy',
       source: 'Source code',
       llmsFull: 'Full text',
     },
     notes: {
+      guides: 'reference guides built from the same game data as the tools',
       about:
         'what OutCrop is, how to use it, how accurate it is, and common questions, such as how to find kaolin clay',
       privacy: 'what OutCrop keeps in your browser and what it never sends',
       source: 'EUPL-1.2, on GitHub',
-      llmsFull: 'the About page and its questions as one Markdown file',
+      llmsFull: 'the About page, its questions and every guide, tables included, as one Markdown file',
     },
     fullSource: 'The text of {url}, as Markdown.',
   },

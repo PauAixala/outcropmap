@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The build writes the title, description, social card and structured data (src/app/site/pages.ts). -->
+    <title>OutCrop Â· Guides</title>
+    <!-- outcrop:head -->
+    <link rel="icon" type="image/png" href="./icons/favicon-32.png" />
+    <link rel="stylesheet" href="./src/ui/styles/base.css" />
+  </head>
+  <body>
+    <div id="app" class="app app--guide" data-page="tfg-ore-veins">
+      <header id="app-header" class="app-header"><!-- shell: nav + theme toggle --></header>
+      <main class="app-main">
+        <!-- Written by the build from src/ui/i18n/en-guides.ts and the data under src/data (src/app/site/guides.ts). -->
+        <article id="guide" class="panel guide">
+          <!-- outcrop:guide -->
+        </article>
+      </main>
+    </div>
+    <script type="module" src="./src/pages/guide/main.ts"></script>
+  </body>
+</html>

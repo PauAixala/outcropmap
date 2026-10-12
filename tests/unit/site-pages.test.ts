@@ -12,9 +12,11 @@ import {
   type Json,
 } from '@app/site/pages';
 import {
+  GUIDE_IDS,
   SITE_ORIGIN,
   SITE_PAGES,
   SOCIAL_IMAGE,
+  isGuideId,
   pageUrl,
   sitePage,
   type SitePageId,
@@ -90,7 +92,7 @@ const ctx: RenderContext = {
 
 describe('site pages', () => {
   it('builds every page site.json lists, and each file exists', () => {
-    expect(SITE_PAGES.map((page) => page.id)).toEqual(['map', 'forge', 'about', 'privacy']);
+    expect(SITE_PAGES.map((page) => page.id)).toEqual(['map', 'forge', 'guides', ...GUIDE_IDS, 'about', 'privacy']);
     for (const page of SITE_PAGES)
       expect([page.file, existsSync(join(ROOT, page.file))]).toEqual([page.file, true]);
     expect(pageUrl('map')).toBe(`${SITE_ORIGIN}/`);
@@ -232,15 +234,16 @@ describe('site pages', () => {
   });
 
   it('tells a reader of the privacy page where the cookie settings are', () => {
-    // The button lives in the header of every page that carries the ad tag, and nowhere else.
+    // The button lives in the header of every page that carries the ad tag, and nowhere else. The
+    // guides are named once, as a section: "the Guides pages".
     for (const page of SITE_PAGES) {
-      if (page.id === 'map' || page.id === 'forge' || page.id === 'about') {
-        expect([page.id, page.adScript, en.privacy.adsConsent.includes(en.nav[page.id])]).toEqual([
-          page.id,
-          true,
-          true,
-        ]);
-      }
+      if (page.id === 'privacy') continue;
+      const label = page.id === 'guides' || isGuideId(page.id) ? en.nav.guides : en.nav[page.id];
+      expect([page.id, page.adScript, en.privacy.adsConsent.includes(label)]).toEqual([
+        page.id,
+        true,
+        true,
+      ]);
     }
     expect(sitePage('privacy').adScript).toBe(false);
     expect(en.privacy.adsConsent).not.toMatch(/every page/);

@@ -12,7 +12,8 @@ import rawConfig from '../../ads.config.json';
 /**
  * Where an ad can go. The map has a rail to the left of the map and a banner below it; the forge
  * has a rail on each side, one block between the calculator and the custom-recipe tools, and one
- * block at the end of the page.
+ * block at the end of the page. A guide has a rail on each side, one block after its contents and
+ * one before its related guides; the guides page has the rails and the closing block.
  */
 export const AD_PLACEMENTS = [
   'mapLeft',
@@ -21,6 +22,10 @@ export const AD_PLACEMENTS = [
   'forgeRight',
   'forgeMiddle',
   'forgeEnd',
+  'guideLeft',
+  'guideRight',
+  'guideTop',
+  'guideEnd',
 ] as const;
 
 export type AdPlacement = (typeof AD_PLACEMENTS)[number];

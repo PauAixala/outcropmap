@@ -10,12 +10,22 @@
     "relative so the site still works from any subfolder (ADR 0004).",
     "adScript: whether the page carries the AdSense tag. privacy.html does not: AdSense Help (answer",
     "10961370) asks that the privacy page the consent message links to hosts no ad tags and no",
-    "consent-message tag. The google-adsense-account meta is not a script and goes on every page."
+    "consent-message tag. The google-adsense-account meta is not a script and goes on every page.",
+    "The guides (guides.html and the pages it lists) sit at the site root like every other page, so",
+    "the header's relative links work from each of them; src/app/site/guides.ts writes their text."
   ],
   "origin": "https://outcropmap.com",
   "pages": [
     { "id": "map", "file": "index.html", "path": "/", "adScript": true },
     { "id": "forge", "file": "forge.html", "path": "/forge.html", "adScript": true },
+    { "id": "guides", "file": "guides.html", "path": "/guides.html", "adScript": true },
+    { "id": "tfg-ore-veins", "file": "tfg-ore-veins.html", "path": "/tfg-ore-veins.html", "adScript": true },
+    { "id": "tfc-ore-veins", "file": "tfc-ore-veins.html", "path": "/tfc-ore-veins.html", "adScript": true },
+    { "id": "kaolin-clay", "file": "kaolin-clay.html", "path": "/kaolin-clay.html", "adScript": true },
+    { "id": "rock-layers", "file": "rock-layers.html", "path": "/rock-layers.html", "adScript": true },
+    { "id": "anvil-guide", "file": "anvil-guide.html", "path": "/anvil-guide.html", "adScript": true },
+    { "id": "tfg-structures", "file": "tfg-structures.html", "path": "/tfg-structures.html", "adScript": true },
+    { "id": "tfg-dimensions", "file": "tfg-dimensions.html", "path": "/tfg-dimensions.html", "adScript": true },
     { "id": "about", "file": "about.html", "path": "/about.html", "adScript": true },
     { "id": "privacy", "file": "privacy.html", "path": "/privacy.html", "adScript": false }
   ],

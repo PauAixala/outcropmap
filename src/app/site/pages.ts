@@ -20,10 +20,28 @@ import { enSite } from '../../ui/i18n/en-site';
 import type { SiteLink, SiteQuestion, SiteSection } from '../../ui/i18n/en-site';
 import { REPOSITORY_URL } from '../project';
 import { factPlaceholders, siteFacts } from './facts';
+import {
+  forgeGuideHtml,
+  guideArticleHtml,
+  guideDescription,
+  guidePlaceholders,
+  guideTitle,
+  guidesIndexHtml,
+} from './guides';
 import { blocksHtml, blocksText, escapeAttr, escapeText, paragraphHtml } from './markup';
 import type { LinkTarget, RenderContext } from './markup';
-import { SITE_ORIGIN, SOCIAL_IMAGE, pageHref, pageUrl, sitePageByFile, siteUrl } from './site';
-import type { SitePageId } from './site';
+import {
+  GUIDE_IDS,
+  SITE_ORIGIN,
+  SOCIAL_IMAGE,
+  isGuideId,
+  isSitePageId,
+  pageHref,
+  pageUrl,
+  sitePageByFile,
+  siteUrl,
+} from './site';
+import type { GuideId, SitePageId } from './site';
 
 export interface SiteBuildOptions {
   /** Whether this build shows ads (`ADS_ENABLED`, from ads.config.json). */
@@ -47,12 +65,8 @@ const TFG_URL = 'https://github.com/TerraFirmaGreg-Team/Modpack-Modern';
  * site works from any folder) and absolute where the text leaves the site, as in llms.txt.
  */
 export function linkTarget(link: SiteLink, absolute: boolean): LinkTarget {
+  if (isSitePageId(link)) return { href: absolute ? pageUrl(link) : pageHref(link), external: false };
   switch (link) {
-    case 'map':
-    case 'forge':
-    case 'about':
-    case 'privacy':
-      return { href: absolute ? pageUrl(link) : pageHref(link), external: false };
     case 'llmsFull':
       return { href: absolute ? siteUrl('/llms-full.txt') : './llms-full.txt', external: false };
     case 'source':
@@ -64,8 +78,17 @@ export function linkTarget(link: SiteLink, absolute: boolean): LinkTarget {
 
 let placeholders: Readonly<Record<string, string>> | null = null;
 
+/** The About page's numbers and the guides', as one table; a name in both is a build error. */
+function allPlaceholders(): Readonly<Record<string, string>> {
+  const facts = factPlaceholders(siteFacts());
+  const guides = guidePlaceholders();
+  const twice = Object.keys(guides).filter((name) => name in facts);
+  if (twice.length > 0) throw new Error(`site text: {${twice.join('}, {')}} defined twice`);
+  return { ...facts, ...guides };
+}
+
 export function renderContext(options: SiteBuildOptions, absolute: boolean): RenderContext {
-  placeholders ??= factPlaceholders(siteFacts());
+  placeholders ??= allPlaceholders();
   return {
     values: placeholders,
     ads: options.adsEnabled,
@@ -83,6 +106,7 @@ export function pageDescription(id: SitePageId, options: SiteBuildOptions): stri
       ? enSite.pages.privacy.description
       : enSite.pages.privacy.descriptionNoAds;
   }
+  if (id === 'guides' || isGuideId(id)) return guideDescription(id, renderContext(options, false));
   return enSite.pages[id].description;
 }
 
@@ -143,11 +167,7 @@ function appNode(tool: 'map' | 'forge'): JsonObject {
     featureList: [...text.features],
     keywords: text.keywords.join(', '),
     inLanguage: 'en',
-    about: [
-      { '@type': 'VideoGame', name: 'Minecraft' },
-      { '@type': 'Thing', name: 'TerraFirmaCraft', sameAs: TFC_URL },
-      { '@type': 'Thing', name: 'TerraFirmaGreg', sameAs: TFG_URL },
-    ],
+    about: [...ABOUT_THE_GAME],
     isBasedOn: ref(sourceId),
     isPartOf: ref(websiteId),
   };
@@ -161,6 +181,44 @@ function questionNode(question: SiteQuestion, ctx: RenderContext): JsonObject {
   };
 }
 
+const ABOUT_THE_GAME: readonly JsonObject[] = [
+  { '@type': 'VideoGame', name: 'Minecraft' },
+  { '@type': 'Thing', name: 'TerraFirmaCraft', sameAs: TFC_URL },
+  { '@type': 'Thing', name: 'TerraFirmaGreg', sameAs: TFG_URL },
+];
+
+const articleId = (id: GuideId): string => `${pageUrl(id)}#article`;
+
+/** A guide is a TechArticle: reference text about the game, written by the site. */
+function articleNode(id: GuideId, options: SiteBuildOptions): JsonObject {
+  const ctx = renderContext(options, true);
+  return {
+    '@type': 'TechArticle',
+    '@id': articleId(id),
+    headline: guideTitle(id, ctx),
+    description: pageDescription(id, options),
+    url: pageUrl(id),
+    image: SOCIAL_IMAGE.url,
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    author: { '@type': 'Organization', name: en.appTitle, url: pageUrl('map') },
+    publisher: { '@type': 'Organization', name: en.appTitle, url: pageUrl('map') },
+    about: [...ABOUT_THE_GAME],
+    mainEntityOfPage: ref(webPageId(id)),
+    isPartOf: ref(websiteId),
+  };
+}
+
+function breadcrumbNode(id: GuideId, options: SiteBuildOptions): JsonObject {
+  return {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: en.nav.guides, item: pageUrl('guides') },
+      { '@type': 'ListItem', position: 2, name: guideTitle(id, renderContext(options, true)), item: pageUrl(id) },
+    ],
+  };
+}
+
 function webPageNode(id: SitePageId, options: SiteBuildOptions): JsonObject {
   const common = {
     '@id': webPageId(id),
@@ -170,7 +228,24 @@ function webPageNode(id: SitePageId, options: SiteBuildOptions): JsonObject {
     inLanguage: 'en',
     isPartOf: ref(websiteId),
   };
+  if (isGuideId(id)) {
+    return { '@type': 'WebPage', ...common, mainEntity: ref(articleId(id)), breadcrumb: breadcrumbNode(id, options) };
+  }
   switch (id) {
+    case 'guides':
+      return {
+        '@type': 'CollectionPage',
+        ...common,
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: GUIDE_IDS.map((guide, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            url: pageUrl(guide),
+            name: guideTitle(guide, renderContext(options, true)),
+          })),
+        },
+      };
     case 'map':
     case 'forge':
       return { '@type': 'WebPage', ...common, mainEntity: ref(appId(id)) };
@@ -195,6 +270,7 @@ export function structuredData(id: SitePageId, options: SiteBuildOptions): JsonO
   const nodes: JsonObject[] = [websiteNode(), webPageNode(id, options)];
   if (id === 'map' || id === 'forge') nodes.push(appNode(id), sourceNode());
   if (id === 'about') nodes.push(appNode('map'), appNode('forge'), sourceNode());
+  if (isGuideId(id)) nodes.push(articleNode(id, options));
   return { '@context': 'https://schema.org', '@graph': nodes };
 }
 
@@ -260,6 +336,7 @@ export function staticSummaryHtml(tool: 'map' | 'forge', options: SiteBuildOptio
   const other = tool === 'map' ? 'forge' : 'map';
   const links = [
     link(ctx.resolve(other), copy.links[other]),
+    link(ctx.resolve('guides'), copy.links.guides),
     link(ctx.resolve('about'), copy.links.about),
     link(ctx.resolve('privacy'), copy.links.privacy),
     link(ctx.resolve('source'), copy.links.source),
@@ -355,6 +432,7 @@ export function pageParts(
   options: SiteBuildOptions,
 ): Readonly<Record<string, string>> {
   const head = headHtml(id, options);
+  if (isGuideId(id)) return { head, guide: guideArticleHtml(id, renderContext(options, false)) };
   switch (id) {
     case 'map':
       return { head, 'static-summary': staticSummaryHtml('map', options) };
@@ -365,7 +443,11 @@ export function pageParts(
         'forge-hero-title': escapeText(en.forge.heroTitle),
         'forge-hero-body': escapeText(en.forge.heroBody),
         'static-summary': staticSummaryHtml('forge', options),
+        // Visible to everyone, under the calculator: how the anvil works, and where to read more.
+        'forge-guide': forgeGuideHtml(renderContext(options, false)),
       };
+    case 'guides':
+      return { head, guide: guidesIndexHtml(renderContext(options, false)) };
     case 'about':
       return { head, about: aboutArticleHtml(options) };
     case 'privacy':

@@ -2894,3 +2894,281 @@ button.app-header__legal:active:not(:disabled) {
 .about .site-disclaimer {
   padding: 1.5rem 0 0;
 }
+/* --- The guides (guides.html and the pages it lists) and the forge's anvil section ---
+ * The About page's reading column, wider: the guides carry data tables. Everything here is static
+ * HTML the build writes (src/app/site/guides.ts), shown to every visitor. */
+.app--guide {
+  height: auto;
+  min-height: 100%;
+}
+
+.app--guide .app-main {
+  display: block;
+  width: min(72rem, 100%);
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 2.5rem) 3rem;
+}
+
+.guide {
+  border-bottom: 0;
+}
+
+.guide h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.6rem;
+}
+
+.guide h2,
+.forge-guide h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.1rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.forge-guide h2 {
+  margin-top: 0;
+}
+
+/* `.panel h3` is a small uppercase label; a guide's card title is a heading to read. */
+.guide h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.guide p,
+.guide li,
+.forge-guide p {
+  max-width: 46em;
+  line-height: 1.55;
+}
+
+.guide p,
+.forge-guide p {
+  margin: 0 0 0.6rem;
+}
+
+.guide ul,
+.guide ol {
+  margin: 0 0 0.8rem;
+  padding-left: 1.4rem;
+}
+
+.guide li + li {
+  margin-top: 0.35rem;
+}
+
+.guide a,
+.forge-guide a {
+  color: var(--text);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.guide a:hover,
+.forge-guide a:hover {
+  text-decoration-color: var(--text);
+}
+
+.guide__crumbs {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.guide__lead p:first-child {
+  font-size: 1.05rem;
+}
+
+.guide__contents {
+  margin: 1.25rem 0 0.5rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--bg-elevated);
+}
+
+.guide__contents ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  columns: 2 14rem;
+}
+
+.guide .guide-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 0.9rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide .guide-list li + li {
+  margin-top: 0;
+}
+
+.guide-card {
+  padding: 0.9rem 1rem;
+  background: var(--bg-elevated);
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 var(--bevel-hi),
+    inset calc(-1 * var(--bevel)) calc(-1 * var(--bevel)) 0 var(--bevel-lo);
+}
+
+.guide-card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* A wide table scrolls inside its own box on a narrow screen instead of widening the page. */
+.guide-table {
+  max-width: 100%;
+  margin: 0.75rem 0 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+
+.guide-table:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.guide-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.guide-table caption {
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+  font-weight: 600;
+  background: var(--bg-elevated);
+}
+
+.guide-table th,
+.guide-table td {
+  padding: 0.4rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid var(--border);
+}
+
+.guide-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--bg-panel);
+}
+
+.guide-table tbody th {
+  font-weight: 600;
+  min-width: 9rem;
+}
+
+/* On a narrow screen a long list of rocks wraps at a readable width, and the table scrolls. */
+.guide-table td {
+  min-width: 7.5rem;
+}
+
+.guide-table tbody tr:target {
+  background: var(--bg-elevated);
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.guide-table__note {
+  display: block;
+  margin-top: 0.15rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.guide-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+}
+
+.guide-filter__input {
+  min-width: min(18rem, 100%);
+}
+
+.guide-filter__count {
+  color: var(--text-muted);
+}
+
+.guide__related {
+  margin-top: 2rem;
+  padding: 0.6rem 0.9rem 0.2rem;
+  background: var(--bg-elevated);
+}
+
+.guide__related h2 {
+  margin-top: 0.4rem;
+}
+
+.guide__source {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.guide .site-disclaimer {
+  padding: 1rem 0 0;
+}
+
+/* The forge's anvil section spans both columns, like the hero above it. */
+.forge-guide {
+  grid-column: 1 / -1;
+}
+
+/* A guide's ads, as the forge has them: blocks between parts of the article, and on a wide screen
+ * a rail on each side of the column whose ad follows the scroll (src/pages/guide/main.ts). */
+.guide-ad {
+  margin: 1.5rem 0;
+}
+
+.guide-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 72rem) minmax(0, 1fr);
+  column-gap: 1.5rem;
+}
+
+.guide-layout > .app-main {
+  width: 100%;
+  margin: 0;
+}
+
+.guide-rail {
+  padding: 2rem 0 3rem;
+}
+
+.guide-rail .ad-slot {
+  position: sticky;
+  top: 1rem;
+}
+
+.guide-rail--left {
+  justify-self: end;
+}
+
+.guide-rail--right {
+  justify-self: start;
+}
+
+/* A guide is a page of the Guides section: its tab is pressed, and still a link back to the list. */
+.app-tab[aria-current='true'] {
+  cursor: pointer;
+}

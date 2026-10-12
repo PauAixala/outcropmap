@@ -88,7 +88,7 @@ describe('llms.txt', () => {
     expect(lines[0]).toBe('# OutCrop');
     expect(lines.find((line) => line.startsWith('> '))).toBe(`> ${enSite.llms.summary}`);
     const headings = lines.filter((line) => line.startsWith('## '));
-    expect(headings).toEqual(['## Tools', '## About', '## Optional']);
+    expect(headings).toEqual(['## Tools', '## Guides', '## About', '## Optional']);
     const links = lines.filter((line) => line.startsWith('- '));
     for (const link of links) expect(link).toMatch(/^- \[[^\]]+\]\(https:\/\/[^)]+\): \S/);
   });
