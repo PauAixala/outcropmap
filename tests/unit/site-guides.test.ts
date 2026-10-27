@@ -97,6 +97,15 @@ describe('the guide pages', () => {
     });
   }
 
+  it('links every guide from the map and the forge themselves, in their static HTML', () => {
+    // The map's summary is also what its side panel shows as "About OutCrop" (src/pages/map/main.ts).
+    for (const file of ['index.html', 'forge.html']) {
+      const summary = /<section class="static-summary">([\s\S]*?)<\/section>/.exec(render(file))?.[1] ?? '';
+      for (const id of GUIDE_IDS) expect([file, summary.includes(`href="./${sitePage(id).file}"`)]).toEqual([file, true]);
+      expect(summary).toContain('class="static-summary__no-script"');
+    }
+  });
+
   it('links each guide from the guides page, and back', () => {
     const index = render('guides.html');
     for (const id of GUIDE_IDS) {

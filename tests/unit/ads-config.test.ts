@@ -23,6 +23,7 @@ describe('parseAdsConfig', () => {
     expect(config).toEqual({
       client: 'ca-pub-1234567890123456',
       slots: { ...EMPTY, mapLeft: '1234567890', forgeEnd: '2345678901' },
+      approved: true,
     });
   });
 
@@ -30,7 +31,14 @@ describe('parseAdsConfig', () => {
     expect(parseAdsConfig({ client: '', slots: { mapLeft: '1234567890' } })).toEqual({
       client: '',
       slots: EMPTY,
+      approved: true,
     });
+  });
+
+  it('keeps the slots but marks them unapproved until AdSense says yes', () => {
+    const config = parseAdsConfig({ client: 'ca-pub-1234567890123456', approved: false, slots: { guideTop: '1234567890' } });
+    expect([config.approved, config.slots.guideTop]).toEqual([false, '1234567890']);
+    expect(() => parseAdsConfig({ client: '', approved: 'no', slots: {} })).toThrow(/approved/);
   });
 
   it('rejects a malformed publisher id', () => {

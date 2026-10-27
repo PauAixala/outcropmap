@@ -35,6 +35,13 @@ export interface AdsConfig {
   readonly client: string;
   /** One display ad unit per placement; empty means no ad there. */
   readonly slots: Readonly<Record<AdPlacement, string>>;
+  /**
+   * Whether AdSense has approved the site. Until it has, no ad unit can fill, so the pages draw no
+   * ad boxes at all: a reviewer would otherwise find every page framed by empty "Advertisement"
+   * placeholders. The tag, the account meta, ads.txt and the consent message stay either way,
+   * because the review needs them. A file without the key keeps the old behaviour (true).
+   */
+  readonly approved: boolean;
 }
 
 const CLIENT = /^ca-pub-\d{16}$/;
@@ -45,7 +52,14 @@ const SLOT = /^\d{6,}$/;
  * shipping a page that asks Google for an ad unit that does not exist.
  */
 export function parseAdsConfig(raw: unknown): AdsConfig {
-  const record = (raw ?? {}) as { client?: unknown; slots?: Partial<Record<string, unknown>> };
+  const record = (raw ?? {}) as {
+    client?: unknown;
+    slots?: Partial<Record<string, unknown>>;
+    approved?: unknown;
+  };
+  if (record.approved !== undefined && typeof record.approved !== 'boolean') {
+    throw new Error('ads.config.json: approved must be true or false');
+  }
   const client = typeof record.client === 'string' ? record.client.trim() : '';
   if (client !== '' && !CLIENT.test(client)) {
     throw new Error(`ads.config.json: client "${client}" is not "ca-pub-" followed by 16 digits`);
@@ -59,7 +73,7 @@ export function parseAdsConfig(raw: unknown): AdsConfig {
     }
     slots[placement] = client === '' ? '' : text;
   }
-  return { client, slots };
+  return { client, slots, approved: record.approved !== false };
 }
 
 export const ADS: AdsConfig = parseAdsConfig(rawConfig);

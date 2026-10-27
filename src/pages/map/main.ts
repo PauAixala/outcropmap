@@ -609,6 +609,25 @@ async function boot(): Promise<void> {
 
 
 
+    // The page's own introduction, which the build writes for visitors without JavaScript (the
+    // About page's summary, every guide, and where to read more), moves here and shows: a first
+    // visitor, and a crawler that renders the page, read what the map is and where the guides are
+    // instead of a page that is all controls. Only the "needs JavaScript" line stays hidden.
+    const intro = document.querySelector<HTMLElement>('.static-summary');
+    if (intro) {
+      mountCollapsibleSection({
+        parent: configSection,
+        key: 'intro',
+        storage,
+        defaultOpen: true,
+        fallbackTitle: en.mapIntro.heading,
+        build: (body) => {
+          intro.classList.add('static-summary--panel');
+          body.append(intro);
+        },
+      });
+    }
+
     // Advanced last: it is the section a player needs least often, and it already carries its own
     // persisted disclosure, so it is not wrapped in a second one.
     const settingsSection = document.createElement('section');

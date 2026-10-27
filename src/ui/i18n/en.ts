@@ -30,6 +30,10 @@ export const en = {
     about: 'About',
     privacy: 'Privacy',
   },
+  /** The map's side-panel section that shows the page's own introduction (src/pages/map/main.ts). */
+  mapIntro: {
+    heading: 'About OutCrop',
+  },
   /** The guide pages' own labels; their text is in ./en-guides.ts. */
   guides: {
     tableFilterLabel: 'Filter this table',

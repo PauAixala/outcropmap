@@ -325,8 +325,10 @@ const link = (target: LinkTarget, text: string): string =>
 
 /**
  * The map's and the forge's text for a visitor without JavaScript: the About page's summary of the
- * tool, word for word, what the page needs, and where to read more. Hidden by base.css unless
- * scripting is off, so a visitor with JavaScript sees the page exactly as before.
+ * tool, word for word, what the page needs, every guide, and where to read more. Hidden by base.css
+ * unless scripting is off; the map's entry script then moves it, visible, into an "About OutCrop"
+ * section of its side panel (`static-summary--panel`), less the line that only matters without
+ * scripts (`static-summary__no-script`).
  */
 export function staticSummaryHtml(tool: 'map' | 'forge', options: SiteBuildOptions): string {
   const ctx = renderContext(options, false);
@@ -341,11 +343,15 @@ export function staticSummaryHtml(tool: 'map' | 'forge', options: SiteBuildOptio
     link(ctx.resolve('privacy'), copy.links.privacy),
     link(ctx.resolve('source'), copy.links.source),
   ];
+  // Each guide by name, so the tools' own pages link to every one of them.
+  const guides = GUIDE_IDS.map((id) => link(ctx.resolve(id), guideTitle(id, ctx)));
   return [
     `<section class="static-summary">`,
     `<${heading}>${escapeText(copy[tool].heading)}</${heading}>`,
     `<p>${paragraphHtml(enSite.summaries[tool], ctx)}</p>`,
-    `<p>${escapeText(copy[tool].needsScript)}</p>`,
+    `<p class="static-summary__no-script">${escapeText(copy[tool].needsScript)}</p>`,
+    `<p>${escapeText(copy.guides)}</p>`,
+    `<ul class="static-summary__guides">${guides.map((item) => `<li>${item}</li>`).join('')}</ul>`,
     `<p>${escapeText(copy.more)} ${links.join(' · ')}</p>`,
     `<p class="site-disclaimer">${escapeText(en.disclaimer)}</p>`,
     `</section>`,

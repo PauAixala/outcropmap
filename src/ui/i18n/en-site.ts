@@ -78,6 +78,8 @@ interface SiteText {
     readonly map: { readonly heading: string; readonly needsScript: string };
     readonly forge: { readonly heading: string; readonly needsScript: string };
     readonly more: string;
+    /** Introduces the list of every guide. */
+    readonly guides: string;
     readonly links: { readonly [K in 'map' | 'forge' | 'guides' | 'about' | 'privacy' | 'source']: string };
   };
   readonly about: {
@@ -203,6 +205,8 @@ export const enSite = {
       needsScript: 'The calculator runs in your browser and needs JavaScript.',
     },
     more: 'More:',
+    guides:
+      'The guides, written from the same game data, explain what the tools show: every ore vein and rock, kaolin clay, the anvil’s rules, and TerraFirmaGreg’s structures and planets.',
     links: {
       map: 'Seed map',
       forge: 'Forging calculator',

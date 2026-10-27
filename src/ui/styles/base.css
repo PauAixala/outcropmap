@@ -2806,6 +2806,48 @@ button.app-header__legal:active:not(:disabled) {
     padding: 0.5rem 0 0;
     background: none;
   }
+
+  .static-summary__guides {
+    margin: 0 0 0.6rem;
+  }
+}
+
+/* With scripts, the map's entry script moves its summary into the side panel's "About OutCrop"
+ * section, where everyone sees it (src/pages/map/main.ts). The panel already closes with the
+ * disclaimer, and the "needs JavaScript" line is moot there. */
+.static-summary.static-summary--panel {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.static-summary--panel h1 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+}
+
+.static-summary--panel p {
+  margin: 0 0 0.5rem;
+}
+
+.static-summary--panel ul {
+  margin: 0 0 0.5rem;
+  padding-left: 1.1rem;
+}
+
+.static-summary--panel li + li {
+  margin-top: 0.2rem;
+}
+
+.static-summary--panel a {
+  color: var(--text);
+  text-decoration-color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.static-summary--panel .static-summary__no-script,
+.static-summary--panel .site-disclaimer {
+  display: none;
 }
 
 /* The About page: the privacy page's reading column, with room for lists and questions. */

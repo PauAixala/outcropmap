@@ -72,7 +72,8 @@ export const RAIL_MIN_VIEWPORT: Readonly<Record<'map' | 'forge' | 'guide', numbe
 
 /** Whether `placement` has an ad unit in this build. */
 export function hasAd(placement: AdPlacement): boolean {
-  return ADS_ENABLED && ADS.slots[placement] !== '';
+  // Before approval no unit can fill: draw nothing rather than an empty labelled box.
+  return ADS_ENABLED && ADS.approved && ADS.slots[placement] !== '';
 }
 
 /**
