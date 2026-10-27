@@ -2509,6 +2509,11 @@ button.measure-btn--active:hover:not(:disabled) {
   gap: 0.25rem;
 }
 
+/* A unit AdSense answered with no ad (ad-slot.ts): no empty box, label and all. */
+.ad-slot[hidden] {
+  display: none;
+}
+
 .ad-slot__label {
   margin: 0;
   font-size: 0.65rem;

@@ -80,8 +80,16 @@ export function hasAd(placement: AdPlacement): boolean {
  * Appends `placement`'s ad unit to `container`, which must already be in the page and laid out
  * where it will stay: a banner is sized from the room it has. Returns false, adding nothing, when
  * there is no unit for the placement or a banner has no standard size that fits.
+ *
+ * Once the site is approved, AdSense marks every unit it has answered `data-ad-status="filled"` or
+ * `"unfilled"` (AdSense Help, "Hide unfilled ad units"). An unfilled unit would leave its box empty,
+ * so the box hides itself and `onUnfilled` lets the page fold away the room it kept for it.
  */
-export function mountAdSlot(container: HTMLElement, placement: AdPlacement): boolean {
+export function mountAdSlot(
+  container: HTMLElement,
+  placement: AdPlacement,
+  onUnfilled?: () => void,
+): boolean {
   if (!hasAd(placement)) return false;
   const shape = SHAPE[placement];
   let size: AdSize | undefined;
@@ -115,6 +123,17 @@ export function mountAdSlot(container: HTMLElement, placement: AdPlacement): boo
   }
   box.append(label, unit);
   container.append(box);
+
+  // Watched before the push, so an answer that comes back at once is not missed.
+  const status = new MutationObserver(() => {
+    const answer = unit.getAttribute('data-ad-status');
+    if (answer === null) return;
+    status.disconnect();
+    if (answer !== 'unfilled') return;
+    box.hidden = true;
+    onUnfilled?.();
+  });
+  status.observe(unit, { attributes: true, attributeFilter: ['data-ad-status'] });
 
   const w = window as unknown as AdsWindow;
   // Once AdSense's script has loaded, `push` runs at once and throws a `TagError` for a slot it

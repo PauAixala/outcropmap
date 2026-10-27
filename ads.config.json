@@ -6,7 +6,7 @@
     "mapLeft is a 160 x 600 skyscraper in a column left of the map; forgeLeft and forgeRight are 160 x 600 rails that follow the scroll; all three appear only on screens wide enough for them. mapBottom is a banner below the map; forgeMiddle and forgeEnd are responsive blocks.",
     "guideLeft and guideRight are the guides' 160 x 600 rails, like the forge's; guideTop (after a guide's contents) and guideEnd (before its related guides, and at the end of the guides page) are responsive blocks. Each has its own unit, named 'Site <placement>' in AdSense.",
     "While client is set, the build writes the AdSense tag into content pages (not the privacy page), verification meta into every page's head, and ads.txt at the site root.",
-    "approved: false until AdSense lists the site as 'Listo' (Sites). Until then no unit can fill, so no ad boxes are drawn at all; the tag, the meta, ads.txt and the consent message stay, because the review needs them. Set it to true and deploy on the day the site is approved."
+    "approved: false until AdSense lists the site as 'Listo' (Sites). Until then no unit can fill, so no ad boxes are drawn at all; the tag, the meta, ads.txt and the consent message stay, because the review needs them. Set it to true and deploy on the day the site is approved. From then on a unit AdSense answers with no ad (data-ad-status 'unfilled') hides itself and gives its room back, so an empty box never shows."
   ],
   "client": "ca-pub-7466765453292112",
   "approved": false,

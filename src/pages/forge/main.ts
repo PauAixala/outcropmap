@@ -59,19 +59,19 @@ async function boot(): Promise<void> {
 
   // Ads, in a build that has them: one block between the calculator and the custom-recipe tools,
   // one at the end of the page, and on each side a rail ad that follows the scroll, where the
-  // screen is wide enough for it.
+  // screen is wide enough for it. A block AdSense answers with no ad goes, gap and all.
   const mainEl = document.querySelector('.app-main');
   if (pickerEl && hasAd('forgeMiddle')) {
     const middle = document.createElement('div');
     middle.className = 'forge-ad';
     pickerEl.after(middle);
-    mountAdSlot(middle, 'forgeMiddle');
+    mountAdSlot(middle, 'forgeMiddle', () => middle.remove());
   }
   if (mainEl && hasAd('forgeEnd')) {
     const end = document.createElement('div');
     end.className = 'forge-ad';
     mainEl.append(end);
-    mountAdSlot(end, 'forgeEnd');
+    mountAdSlot(end, 'forgeEnd', () => end.remove());
   }
   const wide = window.matchMedia(`(min-width: ${RAIL_MIN_VIEWPORT.forge}px)`).matches;
   if (mainEl instanceof HTMLElement && wide && (hasAd('forgeLeft') || hasAd('forgeRight'))) {

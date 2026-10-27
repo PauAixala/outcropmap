@@ -68,7 +68,8 @@ function mountBlock(anchor: Element | null, where: 'before' | 'after', placement
   box.className = 'guide-ad';
   if (where === 'before') anchor.before(box);
   else anchor.after(box);
-  mountAdSlot(box, placement);
+  // A block AdSense answers with no ad goes, margins and all.
+  mountAdSlot(box, placement, () => box.remove());
 }
 
 /**

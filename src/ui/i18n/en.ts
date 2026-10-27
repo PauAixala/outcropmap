@@ -8,7 +8,9 @@ export const en = {
    *  and the map and the forge also set it at runtime, so both must stay the same string. */
   pageTitles: {
     map: 'OutCrop · Seed map for TerraFirmaCraft and TerraFirmaGreg',
-    forge: 'OutCrop · Anvil calculator for TerraFirmaCraft and TerraFirmaGreg',
+    // Leads with what people search for: "tfc anvil calculator" showed it 24 times in a month with
+    // no click while the title began with the brand.
+    forge: 'TFC anvil calculator for TerraFirmaCraft and TerraFirmaGreg · OutCrop',
     // The guides lead with their subject: it is what a search result has to show first.
     guides: 'Guides to TerraFirmaCraft and TerraFirmaGreg · OutCrop',
     'tfg-ore-veins': 'TerraFirmaGreg ore veins: depths, rocks and yields · OutCrop',
@@ -498,7 +500,7 @@ export const en = {
   },
   // Forging calculator panels (docs/PLAN.md section 14): custom recipe editor + saved list.
   forge: {
-    heroTitle: 'Shape every strike before you swing.',
+    heroTitle: 'TFC anvil calculator: shape every strike before you swing.',
     heroBody:
       'Build exact finishing rules, save your recipes, and keep light, medium, and hard hits distinct.',
     catalogHeading: 'Default recipes',

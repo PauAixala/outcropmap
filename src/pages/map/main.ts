@@ -127,12 +127,21 @@ async function boot(): Promise<void> {
   const adMain = document.querySelector('.app-main');
   const adApp = document.getElementById('app');
   if (adMain && adApp) {
+    // A cell with no ad in it goes, and the map takes its room back (its ResizeObserver redraws):
+    // a banner that does not fit, or a unit AdSense answers with no ad.
+    const dropCell = (cell: HTMLElement, layout: 'app--ads-rail' | 'app--ads-bottom'): void => {
+      cell.remove();
+      adApp.classList.remove(layout);
+      if (!adApp.classList.contains('app--ads-rail') && !adApp.classList.contains('app--ads-bottom')) {
+        adApp.classList.remove('app--ads');
+      }
+    };
     if (hasAd('mapLeft') && window.matchMedia(`(min-width: ${RAIL_MIN_VIEWPORT.map}px)`).matches) {
       const rail = document.createElement('div');
       rail.className = 'map-ad-rail';
       adMain.append(rail);
       adApp.classList.add('app--ads', 'app--ads-rail');
-      mountAdSlot(rail, 'mapLeft');
+      mountAdSlot(rail, 'mapLeft', () => dropCell(rail, 'app--ads-rail'));
     }
     if (hasAd('mapBottom')) {
       const banner = document.createElement('div');
@@ -140,10 +149,8 @@ async function boot(): Promise<void> {
       adMain.append(banner);
       adApp.classList.add('app--ads', 'app--ads-bottom');
       // A window narrower than the smallest banner gets none, and no empty row for it.
-      if (!mountAdSlot(banner, 'mapBottom')) {
-        banner.remove();
-        adApp.classList.remove('app--ads-bottom');
-        if (!adApp.classList.contains('app--ads-rail')) adApp.classList.remove('app--ads');
+      if (!mountAdSlot(banner, 'mapBottom', () => dropCell(banner, 'app--ads-bottom'))) {
+        dropCell(banner, 'app--ads-bottom');
       }
     }
   }

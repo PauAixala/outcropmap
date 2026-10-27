@@ -129,7 +129,7 @@ export const enSite = {
     },
     forge: {
       description:
-        'Anvil calculator for TerraFirmaCraft and TerraFirmaGreg: pick a recipe, get the shortest sequence of strikes that finishes it, last three steps included.',
+        'Free TFC anvil and smithing calculator for TerraFirmaCraft and TerraFirmaGreg: pick a recipe, get the shortest strike sequence, finishing rules included.',
     },
     about: {
       description:
