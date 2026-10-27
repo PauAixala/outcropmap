@@ -2,14 +2,16 @@ import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { HtmlTagDescriptor, IndexHtmlTransformResult, Plugin } from 'vite';
 import { describe, expect, it } from 'vitest';
-import { ADS } from '@app/ads-config';
+import { ADS, ADS_ENABLED } from '@app/ads-config';
 import { REPOSITORY_URL } from '@app/project';
 import {
   LICENSE_URL,
+  adsState,
   pageDescription,
   renderSitePage,
   structuredData,
   type Json,
+  type SiteBuildOptions,
 } from '@app/site/pages';
 import {
   GUIDE_IDS,
@@ -23,7 +25,7 @@ import {
 } from '@app/site/site';
 import { paragraphText, type RenderContext } from '@app/site/markup';
 import { en } from '@ui/i18n/en';
-import { enSite } from '@ui/i18n/en-site';
+import { enSite, type AdsState } from '@ui/i18n/en-site';
 import config from '../../vite.config';
 
 /**
@@ -32,8 +34,15 @@ import config from '../../vite.config';
  */
 const ROOT = process.cwd();
 const read = (file: string): string => readFileSync(join(ROOT, file), 'utf8');
-const render = (file: string, adsEnabled = true): string =>
-  renderSitePage(file, read(file), { adsEnabled });
+/** One build per ad state: no AdSense, AdSense before it approves the site, and ads. */
+const BUILDS: Readonly<Record<AdsState, SiteBuildOptions>> = {
+  noAds: { adsEnabled: false },
+  adsPending: { adsEnabled: true, adsApproved: false },
+  ads: { adsEnabled: true, adsApproved: true },
+};
+const AD_STATES = ['noAds', 'adsPending', 'ads'] as const satisfies readonly AdsState[];
+const render = (file: string, state: AdsState = 'ads'): string =>
+  renderSitePage(file, read(file), BUILDS[state]);
 
 const unescape = (text: string): string =>
   text
@@ -86,7 +95,7 @@ function visibleText(html: string): string {
 
 const ctx: RenderContext = {
   values: {},
-  ads: true,
+  ads: 'ads',
   resolve: () => ({ href: '', external: false }),
 };
 
@@ -101,12 +110,12 @@ describe('site pages', () => {
   });
 
   for (const page of SITE_PAGES) {
-    for (const adsEnabled of [true, false]) {
-      it(`writes ${page.file}'s title, description, canonical address and social card (ads ${adsEnabled ? 'on' : 'off'})`, () => {
-        const html = render(page.file, adsEnabled);
+    for (const state of AD_STATES) {
+      it(`writes ${page.file}'s title, description, canonical address and social card (${state})`, () => {
+        const html = render(page.file, state);
         expect(html).toContain(`<title>${en.pageTitles[page.id]}</title>`);
         const description = meta(html, 'name', 'description');
-        expect(description).toBe(pageDescription(page.id, { adsEnabled }));
+        expect(description).toBe(pageDescription(page.id, BUILDS[state]));
         expect(description!.length).toBeGreaterThan(50);
         expect(description!.length).toBeLessThanOrEqual(160);
         expect(canonical(html)).toBe(pageUrl(page.id));
@@ -215,10 +224,11 @@ describe('site pages', () => {
     );
   });
 
-  it('writes the privacy policy, with the ads section only in a build with ads', () => {
-    const withAds = visibleText(render('privacy.html', true));
-    const withoutAds = visibleText(render('privacy.html', false));
-    for (const text of [withAds, withoutAds]) {
+  it('writes the privacy policy, its ads section following the build’s ad state', () => {
+    const [withoutAds, pending, withAds] = AD_STATES.map((state) =>
+      visibleText(render('privacy.html', state)),
+    );
+    for (const text of [withoutAds, pending, withAds]) {
       expect(text).toContain(en.privacy.title);
       expect(text).toContain(en.privacy.kept);
       expect(text).toContain(en.privacy.hosting);
@@ -228,9 +238,17 @@ describe('site pages', () => {
     expect(withAds).toContain(en.privacy.ads);
     expect(withAds).toContain(en.privacy.adsConsent);
     expect(withAds).not.toContain(en.privacy.noAds);
+    expect(withAds).not.toContain(enSite.privacy.adsPending);
+    // Before approval: the tag and the consent message are disclosed, the ads are not claimed.
+    expect(pending).toContain(enSite.privacy.adsPending);
+    expect(pending).toContain(en.privacy.adsConsent);
+    expect(pending).toContain(enSite.privacy.adsUsStates);
+    expect(pending).not.toContain(en.privacy.ads);
+    expect(pending).not.toContain(en.privacy.noAds);
     expect(withoutAds).toContain(en.privacy.noAds);
     expect(withoutAds).not.toContain(en.privacy.adsHeading);
-    expect(render('privacy.html', true)).toContain('href="https://adssettings.google.com/"');
+    for (const state of ['adsPending', 'ads'] as const)
+      expect(render('privacy.html', state)).toContain('href="https://adssettings.google.com/"');
   });
 
   it('tells a reader of the privacy page where the cookie settings are', () => {
@@ -334,6 +352,18 @@ describe('the AdSense tag', () => {
     const result = await transform(named('outcrop-site-pages'), 'about.html', read('about.html'));
     expect(typeof result).toBe('string');
     expect(String(result)).toContain(`<title>${en.pageTitles.about}</title>`);
+  });
+
+  it('writes the text for the ad state ads.config.json is in, approval included', async () => {
+    // vite.config.ts passes `adsEnabled` alone; `approved` comes from the committed config, as it
+    // does for the ad slots. The three states read differently, so this pins the build to one.
+    const html = read('about.html');
+    const variants = AD_STATES.map((state) => renderSitePage('about.html', html, BUILDS[state]));
+    expect(new Set(variants).size).toBe(AD_STATES.length);
+    const expected: AdsState = !ADS_ENABLED ? 'noAds' : ADS.approved ? 'ads' : 'adsPending';
+    expect(adsState({ adsEnabled: ADS_ENABLED })).toBe(expected);
+    const result = await transform(named('outcrop-site-pages'), 'about.html', html);
+    expect(result).toBe(variants[AD_STATES.indexOf(expected)]);
   });
 });
 

@@ -6,7 +6,7 @@
  *
  * Relative imports only: vite.config.ts loads this module (tests/unit/site-imports.test.ts).
  */
-import type { Block, Inline, Paragraph, SiteLink } from '../../ui/i18n/en-site';
+import type { AdsState, Block, Inline, Paragraph, SiteLink } from '../../ui/i18n/en-site';
 
 /** Where a link goes; `external` links open in a new tab and send no referrer. */
 export interface LinkTarget {
@@ -17,8 +17,11 @@ export interface LinkTarget {
 export interface RenderContext {
   /** What each `{placeholder}` stands for (`factPlaceholders`). An unknown one is a build error. */
   readonly values: Readonly<Record<string, string>>;
-  /** Whether this build shows ads, for blocks marked `when`. */
-  readonly ads: boolean;
+  /**
+   * What this build does about ads, for blocks marked `when` (`AdsState`): no AdSense, AdSense's
+   * code with no ads until AdSense approves the site, or ads.
+   */
+  readonly ads: AdsState;
   readonly resolve: (link: SiteLink) => LinkTarget;
 }
 
@@ -49,7 +52,7 @@ export function fillPlaceholders(text: string, values: Readonly<Record<string, s
 
 function shown(block: Block, ctx: RenderContext): boolean {
   if (!('p' in block) || block.when === undefined) return true;
-  return block.when === 'ads' ? ctx.ads : !ctx.ads;
+  return block.when === ctx.ads;
 }
 
 /** The blocks this build shows. */

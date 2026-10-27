@@ -54,10 +54,13 @@ keep the source of what you publish available, and pass the same terms on.
 OutCrop keeps your seed, settings, waypoints and custom recipes in your own browser
 (`localStorage`) and never sends them anywhere. There are no analytics and no accounts.
 
-The public site carries ads from Google AdSense, which uses cookies. Visitors in the European
-Economic Area, the United Kingdom and Switzerland are asked for consent first, and "Privacy and
-cookie settings" at the top of every page changes that choice. The site's Privacy page has the
-details.
+The public site carries Google AdSense, which uses cookies: AdSense's code and Google's consent
+message are on every page but the Privacy page. Ads show only once AdSense has approved the site,
+which `approved` in `ads.config.json` records; until then the pages draw none. Visitors in the
+European Economic Area, the United Kingdom and Switzerland are asked for consent first, and
+"Privacy and cookie settings" at the top of the Map, Forge, Guides and About pages changes that
+choice; visitors in US states with their own privacy laws get a link to opt out of the sale or
+sharing of their personal information. The site's Privacy page has the details.
 
 ## Not affiliated
 

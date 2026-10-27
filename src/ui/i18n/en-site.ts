@@ -1,10 +1,11 @@
 /**
  * The words of the site's static text: the About page and its questions, each page's description
  * and social card, the summary a visitor without JavaScript reads on the map and the forge, the
- * structured data, and llms.txt. `src/app/site/pages.ts` writes all of it into the HTML at build
- * time, so a crawler that runs no JavaScript reads the same text a visitor does. None of it ships
- * in a page's script, which is why it lives apart from `en.ts`; a Spanish locale would add a
- * sibling of this file.
+ * structured data, llms.txt, and the privacy page's words for before AdSense approves the site
+ * (the rest of that page is `en.privacy`). `src/app/site/pages.ts` writes all of it into the HTML
+ * at build time, so a crawler that runs no JavaScript reads the same text a visitor does. None of
+ * it ships in a page's script, which is why it lives apart from `en.ts`; a Spanish locale would add
+ * a sibling of this file.
  *
  * Everything here has to be true of the tools as built (AGENTS.md section 2). In particular it never
  * claims more accuracy than the tests back: exposure is not known, surface height is approximate,
@@ -28,11 +29,23 @@ export type Inline =
 export type Paragraph = readonly Inline[];
 
 /**
- * A paragraph, a bulleted list or a numbered list. `when` keeps a paragraph to the builds that
- * show ads, or to those that do not (`ads.config.json`, decided at build time like the pages).
+ * What a build does about ads, decided at build time from `ads.config.json` like the pages' ad tag
+ * (`adsState` in `src/app/site/pages.ts`):
+ *
+ * - `noAds`: no AdSense at all (`client` is empty): no tag, no consent message, no ads.
+ * - `adsPending`: the pages carry AdSense's tag and Google's consent message, but AdSense has not
+ *   approved the site (`approved` is false), so no ad is drawn. Text in this state never says the
+ *   site shows ads.
+ * - `ads`: AdSense has approved the site and it shows ads.
+ */
+export type AdsState = 'noAds' | 'adsPending' | 'ads';
+
+/**
+ * A paragraph, a bulleted list or a numbered list. `when` keeps a paragraph to the builds in one
+ * ad state (`AdsState`).
  */
 export type Block =
-  | { readonly p: Paragraph; readonly when?: 'ads' | 'noAds' }
+  | { readonly p: Paragraph; readonly when?: AdsState }
   | { readonly list: readonly Paragraph[] }
   | { readonly steps: readonly Paragraph[] };
 
@@ -56,9 +69,20 @@ interface SiteText {
     readonly map: { readonly description: string };
     readonly forge: { readonly description: string };
     readonly about: { readonly description: string };
-    readonly privacy: { readonly description: string; readonly descriptionNoAds: string };
+    /** One description per ad state: `description` while the site shows ads. */
+    readonly privacy: {
+      readonly description: string;
+      readonly descriptionAdsPending: string;
+      readonly descriptionNoAds: string;
+    };
   };
   readonly socialImageAlt: string;
+  /** The privacy page's words while AdSense has not approved the site (see `enSite.privacy`). */
+  readonly privacy: {
+    readonly introAdsPending: string;
+    readonly adsPending: string;
+    readonly adsUsStates: string;
+  };
   readonly structuredData: {
     readonly operatingSystem: string;
     readonly browserRequirements: string;
@@ -138,6 +162,8 @@ export const enSite = {
     privacy: {
       description:
         'How OutCrop handles your data: what stays in your browser, what it never sends, and what the Google AdSense ads and their cookies do.',
+      descriptionAdsPending:
+        'How OutCrop handles your data: what stays in your browser, what it never sends, and what Google AdSense’s code and cookies do. It shows no ads yet.',
       descriptionNoAds:
         'How OutCrop handles your data: what stays in your browser and what it never sends. This copy shows no ads and sets no cookies.',
     },
@@ -145,6 +171,22 @@ export const enSite = {
   // Describes public/og-image.jpg; change it with the image.
   socialImageAlt:
     'OutCrop: seed maps and anvil sequences for TerraFirmaCraft and TerraFirmaGreg. A biome map with shaded relief, rivers and two waypoints, and the probe readout for a Plateau with a Kaolin Clay deposit between Y 86 and 98.',
+  /**
+   * The privacy page while the pages carry AdSense's tag and Google's consent message but AdSense
+   * has not approved the site (`adsPending`). The rest of the page, and its wording once ads show,
+   * is `en.privacy`; `privacyArticleHtml` in src/app/site/pages.ts puts the two together. What
+   * loads today is disclosed in full: the tag, its cookies, the consent message and the US states
+   * opt-out link (checked on the live site, 27 October 2026, with `?fc=alwaysshow&fctype=ccpa`).
+   * The last two sentences of `adsPending` are AdSense's required disclosure, word for word as
+   * `en.privacy.ads` has it.
+   */
+  privacy: {
+    introAdsPending: 'What OutCrop keeps, what it sends, and what Google AdSense’s code does.',
+    adsPending:
+      'This site uses Google AdSense but shows no ads yet: they will appear once AdSense approves the site. Its code already loads on every page except this one, because AdSense needs it there to review the site, and Google may set cookies through it. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google’s use of advertising cookies enables it and its partners to serve ads based on your visits to this and other sites on the Internet.',
+    adsUsStates:
+      'Visitors in US states with their own privacy laws see a “Do Not Sell or Share My Personal Information” link, which lets them opt out of the sale or sharing of their personal information for ads.',
+  },
   structuredData: {
     operatingSystem: 'Any; runs in a web browser',
     browserRequirements: 'Requires JavaScript.',
@@ -407,6 +449,12 @@ export const enSite = {
               'The site shows ads from Google AdSense, which uses cookies. Visitors in the European Economic Area, the United Kingdom and Switzerland are asked for consent first.',
             ],
           },
+          {
+            when: 'adsPending',
+            p: [
+              'The site carries Google AdSense’s code and Google’s consent message, and will show ads from Google AdSense once AdSense approves it; until then it shows none. AdSense uses cookies, and visitors in the European Economic Area, the United Kingdom and Switzerland are asked for consent first.',
+            ],
+          },
           { when: 'noAds', p: ['This copy of OutCrop shows no ads and sets no cookies.'] },
           { p: ['The ', { link: 'privacy', text: 'privacy page' }, ' has the details.'] },
         ],
@@ -580,6 +628,12 @@ export const enSite = {
             ],
           },
           { when: 'ads', p: ['The site shows ads from Google AdSense.'] },
+          {
+            when: 'adsPending',
+            p: [
+              'The site will show ads from Google AdSense once AdSense approves it; until then it shows none.',
+            ],
+          },
         ],
       },
     ],

@@ -17,7 +17,8 @@
  */
 import { en } from '../../ui/i18n/en';
 import { enSite } from '../../ui/i18n/en-site';
-import type { SiteLink, SiteQuestion, SiteSection } from '../../ui/i18n/en-site';
+import type { AdsState, SiteLink, SiteQuestion, SiteSection } from '../../ui/i18n/en-site';
+import { ADS } from '../ads-config';
 import { REPOSITORY_URL } from '../project';
 import { factPlaceholders, siteFacts } from './facts';
 import {
@@ -44,8 +45,24 @@ import {
 import type { GuideId, SitePageId } from './site';
 
 export interface SiteBuildOptions {
-  /** Whether this build shows ads (`ADS_ENABLED`, from ads.config.json). */
+  /**
+   * Whether this build carries Google AdSense (`ADS_ENABLED`, from ads.config.json): its tag, the
+   * account meta, ads.txt and Google's consent message.
+   */
   readonly adsEnabled: boolean;
+  /**
+   * Whether AdSense has approved the site, so that the pages draw ads (`ADS.approved`). Until it
+   * has, a build with AdSense shows none, and its text says so rather than claim ads. Left out,
+   * ads.config.json decides, as it does for the ad slots (src/ui/components/ad-slot.ts); the build
+   * leaves it out, and tests set it to render either state. Ignored without `adsEnabled`.
+   */
+  readonly adsApproved?: boolean;
+}
+
+/** What the text of this build says about ads (`AdsState`). */
+export function adsState(options: SiteBuildOptions): AdsState {
+  if (!options.adsEnabled) return 'noAds';
+  return (options.adsApproved ?? ADS.approved) ? 'ads' : 'adsPending';
 }
 
 /** The licence, as SPDX names it. */
@@ -91,7 +108,7 @@ export function renderContext(options: SiteBuildOptions, absolute: boolean): Ren
   placeholders ??= allPlaceholders();
   return {
     values: placeholders,
-    ads: options.adsEnabled,
+    ads: adsState(options),
     resolve: (link) => linkTarget(link, absolute),
   };
 }
@@ -102,9 +119,13 @@ export function pageTitle(id: SitePageId): string {
 
 export function pageDescription(id: SitePageId, options: SiteBuildOptions): string {
   if (id === 'privacy') {
-    return options.adsEnabled
-      ? enSite.pages.privacy.description
-      : enSite.pages.privacy.descriptionNoAds;
+    const copy = enSite.pages.privacy;
+    const byState: Readonly<Record<AdsState, string>> = {
+      ads: copy.description,
+      adsPending: copy.descriptionAdsPending,
+      noAds: copy.descriptionNoAds,
+    };
+    return byState[adsState(options)];
   }
   if (id === 'guides' || isGuideId(id)) return guideDescription(id, renderContext(options, false));
   return enSite.pages[id].description;
@@ -402,30 +423,38 @@ export function aboutArticleHtml(options: SiteBuildOptions): string {
 }
 
 /**
- * privacy.html's article, from `en.privacy`. The ads section follows `ads.config.json`, decided at
- * build time exactly as the pages' ad tag is.
+ * privacy.html's article, from `en.privacy`, with `enSite.privacy` while AdSense has not approved
+ * the site. The ads section follows `ads.config.json` (`adsState`), decided at build time exactly
+ * as the pages' ad tag and ad slots are: no ads at all; AdSense's tag and consent message but no
+ * ads yet, disclosed in full because they load today; or ads.
  */
 export function privacyArticleHtml(options: SiteBuildOptions): string {
   const copy = en.privacy;
+  const pending = enSite.privacy;
+  const state = adsState(options);
   const p = (text: string): string => `<p>${escapeText(text)}</p>`;
   const out = (href: string, text: string): string =>
     `<p>${link({ href, external: true }, text)}</p>`;
   const section = (heading: string, ...body: readonly string[]): string =>
     [`<section>`, `<h2>${escapeText(heading)}</h2>`, ...body, `</section>`].join('\n');
-  const ads = options.adsEnabled
-    ? section(
-        copy.adsHeading,
-        p(copy.ads),
-        p(copy.adsConsent),
-        out(ADS_SETTINGS_URL, copy.adsOptOut),
-        out(ADS_PARTNERS_URL, copy.adsPartners),
-      )
-    : section(copy.noAdsHeading, p(copy.noAds));
+  const google = [out(ADS_SETTINGS_URL, copy.adsOptOut), out(ADS_PARTNERS_URL, copy.adsPartners)];
+  const ads: Readonly<Record<AdsState, string>> = {
+    // The US states message is published as well as the EU one, so both states name its link.
+    ads: section(copy.adsHeading, p(copy.ads), p(copy.adsConsent), p(pending.adsUsStates), ...google),
+    adsPending: section(
+      copy.adsHeading,
+      p(pending.adsPending),
+      p(copy.adsConsent),
+      p(pending.adsUsStates),
+      ...google,
+    ),
+    noAds: section(copy.noAdsHeading, p(copy.noAds)),
+  };
   return [
     `<h1>${escapeText(copy.title)}</h1>`,
-    `<p class="privacy__intro">${escapeText(copy.intro)}</p>`,
+    `<p class="privacy__intro">${escapeText(state === 'adsPending' ? pending.introAdsPending : copy.intro)}</p>`,
     section(copy.keptHeading, p(copy.kept)),
-    ads,
+    ads[state],
     section(copy.hostingHeading, p(copy.hosting), out(HOSTING_PRIVACY_URL, copy.hostingLink)),
     section(copy.contactHeading, p(copy.contact), out(ISSUES_URL, ISSUES_URL)),
     `<p class="site-disclaimer">${escapeText(en.disclaimer)}</p>`,

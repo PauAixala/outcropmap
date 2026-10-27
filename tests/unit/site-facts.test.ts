@@ -148,6 +148,6 @@ describe('site text placeholders', () => {
     const conditional = (blocks: readonly Block[]): string[] =>
       blocks.flatMap((block) => ('p' in block && block.when !== undefined ? [block.when] : []));
     const privacy = enSite.about.sections.find((section) => section.id === 'privacy');
-    expect(conditional(privacy?.blocks ?? []).sort()).toEqual(['ads', 'noAds']);
+    expect(conditional(privacy?.blocks ?? []).sort()).toEqual(['ads', 'adsPending', 'noAds']);
   });
 });

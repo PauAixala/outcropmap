@@ -114,9 +114,15 @@ describe('llms-full.txt', () => {
     expect(full).toContain(`between Y ${kaolin.minY} and ${kaolin.maxY}`);
   });
 
-  it('writes the ads sentences only in a build with ads', () => {
+  it('writes the ads sentences for the build’s ad state', () => {
     const noAds = llmsFullTxt({ adsEnabled: false });
-    expect(full).toContain('Google AdSense');
+    const pending = llmsFullTxt({ adsEnabled: true, adsApproved: false });
+    const ads = llmsFullTxt({ adsEnabled: true, adsApproved: true });
+    expect(ads).toContain('The site shows ads from Google AdSense');
+    // Before AdSense approves the site: its code is there, and no ad is claimed.
+    expect(pending).toContain('Google AdSense’s code');
+    expect(pending).toContain('until then it shows none');
+    expect(pending).not.toMatch(/\bshows ads\b/);
     expect(noAds).not.toContain('Google AdSense');
     expect(noAds).toContain('shows no ads');
   });
