@@ -53,7 +53,13 @@ import { blockToChunk } from '@core/coords/coords';
 import type { BlockBox, DepositFeature } from '../../api/types';
 import { biomeTagMembers, stripTagMarker } from './biome-tags';
 import { chunkVeinRandom, defaultYPos, veinNameSeed, type VeinProfileId } from './disc-vein';
-import { collectRockNames, columnCanHost, hostRockIdsOf, veinMaterials } from './vein-materials';
+import {
+  collectRockNames,
+  columnCanHost,
+  hostRockIdsOf,
+  veinMaterials,
+  veinTableNames,
+} from './vein-materials';
 import { parseIndicator } from './indicator';
 import type { VeinIndicator } from '@worldgen/api/types';
 
@@ -167,7 +173,11 @@ function build(profile: VeinProfileId): readonly PipeVeinDef[] {
       hostRockIds: hostRockIdsOf(raw.blocks),
       hasIndicator: raw.indicator != null,
       indicator: parseIndicator(raw.indicator ?? null),
-      produces: veinMaterials(raw.blocks, rockNames),
+      produces: veinMaterials(
+        raw.blocks,
+        rockNames,
+        veinTableNames(RAW_BY_PROFILE[profile]).materials,
+      ),
       rawBlocks: raw.blocks,
     });
   }

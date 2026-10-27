@@ -391,6 +391,8 @@ export const en = {
   oreNames: {
     amethyst: 'Amethyst',
     borax: 'Borax',
+    // GregTech's material id drops the apostrophe.
+    fullers_earth: 'Fuller’s Earth',
     gravel: 'Gravel',
     gypsum: 'Gypsum',
     kaolin: 'Kaolin Clay',

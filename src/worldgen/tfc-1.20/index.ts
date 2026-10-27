@@ -43,8 +43,11 @@ import {
   typicalVeinBlocks,
   veinFilterId,
   veinMaterialMix,
+  veinMaterials,
+  veinTableNames,
 } from './features';
-import { discVeinExtent } from './features/disc-vein';
+import { discVeinBand, discVeinExtent } from './features/disc-vein';
+import { RAW_VEINS_BY_PROFILE } from './features/vein-tables';
 
 /**
  * World-preset fields exposed as sliders (`ProfileDescriptor.settings`), read from
@@ -70,6 +73,12 @@ function projected(vein: object): boolean {
   return 'project' in vein && vein.project === true;
 }
 
+/** A cluster's or a pipe's heights: its whole window -- see `depositIndex`. */
+const windowOf = (vein: { readonly minY: number; readonly maxY: number }) => ({
+  minY: vein.minY,
+  maxY: vein.maxY,
+});
+
 function depositIndex(
   profile: 'tfc-1.20' | 'tfg',
   extra: readonly string[] = [],
@@ -84,27 +93,38 @@ function depositIndex(
   const yields: Record<string, readonly string[]> = {};
   const yRanges: Record<string, { minY: number; maxY: number; project: boolean }> = {};
   const mix: Record<string, readonly { material: string; share: number }[]> = {};
-  for (const vein of [
-    ...clusterVeinsFor(profile),
-    ...discVeinsFor(profile),
-    ...pipeVeinsFor(profile),
-  ]) {
+  // Materials are named against the whole table: every rock any of its veins names, and every
+  // material it names plainly (`veinTableNames`). The yields and the mix come from the same raw
+  // blocks with the same names, so the label, the search and the hover rows agree.
+  const { rocks, materials } = veinTableNames(RAW_VEINS_BY_PROFILE[profile]);
+  // The heights a vein's blocks can occupy. A disc reports its own band (`discVeinBand`), which is
+  // narrower than the window its centre is drawn in: kaolin's window is Y 75 to 110 and every patch
+  // lies in Y 86 to 98. A cluster or a pipe keeps its window: its centre is drawn `size` (`height`)
+  // inside it, and its body can reach back out to within a block or two of either end.
+  const veins = [
+    ...clusterVeinsFor(profile).map((vein) => ({ vein, band: windowOf(vein) })),
+    ...discVeinsFor(profile).map((vein) => ({ vein, band: discVeinBand(vein) })),
+    ...pipeVeinsFor(profile).map((vein) => ({ vein, band: windowOf(vein) })),
+  ];
+  for (const { vein, band } of veins) {
     const id = veinFilterId(vein.ore);
     ores.push(id);
-    if (vein.produces.length > 0) yields[id] = vein.produces;
-    const veinMix = veinMaterialMix(rawVeinBlocks(profile, vein.id));
+    const blocks = rawVeinBlocks(profile, vein.id);
+    const produces = veinMaterials(blocks, rocks, materials);
+    if (produces.length > 0) yields[id] = produces;
+    const veinMix = veinMaterialMix(blocks, rocks, materials);
     if (veinMix.length > 0) mix[id] = veinMix;
-    const known = yRanges[id];
+    const previous = yRanges[id];
     // Veins sharing a filter id are one entry in the list, so the depths shown have to cover all of
     // them. A mixed group keeps `project` only if every member is projected, since one absolute
     // vein makes the number an absolute Y again.
-    yRanges[id] = known
+    yRanges[id] = previous
       ? {
-          minY: Math.min(known.minY, vein.minY),
-          maxY: Math.max(known.maxY, vein.maxY),
-          project: known.project && projected(vein),
+          minY: Math.min(previous.minY, band.minY),
+          maxY: Math.max(previous.maxY, band.maxY),
+          project: previous.project && projected(vein),
         }
-      : { minY: vein.minY, maxY: vein.maxY, project: projected(vein) };
+      : { minY: band.minY, maxY: band.maxY, project: projected(vein) };
   }
 
   // Deferred: each of these walks the vein's bounding box (~150 ms for a whole profile), and both

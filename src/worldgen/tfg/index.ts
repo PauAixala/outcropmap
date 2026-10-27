@@ -14,15 +14,21 @@ import type { RegionGeneratorSettings } from '../tfc-1.20/region/generator';
 import { TFGRegionGenerator } from './region/generator';
 import { BIOME_IDS } from './biome/ids';
 import { sampleClimate } from './climate';
-import { kaolinInBox } from './kaolin';
+import { KAOLIN, kaolinInBox } from './kaolin';
 import {
   clusterDepositsInBox,
   clusterVeinsFor,
   rawVeinBlocks,
   typicalVeinBlocks,
 } from '../tfc-1.20/features/cluster-vein';
-import { discDepositsInBox, discVeinExtent, discVeinsFor } from '../tfc-1.20/features/disc-vein';
-import type { VeinProfileId } from '../tfc-1.20/features/vein-tables';
+import {
+  discDepositsInBox,
+  discVeinBand,
+  discVeinExtent,
+  discVeinsFor,
+  type DiscVeinDef,
+} from '../tfc-1.20/features/disc-vein';
+import { RAW_VEINS_BY_PROFILE, type VeinProfileId } from '../tfc-1.20/features/vein-tables';
 import { DIKE_OVERWRITES, dikeRockAt, dikesInBox } from '../tfc-1.20/features/dike';
 
 /**
@@ -48,7 +54,12 @@ import {
   pipeVeinsFor,
   typicalPipeVeinBlocks,
 } from '../tfc-1.20/features/pipe-vein';
-import { veinFilterId, veinMaterialMix } from '../tfc-1.20/features/vein-materials';
+import {
+  veinFilterId,
+  veinMaterialMix,
+  veinMaterials,
+  veinTableNames,
+} from '../tfc-1.20/features/vein-materials';
 import { tfgRocks } from './rocks';
 import biomes from '@data/tfg/biomes.json';
 import veinVerification from '@data/tfg/vein-verification.json';
@@ -68,16 +79,31 @@ function projected(vein: object): boolean {
   return 'project' in vein && vein.project === true;
 }
 
+/** A cluster or a pipe keeps its window: its centre is drawn `size` (`height`) inside it, and its
+ *  body can reach back out to within a block or two of either end. */
+const windowOf = (vein: { readonly minY: number; readonly maxY: number }) => ({
+  minY: vein.minY,
+  maxY: vein.maxY,
+});
+
 /**
  * The ore filter list and everything the UI shows beside it, from the vein tables themselves.
  *
  * It takes every vein *set* the profile can show, not just the overworld's: the filter is one list
  * across the whole profile, and an ore that only exists on Mars is still an ore the player can ask
  * the map for. Sets sharing a filter id merge, which is what the depth range's `Math.min` is for.
+ *
+ * The depth shown for a disc vein is its own band (`discVeinBand`), narrower than the window its
+ * centre is drawn in: kaolin's window is Y 75 to 110 and every patch lies in Y 86 to 98.
  */
 function depositIndex(
   sets: readonly VeinProfileId[],
-  extra: readonly string[] = [],
+  /**
+   * Disc veins from outside the vein tables: TerraFirmaGreg's kaolin, from the modpack's own
+   * KubeJS config (`./kaolin.ts`). Listed with their band, but with no yields or mix: kaolin
+   * replaces soil, not a table of host rocks.
+   */
+  extra: readonly DiscVeinDef[] = [],
 ): {
   ores: string[];
   oresBySet: Partial<Record<VeinProfileId, string[]>>;
@@ -86,37 +112,52 @@ function depositIndex(
   mix: Record<string, readonly { material: string; share: number }[]>;
   typicalBlocks: (id: string) => number | null;
 } {
-  const ores = [...extra];
+  const ores = extra.map((vein) => veinFilterId(vein.ore));
   // The same ids, split by the table they came from: the filter panel shows one dimension at a
   // time, and offering Mars's ores while looking at the overworld is a control that matches nothing.
   const oresBySet: Partial<Record<VeinProfileId, string[]>> = {};
   const yields: Record<string, readonly string[]> = {};
   const yRanges: Record<string, { minY: number; maxY: number; project: boolean }> = {};
   const mix: Record<string, readonly { material: string; share: number }[]> = {};
-  const withSet = <T,>(pick: (set: VeinProfileId) => readonly T[]): { set: VeinProfileId; vein: T }[] =>
-    sets.flatMap((set) => pick(set).map((vein) => ({ set, vein })));
-  for (const { set, vein } of [
-    ...withSet(clusterVeinsFor),
-    ...withSet(oreDiscVeins),
-    ...withSet(pipeVeinsFor),
+  const addRange = (id: string, band: { minY: number; maxY: number }, project: boolean): void => {
+    const previous = yRanges[id];
+    // Veins sharing a filter id are one entry in the list, so the depths shown have to cover all of
+    // them. A mixed group keeps `project` only if every member is projected, since one absolute
+    // vein makes the number an absolute Y again.
+    yRanges[id] = previous
+      ? {
+          minY: Math.min(previous.minY, band.minY),
+          maxY: Math.max(previous.maxY, band.maxY),
+          project: previous.project && project,
+        }
+      : { minY: band.minY, maxY: band.maxY, project };
+  };
+  for (const vein of extra) addRange(veinFilterId(vein.ore), discVeinBand(vein), projected(vein));
+
+  const withSet = <T,>(
+    pick: (set: VeinProfileId) => readonly T[],
+    band: (vein: T) => { minY: number; maxY: number },
+  ): { set: VeinProfileId; vein: T; band: { minY: number; maxY: number } }[] =>
+    sets.flatMap((set) => pick(set).map((vein) => ({ set, vein, band: band(vein) })));
+  for (const { set, vein, band } of [
+    ...withSet(clusterVeinsFor, windowOf),
+    ...withSet(oreDiscVeins, discVeinBand),
+    ...withSet(pipeVeinsFor, windowOf),
   ]) {
     const id = veinFilterId(vein.ore);
     ores.push(id);
     (oresBySet[set] ??= []).push(id);
-    if (vein.produces.length > 0) yields[id] = vein.produces;
-    const veinMix = veinMaterialMix(rawVeinBlocks(set, vein.id));
+    // Named against the vein's whole table: every rock any of its veins names, and every material
+    // it names plainly -- the Beneath's pyroxenite and dripstone ores resolve against those
+    // (`veinTableNames`). The yields and the mix come from the same raw blocks with the same names,
+    // so the label, the search and the hover rows agree.
+    const { rocks, materials } = veinTableNames(RAW_VEINS_BY_PROFILE[set]);
+    const blocks = rawVeinBlocks(set, vein.id);
+    const produces = veinMaterials(blocks, rocks, materials);
+    if (produces.length > 0) yields[id] = produces;
+    const veinMix = veinMaterialMix(blocks, rocks, materials);
     if (veinMix.length > 0) mix[id] = veinMix;
-    const known = yRanges[id];
-    // Veins sharing a filter id are one entry in the list, so the depths shown have to cover all of
-    // them. A mixed group keeps `project` only if every member is projected, since one absolute
-    // vein makes the number an absolute Y again.
-    yRanges[id] = known
-      ? {
-          minY: Math.min(known.minY, vein.minY),
-          maxY: Math.max(known.maxY, vein.maxY),
-          project: known.project && projected(vein),
-        }
-      : { minY: vein.minY, maxY: vein.maxY, project: projected(vein) };
+    addRange(id, band, projected(vein));
   }
 
   // Deferred: each of these walks the vein's bounding box (~150 ms for a whole profile), and both
@@ -140,7 +181,7 @@ function depositIndex(
 
 const TFG_DEPOSITS = depositIndex(
   Object.values(VEIN_SET_BY_DIMENSION) as VeinProfileId[],
-  ['kaolin'],
+  [KAOLIN],
 );
 
 export const TFG_PROFILE: ProfileDescriptor = {

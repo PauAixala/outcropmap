@@ -113,6 +113,7 @@ import {
   columnCanHost,
   hostRockIdsOf,
   veinMaterials,
+  veinTableNames,
 } from './vein-materials';
 import { parseIndicator } from './indicator';
 import type { VeinIndicator } from '@worldgen/api/types';
@@ -256,7 +257,11 @@ function buildDiscVeinDefs(profile: VeinProfileId): readonly DiscVeinDef[] {
       hostRock: hostRockDescription(raw.blocks),
       hostRockIds: hostRockIdsOf(raw.blocks),
       nameSeed: veinNameSeed(raw.random_name),
-      produces: veinMaterials(raw.blocks, rockNames),
+      produces: veinMaterials(
+        raw.blocks,
+        rockNames,
+        veinTableNames(RAW_VEINS_BY_PROFILE[profile]).materials,
+      ),
     });
   }
   return defs;
@@ -358,6 +363,52 @@ export function defaultYPos(
   }
   // Java int division truncates toward zero -- CLAUDE.md section 2.
   return Math.trunc((minY + maxY) / 2);
+}
+
+/**
+ * A `RandomSource` whose bounded `nextInt` always answers `pick(bound)`. `defaultYPos` makes no
+ * other draw, so anything else is a change this has to hear about rather than paper over.
+ */
+function fixedDraw(pick: (bound: number) => number): RandomSource {
+  const unexpected = (): never => {
+    throw new Error('discVeinBand: defaultYPos made a draw other than nextInt(bound)');
+  };
+  return {
+    next: unexpected,
+    nextInt: (bound?: number) => (bound === undefined ? unexpected() : pick(bound)),
+    nextLong: unexpected,
+    nextBoolean: unexpected,
+    nextFloat: unexpected,
+    nextDouble: unexpected,
+    nextGaussian: unexpected,
+  };
+}
+
+/**
+ * The Y band a disc vein's blocks can occupy, across every vein of its type — what the ore filter
+ * shows, where the configured `[min_y, max_y]` is only the window the centre is drawn in. For a
+ * `project: true` vein it is measured from the surface, as the window is.
+ *
+ * `DiscVeinFeature#defaultPosRespectingHeight` places the centre with
+ * `defaultYPos(config.size(), ...)` (see this file's header): somewhere in
+ * `[minY + size, maxY - size)` when that range is positive, otherwise always `(minY + maxY) / 2`.
+ * `DiscVeinFeature#getChanceToGenerate` fills only `|y| <= config.height()` around it, and
+ * `VeinFeature#place` clips its Y loop to `[config.minY(), config.maxY()]` before the surface
+ * projection is added. Kaolin is the second case — 110 - 75 - 2 * 18 < 0 — so every patch is
+ * centred on Y 92 and spans Y 86 to 98, where its window says 75 to 110.
+ *
+ * The centre's lowest and highest values come from `defaultYPos` itself, handed the smallest and
+ * the largest draw `nextInt(bound)` can make, so this cannot drift from the placement it describes.
+ */
+export function discVeinBand(
+  vein: Pick<DiscVeinDef, 'minY' | 'maxY' | 'size' | 'height'>,
+): { readonly minY: number; readonly maxY: number } {
+  const lowest = defaultYPos(vein.size, fixedDraw(() => 0), vein.minY, vein.maxY);
+  const highest = defaultYPos(vein.size, fixedDraw((bound) => bound - 1), vein.minY, vein.maxY);
+  return {
+    minY: Math.max(vein.minY, lowest - vein.height),
+    maxY: Math.min(vein.maxY, highest + vein.height),
+  };
 }
 
 /**

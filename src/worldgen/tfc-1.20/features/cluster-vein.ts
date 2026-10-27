@@ -58,6 +58,7 @@ import {
   columnCanHost,
   hostRockIdsOf,
   veinMaterials,
+  veinTableNames,
 } from './vein-materials';
 import { parseIndicator } from './indicator';
 import type { VeinIndicator } from '@worldgen/api/types';
@@ -178,7 +179,11 @@ function buildClusterVeinDefs(profile: VeinProfileId): readonly ClusterVeinDef[]
       hasIndicator: raw.indicator != null,
       project: raw.project === true,
       indicator: parseIndicator(raw.indicator ?? null),
-      produces: veinMaterials(raw.blocks, rockNames),
+      produces: veinMaterials(
+        raw.blocks,
+        rockNames,
+        veinTableNames(RAW_VEINS_BY_PROFILE[profile]).materials,
+      ),
     });
   }
   return defs;

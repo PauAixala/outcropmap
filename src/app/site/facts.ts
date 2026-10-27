@@ -58,8 +58,12 @@ const ACTIONS: readonly (readonly [keyof typeof tfcAnvil.actions, string])[] = [
  * centre with `VeinFeature#defaultYPos(config.size(), ...)`: somewhere in `[minY + size, maxY - size)`
  * when that range is positive, otherwise always `(minY + maxY) / 2` (Java int division). The disc
  * then reaches `height` blocks either side of it (`DiscVeinFeature#getChanceToGenerate`,
- * `|y| <= height`). Kaolin is the second case: 110 - 75 - 2 * 18 < 0, so every patch is centred
- * on Y 92 and spans Y 86 to 98.
+ * `|y| <= height`), and `VeinFeature#place` clips its Y loop to `[minY, maxY]`. Kaolin is the
+ * second case: 110 - 75 - 2 * 18 < 0, so every patch is centred on Y 92 and spans Y 86 to 98.
+ *
+ * The map's own copy is `discVeinBand` in src/worldgen/tfc-1.20/features/disc-vein.ts, built on
+ * the port's `defaultYPos`; this one is for the build-time site code, which cannot import it.
+ * tests/unit/disc-vein-band.test.ts holds the two together.
  */
 export function discVeinBand(vein: {
   readonly minY: number;
@@ -70,7 +74,10 @@ export function discVeinBand(vein: {
   const range = vein.maxY - vein.minY - 2 * vein.size;
   const lowest = range > 0 ? vein.minY + vein.size : Math.trunc((vein.minY + vein.maxY) / 2);
   const highest = range > 0 ? vein.minY + vein.size + range - 1 : lowest;
-  return { minY: lowest - vein.height, maxY: highest + vein.height };
+  return {
+    minY: Math.max(vein.minY, lowest - vein.height),
+    maxY: Math.min(vein.maxY, highest + vein.height),
+  };
 }
 
 /** The one climate gate on TerraFirmaCraft's kaolin placed feature, as the installed pack ships it. */
