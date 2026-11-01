@@ -78,7 +78,12 @@
   --map-grid-strong: #0000003f;
   --map-label: #1d1a14;
   --map-label-plate: #f4f2ec;
+  /* A deposit marker's two-tone ring (src/render/markers.ts): the dark outline around its fill,
+   * then the light halo outside that. One of the two always stands out from the ground under it,
+   * whatever the theme or raster layer, and the outline keeps a pale fill apart from the halo. The
+   * fills themselves are data, per profile, and the same in both themes. */
   --marker-outline: #1d1a14;
+  --marker-halo: #fcfbf7;
   /* Deposit markers on the `minerals` layer (src/render/canvas2d/painter.ts's paintDeposits). */
   --marker-mineral: #d98b0f;
 
@@ -97,52 +102,6 @@
   --inset-shade-deep: rgba(0, 0, 0, 0.42);
   --inset-light: rgba(255, 255, 255, 0.28);
   --inset-light-strong: rgba(255, 255, 255, 0.3);
-
-  /* Ore deposit markers on the map, one per ore family (src/render/markers.ts ORE_TOKEN_NAMES).
-   * Earthy, ore-like colours; the same in both themes because they name the rock, not the UI. */
-  --ore-tetrahedrite: #72514c;
-  --ore-malachite: #2e8b57;
-  --ore-copper: #b87333;
-  --ore-hematite: #9c4f42;
-  --ore-magnetite: #454b50;
-  --ore-limonite: #a66a2c;
-  --ore-iron: #8b5145;
-  --ore-cassiterite: #59636f;
-  --ore-tin: #89929b;
-  --ore-bismuth: #c18eaa;
-  --ore-sphalerite: #a58d3e;
-  --ore-zinc: #9ba3a1;
-  --ore-galena: #625c78;
-  --ore-lead: #6f7080;
-  --ore-garnierite: #6f9b63;
-  --ore-nickel: #9aa897;
-  --ore-gold: #d6ae32;
-  --ore-silver: #b7c0c8;
-  --ore-platinum: #c8c8d0;
-  --ore-lignite: #5b3a29;
-  --ore-graphite: #42434a;
-  --ore-coal: #292b30;
-  --ore-sulfur: #d8c92e;
-  --ore-gypsum: #e2d8c8;
-  --ore-sylvite: #d28dab;
-  --ore-halite: #e0a8b6;
-  --ore-saltpeter: #d7d1bd;
-  --ore-borax: #e5e0d2;
-  --ore-kaolin: #e8d8c7;
-  --ore-gravel: #77736c;
-  --ore-lapis: #3155a6;
-  --ore-lazurite: #3155a6;
-  --ore-sapphire: #2458b3;
-  --ore-ruby: #a82f4d;
-  --ore-emerald: #2f9a62;
-  --ore-diamond: #8fd6dc;
-  --ore-amethyst: #8e5bb7;
-  --ore-opal: #b9d8d2;
-  --ore-uranium: #88b83e;
-  --ore-chromite: #514650;
-  --ore-manganese: #624b64;
-  --ore-tungsten: #596470;
-  --ore-molybdenum: #637687;
 
   /* Anvil catalogue markers, coloured by the metal the recipe works (src/ui/icons/metal-colours.ts).
    * These are the metals' own colours as TerraFirmaCraft renders them, so the list reads as a
@@ -242,6 +201,8 @@
     --map-label: #e8e6df;
     --map-label-plate: #1b1d20;
     --marker-outline: #0d0e10;
+    /* Still the light band on the dark map, a step off white so a field of markers does not glare. */
+    --marker-halo: #e8e6df;
     --marker-mineral: #f0aa3c;
 
     /* Brighter on the dark map so the same hues keep their contrast. */
@@ -315,6 +276,8 @@
   --map-label: #e8e6df;
   --map-label-plate: #1b1d20;
   --marker-outline: #0d0e10;
+  /* Still the light band on the dark map, a step off white so a field of markers does not glare. */
+  --marker-halo: #e8e6df;
   --marker-mineral: #f0aa3c;
 
   /* Brighter on the dark map so the same hues keep their contrast. */
@@ -1150,6 +1113,24 @@ button.measure-btn--active:hover:not(:disabled) {
   border: 1px solid var(--marker-outline);
 }
 
+/* The ore filter's swatch: the map's deposit marker at 1:1, its shape and fill from the kind's
+ * style and its ring from the same two tokens the canvas reads (src/render/markers.ts). The ring
+ * is styled here, not in the markup, so a theme switch restyles every swatch without a rebuild. */
+.deposit-swatch {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+}
+
+.deposit-swatch__halo {
+  fill: var(--marker-halo);
+}
+
+.deposit-swatch__outline {
+  fill: var(--marker-outline);
+}
+
 .filter-section-head .filter-subheading {
   margin: 0;
   flex: 1 1 auto;
@@ -1264,6 +1245,14 @@ button.measure-btn--active:hover:not(:disabled) {
 .filter-checklist .ore-swatch {
   flex: none;
   margin-top: 0.2rem;
+}
+
+/* Centred on the name's line, the way the checkbox is: the 24px box is taller than that line, and
+ * most of it is empty space around the marker. */
+.filter-checklist .deposit-swatch {
+  flex: none;
+  margin-top: -4px;
+  margin-bottom: -4px;
 }
 
 /* Temperature and rainfall side by side at this width instead of stacked -- there is room, and it

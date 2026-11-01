@@ -5,7 +5,6 @@
  */
 import { createStorage } from '@platform/storage';
 import type { StorageAdapter } from '@platform/storage';
-import { ORE_TOKEN_NAMES } from '@render/markers';
 
 export type ThemePreference = 'system' | 'light' | 'dark';
 
@@ -43,6 +42,9 @@ const TOKEN_NAMES = [
   'map-label',
   'map-label-plate',
   'marker-outline',
+  // The light band of a deposit marker's ring, outside the dark `marker-outline`. The fills
+  // themselves are not tokens: they are data, per profile (`@render/deposit-style`).
+  'marker-halo',
   'marker-mineral',
   'wp-red',
   'wp-orange',
@@ -50,8 +52,6 @@ const TOKEN_NAMES = [
   'wp-blue',
   'wp-purple',
   'wp-pink',
-  // The map's ore marker colours: read here so the canvas gets them resolved.
-  ...ORE_TOKEN_NAMES,
 ];
 
 export type ThemeChangeListener = (tokens: ThemeTokens, preference: ThemePreference) => void;

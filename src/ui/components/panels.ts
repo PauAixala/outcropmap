@@ -22,8 +22,7 @@ import {
 } from '@layers/index';
 import type { MapFilter, RockMatchMode } from '@layers/index';
 import { colorToCss } from '@render/colormap';
-import { oreMarkerColor } from '@render/markers';
-import { getThemeTokens } from '@ui/theme/theme';
+import { depositSwatchSpec } from '@render/markers';
 import { createStorage } from '@platform/storage';
 import type { StorageAdapter } from '@platform/storage';
 import type { Store } from '@app/state';
@@ -443,7 +442,8 @@ function syncChecklist(
   selected: readonly string[],
   labelFor: (id: string) => string,
   onToggle: (id: string, checked: boolean) => void,
-  colorForId?: (id: string) => number,
+  /** Optional swatch before the name: a colour square (`colourSwatch`), or an ore's marker. */
+  swatchFor?: (id: string) => Element,
   /** Optional hover text, e.g. what a vein actually yields. */
   titleFor?: (id: string) => string,
   /** Optional second line under the name, in smaller muted text (an ore's yields). */
@@ -461,12 +461,7 @@ function syncChecklist(
       checkbox.type = 'checkbox';
       checkbox.addEventListener('change', () => onToggle(id, checkbox.checked));
       label.append(checkbox);
-      if (colorForId) {
-        const swatch = document.createElement('span');
-        swatch.className = 'ore-swatch';
-        swatch.style.background = colorToCss(colorForId(id));
-        label.append(swatch);
-      }
+      if (swatchFor) label.append(swatchFor(id));
       const name = labelFor(id);
       const detail = detailFor?.(id) ?? '';
       const text = document.createElement('span');
@@ -496,6 +491,39 @@ function syncChecklist(
     const checked = selected.includes(id);
     if (entry.checkbox.checked !== checked) entry.checkbox.checked = checked;
   }
+}
+
+/** A flat colour square: the rock and biome lists' swatch, the colour their layer paints. */
+function colourSwatch(color: number): HTMLSpanElement {
+  const swatch = document.createElement('span');
+  swatch.className = 'ore-swatch';
+  swatch.style.background = colorToCss(color);
+  return swatch;
+}
+
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+/**
+ * The ore list's swatch: the marker the map draws for that kind, shape and fill included, from the
+ * same `depositStyle` and the same geometry as the painter (`depositSwatchSpec`). Only the fill is
+ * set here; the halo and the outline take their colours from CSS (`.deposit-swatch__*`), so they
+ * follow the theme without a rebuild.
+ */
+function depositSwatch(profile: ProfileId, id: string): SVGSVGElement {
+  const spec = depositSwatchSpec(profile, id);
+  const svg = document.createElementNS(SVG_NS, 'svg');
+  svg.classList.add('deposit-swatch');
+  svg.setAttribute('viewBox', spec.viewBox);
+  svg.setAttribute('aria-hidden', 'true');
+  svg.dataset.shape = spec.shape;
+  for (const { layer, d } of spec.layers) {
+    const path = document.createElementNS(SVG_NS, 'path');
+    path.setAttribute('d', d);
+    path.classList.add(`deposit-swatch__${layer}`);
+    if (layer === 'fill') path.setAttribute('fill', spec.fill);
+    svg.append(path);
+  }
+  return svg;
 }
 
 /** One "<subheading> + Select all + Select none" row, shared by the rock and biome sections. */
@@ -724,6 +752,8 @@ export function mountFilterPanel(container: HTMLElement, store: Store<MapState>)
   // against `DepositFeature.ore` with its prefix stripped (see `main.ts`'s marker filter).
   let oreIds = Object.keys(en.oreNames).sort();
   const oreIdsCache = { current: '' };
+  /** The profile whose palette the ore swatches were drawn from. */
+  let oreSwatchProfile: ProfileId | null = null;
   container.append(oreField);
 
   // --- Structures: one chip per kind, icon first, the way the map shows them. An empty selection
@@ -1054,7 +1084,7 @@ export function mountFilterPanel(container: HTMLElement, store: Store<MapState>)
         });
       },
       // The same colour the rock layer paints, so the list doubles as its legend.
-      (id) => descriptor?.rockPalette?.[id] ?? 0,
+      (id) => colourSwatch(descriptor?.rockPalette?.[id] ?? 0),
     );
     if (matchSelect.value !== state.filter.rockMatch) matchSelect.value = state.filter.rockMatch;
 
@@ -1075,7 +1105,7 @@ export function mountFilterPanel(container: HTMLElement, store: Store<MapState>)
       },
       // The same expression `biomeLayer` paints with, so the swatch is the colour on the map even
       // where no palette entry exists.
-      (id) => descriptor?.biomePalette?.[id] ?? categoricalColor(hashString(id)),
+      (id) => colourSwatch(descriptor?.biomePalette?.[id] ?? categoricalColor(hashString(id))),
     );
 
     syncNumberInput(tempRow.minInput, state.filter.tempMin);
@@ -1083,6 +1113,13 @@ export function mountFilterPanel(container: HTMLElement, store: Store<MapState>)
     syncNumberInput(rainRow.minInput, state.filter.rainMin);
     syncNumberInput(rainRow.maxInput, state.filter.rainMax);
 
+    // Each profile has its own palette, so a profile change redraws every swatch even where the two
+    // offer the same ids. A theme change needs nothing: the ring's colours are CSS.
+    if (state.profile !== oreSwatchProfile) {
+      oreSwatchProfile = state.profile;
+      oreIdsCache.current = '';
+    }
+    const swatchProfile = state.profile;
     syncChecklist(
       oreList,
       oreEntries,
@@ -1100,8 +1137,8 @@ export function mountFilterPanel(container: HTMLElement, store: Store<MapState>)
             : {}),
         });
       },
-      // The swatch uses the same resolved `--ore-*` tokens as the canvas markers.
-      (id: string) => oreMarkerColor(id, getThemeTokens().colors),
+      // The marker the map draws for this kind: same shape, same fill, same ring.
+      (id) => depositSwatch(swatchProfile, id),
       oreTooltipText,
       (id) => oreDetailText(id),
     );

@@ -1,0 +1,206 @@
+{
+  "_meta": {
+    "description": "Fill colours, marker categories and material families of the tfc-1.20 profile's deposit markers: the minerals layer, its filter swatches and its legend, read by src/render/deposit-style.ts. This is our own UI design choice, not a port of any Java source. The ids are ported game data, the canonical vein ids of src/data/tfc-1.20/veins.json as veinFilterId reports them (a cluster vein's table key, otherwise its random_name, so kaolin_disc is \"kaolin\"); only the family, category and colour given to each id are decisions. The three rock dikes are not deposits and have no entry. \"sulfur\" is listed although the map does not draw it (a near_lava vein).",
+    "profile": "tfc-1.20",
+    "family": "What a player would call the ore: the vein's main yield, the material with the largest share of its blocks in the mix the map itself shows (veinMaterialMix in src/worldgen/tfc-1.20/features/vein-materials.ts, the first row of the ore filter's tooltip), with TFC's ore grade (poor_, normal_, rich_) and the \"_deposit\" of its pannable placer gravel taken off. A vein that places no ore (gravel) or replaces soil rather than rock (kaolin) is its own family. So normal_malachite and surface_malachite are two variants of \"malachite\", and fake_native_gold is \"pyrite\".",
+    "category": "TFC's own classification of the family's ore. metal: the graded ores, which melt into a metal (net.dries007.tfc.common.blocks.rock.Ore#isGraded). fuel: the two ores TFC makes flammable (Ore#create: lignite, bituminous_coal). gem: net.dries007.tfc.common.blocks.Gem, which includes pyrite: TFC cuts it into tfc:gem/pyrite with sandpaper (data/tfc/recipes/pyrite_cut.json) and it melts into nothing. mineral: every other Ore (gypsum, graphite, sulfur, cinnabar, cryolite, saltpeter, sylvite, borax, halite), plus kaolin and gravel. Two calls apply to both profiles: graphite is a mineral, not a fuel (TFC grinds it for fire clay and never burns it), and redstone is a mineral; TFC has no redstone ore, and cinnabar and cryolite, which it grinds into redstone, are minerals.",
+    "colour": "One fill per kind, the same in both themes, as \"#rrggbb\"; the marker's two-tone ring (theme tokens) keeps it legible on both themes and over every raster layer. Shape encodes the category (CATEGORY_SHAPE in src/render/deposit-style.ts), so colours only have to be told apart among the kinds one dimension draws with the same shape. In each (dimension, category) group, distance is Euclidean in OKLab (ΔE_OK; Björn Ottosson 2020), and colour blindness is simulated with Machado, Oliveira and Fernandes 2009 at severity 1.0 in linear sRGB. Floors, never broken: kinds of different families at least 0.08 apart, and 0.03 apart for protanopia and for deuteranopia; variants of one family at least 0.04 apart; OKLab lightness 0.40..0.93, so no fill merges with the ring's dark outline. Targets: 0.10, 0.05 and 0.05. Semantic anchors (copper orange, gold yellow, malachite green, lapis blue, coal near-black, kaolin near-white, ...) outrank the targets but never a floor; variants of one family are shades of its colour, mostly lighter or darker. Achieved: every group meets every target (minimum 0.10 between families, 0.05 for colour blindness, 0.05 between variants). Proposed by tools/ore-palettes.mjs (deterministic: --write reproduces this file) and held to these numbers by tests/unit/deposit-style.test.ts; this file is the source of truth."
+  },
+  "_fallback": {
+    "category": "metal",
+    "family": "unknown",
+    "color": "#8c8c8c"
+  },
+  "ores": {
+    "amethyst": {
+      "category": "gem",
+      "family": "amethyst",
+      "color": "#9a5fd8"
+    },
+    "bituminous_coal": {
+      "category": "fuel",
+      "family": "bituminous_coal",
+      "color": "#444850"
+    },
+    "borax": {
+      "category": "mineral",
+      "family": "borax",
+      "color": "#c2bdfe"
+    },
+    "cinnabar": {
+      "category": "mineral",
+      "family": "cinnabar",
+      "color": "#c62f2f"
+    },
+    "cryolite": {
+      "category": "mineral",
+      "family": "cryolite",
+      "color": "#98dbe7"
+    },
+    "diamond": {
+      "category": "gem",
+      "family": "diamond",
+      "color": "#baeff4"
+    },
+    "emerald": {
+      "category": "gem",
+      "family": "emerald",
+      "color": "#1fbf6a"
+    },
+    "fake_native_gold": {
+      "category": "gem",
+      "family": "pyrite",
+      "color": "#cab12f"
+    },
+    "gabbro_garnierite": {
+      "category": "metal",
+      "family": "garnierite",
+      "color": "#83c669"
+    },
+    "graphite": {
+      "category": "mineral",
+      "family": "graphite",
+      "color": "#50535b"
+    },
+    "gravel": {
+      "category": "mineral",
+      "family": "gravel",
+      "color": "#8b8781"
+    },
+    "gypsum": {
+      "category": "mineral",
+      "family": "gypsum",
+      "color": "#ffe795"
+    },
+    "halite": {
+      "category": "mineral",
+      "family": "halite",
+      "color": "#f3bbc4"
+    },
+    "kaolin": {
+      "category": "mineral",
+      "family": "kaolin",
+      "color": "#e7e7e6"
+    },
+    "lapis_lazuli": {
+      "category": "gem",
+      "family": "lapis_lazuli",
+      "color": "#2f52c4"
+    },
+    "lignite": {
+      "category": "fuel",
+      "family": "lignite",
+      "color": "#755233"
+    },
+    "normal_bismuthinite": {
+      "category": "metal",
+      "family": "bismuthinite",
+      "color": "#c687b1"
+    },
+    "normal_garnierite": {
+      "category": "metal",
+      "family": "garnierite",
+      "color": "#97d776"
+    },
+    "normal_malachite": {
+      "category": "metal",
+      "family": "malachite",
+      "color": "#0d9655"
+    },
+    "normal_native_gold": {
+      "category": "metal",
+      "family": "native_gold",
+      "color": "#e3b10e"
+    },
+    "normal_native_silver": {
+      "category": "metal",
+      "family": "native_silver",
+      "color": "#bdc5ce"
+    },
+    "normal_sphalerite": {
+      "category": "metal",
+      "family": "sphalerite",
+      "color": "#3a8bc4"
+    },
+    "normal_tetrahedrite": {
+      "category": "metal",
+      "family": "tetrahedrite",
+      "color": "#848890"
+    },
+    "opal": {
+      "category": "gem",
+      "family": "opal",
+      "color": "#ffd4cd"
+    },
+    "rich_native_gold": {
+      "category": "metal",
+      "family": "native_gold",
+      "color": "#f3c338"
+    },
+    "saltpeter": {
+      "category": "mineral",
+      "family": "saltpeter",
+      "color": "#cdcc96"
+    },
+    "sulfur": {
+      "category": "mineral",
+      "family": "sulfur",
+      "color": "#e4d421"
+    },
+    "surface_bismuthinite": {
+      "category": "metal",
+      "family": "bismuthinite",
+      "color": "#d997c1"
+    },
+    "surface_cassiterite": {
+      "category": "metal",
+      "family": "cassiterite",
+      "color": "#734124"
+    },
+    "surface_hematite": {
+      "category": "metal",
+      "family": "hematite",
+      "color": "#b43d2e"
+    },
+    "surface_limonite": {
+      "category": "metal",
+      "family": "limonite",
+      "color": "#bc9431"
+    },
+    "surface_magnetite": {
+      "category": "metal",
+      "family": "magnetite",
+      "color": "#404952"
+    },
+    "surface_malachite": {
+      "category": "metal",
+      "family": "malachite",
+      "color": "#2aa765"
+    },
+    "surface_native_copper": {
+      "category": "metal",
+      "family": "native_copper",
+      "color": "#c8692c"
+    },
+    "surface_native_silver": {
+      "category": "metal",
+      "family": "native_silver",
+      "color": "#cfd6df"
+    },
+    "surface_sphalerite": {
+      "category": "metal",
+      "family": "sphalerite",
+      "color": "#4a9cd6"
+    },
+    "surface_tetrahedrite": {
+      "category": "metal",
+      "family": "tetrahedrite",
+      "color": "#737884"
+    },
+    "sylvite": {
+      "category": "mineral",
+      "family": "sylvite",
+      "color": "#e0a07c"
+    }
+  }
+}

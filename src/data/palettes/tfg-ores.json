@@ -1,0 +1,836 @@
+{
+  "_meta": {
+    "description": "Fill colours, marker categories and material families of the tfg profile's deposit markers in every TerraFirmaGreg dimension (vein ids are unique across them): the minerals layer, its filter swatches and its legend, read by src/render/deposit-style.ts. This is our own UI design choice, not a port of any Java source. The ids are ported game data, the canonical vein ids of src/data/tfg/veins.json (overworld), veins-nether.json (the Beneath), veins-moon.json, veins-mars.json and veins-venus.json as veinFilterId reports them (a cluster vein's table key, otherwise its random_name, so kaolin_disc is \"kaolin\", which the map draws from TerraFirmaGreg's KubeJS config instead); the data's own spellings are kept (beneath_molydbenum, surface_salpeter, mars_neodynium). Only the family, category and colour given to each id are decisions. The three rock dikes are not deposits and have no entry. deep_copper_sulfide, deep_sulfur (near_lava veins) and gravel (no ore) are listed although the map does not draw them. Glacio has no vein table.",
+    "profile": "tfg",
+    "family": "What a player would call the ore: the vein's main yield, the material with the largest share of its blocks in the mix the map itself shows (veinMaterialMix in src/worldgen/tfc-1.20/features/vein-materials.ts, the first row of the ore filter's tooltip; ties go to the alphabetically first, as the tooltip sorts them). GregTech's sand form of a mineral is that mineral (cassiterite_sand is \"cassiterite\"); a vein with no ore (gravel) or a soil deposit (kaolin) is its own family. The yield often differs from the vein's name, and the yield wins: deep_asbestos is mostly cassiterite, moon_magnetite chromite, mars_salt spodumene, mars_sulfur pyrite, deep_mars_chromite redstone.",
+    "category": "From TerraFirmaGreg's field guide entry for the family material (tfg.ore_patchouli_info.<material> in kubejs/assets/tfg/lang/en_us.json), in this order. fuel: \"Used for: Fuel\" (coal, lignite, anthracite). gem: the gemstones and crystals GregTech drops as gems and players collect as such: diamond, emerald, ruby, the sapphires, the topazes, amethyst, opal, the red and yellow garnets, lapis, lazurite, sodalite, olivine, and the quartzes (quartzite, nether and certus quartz). metal: \"Melts into\" or \"Smelts into\" a metal (redstone excepted: it melts into liquid redstone), which covers the copper, iron, tin, zinc, lead, nickel, gold, silver and bismuth ores, pyrite (\"Melts into: Cast Iron\") and the basaltic and granitic mineral sands; or \"Source of\" a metal other than the salt-and-clay light metals sodium, potassium, calcium and magnesium: alunite, almandine, grossular and kyanite (aluminium), spodumene (lithium), ilmenite, chromite, pyrolusite, scheelite, tungstate, wulfenite, cobaltite, electrotine (gold, silver), bastnasite, pyrochlore, pitchblende, thorium, irarsite, tarkianite. mineral: everything else: salts, sulfur, saltpeter, gypsum, borax-type evaporites, phosphates (apatite, tricalcium phosphate), clays and sands (kaolin, fuller's earth, garnet sand), soapstone, trona, realgar (arsenic is a metalloid), graphite (a mineral, as in TFC: \"Used for: Fire Clay, Silicon Carbide, Graphene\"), redstone (as in TFC), and the two micas, mica and phlogopite: the field guide names aluminium among their elements, but GregTech makes them into mica insulator sheets and nobody digs them for a metal.",
+    "colour": "One fill per kind, the same in both themes, as \"#rrggbb\"; the marker's two-tone ring (theme tokens) keeps it legible on both themes and over every raster layer. Shape encodes the category (CATEGORY_SHAPE in src/render/deposit-style.ts), so colours only have to be told apart among the kinds one dimension draws with the same shape. In each (dimension, category) group, distance is Euclidean in OKLab (ΔE_OK; Björn Ottosson 2020), and colour blindness is simulated with Machado, Oliveira and Fernandes 2009 at severity 1.0 in linear sRGB. Floors, never broken: kinds of different families at least 0.08 apart, and 0.03 apart for protanopia and for deuteranopia; variants of one family at least 0.04 apart; OKLab lightness 0.40..0.93, so no fill merges with the ring's dark outline. Targets: 0.10, 0.05 and 0.05. Semantic anchors (copper orange, gold yellow, malachite green, lapis blue, coal near-black, kaolin near-white, ...) outrank the targets but never a floor; variants of one family are shades of its colour, mostly lighter or darker. Achieved: every group meets every target except one. The overworld's metal circles (49 kinds, 29 families) keep 0.10 between families and 0.05 between variants for normal vision, but reach 0.045 under protanopia and 0.043 under deuteranopia: the colours players expect of its warm ores (gold, brass chalcopyrite, orange copper, ochre limonite, rust goethite, brown cassiterite, red hematite) all fall on one yellow-brown strip for red-green colour blindness, told apart by lightness alone, and the anchors were kept over that target. One colour per family serves every dimension (vein ids are unique across them, and gold looks like gold on the Moon too): each kind is within 0.08 of its family's colour in every other dimension the family occurs in. Proposed by tools/ore-palettes.mjs (deterministic: --write reproduces this file) and held to these numbers by tests/unit/deposit-style.test.ts; this file is the source of truth."
+  },
+  "_fallback": {
+    "category": "metal",
+    "family": "unknown",
+    "color": "#8c8c8c"
+  },
+  "ores": {
+    "beneath_aluminium": {
+      "category": "metal",
+      "family": "alunite",
+      "color": "#eabf9e"
+    },
+    "beneath_bismuth": {
+      "category": "metal",
+      "family": "bismuth",
+      "color": "#cc8fd3"
+    },
+    "beneath_coal_anthracite": {
+      "category": "fuel",
+      "family": "anthracite",
+      "color": "#5d5c83"
+    },
+    "beneath_coal_bituminous": {
+      "category": "fuel",
+      "family": "coal",
+      "color": "#44484f"
+    },
+    "beneath_coal_lignite": {
+      "category": "fuel",
+      "family": "lignite",
+      "color": "#754f2b"
+    },
+    "beneath_copper_native": {
+      "category": "metal",
+      "family": "copper",
+      "color": "#c3681b"
+    },
+    "beneath_copper_sulfide": {
+      "category": "metal",
+      "family": "chalcocite",
+      "color": "#5232c6"
+    },
+    "beneath_copper_tetrahedrite": {
+      "category": "metal",
+      "family": "tetrahedrite",
+      "color": "#5f7c7e"
+    },
+    "beneath_gold": {
+      "category": "metal",
+      "family": "gold",
+      "color": "#fdc637"
+    },
+    "beneath_gold_rich": {
+      "category": "metal",
+      "family": "gold",
+      "color": "#ecb415"
+    },
+    "beneath_graphite": {
+      "category": "mineral",
+      "family": "graphite",
+      "color": "#50535b"
+    },
+    "beneath_iron_banded": {
+      "category": "metal",
+      "family": "goethite",
+      "color": "#655a10"
+    },
+    "beneath_iron_hematite": {
+      "category": "metal",
+      "family": "hematite",
+      "color": "#b4271b"
+    },
+    "beneath_iron_magnetite": {
+      "category": "metal",
+      "family": "magnetite",
+      "color": "#3a4c63"
+    },
+    "beneath_lead_silver": {
+      "category": "metal",
+      "family": "galena",
+      "color": "#a5acb2"
+    },
+    "beneath_lithium": {
+      "category": "metal",
+      "family": "spodumene",
+      "color": "#e0c3f0"
+    },
+    "beneath_manganese": {
+      "category": "metal",
+      "family": "pyrolusite",
+      "color": "#890945"
+    },
+    "beneath_molydbenum": {
+      "category": "metal",
+      "family": "wulfenite",
+      "color": "#dd4f5c"
+    },
+    "beneath_nickel": {
+      "category": "metal",
+      "family": "pentlandite",
+      "color": "#b39a52"
+    },
+    "beneath_phlogopite": {
+      "category": "mineral",
+      "family": "phlogopite",
+      "color": "#886b4d"
+    },
+    "beneath_phosphate": {
+      "category": "mineral",
+      "family": "tricalcium_phosphate",
+      "color": "#f4c98f"
+    },
+    "beneath_psg": {
+      "category": "metal",
+      "family": "irarsite",
+      "color": "#a1d4c5"
+    },
+    "beneath_quartz": {
+      "category": "gem",
+      "family": "nether_quartz",
+      "color": "#ece0d4"
+    },
+    "beneath_realgar": {
+      "category": "mineral",
+      "family": "realgar",
+      "color": "#dd541e"
+    },
+    "beneath_redstone": {
+      "category": "mineral",
+      "family": "redstone",
+      "color": "#c6181c"
+    },
+    "beneath_salt": {
+      "category": "mineral",
+      "family": "salt",
+      "color": "#f5bcd7"
+    },
+    "beneath_sulfur": {
+      "category": "mineral",
+      "family": "sulfur",
+      "color": "#e7d629"
+    },
+    "beneath_tin": {
+      "category": "metal",
+      "family": "cassiterite",
+      "color": "#834748"
+    },
+    "beneath_zinc": {
+      "category": "metal",
+      "family": "sphalerite",
+      "color": "#4080c1"
+    },
+    "deep_apatite": {
+      "category": "mineral",
+      "family": "apatite",
+      "color": "#3fa9c5"
+    },
+    "deep_asbestos": {
+      "category": "metal",
+      "family": "cassiterite",
+      "color": "#73323a"
+    },
+    "deep_banded_iron": {
+      "category": "metal",
+      "family": "goethite",
+      "color": "#67692c"
+    },
+    "deep_bauxite": {
+      "category": "metal",
+      "family": "ilmenite",
+      "color": "#6c0c8c"
+    },
+    "deep_big_redstone": {
+      "category": "mineral",
+      "family": "redstone",
+      "color": "#bf0713"
+    },
+    "deep_bismuth": {
+      "category": "metal",
+      "family": "bismuth",
+      "color": "#dd88d8"
+    },
+    "deep_copper_iron": {
+      "category": "metal",
+      "family": "chalcopyrite",
+      "color": "#a19100"
+    },
+    "deep_copper_sulfide": {
+      "category": "mineral",
+      "family": "sulfur",
+      "color": "#d6c400"
+    },
+    "deep_copper_tin": {
+      "category": "metal",
+      "family": "chalcopyrite",
+      "color": "#bc9b01"
+    },
+    "deep_galena": {
+      "category": "metal",
+      "family": "galena",
+      "color": "#aeb7ba"
+    },
+    "deep_graphite": {
+      "category": "mineral",
+      "family": "graphite",
+      "color": "#565a63"
+    },
+    "deep_graphite_volcanic": {
+      "category": "mineral",
+      "family": "graphite",
+      "color": "#484b54"
+    },
+    "deep_iron": {
+      "category": "metal",
+      "family": "goethite",
+      "color": "#876200"
+    },
+    "deep_kyanite": {
+      "category": "metal",
+      "family": "kyanite",
+      "color": "#6ca4fb"
+    },
+    "deep_lazurite_calcite": {
+      "category": "gem",
+      "family": "lazurite",
+      "color": "#293a9c"
+    },
+    "deep_magnetite": {
+      "category": "metal",
+      "family": "magnetite",
+      "color": "#204d67"
+    },
+    "deep_magnetite_olivine": {
+      "category": "mineral",
+      "family": "fullers_earth",
+      "color": "#b8a222"
+    },
+    "deep_manganese": {
+      "category": "metal",
+      "family": "grossular",
+      "color": "#923289"
+    },
+    "deep_mars_chromite": {
+      "category": "mineral",
+      "family": "redstone",
+      "color": "#c81b1d"
+    },
+    "deep_mars_pitchblende": {
+      "category": "metal",
+      "family": "pitchblende",
+      "color": "#004f75"
+    },
+    "deep_mars_sheldonite": {
+      "category": "metal",
+      "family": "bornite",
+      "color": "#7a50bf"
+    },
+    "deep_molybdenum": {
+      "category": "metal",
+      "family": "wulfenite",
+      "color": "#de5158"
+    },
+    "deep_monazite": {
+      "category": "metal",
+      "family": "bastnasite",
+      "color": "#f97893"
+    },
+    "deep_nickel": {
+      "category": "metal",
+      "family": "garnierite",
+      "color": "#6ee57f"
+    },
+    "deep_redstone": {
+      "category": "mineral",
+      "family": "redstone",
+      "color": "#d22a25"
+    },
+    "deep_saltpeter": {
+      "category": "mineral",
+      "family": "saltpeter",
+      "color": "#d59069"
+    },
+    "deep_sapphire": {
+      "category": "gem",
+      "family": "sapphire",
+      "color": "#2d56cd"
+    },
+    "deep_scheelite": {
+      "category": "metal",
+      "family": "scheelite",
+      "color": "#e2d9b2"
+    },
+    "deep_sphalerite": {
+      "category": "metal",
+      "family": "sphalerite",
+      "color": "#017fbb"
+    },
+    "deep_sulfur": {
+      "category": "mineral",
+      "family": "sulfur",
+      "color": "#fbe640"
+    },
+    "deep_tantalite": {
+      "category": "metal",
+      "family": "grossular",
+      "color": "#a9499d"
+    },
+    "deep_thorianite": {
+      "category": "metal",
+      "family": "thorium",
+      "color": "#488c39"
+    },
+    "deep_tin": {
+      "category": "metal",
+      "family": "cassiterite",
+      "color": "#80434c"
+    },
+    "deep_topaz": {
+      "category": "gem",
+      "family": "blue_topaz",
+      "color": "#43b0e0"
+    },
+    "gravel": {
+      "category": "mineral",
+      "family": "gravel",
+      "color": "#86837e"
+    },
+    "high_bismuth_mountain": {
+      "category": "metal",
+      "family": "bismuth",
+      "color": "#bf8ccc"
+    },
+    "high_coal": {
+      "category": "fuel",
+      "family": "coal",
+      "color": "#434850"
+    },
+    "high_gypsum": {
+      "category": "mineral",
+      "family": "gypsum",
+      "color": "#c5f5ad"
+    },
+    "high_lead": {
+      "category": "metal",
+      "family": "lead",
+      "color": "#8574ef"
+    },
+    "high_realgar": {
+      "category": "metal",
+      "family": "chalcopyrite",
+      "color": "#9da501"
+    },
+    "high_sulfur": {
+      "category": "mineral",
+      "family": "sulfur",
+      "color": "#e6d623"
+    },
+    "high_tetrahedrite": {
+      "category": "metal",
+      "family": "tetrahedrite",
+      "color": "#4c7179"
+    },
+    "high_tin": {
+      "category": "metal",
+      "family": "cassiterite",
+      "color": "#72432e"
+    },
+    "kaolin": {
+      "category": "mineral",
+      "family": "kaolin",
+      "color": "#ebe7e2"
+    },
+    "mars_almandine": {
+      "category": "metal",
+      "family": "almandine",
+      "color": "#60375b"
+    },
+    "mars_apatite": {
+      "category": "mineral",
+      "family": "apatite",
+      "color": "#42a9c5"
+    },
+    "mars_beryllium": {
+      "category": "gem",
+      "family": "emerald",
+      "color": "#20bf6a"
+    },
+    "mars_coal": {
+      "category": "fuel",
+      "family": "coal",
+      "color": "#454950"
+    },
+    "mars_copper": {
+      "category": "metal",
+      "family": "chalcopyrite",
+      "color": "#ac9f09"
+    },
+    "mars_galena": {
+      "category": "metal",
+      "family": "galena",
+      "color": "#9ba3a9"
+    },
+    "mars_gold": {
+      "category": "metal",
+      "family": "gold",
+      "color": "#f6be29"
+    },
+    "mars_graphite": {
+      "category": "mineral",
+      "family": "graphite",
+      "color": "#50535b"
+    },
+    "mars_hematite": {
+      "category": "metal",
+      "family": "hematite",
+      "color": "#ba3024"
+    },
+    "mars_lapis": {
+      "category": "gem",
+      "family": "lazurite",
+      "color": "#293b9d"
+    },
+    "mars_lubricant": {
+      "category": "mineral",
+      "family": "trona",
+      "color": "#d9d1b9"
+    },
+    "mars_neodynium": {
+      "category": "metal",
+      "family": "bastnasite",
+      "color": "#f67690"
+    },
+    "mars_nickel": {
+      "category": "metal",
+      "family": "garnierite",
+      "color": "#85dc7d"
+    },
+    "mars_pitchblende": {
+      "category": "metal",
+      "family": "pitchblende",
+      "color": "#165e88"
+    },
+    "mars_quartzite": {
+      "category": "gem",
+      "family": "quartzite",
+      "color": "#e2dde8"
+    },
+    "mars_salt": {
+      "category": "metal",
+      "family": "spodumene",
+      "color": "#dfc1ec"
+    },
+    "mars_stibnite": {
+      "category": "metal",
+      "family": "tetrahedrite",
+      "color": "#648284"
+    },
+    "mars_sulfur": {
+      "category": "metal",
+      "family": "pyrite",
+      "color": "#d3a86f"
+    },
+    "mars_surface_bismuthinite": {
+      "category": "metal",
+      "family": "bismuth",
+      "color": "#ce90d2"
+    },
+    "mars_surface_cassiterite": {
+      "category": "metal",
+      "family": "cassiterite",
+      "color": "#854b4b"
+    },
+    "mars_surface_hematite": {
+      "category": "metal",
+      "family": "hematite",
+      "color": "#a9160a"
+    },
+    "mars_surface_nickel_galena": {
+      "category": "metal",
+      "family": "galena",
+      "color": "#abb4bb"
+    },
+    "mars_surface_tetrahedrite": {
+      "category": "metal",
+      "family": "tetrahedrite",
+      "color": "#577271"
+    },
+    "mars_tantalite": {
+      "category": "metal",
+      "family": "pyrolusite",
+      "color": "#890143"
+    },
+    "mars_tungsten": {
+      "category": "metal",
+      "family": "scheelite",
+      "color": "#e2d9b1"
+    },
+    "moon_apatite": {
+      "category": "metal",
+      "family": "pyrochlore",
+      "color": "#9f6426"
+    },
+    "moon_bauxite": {
+      "category": "metal",
+      "family": "ilmenite",
+      "color": "#6b0e8b"
+    },
+    "moon_beryllium": {
+      "category": "gem",
+      "family": "emerald",
+      "color": "#20bf6a"
+    },
+    "moon_cassiterite": {
+      "category": "metal",
+      "family": "cassiterite",
+      "color": "#884a4b"
+    },
+    "moon_desh": {
+      "category": "metal",
+      "family": "ilmenite",
+      "color": "#7e1e9e"
+    },
+    "moon_garnet": {
+      "category": "gem",
+      "family": "amethyst",
+      "color": "#9a5fd8"
+    },
+    "moon_garnierite": {
+      "category": "metal",
+      "family": "garnierite",
+      "color": "#84d97a"
+    },
+    "moon_gold": {
+      "category": "metal",
+      "family": "gold",
+      "color": "#f5bd28"
+    },
+    "moon_graphite": {
+      "category": "mineral",
+      "family": "graphite",
+      "color": "#50535b"
+    },
+    "moon_gypsum": {
+      "category": "mineral",
+      "family": "gypsum",
+      "color": "#cdf4b2"
+    },
+    "moon_lubricant": {
+      "category": "mineral",
+      "family": "soapstone",
+      "color": "#8ba292"
+    },
+    "moon_magnetite": {
+      "category": "metal",
+      "family": "chromite",
+      "color": "#614016"
+    },
+    "moon_manganese": {
+      "category": "metal",
+      "family": "grossular",
+      "color": "#a24093"
+    },
+    "moon_mica": {
+      "category": "metal",
+      "family": "kyanite",
+      "color": "#6ca1f6"
+    },
+    "moon_molybdenum": {
+      "category": "metal",
+      "family": "wulfenite",
+      "color": "#dd515a"
+    },
+    "moon_monazite": {
+      "category": "metal",
+      "family": "bastnasite",
+      "color": "#f67790"
+    },
+    "moon_pyrolusite": {
+      "category": "metal",
+      "family": "pyrolusite",
+      "color": "#8b0345"
+    },
+    "moon_quartz": {
+      "category": "gem",
+      "family": "certus_quartz",
+      "color": "#b9d9f2"
+    },
+    "moon_redstone": {
+      "category": "mineral",
+      "family": "redstone",
+      "color": "#c81b1d"
+    },
+    "moon_saltpeter": {
+      "category": "metal",
+      "family": "electrotine",
+      "color": "#43b8cd"
+    },
+    "moon_sapphire": {
+      "category": "metal",
+      "family": "almandine",
+      "color": "#61385c"
+    },
+    "moon_scheelite": {
+      "category": "metal",
+      "family": "tungstate",
+      "color": "#4a6115"
+    },
+    "moon_sheldonite": {
+      "category": "metal",
+      "family": "bornite",
+      "color": "#7a51c1"
+    },
+    "moon_silver": {
+      "category": "metal",
+      "family": "silver",
+      "color": "#c6cdd6"
+    },
+    "moon_sphalerite": {
+      "category": "metal",
+      "family": "sphalerite",
+      "color": "#4080c1"
+    },
+    "moon_tetrahedrite": {
+      "category": "metal",
+      "family": "tetrahedrite",
+      "color": "#5f7c7e"
+    },
+    "moon_topaz": {
+      "category": "gem",
+      "family": "blue_topaz",
+      "color": "#43b0e0"
+    },
+    "normal_amethyst": {
+      "category": "gem",
+      "family": "amethyst",
+      "color": "#9a5fd8"
+    },
+    "normal_asbestos_dry": {
+      "category": "metal",
+      "family": "cassiterite",
+      "color": "#a65058"
+    },
+    "normal_coal": {
+      "category": "fuel",
+      "family": "lignite",
+      "color": "#71471b"
+    },
+    "normal_copper": {
+      "category": "metal",
+      "family": "chalcopyrite",
+      "color": "#bab019"
+    },
+    "normal_copper_gypsum": {
+      "category": "metal",
+      "family": "chalcocite",
+      "color": "#512dc8"
+    },
+    "normal_galena": {
+      "category": "metal",
+      "family": "galena",
+      "color": "#9ca6ad"
+    },
+    "normal_garnierite": {
+      "category": "metal",
+      "family": "garnierite",
+      "color": "#7bd073"
+    },
+    "normal_gold": {
+      "category": "metal",
+      "family": "gold",
+      "color": "#fab814"
+    },
+    "normal_iron": {
+      "category": "metal",
+      "family": "yellow_limonite",
+      "color": "#e28d5d"
+    },
+    "normal_mica": {
+      "category": "mineral",
+      "family": "mica",
+      "color": "#a9b8a5"
+    },
+    "normal_quartz": {
+      "category": "gem",
+      "family": "quartzite",
+      "color": "#e9e5f0"
+    },
+    "normal_quartz_borax": {
+      "category": "gem",
+      "family": "quartzite",
+      "color": "#d8d3df"
+    },
+    "normal_salt": {
+      "category": "mineral",
+      "family": "salt",
+      "color": "#e7b1cb"
+    },
+    "normal_sphalerite": {
+      "category": "metal",
+      "family": "sphalerite",
+      "color": "#4589cd"
+    },
+    "normal_spodumene": {
+      "category": "metal",
+      "family": "spodumene",
+      "color": "#e2c6f0"
+    },
+    "normal_sulfide": {
+      "category": "metal",
+      "family": "bornite",
+      "color": "#7950c3"
+    },
+    "normal_tarkianite": {
+      "category": "metal",
+      "family": "tarkianite",
+      "color": "#98789d"
+    },
+    "sand_basaltic": {
+      "category": "metal",
+      "family": "basaltic_mineral_sand",
+      "color": "#1e52a7"
+    },
+    "sand_garnet": {
+      "category": "mineral",
+      "family": "garnet_sand",
+      "color": "#a1554b"
+    },
+    "sand_granitic": {
+      "category": "metal",
+      "family": "granitic_mineral_sand",
+      "color": "#d7f68a"
+    },
+    "sand_tin": {
+      "category": "metal",
+      "family": "cassiterite",
+      "color": "#89565a"
+    },
+    "surface_bismuth": {
+      "category": "metal",
+      "family": "bismuth",
+      "color": "#d09edb"
+    },
+    "surface_coal": {
+      "category": "fuel",
+      "family": "lignite",
+      "color": "#7d5735"
+    },
+    "surface_cobaltite": {
+      "category": "metal",
+      "family": "cobaltite",
+      "color": "#385de5"
+    },
+    "surface_gold": {
+      "category": "metal",
+      "family": "gold",
+      "color": "#ffce44"
+    },
+    "surface_hematite": {
+      "category": "metal",
+      "family": "hematite",
+      "color": "#a40f04"
+    },
+    "surface_limonite": {
+      "category": "metal",
+      "family": "yellow_limonite",
+      "color": "#c58a6d"
+    },
+    "surface_magnetite": {
+      "category": "metal",
+      "family": "magnetite",
+      "color": "#4a4e6c"
+    },
+    "surface_malachite": {
+      "category": "metal",
+      "family": "malachite",
+      "color": "#00ad7f"
+    },
+    "surface_mica": {
+      "category": "mineral",
+      "family": "mica",
+      "color": "#98a796"
+    },
+    "surface_native_copper": {
+      "category": "metal",
+      "family": "copper",
+      "color": "#be6613"
+    },
+    "surface_nickel": {
+      "category": "metal",
+      "family": "garnierite",
+      "color": "#9edb87"
+    },
+    "surface_salpeter": {
+      "category": "mineral",
+      "family": "saltpeter",
+      "color": "#e9a074"
+    },
+    "surface_sphalerite": {
+      "category": "metal",
+      "family": "sphalerite",
+      "color": "#5676bb"
+    },
+    "surface_sylvite_salt": {
+      "category": "mineral",
+      "family": "salt",
+      "color": "#febedf"
+    },
+    "surface_tetrahedrite": {
+      "category": "metal",
+      "family": "tetrahedrite",
+      "color": "#60807b"
+    },
+    "surface_tricalcium_phosphate": {
+      "category": "mineral",
+      "family": "tricalcium_phosphate",
+      "color": "#f4ca90"
+    },
+    "venus_manual_salt": {
+      "category": "mineral",
+      "family": "salt",
+      "color": "#f5bcd7"
+    },
+    "venus_manual_sulfur": {
+      "category": "mineral",
+      "family": "sulfur",
+      "color": "#e7d629"
+    }
+  }
+}

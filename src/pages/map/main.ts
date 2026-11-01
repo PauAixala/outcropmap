@@ -43,7 +43,7 @@ import { structureSetOf } from '@ui/icons/structure-glyphs';
 import { clusterStructures, type StructureCluster } from '@render/structure-clusters';
 import { STRUCTURE_MARKER_PX } from '@render/canvas2d/painter';
 import type { StructureFeature } from '@worldgen/api/types';
-import { matchesOreFilter } from '@render/markers';
+import { DEPOSIT_HIT_RADIUS_PX, matchesOreFilter } from '@render/markers';
 import { markerConfidence, veinFilterId, veinIsUnreliable } from '@worldgen/api/types';
 
 /**
@@ -328,6 +328,7 @@ async function boot(): Promise<void> {
         showGrid: state.enabledLayers.includes('grid'),
         tiles,
         palette: tokens.colors,
+        profile: state.profile,
         ...(tokens.alphas ? { alphas: tokens.alphas } : {}),
         layerOpacity: state.layerOpacity,
         filter: state.filter,
@@ -452,9 +453,10 @@ async function boot(): Promise<void> {
         .filter((d) => !veinIsUnreliable(clickDescriptor?.depositReliability, veinFilterId(d.ore)))
         .filter((d) => meetsAccuracy(clickDescriptor, d, state.minMarkerAccuracy ?? 0));
       // Nearest marker within a fixed on-screen radius (screen space, not block space, so the hit
-      // area stays the same size on screen at every zoom, matching `DEPOSIT_MARKER_RADIUS_PX`).
+      // area stays the same size on screen at every zoom, like the marker itself). The radius covers
+      // every marker shape whole, halo included (`@render/markers`).
       let nearest: DepositFeature | null = null;
-      let nearestDistance = 12; // px -- a bit more forgiving than the marker's own drawn radius.
+      let nearestDistance = DEPOSIT_HIT_RADIUS_PX;
       for (const deposit of visible) {
         const screen = blockToScreen(
           camera,

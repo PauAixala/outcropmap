@@ -12,10 +12,17 @@ import {
   tileOriginBlock,
   tileSpanBlocks,
 } from '@core/coords/coords';
-import type { DepositFeature, LayerId, StructureFeature } from '@worldgen/api/types';
+import type { DepositFeature, LayerId, ProfileId, StructureFeature } from '@worldgen/api/types';
 import type { CachedTile, TileManager } from '@render/tiles/tile-manager';
 import { colorToCss } from '@render/colormap';
-import { oreMarkerColor } from '@render/markers';
+import { depositStyle } from '@render/deposit-style';
+import type { DepositShape } from '@render/deposit-style';
+import {
+  DEPOSIT_MARKER_REACH_PX,
+  DEPOSIT_PIXEL_PHASE,
+  snapMarkerCoordinate,
+  traceDepositMarker,
+} from '@render/markers';
 import { tokenColour } from '@render/tokens';
 import { en } from '@ui/i18n/en';
 import { getRasterLayer, orderLayersForPaint, resolveLayerOpacity } from '@layers/index';
@@ -38,6 +45,10 @@ export interface PaintOptions {
   readonly showGrid: boolean;
   readonly tiles: TileManager;
   readonly palette: Record<string, number>;
+  /** The active version profile. Deposit markers take their shape and fill from its palette
+   * (`depositStyle`), so without it no marker is drawn: TFC and TFG colour the same id differently,
+   * and a guessed profile would paint the wrong one. */
+  readonly profile?: ProfileId;
   /** Alpha of translucent tokens (`ThemeTokens.alphas`); the grid's lines are drawn with it. */
   readonly alphas?: Record<string, number>;
   /** Per-layer opacity overrides (0..1); a layer with no entry paints at its own defaultOpacity
@@ -200,8 +211,8 @@ export function paintFrame(opts: PaintOptions): void {
     }
   }
 
-  if (opts.showDeposits && opts.deposits && opts.deposits.length > 0) {
-    paintDeposits(ctx, camera, width, height, opts.deposits, palette);
+  if (opts.showDeposits && opts.profile && opts.deposits && opts.deposits.length > 0) {
+    paintDeposits(ctx, camera, width, height, opts.deposits, opts.profile, palette);
   }
 
   if (opts.showStructures && opts.structures && opts.structures.length > 0) {
@@ -464,18 +475,155 @@ export function paintMeasure(
 /** Side of the square drawn at each end of a measure line. */
 const MEASURE_END_PX = 10;
 
-/** Radius, in CSS pixels, of a deposit marker dot -- independent of zoom (AGENTS.md 1a: this is a
- * map marker, not a to-scale rendering of the vein's real `size`/`height`, which are recorded on
- * the feature for the click readout instead). */
-const DEPOSIT_MARKER_RADIUS_PX = 5;
+/**
+ * CSS strings of deposit fills, by packed colour, so a frame of markers builds no strings: each is
+ * made the first time its colour is drawn. The palettes hold a few hundred colours between them.
+ */
+const depositFillCss = new Map<number, string>();
+
+function fillCss(color: number): string {
+  let css = depositFillCss.get(color);
+  if (css === undefined) {
+    css = colorToCss(color);
+    depositFillCss.set(color, css);
+  }
+  return css;
+}
+
+/** Draws one whole marker -- halo, outline, fill -- with its point at `(x, y)` in `g`'s space. */
+function drawDepositMarker(
+  g: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
+  shape: DepositShape,
+  color: number,
+  halo: string,
+  outline: string,
+  x: number,
+  y: number,
+): void {
+  g.fillStyle = halo;
+  g.beginPath();
+  traceDepositMarker(g, shape, 'halo', x, y);
+  g.fill();
+  g.fillStyle = outline;
+  g.beginPath();
+  traceDepositMarker(g, shape, 'outline', x, y);
+  g.fill();
+  g.fillStyle = fillCss(color);
+  g.beginPath();
+  traceDepositMarker(g, shape, 'fill', x, y);
+  g.fill();
+}
 
 /**
- * Draws every deposit marker in screen space as a small filled-and-outlined dot -- the outline
- * uses the same `--marker-outline` token every other marker in the project would use (kept
- * distinct from the mineral fill colour so a marker stays legible over both light and dark map
- * tiles). One draw call per marker: the `minerals` layer's marker count per viewport is bounded by
- * the sparse per-chunk rarity check (`docs/WORLDGEN-NOTES.md`'s "Ore veins" section), nowhere near
- * the per-pixel volume the raster loop above has to manage.
+ * Deposit marker sprites. Three filled paths per marker made the GPU the bottleneck: measured on
+ * 2026-11-01 with 3000 markers on an accelerated canvas, a frame took ~50-70 ms against ~15 ms for
+ * the single-circle markers before (polygons and ring layers do not take Skia's batched-oval path).
+ * So each (shape, fill) is drawn once, ring included, into one atlas canvas, and a frame stamps it
+ * with one `drawImage` per marker: drawImage from one texture batches, and frames are back to
+ * ~15 ms. Markers still paint one by one, so where two overlap the later keeps its whole ring.
+ *
+ * Sprites are drawn at the device pixel ratio and stamped at whole device pixels, one texel to one
+ * pixel, so a sprite is exactly the vector marker it was made from: the square's edges stay crisp.
+ */
+const SHAPE_SLOT: Readonly<Record<DepositShape, number>> = {
+  circle: 0,
+  diamond: 1,
+  square: 2,
+  triangle: 3,
+};
+/** CSS px from a sprite cell's corner to the marker's point, before the shape's pixel phase. */
+const SPRITE_ORIGIN_PX = Math.ceil(DEPOSIT_MARKER_REACH_PX) + 1;
+/** Cells per atlas side: 256 sprites, room for every kind of both profiles at once. */
+const ATLAS_SIDE_CELLS = 16;
+
+interface SpriteAtlas {
+  readonly canvas: HTMLCanvasElement | OffscreenCanvas;
+  readonly ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D;
+  /** Device px per CSS px the sprites were drawn at, and the ring colours they carry. */
+  readonly scale: number;
+  readonly halo: number;
+  readonly outline: number;
+  /** One cell's side in device px, a 1 px gutter included so no sprite samples its neighbour. */
+  readonly cell: number;
+  /** Cell of every sprite drawn so far, by `color * 4 + SHAPE_SLOT[shape]`. */
+  readonly slots: Map<number, number>;
+}
+
+let spriteAtlas: SpriteAtlas | null = null;
+
+/**
+ * The atlas for this scale and ring, made anew when either changes (a theme switch, a monitor with
+ * another pixel ratio). Null where no canvas can be made, e.g. under Node in tests.
+ */
+function atlasFor(scale: number, halo: number, outline: number): SpriteAtlas | null {
+  const current = spriteAtlas;
+  if (current && current.scale === scale && current.halo === halo && current.outline === outline) {
+    return current;
+  }
+  const cell = Math.ceil(2 * SPRITE_ORIGIN_PX * scale) + 1;
+  const side = cell * ATLAS_SIDE_CELLS;
+  let canvas: HTMLCanvasElement | OffscreenCanvas;
+  let g: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D | null;
+  if (typeof document !== 'undefined') {
+    const element = document.createElement('canvas');
+    element.width = side;
+    element.height = side;
+    canvas = element;
+    g = element.getContext('2d');
+  } else if (typeof OffscreenCanvas !== 'undefined') {
+    const offscreen = new OffscreenCanvas(side, side);
+    canvas = offscreen;
+    g = offscreen.getContext('2d');
+  } else {
+    return null;
+  }
+  if (!g) return null;
+  spriteAtlas = { canvas, ctx: g, scale, halo, outline, cell, slots: new Map() };
+  return spriteAtlas;
+}
+
+/** The atlas cell holding this marker's sprite, drawing the sprite the first time it is needed. */
+function spriteCell(
+  atlas: SpriteAtlas,
+  shape: DepositShape,
+  color: number,
+  halo: string,
+  outline: string,
+): number {
+  const key = color * 4 + SHAPE_SLOT[shape];
+  const known = atlas.slots.get(key);
+  if (known !== undefined) return known;
+  const g = atlas.ctx;
+  if (atlas.slots.size >= ATLAS_SIDE_CELLS * ATLAS_SIDE_CELLS) {
+    // Full, which takes more kinds than any two palettes hold: start over.
+    g.setTransform(1, 0, 0, 1, 0, 0);
+    g.clearRect(0, 0, atlas.canvas.width, atlas.canvas.height);
+    atlas.slots.clear();
+  }
+  const slot = atlas.slots.size;
+  atlas.slots.set(key, slot);
+  const column = slot % ATLAS_SIDE_CELLS;
+  const row = (slot - column) / ATLAS_SIDE_CELLS;
+  g.setTransform(atlas.scale, 0, 0, atlas.scale, column * atlas.cell, row * atlas.cell);
+  const point = SPRITE_ORIGIN_PX + DEPOSIT_PIXEL_PHASE[shape];
+  drawDepositMarker(g, shape, color, halo, outline, point, point);
+  return slot;
+}
+
+/**
+ * Draws every deposit marker in screen space, at a constant size at every zoom (AGENTS.md 1a: a
+ * map marker, not a to-scale rendering of the vein's real `size`/`height`, which the click readout
+ * carries instead).
+ *
+ * Shape and fill come from `depositStyle` (shape = category, colour = material family, chosen per
+ * profile), and the geometry from `@render/markers`, which the ore filter's swatches draw too. Each
+ * marker is three nested fills -- the light `--marker-halo`, the dark `--marker-outline`, then its
+ * colour -- stamped from the sprite atlas above, or traced directly where the context cannot report
+ * its transform.
+ *
+ * The loop allocates nothing: the projection is `blockToScreen` inlined (it returns a fresh
+ * object), sprites and fill strings are cached, and there is one style lookup per marker and one
+ * save/restore for the whole layer.
  */
 function paintDeposits(
   ctx: CanvasRenderingContext2D,
@@ -483,19 +631,58 @@ function paintDeposits(
   width: number,
   height: number,
   deposits: readonly DepositFeature[],
+  profile: ProfileId,
   palette: Record<string, number>,
 ): void {
-  const outline = colorToCss(tokenColour(palette, 'marker-outline'));
+  const haloColor = tokenColour(palette, 'marker-halo');
+  const outlineColor = tokenColour(palette, 'marker-outline');
+  const halo = colorToCss(haloColor);
+  const outline = colorToCss(outlineColor);
+  const bpp = blocksPerPixel(camera.zoom);
+  const halfWidth = width / 2;
+  const halfHeight = height / 2;
+  const reach = DEPOSIT_MARKER_REACH_PX;
+  // The canvas's own transform: CSS px to device px (map-canvas.ts sets it to the pixel ratio).
+  const transform = typeof ctx.getTransform === 'function' ? ctx.getTransform() : null;
+  const scale = transform?.a ?? 1;
+  const atlas = transform && scale > 0 ? atlasFor(scale, haloColor, outlineColor) : null;
   ctx.save();
-  for (const deposit of deposits) {
-    const screen = blockToScreen(camera, width, height, deposit.x, deposit.z);
-    ctx.beginPath();
-    ctx.arc(screen.x, screen.y, DEPOSIT_MARKER_RADIUS_PX, 0, Math.PI * 2);
-    ctx.fillStyle = colorToCss(oreMarkerColor(deposit.ore, palette));
-    ctx.fill();
-    ctx.lineWidth = 1.5;
-    ctx.strokeStyle = outline;
-    ctx.stroke();
+  // Sprites land on whole device pixels at exactly their own size: nothing to smooth.
+  ctx.imageSmoothingEnabled = false;
+  for (let i = 0; i < deposits.length; i++) {
+    const deposit = deposits[i];
+    if (deposit === undefined) continue;
+    const screenX = halfWidth + (deposit.x - camera.centerX) / bpp;
+    const screenY = halfHeight + (deposit.z - camera.centerZ) / bpp;
+    const offScreen =
+      screenX < -reach || screenY < -reach || screenX > width + reach || screenY > height + reach;
+    if (offScreen) continue;
+    const style = depositStyle(profile, deposit.ore);
+    const shape = style.shape;
+    if (atlas === null || transform === null) {
+      const x = snapMarkerCoordinate(shape, screenX);
+      const y = snapMarkerCoordinate(shape, screenY);
+      drawDepositMarker(ctx, shape, style.color, halo, outline, x, y);
+      continue;
+    }
+    const slot = spriteCell(atlas, shape, style.color, halo, outline);
+    const column = slot % ATLAS_SIDE_CELLS;
+    const row = (slot - column) / ATLAS_SIDE_CELLS;
+    // The cell's corner, in whole device px, placed so the sprite's point falls on the marker.
+    const point = (SPRITE_ORIGIN_PX + DEPOSIT_PIXEL_PHASE[shape]) * scale;
+    const left = Math.round(screenX * scale + transform.e - point);
+    const top = Math.round(screenY * scale + transform.f - point);
+    ctx.drawImage(
+      atlas.canvas,
+      column * atlas.cell,
+      row * atlas.cell,
+      atlas.cell,
+      atlas.cell,
+      (left - transform.e) / scale,
+      (top - transform.f) / scale,
+      atlas.cell / scale,
+      atlas.cell / scale,
+    );
   }
   ctx.restore();
 }
