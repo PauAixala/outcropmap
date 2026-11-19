@@ -20,7 +20,7 @@
     "lint": "eslint . --ext .ts",
     "format": "prettier --write \"**/*.{ts,json,md,css,html}\"",
     "extract:data": "node tools/extract-datapack.mjs",
-    "build:web": "tsc --noEmit && vite build && node tools/finish-web-build.mjs",
+    "build:web": "tsc --noEmit && vite build && node tools/finish-web-build.mjs && node tools/cloudflare-analytics.mjs",
     "prebuild:web": "node tools/prepare-out-dir.mjs"
   },
   "devDependencies": {

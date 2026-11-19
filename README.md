@@ -52,7 +52,9 @@ keep the source of what you publish available, and pass the same terms on.
 ## Privacy
 
 OutCrop keeps your seed, settings, waypoints and custom recipes in your own browser
-(`localStorage`) and never sends them anywhere. There are no analytics and no accounts.
+(`localStorage`) and never sends them anywhere. Cloudflare Web Analytics measures visits and page
+views using a beacon loaded from Cloudflare; it does not receive the map seed or the app's saved
+settings from OutCrop. See the site's Privacy page for the analytics disclosure.
 
 The public site carries Google AdSense, which uses cookies: AdSense's code and Google's consent
 message are on every page but the Privacy page. Ads show only once AdSense has approved the site,
